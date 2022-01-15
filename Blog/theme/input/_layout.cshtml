@@ -1,0 +1,28 @@
+﻿@inherits StatiqRazorPage<IDocument>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.11/plyr.css"/>
+    <link rel="stylesheet" href="/assets/styles.css"/>
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+</head>
+<body>
+<div id="blog">
+
+    <h1>Posts</h1>
+    @Html.Partial("_posts.cshtml", Document.GetChildren())
+    
+    <h1>Body</h1>
+    @RenderBody()
+    
+</div>
+<script src="https://cdn.plyr.io/3.6.11/plyr.js"></script>
+<script>
+    const players = Plyr.setup('.lk-player');
+</script>
+<script src="/assets/js/script.min.js"></script>
+</body>
+</html>

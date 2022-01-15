@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.37" />
+    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.41" />
+    <PackageReference Update="Microsoft.Build" Version="17.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="input\posts" />
+    <Folder Include="wwwroot" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="theme\input\_posts.cshtml" />
   </ItemGroup>
 
 </Project>
