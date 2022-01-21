@@ -1,28 +1,23 @@
 ﻿@inherits StatiqRazorPage<IDocument>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Test</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.11/plyr.css"/>
-    <link rel="stylesheet" href="/assets/styles.css"/>
-    <link rel="stylesheet" href="/assets/css/style.min.css">
-</head>
+<html lang="@Metadata["language"]">
+@await Html.PartialAsync("_partial/head.cshtml", Document)
+
 <body>
 <div id="blog">
+    @await Html.PartialAsync("_partial/header.cshtml", Document)
+    @await Html.PartialAsync("_partial/sidebar.cshtml", Document)
+    @* @await Html.PartialAsync("_partial/post/header-cover.cshtml", Document) *@
+    <div id="main"
+         data-behavior="@Global.SidebarBehavior"
+         class="hasCoverMetaIn" @* TODO add logic *@>
+        @RenderBody()
+        @await Html.PartialAsync("_partial/footer.cshtml", Document)
+    </div>
 
-    <h1>Posts</h1>
-    @Html.Partial("_posts.cshtml", Document.GetChildren())
-    
-    <h1>Body</h1>
-    @RenderBody()
-    
-</div>
-<script src="https://cdn.plyr.io/3.6.11/plyr.js"></script>
-<script>
-    const players = Plyr.setup('.lk-player');
-</script>
-<script src="/assets/js/script.min.js"></script>
+    @await Html.PartialAsync("_partial/cover.cshtml", Document)
+    @await Html.PartialAsync("_partial/script.cshtml", Document)
+</div> 
 </body>
 </html>

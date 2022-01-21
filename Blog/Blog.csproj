@@ -13,12 +13,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="input\posts" />
     <Folder Include="wwwroot" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="input\index2.md" />
+    <Content Include="theme\input\settings.cshtml" />
     <Content Include="theme\input\_posts.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="_config.yml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,2 +1,3 @@
-﻿@inherits StatiqRazorPage<IDocument>
-@Html.Partial("_posts.cshtml", Document.GetChildren())
+@inherits StatiqRazorPage<IDocument>
+
+@await Html.PartialAsync("_partial/index.cshtml", Document.GetChildren())

@@ -1,0 +1,15 @@
+@inherits StatiqRazorPage<IDocument>
+
+<!-- Define author's picture -->
+<header id="header" data-behavior="@Global.SidebarBehavior">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link"
+           href="/">
+            @Constants.BlogTitle
+        </a>
+    </div>
+    <a class="header-right-picture " href="#about" aria-label="Open the link: /#about">
+        <img class="header-picture" src="@Metadata["author:picture"]" alt="Author's picture">
+    </a>
+</header>

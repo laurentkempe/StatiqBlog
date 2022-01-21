@@ -1,0 +1,75 @@
+# ---------------------
+# Sidebar Configuration
+# ---------------------
+
+#    You can add groups of links and links much as you want
+#    You just have to respect the indentation : `groups of links` -> `link` -> `title, link, icon`
+#    E.g:
+#    -------------
+#    sidebar:                   # DON'T modify this variable name
+#         menu:                 # Name of your groups of links (changeable)
+#             home:             # Name of your link (changeable)
+#                title: Home    # Title of your link displayed
+#                url: /         # URL of the link. If the URL is internal, domain name is not necessary
+#                icon: home     # CSS class names of the Font Awesome icon
+#                               # Go to https://fontawesome.com/icons?d=gallery&m=free to find icons you want
+menu:
+  - name : home
+    title: global.home
+    url: /
+    icon: fa fa-home
+  - name : archives
+    title: global.archives
+    url: /all-archives
+    icon: fa fa-archive
+  - name : presentations
+    title: global.presentations
+    url: /presentations.html
+    icon: fa fa-file-powerpoint
+  - name : about
+    title: global.about
+    url: /about-laurent-kempe.html
+    icon: fa fa-question
+
+  - name : github
+    title: global.github
+    url: https://github.com/laurentkempe
+    icon: fab fa-github
+  #stack_overflow:
+  #    title: global.stack_overflow
+  #    url: http://stackoverflow.com/users
+  #    icon: fab fa-stack-overflow
+  - name : twitter
+    title: global.twitter
+    url: https://twitter.com/laurentkempe
+    icon: fab fa-twitter
+  #facebook:
+  #    title: global.facebook
+  #    url: https://facebook.com/
+  #    icon: fab fa-facebook
+  #google_plus:
+  #    title: global.google_plus
+  #    url: https://plus.google.com/
+  #    icon: fab fa-google-plus
+  - name : linked_in
+    title: global.linkedin
+    url: https://www.linkedin.com/in/laurentkempe
+    icon: fab fa-linkedin
+  - name : flickr
+    title: global.flickr
+    url: https://flickr.com/photos/laurentkempe/
+    icon: fab fa-flickr
+  #mail:
+  #    title: global.mail
+  #    url: mailto
+  #    icon: fa fa-envelope
+
+  - name : tags
+    title: global.tags
+    url: /all-tags
+    icon: fa fa-tags
+
+  - name : rss
+    title: global.rss
+    url: http://feeds.feedburner.com/laurentkempe
+    icon: fa fa-rss

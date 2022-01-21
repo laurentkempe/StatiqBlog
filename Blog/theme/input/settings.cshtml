@@ -1,0 +1,43 @@
+﻿@inherits StatiqRazorPage<IDocument>
+
+@{
+    Layout = @"";
+}
+
+<h1>Settings</h1>
+
+ @* <h1>@Metadata.ContainsKey("author:email").ToString()</h1> *@
+ @* <h1>@Metadata["author:email"]</h1> *@
+ @* <h1>@Metadata["timezone"]</h1> *@
+ @* @if (Metadata.TryGetValue("author:email", out var author)) *@
+ @* { *@
+ @*     <h1>FOUND</h1> *@
+ @*     <h1>@author</h1> *@
+ @* } *@
+ 
+@{
+    var global = Global.ContextSetting(Context);
+
+    var external_link = (IMetadata)Metadata["external_link"];
+}
+
+@if (Metadata != null)
+ {
+     <h2>@Metadata.Keys.Count().ToString()</h2>
+
+     <h2>@global["author_picture"]</h2>
+
+     <h2>@Metadata["sidebar:menu:home:icon"]</h2>
+     <h2>@Metadata["author:picture"]</h2>
+
+     <h2>@external_link["enable"]</h2>
+
+     @foreach (var key in Metadata.Keys)
+     {
+         <table>
+             <tr>
+                 <td>@key</td>
+             </tr>
+         </table>
+     }
+ }

@@ -8,8 +8,7 @@ updated: 2/8/2020 8:23:02 PM
 
 June 9, 2021
 
-Video presentation, in French, during DevApps S04 Ep07 online
-meetup, [starting at 14:45](https://www.youtube.com/watch?v=XtASb2tmo5c&t=119s&ab_channel=DevApps)
+Video presentation, in French, during DevApps S04 Ep07 online meetup
 <?# Plyr video=XtASb2tmo5c start=119 /?> 
 
 And [the slides](https://laurentkempe.com/presentations/Introduction%20to%20Dapr%20.NET%20SDK/Introduction%20to%20Dapr%20.NET%20SDK.pptx)!

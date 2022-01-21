@@ -2,9 +2,7 @@
 layout: _layout
 ---
 
-# Hello World!
-
-Hello from my first Statiq page.
+# Hello from my first Statiq page.
 
 [Presentations](/presentations)
 
@@ -17,4 +15,3 @@ Hello from my first Statiq page.
 <?# YouTube u5ayTqlLWQQ /?>
 
 <?# Plyr XtASb2tmo5c /?>
-

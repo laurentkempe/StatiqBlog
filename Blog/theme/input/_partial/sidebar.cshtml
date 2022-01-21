@@ -1,0 +1,51 @@
+@inherits StatiqRazorPage<IDocument>
+
+@{
+    var authorPicture = Metadata["author:picture"].ToString();
+    var read_ore_about_author = ((IMetadata)Metadata["global"])["read_more_about_author"].ToString();
+    var author_picture = ((IMetadata)Metadata["global"])["author_picture"].ToString();
+    var author_bio = ((IMetadata)Metadata["author"])["bio"].ToString();
+
+    var s = Metadata["sidebar:menu"];
+
+    // IDocument o = Outputs.FromPipeline("Data").FilterSources("sidebar.yml").Get("sidebar.yml");
+    //
+    // var menuEntries = o.GetDocumentList("sidebar:menu");
+}
+
+<nav id="sidebar" data-behavior="@Global.SidebarBehavior">
+    <div class="sidebar-container">
+        @if (!string.IsNullOrWhiteSpace(authorPicture))
+        {
+            <div class="sidebar-profile">
+                <a href="/#about" @* TODO see how to convert url_for('/#about') *@
+                   aria-label="@read_ore_about_author">
+                    <img class="sidebar-profile-picture"
+                         src="@authorPicture"
+                         alt="@author_picture"/>
+                </a>
+                <h4 class="sidebar-profile-name">@Metadata["author2"]</h4>
+                @if (!string.IsNullOrWhiteSpace(author_bio))
+                {
+                    <h5 class="sidebar-profile-bio">@author_bio</h5> @* TODO <%- markdown(__('author.bio')) %> *@
+                }
+            </div>
+        }
+    </div>
+
+    @foreach(IDocument menu in Outputs.Get("sidebar.yml").GetDocumentList("menu"))
+    {
+        <ul class="sidebar-buttons">
+            <li class="sidebar-button">
+                <a
+                    class="sidebar-button-link"
+                    href="@menu.GetString("url")"
+                    rel="noopener"
+                    title="Home"> @* TODO Get string from languages/en.yml *@
+                    <i class="sidebar-button-icon @menu.GetString("icon")" aria-hidden="true"></i>
+                    <span class="sidebar-button-desc">@menu.GetString("name").WithFirstLetterUppercase()</span>
+                </a>
+            </li>
+        </ul>
+    }
+</nav>
