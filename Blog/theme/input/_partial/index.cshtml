@@ -1,15 +1,12 @@
 @inherits StatiqRazorPage<IEnumerable<IDocument>>
 
-<div>
-    
-</div>
-
 @foreach (var post in Model)
 {
     var permalink = post.GetString("permalink");
     var title = post.GetString("title");
     var date = post.GetDateTime("date").ToString("MMM dd, yyyy"); //TODO extract date format in configuration
     var thumbnailImage = post.GetString("thumbnailImage");
+    var excerpt = post.ToDocument().GetString(Keys.Excerpt);
     
     <section class="postShorten-group main-content-wrap">
         <article class="postShorten postShorten--thumbnailimg-right">
@@ -26,11 +23,12 @@
                         </time>
                     </div>
                 </div>
-                <div class="postShorten-excerpt">
-                    <p>Till now, we have seen two <a href="https://laurentkempe.com/tags/Dapr/">Dapr building blocks</a> which are the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/">service to service invocation building block</a> and the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/">secrets building block</a>. The secret building block serves to protect things like a database connection string, an API key… so that they’re never disclosed outside of the application. The service to service invocation building block serves to make calls between services in your distributed application easy. In this post, we will introduce a third one which is the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/">bindings building block</a>. The bindings building block enables your distributed application to handle external events or invoke external services.</p>
-                    <a href="@permalink" class="postShorten-excerpt_link link" aria-label=": @title">
-                        Continue reading
-                    </a>
+                <div class="postShorten-excerpt"> @* TODO get excerpt from doc *@
+                    @excerpt
+                    @* <p>Till now, we have seen two <a href="https://laurentkempe.com/tags/Dapr/">Dapr building blocks</a> which are the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/">service to service invocation building block</a> and the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/secrets/secrets-overview/">secrets building block</a>. The secret building block serves to protect things like a database connection string, an API key… so that they’re never disclosed outside of the application. The service to service invocation building block serves to make calls between services in your distributed application easy. In this post, we will introduce a third one which is the <a target="_blank" rel="noopener" href="https://docs.dapr.io/developing-applications/building-blocks/bindings/bindings-overview/">bindings building block</a>. The bindings building block enables your distributed application to handle external events or invoke external services.</p> *@
+                    @* <a href="@permalink" class="postShorten-excerpt_link link" aria-label=": @title"> *@
+                    @*     Continue reading *@
+                    @* </a> *@
                 </div>
             </div>
             @if (!string.IsNullOrWhiteSpace(thumbnailImage))
@@ -42,5 +40,6 @@
                 </a>
             }
         </article>
+        @await Html.PartialAsync("pagination.cshtml", post)
     </section>    
 }

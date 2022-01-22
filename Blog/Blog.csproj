@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="input\index2.md" />
+    <Content Include="input\todelete\index2.md" />
     <Content Include="theme\input\settings.cshtml" />
     <Content Include="theme\input\_posts.cshtml" />
   </ItemGroup>
