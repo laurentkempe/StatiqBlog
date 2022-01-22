@@ -1,4 +1,4 @@
-﻿using Blog.ShortCodes;
+﻿using Blog.Statiq.ShortCodes;
 using Microsoft.Extensions.Configuration;
 using Statiq.App;
 using Statiq.Common;

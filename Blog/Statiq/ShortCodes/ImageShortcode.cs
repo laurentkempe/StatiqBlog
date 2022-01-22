@@ -1,6 +1,6 @@
 ﻿using Statiq.Common;
 
-namespace Blog.ShortCodes;
+namespace Blog.Statiq.ShortCodes;
 
 public class ImageShortcode : SyncShortcode
 {

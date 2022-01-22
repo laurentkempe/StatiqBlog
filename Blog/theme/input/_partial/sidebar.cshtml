@@ -1,27 +1,25 @@
+@using Blog.Statiq.Helpers
 @inherits StatiqRazorPage<IDocument>
 
 @{
-    var authorPicture = Metadata["author:picture"].ToString();
+    var sidebar = Document.AsSidebar();
+    
     var read_ore_about_author = ((IMetadata)Metadata["global"])["read_more_about_author"].ToString();
     var author_picture = ((IMetadata)Metadata["global"])["author_picture"].ToString();
     var author_bio = ((IMetadata)Metadata["author"])["bio"].ToString();
 
     var s = Metadata["sidebar:menu"];
-
-    // IDocument o = Outputs.FromPipeline("Data").FilterSources("sidebar.yml").Get("sidebar.yml");
-    //
-    // var menuEntries = o.GetDocumentList("sidebar:menu");
 }
 
 <nav id="sidebar" data-behavior="@Global.SidebarBehavior">
     <div class="sidebar-container">
-        @if (!string.IsNullOrWhiteSpace(authorPicture))
+        @if (!string.IsNullOrWhiteSpace(sidebar.AuthorPicture))
         {
             <div class="sidebar-profile">
                 <a href="/#about" @* TODO see how to convert url_for('/#about') *@
-                   aria-label="@read_ore_about_author">
+                   aria-label="@sidebar.ReadMoreAboutAuthor">
                     <img class="sidebar-profile-picture"
-                         src="@authorPicture"
+                         src="@sidebar.AuthorPicture"
                          alt="@author_picture"/>
                 </a>
                 <h4 class="sidebar-profile-name">@Metadata["author2"]</h4>

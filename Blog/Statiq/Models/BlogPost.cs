@@ -1,6 +1,7 @@
-﻿using Statiq.Common;
+﻿using Blog.Statiq.Helpers;
+using Statiq.Common;
 
-namespace Blog.Helpers;
+namespace Blog.Statiq.Models;
 
 public class BlogPost
 {
@@ -15,17 +16,4 @@ public class BlogPost
     public string? Excerpt => _document.GetString(Keys.Excerpt);
     public string? Date => _document.GetDateTime("date").ToString(_document?.GetDateFormat());
     public string? ThumbnailImage => _document.GetString("thumbnailImage");
-}
-
-public static class DocumentExtensions
-{
-    private static BlogPost AsBlogPost(this IDocument? document)
-    {
-        return new BlogPost(document);
-    }
-
-    public static IEnumerable<BlogPost> AsBlogPost(this DocumentList<IDocument> blogs)
-    {
-        return blogs.Select(blog => blog.AsBlogPost());
-    }
 }

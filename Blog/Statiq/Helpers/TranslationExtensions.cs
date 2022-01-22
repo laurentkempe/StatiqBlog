@@ -1,7 +1,7 @@
 ﻿using Statiq.Common;
 using Statiq.Razor;
 
-namespace Blog.Helpers;
+namespace Blog.Statiq.Helpers;
 
 /// <summary>
 /// Helpers to get access to translation configuration
@@ -23,18 +23,11 @@ public static class TranslationExtensions
         };
     }
 
-    public static string Translate(this StatiqRazorPage<IDocument> page, string key, string value)
-    {
-        return string.Format(Translate(page, key), value);
-    }
+    public static string Translate(this StatiqRazorPage<IDocument> page, string key, string value) => string.Format(Translate(page, key), value);
 
-    private static IDocument GetTranslation(StatiqRazorPage<IDocument> page)
-    {
-        return page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
-    }
-    
-    public static string GetDateFormat(this IDocument document)
-    {
-        return document.GetString("date_format");
-    }
+    private static IDocument GetTranslation(StatiqRazorPage<IDocument> page) => page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
+
+    public static string GetLocalized(this IDocument? document, string key) => document.GetString(key);
+
+    public static string GetDateFormat(this IDocument document) => document.GetString("date_format");
 }
