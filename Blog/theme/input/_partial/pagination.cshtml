@@ -1,28 +1,29 @@
 @inherits StatiqRazorPage<IDocument>
 
+@{
+    IDocument previous = Model.GetDocument(Keys.Previous);
+    IDocument next = Model.GetDocument(Keys.Next);
+}
+
 <div class="pagination-bar">
   <ul class="pagination">
-    <li class="pagination-prev">
-      <a
-        class="btn btn--default btn--small"
-        href="<%- url_for(page.prev_link) %>"
-        aria-label="<%= __('pagination.newer_posts') %>"
-      >
-        <i class="fa fa-angle-left text-base icon-mr"></i>
-        <span><%= __('pagination.newer_posts') %></span>
-      </a>
-    </li>
-    <li class="pagination-next">
-      <a
-        class="btn btn--default btn--small"
-        href="<%- url_for(page.next_link) %>"
-        aria-label="<%= __('pagination.older_posts') %>"
-      >
-        <span><%= __('pagination.older_posts') %></span>
-        <i class="fa fa-angle-right text-base icon-ml"></i>
-      </a>
-    </li>
-    <li class="pagination-number"><%= _p('pagination.page', page.current) + ' ' + _p('pagination.of', page.total) %></li>
+    @if (previous != null)
+    {
+      <li class="pagination-prev">
+        <a
+          class="btn btn--default btn--small"
+          href="@previous.GetLink()"
+          aria-label="<%= __('pagination.newer_posts') %>"
+        >
+          @* <i class="fa fa-angle-left text-base icon-mr"></i> *@
+          @* <span><%= __('pagination.newer_posts') %></span> *@
+        </a>
+      </li>
+    }
+    @if (next != null)
+    {
+        <div><a class="btn btn-primary" href="@next.GetLink()" role="button">Next Page <i class="fas fa-angle-double-right"></i></a></div>
+    }
   </ul>
 </div>
 
