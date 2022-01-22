@@ -11,7 +11,7 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@previous.GetLink()"
-                    aria-label="<%= __('pagination.newer_posts') %>">
+                    aria-label="@this.Translate("pagination", "newer_posts")">
                     <i class="fa fa-angle-left text-base icon-mr"></i>
                     <span>@(this.Translate("pagination", "newer_posts"))</span>
                 </a>
@@ -23,7 +23,7 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@next.GetLink()"
-                    aria-label="<%= __('pagination.older_posts') %>">
+                    aria-label="@this.Translate("pagination", "older_posts")">
                     <span>@(this.Translate("pagination", "older_posts"))</span>
                     <i class="fa fa-angle-right text-base icon-ml"></i>
                 </a>

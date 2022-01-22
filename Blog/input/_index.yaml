@@ -1,6 +1,6 @@
 ArchiveSources: => $"posts/**/*"
 ArchiveDestination: >
-  => GetInt("Index") <= 1 ? $"index.html" : $"{GetInt("Index")}.html"  
+  => GetInt("Index") <= 1 ? $"index.html" : $"page/{GetInt("Index")}/index.html"  
 ArchivePageSize: 10
 ArchiveOrderDescending: true
 ArchiveOrder: => GetDateTime("date")
