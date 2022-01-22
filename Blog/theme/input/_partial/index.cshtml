@@ -1,41 +1,34 @@
 @inherits StatiqRazorPage<IDocument>
 
 <section class="postShorten-group main-content-wrap">
-    @foreach (var post in Document.GetChildren())
+    @foreach (var blogPost in Document.GetChildren().AsBlogPost())
     {
-        //var permalink = post.GetString("permalink"); @* TODO use permalink *@
-        var permalink = post.GetLink();
-        var title = post.GetString("title");
-        var date = post.GetDateTime("date").ToString("MMM dd, yyyy"); //TODO extract date format in configuration
-        var thumbnailImage = post.GetString("thumbnailImage");
-        var excerpt = new HtmlString(post.GetString(Keys.Excerpt));
-
         <article class="postShorten postShorten--thumbnailimg-right">
             <div class="postShorten-wrap">
                 <div class="postShorten-header">
                     <h1 class="postShorten-title">
-                        <a class="link-unstyled" href="@permalink" aria-label=": @title">
-                            @title
+                        <a class="link-unstyled" href="@blogPost.Permalink" aria-label=": @blogPost.Title">
+                            @blogPost.Title
                         </a>
                     </h1>
                     <div class="postShorten-meta">
-                        <time datetime="@date">
-                            @date
+                        <time datetime="@blogPost.Date">
+                            @blogPost.Date
                         </time>
                     </div>
                 </div>
                 <div class="postShorten-excerpt">
-                    @excerpt
-                    <a href="@permalink" class="postShorten-excerpt_link link" aria-label=": @title">
+                    @Html.Raw(blogPost.Excerpt)
+                    <a href="@blogPost.Permalink" class="postShorten-excerpt_link link" aria-label=": @blogPost.Title">
                         @this.Translate("post.read_more")
                     </a>
                 </div>
             </div>
-            @if (!string.IsNullOrWhiteSpace(thumbnailImage))
+            @if (!string.IsNullOrWhiteSpace(blogPost.ThumbnailImage))
             {
-                <a href="@permalink" aria-label=": @title">
+                <a href="@blogPost.Permalink" aria-label=": @blogPost.Title">
                     <div class="postShorten-thumbnailimg">
-                        <img alt="" src="@thumbnailImage">
+                        <img alt="" src="@blogPost.ThumbnailImage">
                     </div>
                 </a>
             }
