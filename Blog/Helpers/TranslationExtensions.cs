@@ -18,6 +18,7 @@ public static class TranslationExtensions
         {
             1 => translation.GetString(keys[0]),
             2 => translation.GetMetadata(keys[0]).GetString(keys[1]),
+            3 => translation.GetMetadata(keys[0]).GetMetadata(keys[1]).GetString(keys[2]),
             _ => "!!! Error: Translation key is not in the correct format"
         };
     }
