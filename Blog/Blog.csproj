@@ -20,8 +20,8 @@
 
   <ItemGroup>
     <Content Include="input\todelete\index2.md" />
-    <Content Include="theme\input\settings.cshtml" />
-    <Content Include="theme\input\translations.cshtml" />
+    <Content Include="theme\input\hacking\settings.cshtml" />
+    <Content Include="theme\input\hacking\translations.cshtml" />
     <Content Include="theme\input\_posts.cshtml" />
   </ItemGroup>
 
