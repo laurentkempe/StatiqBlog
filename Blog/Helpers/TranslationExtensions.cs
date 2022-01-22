@@ -8,16 +8,23 @@ namespace Blog.Helpers;
 /// </summary>
 public static class TranslationExtensions
 {
-    public static string Translate(this StatiqRazorPage<IDocument> page, string translationCategory, string key)
+    public static string Translate(this StatiqRazorPage<IDocument> page, string key)
     {
-        return GetTranslation(page).GetMetadata(translationCategory).GetString(key);
+        var keys = key.Split(".", StringSplitOptions.RemoveEmptyEntries);
+        
+        var translation = GetTranslation(page);
+
+        return keys.Length switch
+        {
+            1 => translation.GetString(keys[0]),
+            2 => translation.GetMetadata(keys[0]).GetString(keys[1]),
+            _ => "!!! Error: Translation key is not in the correct format"
+        };
     }
 
-    public static string TranslateFormatted(this StatiqRazorPage<IDocument> page, string translationCategory, string formattedKey, string value)
+    public static string Translate(this StatiqRazorPage<IDocument> page, string key, string value)
     {
-        var format = GetTranslation(page).GetMetadata(translationCategory).GetString(formattedKey);
-        
-        return string.Format(format, value);
+        return string.Format(Translate(page, key), value);
     }
 
     private static IDocument GetTranslation(StatiqRazorPage<IDocument> page)
