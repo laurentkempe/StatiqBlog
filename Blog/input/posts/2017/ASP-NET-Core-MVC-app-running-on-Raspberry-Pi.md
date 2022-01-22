@@ -46,7 +46,7 @@ Then we publish
 
 <div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetPublish %}
 
-We use WinSCP to copy all the files create in the folder *C:\@Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm32\publish\* to the Raspberry Pi. Then we run the application from Putty
+We use WinSCP to copy all the files create in the folder *C:\Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm32\publish\* to the Raspberry Pi. Then we run the application from Putty
 
 <div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetMVC %}
 
