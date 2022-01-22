@@ -32,4 +32,9 @@ public static class TranslationExtensions
     {
         return page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
     }
+    
+    public static string GetDateFormat(this IDocument document)
+    {
+        return document.GetString("date_format");
+    }
 }

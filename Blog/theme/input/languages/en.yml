@@ -1,5 +1,5 @@
 # date format displayed everywhere in the blog
-date_format: "MMM DD, YYYY"
+date_format: "MMM dd, yyyy"
 
 global:
     home: "Home"
