@@ -8,7 +8,7 @@ using Statiq.Web;
         .Factory
         .CreateWeb(args)
         .BuildConfiguration(builder => builder.AddYamlFile("_config.yml", optional: false, reloadOnChange: true))
-        .BuildConfiguration(builder => builder.AddYamlFile("theme\\languages\\en.yml", optional: false, reloadOnChange: true))
+        .BuildConfiguration(builder => builder.AddYamlFile("theme\\input\\languages\\en.yml", optional: false, reloadOnChange: true))
         .AddShortcode(typeof(PlyrShortcode))
         .AddShortcode(typeof(ImageShortcode))
         .RunAsync();

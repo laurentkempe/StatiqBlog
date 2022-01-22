@@ -1,14 +1,14 @@
-@inherits StatiqRazorPage<IEnumerable<IDocument>>
+@inherits StatiqRazorPage<IDocument>
 
-@foreach (var post in Model)
-{
-    var permalink = post.GetString("permalink");
-    var title = post.GetString("title");
-    var date = post.GetDateTime("date").ToString("MMM dd, yyyy"); //TODO extract date format in configuration
-    var thumbnailImage = post.GetString("thumbnailImage");
-    var excerpt = new HtmlString(post.ToDocument().GetString(Keys.Excerpt));
-    
-    <section class="postShorten-group main-content-wrap">
+<section class="postShorten-group main-content-wrap">
+    @foreach (var post in Document.GetChildren())
+    {
+        var permalink = post.GetString("permalink");
+        var title = post.GetString("title");
+        var date = post.GetDateTime("date").ToString("MMM dd, yyyy"); //TODO extract date format in configuration
+        var thumbnailImage = post.GetString("thumbnailImage");
+        var excerpt = new HtmlString(post.GetString(Keys.Excerpt));
+
         <article class="postShorten postShorten--thumbnailimg-right">
             <div class="postShorten-wrap">
                 <div class="postShorten-header">
@@ -39,6 +39,6 @@
                 </a>
             }
         </article>
-        @await Html.PartialAsync("pagination.cshtml", post)
-    </section>    
-}
+    }
+    @await Html.PartialAsync("pagination.cshtml", Document)
+</section>

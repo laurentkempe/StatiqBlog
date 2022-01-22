@@ -1,59 +1,34 @@
 @inherits StatiqRazorPage<IDocument>
-
 @{
-    IDocument previous = Model.GetDocument(Keys.Previous);
-    IDocument next = Model.GetDocument(Keys.Next);
+    var previous = Model.GetDocument(Keys.Previous);
+    var next = Model.GetDocument(Keys.Next);
 }
-
 <div class="pagination-bar">
-  <ul class="pagination">
-    @if (previous != null)
-    {
-      <li class="pagination-prev">
-        <a
-          class="btn btn--default btn--small"
-          href="@previous.GetLink()"
-          aria-label="<%= __('pagination.newer_posts') %>"
-        >
-          @* <i class="fa fa-angle-left text-base icon-mr"></i> *@
-          @* <span><%= __('pagination.newer_posts') %></span> *@
-        </a>
-      </li>
-    }
-    @if (next != null)
-    {
-        <div><a class="btn btn-primary" href="@next.GetLink()" role="button">Next Page <i class="fas fa-angle-double-right"></i></a></div>
-    }
-  </ul>
+    <ul class="pagination">
+        @if (previous != null)
+        {
+            <li class="pagination-prev">
+                <a
+                    class="btn btn--default btn--small"
+                    href="@previous.GetLink()"
+                    aria-label="<%= __('pagination.newer_posts') %>">
+                    <i class="fa fa-angle-left text-base icon-mr"></i>
+                    <span>@this.Translate("pagination", "newer_posts")</span>
+                </a>
+            </li>
+        }
+        @if (next != null)
+        {
+            <li class="pagination-next">
+                <a
+                    class="btn btn--default btn--small"
+                    href="@next.GetLink()"
+                    aria-label="<%= __('pagination.older_posts') %>">
+                    <span>@this.Translate("pagination", "older_posts")</span>
+                    <i class="fa fa-angle-right text-base icon-ml"></i>
+                </a>
+            </li>
+        }
+        <li class="pagination-number">@Model.GetString(Keys.Index) @Document.GetString("pagination:of") @Model.GetString(Keys.TotalPages)</li>
+    </ul>
 </div>
-
-@* <div class="pagination-bar"> *@
-@*   <ul class="pagination"> *@
-@*     <% if (page.prev) { %> *@
-@*     <li class="pagination-prev"> *@
-@*       <a *@
-@*         class="btn btn--default btn--small" *@
-@*         href="<%- url_for(page.prev_link) %>" *@
-@*         aria-label="<%= __('pagination.newer_posts') %>" *@
-@*       > *@
-@*         <i class="fa fa-angle-left text-base icon-mr"></i> *@
-@*         <span><%= __('pagination.newer_posts') %></span> *@
-@*       </a> *@
-@*     </li> *@
-@*     <% } %> *@
-@*     <% if (page.next) { %> *@
-@*     <li class="pagination-next"> *@
-@*       <a *@
-@*         class="btn btn--default btn--small" *@
-@*         href="<%- url_for(page.next_link) %>" *@
-@*         aria-label="<%= __('pagination.older_posts') %>" *@
-@*       > *@
-@*         <span><%= __('pagination.older_posts') %></span> *@
-@*         <i class="fa fa-angle-right text-base icon-ml"></i> *@
-@*       </a> *@
-@*     </li> *@
-@*     <% } %> *@
-@*     <li class="pagination-number"><%= _p('pagination.page', page.current) + ' ' + _p('pagination.of', page.total) %></li> *@
-@*   </ul> *@
-@* </div> *@
-
