@@ -58,8 +58,8 @@ global:
     open_post: "Open the post"
 
 pagination:
-    page: "page %d"
-    of: "of %d"
+    page: "page {0}"
+    of: "of {0}"
     newer_posts: "NEWER POSTS"
     older_posts: "OLDER POSTS"
     previous: "PREVIOUS"
