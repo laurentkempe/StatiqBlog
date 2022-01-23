@@ -9,5 +9,6 @@ public static class DocumentExtensions
 
     public static Sidebar AsSidebar(this IDocument? document) => new(document);
 
-    public static IEnumerable<BlogPost> AsBlogPost(this DocumentList<IDocument> blogs) => blogs.Select(blog => blog.AsBlogPost());
+    public static IEnumerable<BlogPost> AsBlogPosts(this DocumentList<IDocument> blogs)
+        => blogs.Select(blog => blog.AsBlogPost());
 }

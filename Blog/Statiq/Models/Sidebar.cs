@@ -10,10 +10,18 @@ public class Sidebar
     public Sidebar(IDocument? document)
     {
         _document = document;
+
+        SideBarButtons = _document.Outputs.Get("sidebar.yml").GetDocumentList("menu");
     }
 
     public string? AuthorPicture => _document.GetString("author:picture");
     public string? ReadMoreAboutAuthor => _document?.GetLocalized("global:read_more_about_author");
+    
+    public IEnumerable<SideBarButton> SideBarButtons { get; }  
+}
+
+public class SideBarButton
+{
 }
 
 /*

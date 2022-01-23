@@ -2,7 +2,7 @@
 @inherits StatiqRazorPage<IDocument>
 
 <section class="postShorten-group main-content-wrap">
-    @foreach (var blogPost in Document.GetChildren().AsBlogPost())
+    @foreach (var blogPost in Document.GetChildren().AsBlogPosts())
     {
         <article class="postShorten postShorten--thumbnailimg-right">
             <div class="postShorten-wrap">
