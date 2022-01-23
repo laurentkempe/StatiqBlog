@@ -11,7 +11,14 @@ public class Sidebar
     {
         _document = document;
 
-        SideBarButtons = _document.Outputs.Get("sidebar.yml").GetDocumentList("menu");
+        var d = _document.GetMetadata("sidebar");
+        var raw = _document.GetRaw("sidebar:menu");
+        SideBarButtons = _document.Get<IList<SideBarButton>>("sidebar:menu");
+    }
+
+    public Sidebar(IExecutionContext context)
+    {
+        SideBarButtons = context.Get<IList<SideBarButton>>("sidebar:menu");
     }
 
     public string? AuthorPicture => _document.GetString("author:picture");
@@ -22,6 +29,16 @@ public class Sidebar
 
 public class SideBarButton
 {
+    public SideBarButton(string title, string url, string icon)
+    {
+        Title = title;
+        Url = url;
+        Icon = icon;
+    }
+
+    public string Title { get; }
+    public string Url { get; }
+    public string Icon { get; }
 }
 
 /*

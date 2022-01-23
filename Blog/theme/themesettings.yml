@@ -26,77 +26,77 @@ image_dir: assets/images
 #                url: /         # URL of the link. If the URL is internal, domain name is not necessary
 #                icon: home     # CSS class names of the Font Awesome icon
 #                               # Go to https://fontawesome.com/icons?d=gallery&m=free to find icons you want
-sidebar:
-    menu:
-        home:
-            title: global.home
-            url: /
-            icon: fa fa-home
-        archives:
-            title: global.archives
-            url: /all-archives
-            icon: fa fa-archive
-        #categories:
-        #    title: global.categories
-        #    url: /all-categories
-        #    icon: fa fa-bookmark
-        presentations:
-            title: global.presentations
-            url: /presentations.html
-            icon: fa fa-file-powerpoint
-        about:
-            title: global.about
-            url: /about-laurent-kempe.html
-            icon: fa fa-question
-        #search:
-        #    title: global.search
-        #    url: /#search
-        #    icon: fa fa-search
-        #    # `open-algolia-search` classes are used to open algolia search modal
-        #    class: open-algolia-search
-    author_links:
-        github:
-            title: global.github
-            url: https://github.com/laurentkempe
-            icon: fab fa-github
-        #stack_overflow:
-        #    title: global.stack_overflow
-        #    url: http://stackoverflow.com/users
-        #    icon: fab fa-stack-overflow
-        twitter:
-            title: global.twitter
-            url: https://twitter.com/laurentkempe
-            icon: fab fa-twitter
-        #facebook:
-        #    title: global.facebook
-        #    url: https://facebook.com/
-        #    icon: fab fa-facebook
-        #google_plus:
-        #    title: global.google_plus
-        #    url: https://plus.google.com/
-        #    icon: fab fa-google-plus
-        linked_in:
-            title: global.linkedin
-            url: https://www.linkedin.com/in/laurentkempe
-            icon: fab fa-linkedin
-        flickr:
-            title: global.flickr
-            url: https://flickr.com/photos/laurentkempe/
-            icon: fab fa-flickr
-        #mail:
-        #    title: global.mail
-        #    url: mailto
-        #    icon: fa fa-envelope
-    section:
-        tags:
-            title: global.tags
-            url: /all-tags
-            icon: fa fa-tags
-    rss:
-        rss:
-            title: global.rss
-            url: http://feeds.feedburner.com/laurentkempe
-            icon: fa fa-rss
+#sidebar:
+#    menu:
+#        home:
+#            title: global.home
+#            url: /
+#            icon: fa fa-home
+#        archives:
+#            title: global.archives
+#            url: /all-archives
+#            icon: fa fa-archive
+#        #categories:
+#        #    title: global.categories
+#        #    url: /all-categories
+#        #    icon: fa fa-bookmark
+#        presentations:
+#            title: global.presentations
+#            url: /presentations.html
+#            icon: fa fa-file-powerpoint
+#        about:
+#            title: global.about
+#            url: /about-laurent-kempe.html
+#            icon: fa fa-question
+#        #search:
+#        #    title: global.search
+#        #    url: /#search
+#        #    icon: fa fa-search
+#        #    # `open-algolia-search` classes are used to open algolia search modal
+#        #    class: open-algolia-search
+#    author_links:
+#        github:
+#            title: global.github
+#            url: https://github.com/laurentkempe
+#            icon: fab fa-github
+#        #stack_overflow:
+#        #    title: global.stack_overflow
+#        #    url: http://stackoverflow.com/users
+#        #    icon: fab fa-stack-overflow
+#        twitter:
+#            title: global.twitter
+#            url: https://twitter.com/laurentkempe
+#            icon: fab fa-twitter
+#        #facebook:
+#        #    title: global.facebook
+#        #    url: https://facebook.com/
+#        #    icon: fab fa-facebook
+#        #google_plus:
+#        #    title: global.google_plus
+#        #    url: https://plus.google.com/
+#        #    icon: fab fa-google-plus
+#        linked_in:
+#            title: global.linkedin
+#            url: https://www.linkedin.com/in/laurentkempe
+#            icon: fab fa-linkedin
+#        flickr:
+#            title: global.flickr
+#            url: https://flickr.com/photos/laurentkempe/
+#            icon: fab fa-flickr
+#        #mail:
+#        #    title: global.mail
+#        #    url: mailto
+#        #    icon: fa fa-envelope
+#    section:
+#        tags:
+#            title: global.tags
+#            url: /all-tags
+#            icon: fa fa-tags
+#    rss:
+#        rss:
+#            title: global.rss
+#            url: http://feeds.feedburner.com/laurentkempe
+#            icon: fa fa-rss
 
 # --------------------
 # Header configuration

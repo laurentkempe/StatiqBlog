@@ -2,13 +2,13 @@
 @inherits StatiqRazorPage<IDocument>
 
 @{
-    var sidebar = Document.AsSidebar();
+    var sidebar = Context.AsSidebar();
     
     var read_ore_about_author = ((IMetadata)Metadata["global"])["read_more_about_author"].ToString();
     var author_picture = ((IMetadata)Metadata["global"])["author_picture"].ToString();
     var author_bio = ((IMetadata)Metadata["author"])["bio"].ToString();
 
-    var s = Metadata["sidebar:menu"];
+    @* var s = Metadata["sidebar:menu"];*@
 }
 
 <nav id="sidebar" data-behavior="@Global.SidebarBehavior">

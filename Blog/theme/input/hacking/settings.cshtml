@@ -1,4 +1,5 @@
-﻿@inherits StatiqRazorPage<IDocument>
+﻿@using Blog.Statiq.Helpers
+@inherits StatiqRazorPage<IDocument>
 
 <h1>Settings</h1>
 
@@ -15,7 +16,14 @@
     var global = Global.ContextSetting(Context);
 
     var external_link = (IMetadata)Metadata["external_link"];
+
+    var deployment = Context.AsDeployment();
 }
+
+<h1>Deployment</h1>
+<h2>@deployment.Branch</h2>
+<h2>@deployment.Repository</h2>
+<h2>@deployment.Type</h2>
 
 @if (Metadata != null)
  {
@@ -23,10 +31,14 @@
 
      <h2>@global["author_picture"]</h2>
 
-     <h2>@Metadata["sidebar:menu:home:icon"]</h2>
-     <h2>@Metadata["author:picture"]</h2>
+    <h1>@deployment</h1>                                  
+                                  
+@*     <h2>@Metadata["sidebar"]</h2> *@
+@*     <h2>@Metadata["sidebar:menu:home:icon"]</h2> *@
+@*     <h2>@Metadata["author:picture"]</h2> *@
 
-     <h2>@external_link["enable"]</h2>
+@*     <h2>@external_link["enable"]</h2> *@
+                             
 
      @foreach (var key in Metadata.Keys)
      {
