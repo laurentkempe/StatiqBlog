@@ -4,14 +4,14 @@ using Statiq.Razor;
 namespace Blog.Statiq.Helpers;
 
 /// <summary>
-/// Helpers to get access to translation configuration
+///     Helpers to get access to translation configuration
 /// </summary>
 public static class TranslationExtensions
 {
-    public static string Translate(this StatiqRazorPage<IDocument> page, string key)
+    public static string GetLocalized(this StatiqRazorPage<IDocument> page, string key)
     {
         var keys = key.Split(".", StringSplitOptions.RemoveEmptyEntries);
-        
+
         var translation = GetTranslation(page);
 
         return keys.Length switch
@@ -23,11 +23,8 @@ public static class TranslationExtensions
         };
     }
 
-    public static string Translate(this StatiqRazorPage<IDocument> page, string key, string value) => string.Format(Translate(page, key), value);
-
-    private static IDocument GetTranslation(StatiqRazorPage<IDocument> page) => page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
-
+    public static string GetLocalized(this StatiqRazorPage<IDocument> page, string key, string value) => string.Format(GetLocalized(page, key), value);
     public static string GetLocalized(this IDocument? document, string key) => document.GetString(key);
-
     public static string GetDateFormat(this IDocument document) => document.GetString("date_format");
+    private static IDocument GetTranslation(StatiqRazorPage<IDocument> page) => page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
 }

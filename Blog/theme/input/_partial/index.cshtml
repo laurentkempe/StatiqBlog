@@ -21,7 +21,7 @@
                 <div class="postShorten-excerpt">
                     @Html.Raw(blogPost.Excerpt)
                     <a href="@blogPost.Permalink" class="postShorten-excerpt_link link" aria-label=": @blogPost.Title">
-                        @this.Translate("post.read_more")
+                        @this.GetLocalized("post.read_more")
                     </a>
                 </div>
             </div>

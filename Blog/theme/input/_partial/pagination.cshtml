@@ -12,9 +12,9 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@previous.GetLink()"
-                    aria-label="@this.Translate("pagination.newer_posts")">
+                    aria-label="@this.GetLocalized("pagination.newer_posts")">
                     <i class="fa fa-angle-left text-base icon-mr"></i>
-                    <span>@(this.Translate("pagination.newer_posts"))</span>
+                    <span>@(this.GetLocalized("pagination.newer_posts"))</span>
                 </a>
             </li>
         }
@@ -24,12 +24,12 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@next.GetLink()"
-                    aria-label="@this.Translate("pagination.older_posts")">
-                    <span>@(this.Translate("pagination.older_posts"))</span>
+                    aria-label="@this.GetLocalized("pagination.older_posts")">
+                    <span>@(this.GetLocalized("pagination.older_posts"))</span>
                     <i class="fa fa-angle-right text-base icon-ml"></i>
                 </a>
             </li>
         }
-        <li class="pagination-number">@this.Translate("pagination.page", Model.GetString(Keys.Index)) @this.Translate("pagination.of", Model.GetString(Keys.TotalPages))</li>
+        <li class="pagination-number">@this.GetLocalized("pagination.page", Model.GetString(Keys.Index)) @this.GetLocalized("pagination.of", Model.GetString(Keys.TotalPages))</li>
     </ul>
 </div>
