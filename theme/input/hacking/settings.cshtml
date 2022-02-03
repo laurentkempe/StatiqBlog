@@ -1,0 +1,44 @@
+﻿@using Blog.Statiq.Helpers
+@inherits StatiqRazorPage<IDocument>
+
+<h1>Settings</h1>
+
+@{
+    var global = Global.ContextSetting(Context);
+
+    var deployment = Context.GetDeployment(); 
+    var sidebar = Context.GetSidebar(); 
+}
+
+<h1>Sidebar</h1>
+
+@foreach (var (name, sideBarButtons) in sidebar.SideBarMenus)
+{
+    <h1>@name</h1>
+    
+    foreach (var (s, title, url, icon) in sideBarButtons)
+    {
+        <h1>@s</h1>
+        <h1>@title</h1>
+        <h1>@url</h1>
+        <h1>@icon</h1>
+    }
+}
+
+<h1>Metadata</h1>                                  
+
+@if (Metadata != null)
+ {
+     <h2>@Metadata.Keys.Count().ToString()</h2>
+
+     <h2>@global["author_picture"]</h2>
+                                  
+     @foreach (var key in Metadata.Keys)
+     {
+         <table>
+             <tr>
+                 <td>@key</td>
+             </tr>
+         </table>
+     }
+ }
