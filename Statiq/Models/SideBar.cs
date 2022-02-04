@@ -5,7 +5,7 @@ using Statiq.Common;
 namespace Blog.Statiq.Models;
 
 [TypeConverter(typeof(SideBarTypeConverter))]
-public record SideBar(IList<SideBarMenu> SideBarMenus)
+public record SideBar(IEnumerable<SideBarMenu> SideBarMenus)
 {
     public static string Key => "sidebar";
 }
@@ -19,6 +19,6 @@ public class SideBarTypeConverter : TypeConverter
     { 
         if (value is not IMetadata menus) return default;
 
-        return new SideBar(TypeHelper.Convert<IList<SideBarMenu>>(menus));        
+        return new SideBar(TypeHelper.Convert<IList<SideBarMenu>>(menus).OrderBy(m => m.Order));        
     }
 }

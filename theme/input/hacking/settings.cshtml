@@ -12,13 +12,15 @@
 
 <h1>Sidebar</h1>
 
-@foreach (var (name, sideBarButtons) in sidebar.SideBarMenus)
+@foreach (var (sideBarName, sideBarOrder, sideBarButtons) in sidebar.SideBarMenus)
 {
-    <h1>@name</h1>
+    <h1>@sideBarName</h1>
+    <h1>@sideBarOrder</h1>
     
-    foreach (var (s, title, url, icon) in sideBarButtons)
+    foreach (var (sideBarButtonName, sideBarButtonOrder, title, url, icon) in sideBarButtons)
     {
-        <h1>@s</h1>
+        <h1>@sideBarButtonName</h1>
+        <h1>@sideBarButtonOrder</h1>
         <h1>@title</h1>
         <h1>@url</h1>
         <h1>@icon</h1>
