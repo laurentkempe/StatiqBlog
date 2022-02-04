@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="input\posts\2022" />
     <Folder Include="input\_darfts" />
     <Folder Include="wwwroot" />
   </ItemGroup>
