@@ -2,7 +2,7 @@
 
 @{
     var post = Document.AsBlogPost();
-}
+    var sidebarBehavior = ViewData["sidebarBehavior"];}
 
 @if (!string.IsNullOrEmpty(post.CoverImage))
 {
@@ -10,7 +10,7 @@
                 @post.MetaAlignmentClass
                 @post.CoverSizeClass"
          style="background-image:url('@post.CoverImage');"
-         data-behavior="@Global.SidebarBehavior">
+         data-behavior="@sidebarBehavior">
         @if (string.IsNullOrEmpty(post.CoverMeta) || post.CoverMeta == "in")
         {
             @await Html.PartialAsync("header.cshtml", Document)

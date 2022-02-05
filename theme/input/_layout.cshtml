@@ -1,9 +1,14 @@
 ﻿@inherits StatiqRazorPage<IDocument>
 @{
-    var sidebarBehavior = Global.SidebarBehavior;
+    var theme = this.Theme();
+    var sidebarBehavior = theme.SidebarBehavior;
     
     var post = Document.AsBlogPost();
-    if (post.IsPost)
+    var pageClearReading = Metadata.GetBool("clearReading");
+    
+    if (post.IsPost && sidebarBehavior < 3) 
+        // &&
+        // ((theme.ClearReading && pageClearReading != false) || pageClearReading == true)) 
     {
         sidebarBehavior += 3;
     }
@@ -24,7 +29,7 @@
     @await Html.PartialAsync("_partial/sidebar.cshtml", Document, sidebarBehaviorData)
     @await Html.PartialAsync("_partial/post/header-cover.cshtml", Document, sidebarBehaviorData)
     <div id="main"
-         data-behavior="@Global.SidebarBehavior"
+         data-behavior="@sidebarBehavior"
          class="hasCoverMetaIn" @* TODO add logic *@>
         @RenderBody()
         @await Html.PartialAsync("_partial/footer.cshtml", Document)
@@ -32,6 +37,6 @@
 
     @await Html.PartialAsync("_partial/cover.cshtml", Document)
     @await Html.PartialAsync("_partial/script.cshtml", Document)
-</div> 
+</div>
 </body>
 </html>

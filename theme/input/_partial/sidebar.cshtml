@@ -1,10 +1,11 @@
-@using Blog.Statiq.Helpers
 @inherits StatiqRazorPage<IDocument>
 
 @{
     var author = Context.GetAuthor();
+    var sidebarBehavior = ViewData["sidebarBehavior"];
 }
-<nav id="sidebar" data-behavior="@Global.SidebarBehavior">
+
+<nav id="sidebar" data-behavior="@sidebarBehavior">
     <div class="sidebar-container">
         @if (!string.IsNullOrWhiteSpace(author.Picture))
         {

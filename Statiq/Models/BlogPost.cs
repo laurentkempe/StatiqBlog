@@ -13,7 +13,7 @@ public class BlogPost
         _document = document;
     }
 
-    public bool IsPost => Permalink != null;
+    public bool IsPost =>  _document.Source.FullPath.Contains("input/posts");
     public string Title => _document.GetString(Keys.Title) ?? _document.GetLocalized("post.no_title");
     public string? Permalink => _document.GetString("permalink");
     public string? Excerpt => _document.GetString(Keys.Excerpt);
