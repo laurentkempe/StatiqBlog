@@ -1,0 +1,2 @@
+InputFiles: "posts/**/*"
+DestinationPath: => $"../output/{GetString("permalink")}/index.html"
