@@ -1,0 +1,47 @@
+﻿@inherits StatiqRazorPage<IDocument>
+@* From _partial\post.ejs *@
+@{
+    Layout = @"../_layout.cshtml";
+
+    var post = Document.AsBlogPost();
+}
+
+<article class="post">
+    @if (post.CoverCaption != null)
+    {
+        <span class="post-header-cover-caption caption">@post.CoverCaption</span>
+    }
+    @if (post.CoverImage == null || post.CoverMeta == "out")
+    {
+        @await Html.PartialAsync("../_partial/post/header.cshtml")
+    }
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            @RenderBody()
+            @* TODO <%- partial('post/gallery') %> *@
+        </div>
+    </div>
+    
+    <div id="post-footer" class="post-footer main-content-wrap">
+    @* TODO
+        <% if ((post.tags) && (post.tags.length > 0)) { %>
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small"><%= __('post.tagged_in') %></span><br/>
+                <%- partial('post/tag', {tags: post.tags})%>
+            </div>
+        <% } %>
+        <% if (post.actions === undefined || post.actions) { %>
+            <%- partial('post/actions', {postContent: postContent}) %>
+        <% } %>
+        <% if (post.comments) { %>
+            <% if (theme.disqus_shortname) { %>
+                <%- partial('post/disqus') %>
+            <% } else if (theme.gitment.enable) { %>
+                <%- partial('post/gitment') %>
+            <% } else if (theme.gitalk.enable) { %>
+                <%- partial('post/gitalk') %>
+            <% } %>
+        <% } %>
+    *@
+    </div>
+</article>

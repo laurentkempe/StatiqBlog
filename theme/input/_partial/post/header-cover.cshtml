@@ -1,3 +1,19 @@
 @inherits StatiqRazorPage<IDocument>
 
-<h1>header-cover</h1>
+@{
+    var post = Document.AsBlogPost();
+}
+
+@if (!string.IsNullOrEmpty(post.CoverImage))
+{
+    <div class="post-header-cover 
+                @post.MetaAlignmentClass
+                @post.CoverSizeClass"
+         style="background-image:url('@post.CoverImage');"
+         data-behavior="@Global.SidebarBehavior">
+        @if (string.IsNullOrEmpty(post.CoverMeta) || post.CoverMeta == "in")
+        {
+            @await Html.PartialAsync("header.cshtml", Document)
+        }
+    </div>    
+}

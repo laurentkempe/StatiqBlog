@@ -1,15 +1,23 @@
 @inherits StatiqRazorPage<IDocument>
-
+@{
+    var sidebarBehavior = @ViewData["sidebarBehavior"];
+}
 <!-- Define author's picture -->
-<header id="header" data-behavior="@Global.SidebarBehavior">
+<header id="header" data-behavior="@sidebarBehavior">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link"
-           href="/">
+           href="/"
+           aria-label="@this.GetLocalized("global.go_to_homepage")">
             @Constants.BlogTitle
         </a>
     </div>
-    <a class="header-right-picture " href="#about" aria-label="Open the link: /#about">
+    <a class="header-right-picture "
+       href="#about"
+       target="_blank"
+       rel="noopener"
+       aria-label="Open the link: /#about">
+        <i class="fa fa-lg fa-lg"></i>
         <img class="header-picture" src="@Metadata["author:picture"]" alt="Author's picture">
     </a>
 </header>

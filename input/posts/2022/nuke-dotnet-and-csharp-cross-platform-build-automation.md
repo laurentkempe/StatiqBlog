@@ -16,7 +16,7 @@ I introduced TeamCity at [Innoveo](http://www.innoveo.com/); all teams still use
 
 You can watch the video "*How Innoveo Skye Business Canvas is built - CI From The Trenches #8*" a conversation about how my team uses TeamCity to build the Innoveo Business Canvas. By the way, we are hiring; feel free to get in touch with me if you are interested!
 <p></p>
-{% youtube Xvjiujn08vo %}
+<?# Plyr video=Xvjiujn08vo /?>
 
 We started using TeamCity UI with MSBuild as an ultra-fast getting started experience. We leveraged all runners integrated to run our whole build, from restoring nugets, compiling, running tests with code coverage, R# code inspections, NDepend analysis, packaging. It was serving us well. But we discovered that not versioning your build script with your code can be a real pain when you need to ship patches! That was a trigger for a change. We could have gone by versioning the TeamCity configuration into our code repository, so both would be aligned.
 
@@ -230,8 +230,7 @@ Press f key to see the presentation full screen, or [navigate to it](https://lau
 
 For French speaking people, join us for remote [DevApps meetup](https://devapps.ms/meetup) each Wednesday late afternoon for a bit of fun. Here is the recording of the meetup about NUKE from 2.2.2022.
 
-<p></p>
-{% youtube o0XLGRObd4E %}
+<?# Plyr video=o0XLGRObd4E start=291 /?>
 
 # Code
 

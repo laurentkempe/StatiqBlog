@@ -1,10 +1,10 @@
 @inherits StatiqRazorPage<IDocument>
 
 @{
-    string? coverImageUrl;
-    coverImageUrl = (string)Metadata["cover_image"];
+    // TODO Adapt to have a concrete class to get themesettings.yml settings
+    var coverImageUrl = (string)Metadata["cover_image"];
 
-@*
+@* 
     var coverImageUrl = null;
 
     // Generate URL of cover image

@@ -1,4 +1,18 @@
 ﻿@inherits StatiqRazorPage<IDocument>
+@{
+    var sidebarBehavior = Global.SidebarBehavior;
+    
+    var post = Document.AsBlogPost();
+    if (post.IsPost)
+    {
+        sidebarBehavior += 3;
+    }
+    
+    var sidebarBehaviorData = new ViewDataDictionary(ViewData)
+    {
+        { "sidebarBehavior", sidebarBehavior }
+    };
+}
 
 <!DOCTYPE html>
 <html lang="@Metadata["language"]">
@@ -6,9 +20,9 @@
 
 <body>
 <div id="blog">
-    @await Html.PartialAsync("_partial/header.cshtml", Document)
-    @await Html.PartialAsync("_partial/sidebar.cshtml", Document)
-    @* @await Html.PartialAsync("_partial/post/header-cover.cshtml", Document) *@
+    @await Html.PartialAsync("_partial/header.cshtml", Document, sidebarBehaviorData)
+    @await Html.PartialAsync("_partial/sidebar.cshtml", Document, sidebarBehaviorData)
+    @await Html.PartialAsync("_partial/post/header-cover.cshtml", Document, sidebarBehaviorData)
     <div id="main"
          data-behavior="@Global.SidebarBehavior"
          class="hasCoverMetaIn" @* TODO add logic *@>
