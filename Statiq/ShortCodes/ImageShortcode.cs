@@ -17,8 +17,85 @@ public class ImageShortcode : SyncShortcode
     public override ShortcodeResult Execute(KeyValuePair<string, string>[] args, string content, IDocument document,
         IExecutionContext context)
     {
-        return "";
+        // <?# image center clear group=travel https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg /?>
+        
+        var classes = new List<string> { "figure" };
+        var group = "";
+        var pathToImage = "";
+        
+        var state = 0;
+       
+        foreach (var (key, value) in args)
+        {
+            if (state == 1)
+            {
+                pathToImage = value;
+            }
+
+            if (state == 0 && key.IsNullOrEmpty())
+            {
+                classes.Add(value);
+            }
+
+            if (state == 0 && !key.IsNullOrEmpty() && key.Equals("group", StringComparison.OrdinalIgnoreCase))
+            {
+                state = 1;
+                group = value;
+            }
+        }
+        
+        /*
+            <div class="figure center" style="width:;"><img class="fig-img" src="https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg" alt=""></div>
+         */
+
+        // Build HTML structure
+        var html = @$"<div class='{string.Join(' ', classes)}'>";
+        html +=  @$"<img class=""fig-img"" src=""{pathToImage}"" />";
+
+        // Build HTML structure
+        // var html = @$"<div class='{figureClass} {string.Join(' ', classes)}'"' +
+        //         (reIndexOf(classes, rFigClass) === -1 ? ' style="width:' + thumbnailWidth + ';"' : '') + '>';
+        // html += fancybox || image;
+        //
+        // // Add caption
+        // // if (!title.IsNullOrEmpty() && classes.IndexOf(noCaptionClass) == -1)
+        // // {
+        // //     html += @$"<span class='{captionClass}'>";
+        // //     html += title;
+        // //     html += "</span>";
+        // // }
+        //
+        html += "</div>";
+        // add `clear` div
+        // html += clear;
+               
+        return html;
     }
+
+    // private string GetImage()
+    // {
+    //     var image = @$"<img class=""fig-img"" src=""' + (thumbnail || original) + '"" ";
+
+        /*
+    // Get title of image
+    var title = args.join(' ');
+    // Build the image HTML structure
+    var image = '<img class="fig-img" src="' + (thumbnail || original) + '" ';
+    // add image size
+    if (thumbnailWidth || thumbnailHeight) {
+      image += 'style="';
+      // add width
+      if (thumbnailWidth) {
+        image += 'width:' + thumbnailWidth + ';';
+      }
+      // add height
+      if (thumbnailHeight) {
+        image += 'height:' + thumbnailHeight + ';';
+      }
+      image += '"';
+    }
+    image += 'alt="' + title + '">';         */
+    // }
 
     // public override ShortcodeResult Execute(KeyValuePair<string, string>[] args, string content, IDocument document, IExecutionContext context)
     // {

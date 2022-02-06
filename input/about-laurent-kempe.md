@@ -7,7 +7,7 @@ alias:
 - /page/about-laurent-kempe.aspx/index.html
 
 ---
-<?# image center clear group=travel image2.png https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg /?>
+<?# image center clear group=laurent https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg /?>
 
 I am an experienced **Team Leader & Distinguished Solution Architect** with a passion for shipping high-quality products
 by empowering development team and culture toward an agile mindset. I bring technical vision and strategy, leading
