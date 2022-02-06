@@ -1,4 +1,4 @@
-layout: _layout
+layout: posts/_layout.cshtml
 title: "About Laurent Kempé"
 permalink: "/about-laurent-kempe"
 updated: 5/30/2018 6:02:02 PM
@@ -8,8 +8,6 @@ alias:
 
 ---
 <?# image center clear group=travel image2.png https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg /?>
-
-{% image center clear group:travel image2.png https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg %}
 
 I am an experienced **Team Leader & Distinguished Solution Architect** with a passion for shipping high-quality products
 by empowering development team and culture toward an agile mindset. I bring technical vision and strategy, leading
