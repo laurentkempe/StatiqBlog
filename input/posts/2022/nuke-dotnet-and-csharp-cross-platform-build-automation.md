@@ -236,4 +236,4 @@ For French speaking people, join us for remote [DevApps meetup](https://devapps.
 
 You can find all the code used in this blog post and for the meetup on the following repository
 
-{% githubCard user:laurentkempe repo:NukeBuildAutomation align:left %}
+<?# githubCard user=laurentkempe repo=NukeBuildAutomation align=left /?>

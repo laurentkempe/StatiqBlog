@@ -148,4 +148,4 @@ Press f key to see the presentation full screen, or [navigate to it](https://lau
 You can access all the aliases I use and created and the others which I borrowed from different people like [Phil Haack](https://haacked.com/archive/2014/07/28/github-flow-aliases/) and [Nicola Paolucci](https://www.atlassian.com/blog/git/advanced-git-aliases), on my Github repository [laurentkempe/dotfiles](https://github.com/laurentkempe/dotfiles/blob/master/git/.gitconfig.aliases#L13).
 
 <p></p>
-{% githubCard user:laurentkempe repo:dotfiles align:left %}
+<?# githubCard user=laurentkempe repo=dotfiles align=left /?>

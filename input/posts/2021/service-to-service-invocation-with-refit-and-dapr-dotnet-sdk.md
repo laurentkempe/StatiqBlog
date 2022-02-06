@@ -81,5 +81,4 @@ In this post, we used [Refit](https://reactiveui.github.io/refit/) to simplify t
 
 You can get access to the code of this blog post on GitHub in the [ServiceToService Refit](https://github.com/laurentkempe/daprPlayground/tree/master/ServiceToServiceRefit) folder.
 <p></p>
-{% githubCard user:laurentkempe repo:daprPlayground align:left %}
-
+<?# githubCard user=laurentkempe repo=daprPlayground align=left /?>

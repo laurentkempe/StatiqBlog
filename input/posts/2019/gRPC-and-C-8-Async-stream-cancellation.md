@@ -99,8 +99,7 @@ static class Program
 We have seen that it is easy to cancel gRPC streaming from the client using C# 8 Async streams and cancellation token.
 
 You can get all the code on GitHub
-{% githubCard user:laurentkempe repo:grpcAsyncStreamCancellation align:left %}
-
+<?# githubCard user=laurentkempe repo=grpcAsyncStreamCancellation align=left /?>
 Thanks, Sam Macpherson for asking the question on Twitter.
 
 {% twitter https://twitter.com/ichpuchtli/status/1174567298226503680 %}

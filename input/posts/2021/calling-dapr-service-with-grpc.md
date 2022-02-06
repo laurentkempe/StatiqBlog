@@ -130,5 +130,4 @@ We have seen that Dapr provides a way to communicate with other applications usi
 
 You can get access to the code of this blog post on GitHub in the [GrpcServiceToService folder](https://github.com/laurentkempe/daprPlayground/tree/master/GrpcServiceToService).
 <p></p>
-{% githubCard user:laurentkempe repo:daprPlayground align:left %}
-
+<?# githubCard user=laurentkempe repo=daprPlayground align=left /?>

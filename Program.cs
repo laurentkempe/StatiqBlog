@@ -15,4 +15,5 @@ await Bootstrapper
         })
         .AddShortcode(typeof(PlyrShortcode))
         .AddShortcode(typeof(ImageShortcode))
+        .AddShortcode("githubCard", typeof(GitHubCardShortCode))
         .RunAsync();

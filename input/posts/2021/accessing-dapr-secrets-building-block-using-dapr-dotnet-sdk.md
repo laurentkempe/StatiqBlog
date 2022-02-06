@@ -139,4 +139,4 @@ We have seen that Dapr provides a very easy and nice way to retrieve secrets tha
 
 You can get access to the code of this blog post on GitHub in the [Secrets folder](https://github.com/laurentkempe/daprPlayground/tree/master/Secrets).
 <p></p>
-{% githubCard user:laurentkempe repo:daprPlayground align:left %}
+<?# githubCard user=laurentkempe repo=daprPlayground align=left /?>

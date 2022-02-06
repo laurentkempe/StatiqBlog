@@ -121,4 +121,4 @@ We have seen that Dapr provides a great way to integrate with external systems u
 You can get access to the code of this blog post on GitHub in the [CronHttpBindings folder](https://github.com/laurentkempe/daprPlayground/tree/master/CronHttpBindings).
 <p></p>
 
-{% githubCard user:laurentkempe repo:daprPlayground align:left %}
+<?# githubCard user=laurentkempe repo=daprPlayground align=left /?>

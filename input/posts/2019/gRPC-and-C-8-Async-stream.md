@@ -142,4 +142,5 @@ static class Program
 We have seen that C# 8 Async streams are nicely integrating with gRPC streaming capabilities. And it makes code more readable!
 
 You can get all the code on GitHub
-{% githubCard user:laurentkempe repo:grpcAsyncStream align:left %}
+<?# githubCard user=laurentkempe repo=grpcAsyncStream align=left /?>
+

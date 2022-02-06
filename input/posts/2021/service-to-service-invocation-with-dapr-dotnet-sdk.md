@@ -131,5 +131,4 @@ In this post, we saw again how easy it is to get the advantage of [Dapr](https:/
 
 You can get access to the code of this blog post on GitHub in the [ServiceToService folder](https://github.com/laurentkempe/daprPlayground/tree/master/ServiceToService)
 <p></p>
-{% githubCard user:laurentkempe repo:daprPlayground align:left %}
-
+<?# githubCard user=laurentkempe repo=daprPlayground align=left /?>

@@ -273,4 +273,4 @@ We have seen all the benefits the .NET Generic Host is bringing. It was easy to 
 
 You can get all the code on GitHub 
 
-{% githubCard user:laurentkempe repo:WpfGenericHost align:left %}
+<?# githubCard user=laurentkempe repo=WpfGenericHost align=left /?>

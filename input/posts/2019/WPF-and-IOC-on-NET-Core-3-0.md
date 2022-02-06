@@ -203,4 +203,4 @@ We can run the application and see that *TextService* is called and the WPF appl
 ![WPF IOC](https://live.staticflickr.com/65535/40675205763_ab0cd3c28b_o.png")
 
 You can get all the code on GitHub 
-{% githubCard user:laurentkempe repo:WpfIoc align:left %}
+<?# githubCard user=laurentkempe repo=WpfIoc align=left /?>
