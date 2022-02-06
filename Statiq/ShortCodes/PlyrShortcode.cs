@@ -26,7 +26,9 @@ internal class PlyrShortcode : SyncShortcode
 // </div>";    
 
         var markup =
-            @$"<div class=""container""><div class=""lk-player plyr__poster"" width=""200"" height=""113"" data-plyr-provider=""youtube"" data-plyr-config='{{ ""youtube"": {{ ""start"": {start}}} }}' data-plyr-embed-id=""{video}""></div></div>";
+            @$"<div class=""plyrcontainer"">
+                    <div class=""lk-player plyr__poster"" data-plyr-provider=""youtube"" data-plyr-config='{{ ""youtube"": {{ ""start"": {start}}} }}' data-plyr-embed-id=""{video}""></div>
+               </div>";
 
         return markup;
     }
