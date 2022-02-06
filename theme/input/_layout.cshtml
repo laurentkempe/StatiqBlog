@@ -4,6 +4,7 @@
     var sidebarBehavior = theme.SidebarBehavior;
     
     var post = Document.AsBlogPost();
+    var blogPage = Document.AsPage();
     var pageClearReading = Metadata.GetBool("clearReading");
     
     if (post.IsPost && sidebarBehavior < 3) 
@@ -30,7 +31,7 @@
     @await Html.PartialAsync("_partial/post/header-cover.cshtml", Document, sidebarBehaviorData)
     <div id="main"
          data-behavior="@sidebarBehavior"
-         class="hasCoverMetaIn" @* TODO add logic *@>
+         class="@blogPage.MainClass">
         @RenderBody()
         @await Html.PartialAsync("_partial/footer.cshtml", Document)
     </div>

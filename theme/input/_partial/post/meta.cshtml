@@ -1,0 +1,21 @@
+@inherits StatiqRazorPage<IDocument>
+@{
+    var post = Document.AsBlogPost();
+    
+    var classes = ViewData["classes"] ?? "";
+}
+
+<div class="@classes">
+    <time datetime="@post.FullDateTime">
+        @post.Date
+    </time>
+    @if (post.Categories.Any())
+    {
+        @* TODO
+            <% if ((post.categories) && (post.categories.length > 0)) { %>
+            <span><%= __('post.categorized_in')  %> </span>
+            <%- partial('category', {categories: post.categories})%>
+            <% } %>
+        *@
+    }
+</div>
