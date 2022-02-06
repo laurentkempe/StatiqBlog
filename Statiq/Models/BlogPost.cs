@@ -29,7 +29,7 @@ public class BlogPost
     public string CoverSize => _document.GetString("coverSize") ?? "";
     public string CoverSizeClass => !string.IsNullOrEmpty(CoverSize) ? $"post-header-cover--{CoverSize}" : "";
     public string? ThumbnailImage => _document.GetString("thumbnailImage");
-    public string? Meta => _document.GetString("meta");
+    public bool Meta => _document.GetBool("meta");
     public string? MetaAlignment => _document.GetString("metaAlignment");
     public string MetaAlignmentClass => !string.IsNullOrEmpty(MetaAlignment) ? $"text-{MetaAlignment}" : "text-left";
 }

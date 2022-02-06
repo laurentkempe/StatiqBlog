@@ -15,7 +15,7 @@
         @post.Title
     </h1>
 
-    @if (post.Meta == null || post.Meta.Length != 0)
+    @if (post.Meta)
     {
         @await Html.PartialAsync("meta.cshtml", viewData)
     }
