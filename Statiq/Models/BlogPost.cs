@@ -19,6 +19,7 @@ public class BlogPost
     public string? Permalink => _document.GetString("permalink");
     public string? Excerpt => _document.GetString(Keys.Excerpt);
     public string Date => _document.GetDateTime("date").ToString(_document.GetDateFormat());
+    public DateTime DateTime => _document.GetDateTime("date");
 
     public IEnumerable<string> Categories => _document.GetList<string>("categories") ?? Enumerable.Empty<string>();
     public IEnumerable<string> Tags => _document.GetList<string>("tags") ?? Enumerable.Empty<string>();

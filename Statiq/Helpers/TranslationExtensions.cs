@@ -1,4 +1,5 @@
-﻿using Statiq.Common;
+﻿using System.Globalization;
+using Statiq.Common;
 using Statiq.Razor;
 
 namespace Blog.Statiq.Helpers;
@@ -26,5 +27,21 @@ public static class TranslationExtensions
     public static string GetLocalized(this StatiqRazorPage<IDocument> page, string key, string value) => string.Format(GetLocalized(page, key), value);
     public static string GetLocalized(this IDocument? document, string key) => document.GetString(key);
     public static string GetDateFormat(this IDocument document) => document.GetString("date_format");
+    public static string GetLocalizedMonth(this StatiqRazorPage<IDocument> page, int month)
+    {
+        var language = page.Document.GetString("language");
+        CultureInfo cultureInfo;
+        try
+        {
+            cultureInfo = CultureInfo.GetCultureInfo(language);
+        }
+        catch (CultureNotFoundException)
+        {
+            cultureInfo = CultureInfo.CurrentCulture;
+        }
+
+        return cultureInfo.DateTimeFormat.GetMonthName(month);
+    }
+    
     private static IDocument GetTranslation(StatiqRazorPage<IDocument> page) => page.Outputs.FromPipeline("Data").FilterSources($"languages/{Constants.Language}.yml").First();
 }
