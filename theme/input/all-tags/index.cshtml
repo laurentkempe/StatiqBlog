@@ -1,0 +1,50 @@
+ArchiveSources: => $"posts/**/*"
+ArchiveDestination: => $"../output/all-tags/index.html"
+---
+@using System.Globalization
+@inherits StatiqRazorPage<IDocument>
+
+<div id="archives" class="main-content-wrap">
+    <form id="filter-form" action="#">
+        <input name="tag" type="text" class="form-control input--xlarge" placeholder="@this.GetLocalized("global.search_tag")" autofocus="autofocus">
+    </form>
+    <h4 class="archive-result text-color-base text-xlarge"
+        data-message-zero="@this.GetLocalized("global.tags_found.zero")"
+        data-message-one="@this.GetLocalized("global.tags_found.one")"
+        data-message-other="@this.GetLocalized("global.tags_found.other")"></h4>
+    <section>
+        @{
+            var posts = Document.GetChildren().AsBlogPosts().ToList();
+            var tagNames = posts.SelectMany(post => post.Tags).Except(new[]{""}).Distinct().OrderBy(s => s).ToList();
+        }
+        @foreach (var tagName in tagNames)
+        {
+            <a class="tag tag--primary tag--small" href="#@tagName-list" data-tag="@tagName.ToLower()">
+                @tagName
+            </a>
+        }
+    </section>
+    <section class="boxes">
+        @foreach (var tagName in tagNames)
+        {
+            <div id="@tagName-list" class="archive box" data-tag="@tagName.ToLower()">
+                <h4 class="archive-title">
+                    <a class="link-unstyled" href="@Metadata["tag_dir"]/@tagName"> @* TODO convert tagName to slug as original; tag.slug *@
+                        @tagName (@posts.Count(post => post.Tags.Contains(tagName)))
+                    </a>
+                </h4>
+                <ul class="archive-posts">
+                    @foreach (var post in posts.Where(post => post.Tags.Contains(tagName)).OrderByDescending(post => post.Date))
+                    {
+                        <li class="archive-post">
+                            <a class="archive-post-title" href="@post.Permalink">
+                                @post.Title
+                            </a>
+                            <span class="archive-post-date"> - @post.Date</span>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }        
+    </section>
+</div>
