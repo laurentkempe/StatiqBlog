@@ -1,7 +1,6 @@
 ArchiveSources: => $"posts/**/*"
 ArchiveDestination: => $"../output/all-tags/index.html"
 ---
-@using System.Globalization
 @inherits StatiqRazorPage<IDocument>
 
 <div id="archives" class="main-content-wrap">
@@ -15,7 +14,7 @@ ArchiveDestination: => $"../output/all-tags/index.html"
     <section>
         @{
             var posts = Document.GetChildren().AsBlogPosts().ToList();
-            var tagNames = posts.SelectMany(post => post.Tags).Except(new[]{""}).Distinct().OrderBy(s => s).ToList();
+            var tagNames = posts.AllTagsOrdered();
         }
         @foreach (var tagName in tagNames)
         {
@@ -30,11 +29,11 @@ ArchiveDestination: => $"../output/all-tags/index.html"
             <div id="@tagName-list" class="archive box" data-tag="@tagName.ToLower()">
                 <h4 class="archive-title">
                     <a class="link-unstyled" href="@Metadata["tag_dir"]/@tagName"> @* TODO convert tagName to slug as original; tag.slug *@
-                        @tagName (@posts.Count(post => post.Tags.Contains(tagName)))
+                        @tagName (@posts.CountPostsPerTag(tagName))
                     </a>
                 </h4>
                 <ul class="archive-posts">
-                    @foreach (var post in posts.Where(post => post.Tags.Contains(tagName)).OrderByDescending(post => post.Date))
+                    @foreach (var post in posts.AllPostsPerTag(tagName))
                     {
                         <li class="archive-post">
                             <a class="archive-post-title" href="@post.Permalink">

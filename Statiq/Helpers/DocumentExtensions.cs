@@ -11,6 +11,6 @@ public static class DocumentExtensions
         => new(document);
     public static Author GetAuthor(this IDocument document)
         => new(document);
-    public static IEnumerable<BlogPost> AsBlogPosts(this DocumentList<IDocument> blogs)
-        => blogs.Select(blog => blog.AsBlogPost());
+    public static IEnumerable<BlogPost> AsBlogPosts(this DocumentList<IDocument> documents)
+        => documents.Select(blog => blog.AsBlogPost());
 }
