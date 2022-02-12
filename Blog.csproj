@@ -17,12 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="input\todelete\index2.md" />
-    <Content Include="theme\input\hacking\settings.cshtml" />
-    <Content Include="theme\input\hacking\translations.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="_config.yml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
