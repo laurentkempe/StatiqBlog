@@ -1,0 +1,19 @@
+FeedSources: => $"posts/**/*"
+FeedOrderDescending: false
+FeedSize: 10
+FeedOrderKey: date
+FeedAtom: true
+
+FeedId: https://laurentkempe.com
+FeedTitle: => Metadata["title"]
+FeedDescription: => Metadata["subtitle"]
+FeedLink: https://laurentkempe.com/atom.xml
+FeedAuthor: => Metadata["author2"]
+
+FeedItemId: => string.Format($"{Metadata["FeedId"]}{Metadata["permalink"]}")
+FeedItemAuthor: => Metadata["author2"]
+FeedItemLink: => string.Format($"{Metadata["FeedId"]}{Metadata["permalink"]}")
+FeedItemDescription : => Metadata["Excerpt"]
+FeedItemContent: => ""
+FeedItemImageLink: => Metadata["thumbnailImage"]
+FeedItemPublished: => GetDateTime("date")

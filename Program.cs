@@ -16,4 +16,8 @@ await Bootstrapper
         .AddShortcode(typeof(PlyrShortcode))
         .AddShortcode(typeof(ImageShortcode))
         .AddShortcode("githubCard", typeof(GitHubCardShortCode))
+        .AddProcess(ProcessTiming.AfterExecution, _ => new ProcessLauncher("cmd", @"/C move feed.atom atom.xml")
+        {
+            WorkingDirectory = "output"
+        })
         .RunAsync();

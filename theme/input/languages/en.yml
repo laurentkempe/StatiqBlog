@@ -80,6 +80,10 @@ post:
     image:
         one: "image"
         other: "%d images"
+        
+        
+presentation:
+    see_more: "Watch it"
 
 author:
     # Your biography (Markdown and HTML supported)
