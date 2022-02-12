@@ -1,0 +1,29 @@
+@inherits StatiqRazorPage<IEnumerable<string>>
+@{
+    var tags = Model;
+    
+    var viewData = new ViewDataDictionary(ViewData)
+    {
+        { "classes", "post-meta" }
+    };
+
+}
+
+@if (tags.Any())
+{
+    foreach (var tag in tags)
+    {
+        <a class="tag tag--primary tag--small t-none-link" href="/tags/@tag/" rel="tag">@tag</a>
+    }
+}
+
+@*
+<% if ((tags) && (tags.length > 0)) { %>
+    <%- list_tags(tags, {
+        show_count: 0,
+        style: 'none',
+        class: 'tag tag--primary tag--small t',
+        separator: ' '
+    }) %>
+<% } %>
+*@

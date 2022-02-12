@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="theme\input\archives" />
     <Folder Include="wwwroot" />
   </ItemGroup>
 

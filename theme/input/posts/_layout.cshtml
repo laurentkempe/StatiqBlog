@@ -23,7 +23,14 @@
     </div>
     
     <div id="post-footer" class="post-footer main-content-wrap">
-    @* TODO
+        @if (post.Tags.Any())
+        {
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">@this.GetLocalized("post.tagged_in")</span><br/>
+                @await Html.PartialAsync("../_partial/post/tag.cshtml", post.Tags)
+            </div>
+        }
+        @* TODO
         <% if ((post.tags) && (post.tags.length > 0)) { %>
             <div class="post-footer-tags">
                 <span class="text-color-light text-small"><%= __('post.tagged_in') %></span><br/>
