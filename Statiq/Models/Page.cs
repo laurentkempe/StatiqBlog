@@ -4,17 +4,17 @@ namespace Blog.Statiq.Models;
 
 public class Page
 {
-    private readonly IDocument _document;
+    private readonly IDocument Document;
     public Page(IDocument document)
     {
         document.ThrowIfNull(nameof(document));
 
-        _document = document;
+        Document = document;
     }
 
-    public string CoverCaption => _document.GetString("coverCaption") ?? "";
-    public string CoverMeta => _document.GetString("coverMeta") ?? "in";
-    public string CoverImage => _document.GetString("coverImage") ?? "";
+    public string CoverCaption => Document.GetString("coverCaption") ?? "";
+    public string CoverMeta => Document.GetString("coverMeta") ?? "in";
+    public string CoverImage => Document.GetString("coverImage") ?? "";
 
     public string MainClass
     {

@@ -5,21 +5,21 @@ namespace Blog.Statiq.Models;
 
 public class Theme
 {
-    private readonly IDocument _document;
+    private readonly IDocument Document;
 
     public Theme(IDocument document)
     {
-        _document = document;
+        Document = document;
     }
 
-    public int SidebarBehavior => _document.GetInt("sidebar_behavior");
-    public bool ClearReading => _document.GetBool("clear_reading");
+    public int SidebarBehavior => Document.GetInt("sidebar_behavior");
+    public bool ClearReading => Document.GetBool("clear_reading");
 
-    public bool ThumbnailImage => _document.GetBool("thumbnail_image");
+    public bool ThumbnailImage => Document.GetBool("thumbnail_image");
 
-    public string ThumbnailImagePosition => _document.GetString("thumbnail_image_position");
+    public string ThumbnailImagePosition => Document.GetString("thumbnail_image_position");
 
-    public string GravatarEmail => _document.GetString("gravatar_email");
+    public string GravatarEmail => Document.GetString("gravatar_email");
 
-    public Author Author => _document.GetAuthor();
+    public Author Author => Document.GetAuthor();
 }
