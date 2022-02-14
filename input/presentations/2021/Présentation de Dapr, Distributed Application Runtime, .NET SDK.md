@@ -1,7 +1,7 @@
 ﻿---
 title: 'Présentation de Dapr, Distributed Application Runtime, .NET SDK'
-permalink: /2021/10/19/dapr-binding-building-block-by-simple-example/
-date: 10/19/2021 13:32:05
+permalink: /2021/10/19/présentation-de-dapr-distributed-application-runtime-dotnet-sdk/
+date: 6/9/2021 17:32:00
 disqusIdentifier: 20211019013205
 tags: [.NET, Dapr]
 video: XtASb2tmo5c

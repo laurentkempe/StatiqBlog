@@ -1,16 +1,16 @@
 ArchiveSources: => $"posts/**/*"
 ArchiveDestination: => $"../output/all-tags/index.html"
 ---
-@inherits StatiqRazorPage<IDocument>
+@inherits MyStatiqRazorPage<IDocument>
 
 <div id="archives" class="main-content-wrap">
     <form id="filter-form" action="#">
-        <input name="tag" type="text" class="form-control input--xlarge" placeholder="@this.GetLocalized("global.search_tag")" autofocus="autofocus">
+        <input name="tag" type="text" class="form-control input--xlarge" placeholder="@Localization.Get("global.search_tag")" autofocus="autofocus">
     </form>
     <h4 class="archive-result text-color-base text-xlarge"
-        data-message-zero="@this.GetLocalized("global.tags_found.zero")"
-        data-message-one="@this.GetLocalized("global.tags_found.one")"
-        data-message-other="@this.GetLocalized("global.tags_found.other")"></h4>
+        data-message-zero="@Localization.Get("global.tags_found.zero")"
+        data-message-one="@Localization.Get("global.tags_found.one")"
+        data-message-other="@Localization.Get("global.tags_found.other")"></h4>
     <section>
         @{
             var posts = Document.GetChildren().AsBlogPosts().ToList();

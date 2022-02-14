@@ -1,4 +1,4 @@
-@inherits StatiqRazorPage<IDocument>
+@inherits MyStatiqRazorPage<IDocument>
 @{
     var sidebarBehavior = ViewData["sidebarBehavior"];
 }
@@ -8,7 +8,7 @@
     <div class="header-title">
         <a class="header-title-link"
            href="/"
-           aria-label="@this.GetLocalized("global.go_to_homepage")">
+           aria-label="@Localization.Get("global.go_to_homepage")">
             @Constants.BlogTitle
         </a>
     </div>

@@ -1,6 +1,6 @@
 ArchiveSources: => $"posts/**/*"
 ArchiveDestination: => $"../output/archives/index.html"
 ---
-@inherits StatiqRazorPage<IDocument>
+@inherits MyStatiqRazorPage<IDocument>
 
-@await Html.PartialAsync("../_partial/index.cshtml", Document)
+@await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements())

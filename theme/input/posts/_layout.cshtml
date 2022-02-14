@@ -1,4 +1,4 @@
-﻿@inherits StatiqRazorPage<IDocument>
+﻿@inherits MyStatiqRazorPage<IDocument>
 @* From _partial\post.ejs *@
 @{
     Layout = @"../_layout.cshtml";
@@ -26,7 +26,7 @@
         @if (post.Tags.Any())
         {
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">@this.GetLocalized("post.tagged_in")</span><br/>
+                <span class="text-color-light text-small">@Localization.Get("post.tagged_in")</span><br/>
                 @await Html.PartialAsync("../_partial/post/tag.cshtml", post.Tags)
             </div>
         }

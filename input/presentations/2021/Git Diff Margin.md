@@ -1,7 +1,7 @@
 ﻿---
 title: 'Git Diff Margin'
-permalink: /2021/10/19/dapr-binding-building-block-by-simple-example/
-date: 10/19/2021 13:32:05
+permalink: /2021/10/19/git-diff-margin/
+date: 04/22/2020 17:30:00
 disqusIdentifier: 20211019013205
 tags: [.NET, Dapr]
 video: LoN_G3mva2c

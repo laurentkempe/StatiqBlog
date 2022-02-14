@@ -1,7 +1,9 @@
-@inherits StatiqRazorPage<IDocument>
+@inherits MyStatiqRazorPage<IDocument>
 @{
     var previous = Model.GetDocument(Keys.Previous);
     var next = Model.GetDocument(Keys.Next);
+    var index = Model.GetString(Keys.Index);
+    var totalPages = Model.GetString(Keys.TotalPages);
 }
 <div class="pagination-bar">
     <ul class="pagination">
@@ -11,9 +13,9 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@previous.GetLink()"
-                    aria-label="@this.GetLocalized("pagination.newer_posts")">
+                    aria-label="@Localization.Get("pagination.newer_posts")">
                     <i class="fa fa-angle-left text-base icon-mr"></i>
-                    <span>@(this.GetLocalized("pagination.newer_posts"))</span>
+                    <span>@Localization.Get("pagination.newer_posts")</span>
                 </a>
             </li>
         }
@@ -23,12 +25,12 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@next.GetLink()"
-                    aria-label="@this.GetLocalized("pagination.older_posts")">
-                    <span>@(this.GetLocalized("pagination.older_posts"))</span>
+                    aria-label="@Localization.Get("pagination.older_posts")">
+                    <span>@(Localization.Get("pagination.older_posts"))</span>
                     <i class="fa fa-angle-right text-base icon-ml"></i>
                 </a>
             </li>
         }
-        <li class="pagination-number">@this.GetLocalized("pagination.page", Model.GetString(Keys.Index)) @this.GetLocalized("pagination.of", Model.GetString(Keys.TotalPages))</li>
+        <li class="pagination-number">@Localization.GetFormatted("pagination.page", index) @Localization.GetFormatted("pagination.of", totalPages)</li>
     </ul>
 </div>

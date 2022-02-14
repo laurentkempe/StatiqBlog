@@ -1,4 +1,4 @@
 InputFiles: "presentations/**/*"
-DestinationPath: => $"../output/{GetString("permalink")}/index.html"
+DestinationPath: => $"../output/presentations/{GetString("permalink")}/index.html"
 Layout: ..\_layout.cshtml
 Meta: True

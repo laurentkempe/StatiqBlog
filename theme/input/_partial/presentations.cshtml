@@ -1,7 +1,7 @@
-@inherits StatiqRazorPage<IDocument>
+@inherits MyStatiqRazorPage<IEnumerable<BlogElementBase>>
 
 <section class="postShorten-group main-content-wrap">
-    @foreach (var presentation in Document.GetChildren().AsPresentations())
+    @foreach (var presentation in Model)
     {
         <article class="postShorten postShorten--thumbnailimg-right">
             <div class="postShorten-wrap">
@@ -20,7 +20,7 @@
                 <div class="postShorten-excerpt">
                     @Html.Raw(presentation.Excerpt)
                     <a href="@presentation.Permalink" class="postShorten-excerpt_link link" aria-label=": @presentation.Title">
-                        @this.GetLocalized("presentation.see_more")
+                        @Localization.Get("presentation.see_more")
                     </a>
                 </div>
             </div>
