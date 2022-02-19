@@ -1,11 +1,6 @@
 layout: posts/_layout.cshtml
 title: "About Laurent Kempé"
 permalink: "/about-laurent-kempe"
-updated: 5/30/2018 6:02:02 PM
-disqusIdentifier: 20180530060202
-alias:
-- /page/about-laurent-kempe.aspx/index.html
-
 ---
 <?# image center clear group=laurent https://farm2.staticflickr.com/1971/31306281378_02b055ccfe_z.jpg /?>
 
