@@ -3,6 +3,7 @@
 @{
     var author = Context.GetAuthor();
     var sidebarBehavior = ViewData["sidebarBehavior"];
+    var sideBarMenus = Context.GetSidebar().SideBarMenus;
 }
 
 <nav id="sidebar" data-behavior="@sidebarBehavior">
@@ -24,7 +25,7 @@
             </div>
         }
 
-    @foreach(var menu in Context.GetSidebar().SideBarMenus)
+    @foreach(var menu in sideBarMenus)
     {
         <ul class="sidebar-buttons">
         @foreach (var (_, _, title, url, icon) in menu.SideBarButtons)
