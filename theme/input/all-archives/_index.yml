@@ -1,0 +1,5 @@
+ArchiveSources: => $"posts/**/*"
+ArchiveKey: => GetDateTime("date").Year
+ArchivePageSize: => 10
+ArchiveDestination: >
+  => GetInt("Index") <= 1 ? $"archives/{GetString("GroupKey")}/index.html" : $"archives/{GetString("GroupKey")}/page/{GetInt("Index")}/index.html"

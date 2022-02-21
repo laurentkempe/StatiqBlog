@@ -1,44 +1,45 @@
-ArchiveSources: => $"posts/**/*"
----
 @inherits MyStatiqRazorPage<IDocument>
 
-@{
-    var allPostsOrderedPerYear = Document.GetChildren().AsBlogPosts().GroupBy(post => post.DateTime.Year);
+@if (Document.ContainsKey(Keys.GroupKey))
+{
+    @await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements())
 }
-
-<div id="archives" class="main-content-wrap">
-    <form id="filter-form" action="#">
-        <input name="date" type="text" class="form-control input--xlarge" placeholder="@Localization.Get("global.search_date")" autofocus="autofocus">
-    </form>
-    <h5 class="archive-result text-color-base text-xlarge"
-        data-message-zero="@Localization.Get("global.posts_found.zero")"
-        data-message-one="@Localization.Get("global.posts_found.one")"
-        data-message-other="@Localization.Get("global.posts_found.other")"></h5>
-    <section class="boxes">
-        @foreach (var postsPerYear in allPostsOrderedPerYear)
-        {
-            var year = postsPerYear.First().DateTime.Year;
-            <div class="archive archive-year box" data-date="@year">
-                <h4 class="archive-title">
-                    <a class="link-unstyled" href="/archives/@year">@year</a>
-                </h4>
-                @foreach (var postPerYearPerMonth in postsPerYear.GroupBy(post => post.DateTime.Month).OrderByDescending(posts => posts.Key))
-                {
-                    var month = postPerYearPerMonth.First().DateTime.Month.ToString("D2");
-                    <ul class="archive-posts archive-month" data-date="@year@month">
-                        <h5 class="archive-title">
-                            <a class="link-unstyled" href="/archives/@year/@month">@Localization.GetLocalizedMonth(postPerYearPerMonth.First().DateTime.Month)</a>
-                        </h5>
-                        @foreach (var post in postPerYearPerMonth.OrderByDescending(post => post.DateTime))
-                        {
-                            <li class="archive-post archive-day" data-date="@post.DateTime.ToString("yyyyMMdd")">
-                                <a class="archive-post-title" href="@post.Permalink">@post.Title</a>
-                                <span class="archive-post-date"> - @post.Date</span>
-                            </li>
-                        }
-                    </ul>
-                }
-            </div>
-        }
-    </section>
-</div>
+else
+{
+    <div id="archives" class="main-content-wrap">
+        <form id="filter-form" action="#">
+            <input name="date" type="text" class="form-control input--xlarge" placeholder="@Localization.Get("global.search_date")" autofocus="autofocus">
+        </form>
+        <h5 class="archive-result text-color-base text-xlarge"
+            data-message-zero="@Localization.Get("global.posts_found.zero")"
+            data-message-one="@Localization.Get("global.posts_found.one")"
+            data-message-other="@Localization.Get("global.posts_found.other")"></h5>
+        <section class="boxes">
+            @foreach (IDocument yearDocument in Document.GetChildren().OrderByDescending(document => document.GetString(Keys.GroupKey)))
+            {
+                var year = yearDocument.GetString(Keys.GroupKey);
+                <div class="archive archive-year box" data-date="@year">
+                    <h4 class="archive-title">
+                        <a class="link-unstyled" href="/archives/@year/">@year</a>
+                    </h4>
+                    @foreach (var postPerYearPerMonth in yearDocument.GetChildren().AsBlogPosts().GroupBy(post => post.DateTime.Month).OrderByDescending(posts => posts.Key))
+                    {
+                        var month = postPerYearPerMonth.First().DateTime.Month.ToString("D2");
+                        <ul class="archive-posts archive-month" data-date="@year@month">
+                            <h5 class="archive-title">
+                                <a class="link-unstyled" href="/archives/@year/@month">@Localization.GetLocalizedMonth(postPerYearPerMonth.First().DateTime.Month)</a>
+                            </h5>
+                            @foreach (var post in postPerYearPerMonth.OrderByDescending(post => post.DateTime))
+                            {
+                                <li class="archive-post archive-day" data-date="@post.DateTime.ToString("yyyyMMdd")">
+                                    <a class="archive-post-title" href="@post.Permalink">@post.Title</a>
+                                    <span class="archive-post-date"> - @post.Date</span>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            }
+        </section>
+    </div>
+}
