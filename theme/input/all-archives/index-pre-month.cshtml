@@ -1,0 +1,6 @@
+@inherits MyStatiqRazorPage<IDocument>
+
+@if (Document.ContainsKey(Keys.GroupKey))
+{
+    @await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements())
+}

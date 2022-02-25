@@ -1,5 +1,5 @@
 ArchiveSources: => $"posts/**/*"
-ArchiveKey: => GetDateTime("date").Year
+ArchiveKey: => $"{GetDateTime("date").Year}/{GetDateTime("date").Month:00}"
 ArchivePageSize: => 10
 ArchiveOrderKey: permalink
 ArchiveOrderDescending: true
