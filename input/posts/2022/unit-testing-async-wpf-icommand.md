@@ -21,7 +21,7 @@ I decided to apply his solution to our original question; "How to test an async 
 
 I quickly created a small .NET 6 WPF project and added to it the [Windows Community Toolkit](https://docs.microsoft.com/en-us/windows/communitytoolkit/) [MVVM](https://docs.microsoft.com/en-us/windows/communitytoolkit/mvvm/introduction) nuget. I copy-pasted the code from Gérald to it and wrote the following tests.
 
-{% codeblock MainWindowViewModelTests.cs lang:csharp %}
+```csharp
 [TestFixture]
 public class MainWindowViewModelTests
 {
@@ -46,13 +46,13 @@ public class MainWindowViewModelTests
         Assert.That(mainWindowViewModel.Upper, Is.EqualTo("BEFORE"));
     }
 }
-{% endcodeblock %}
+```
 
 The first one fails because nothing awaits the execution of the WPF command. The second one succeeds because the test is awaiting the command execution. Nice, very nice!
 
 And here is the code of the `MainWindowViewModel` class.
 
-{% codeblock MainWindowViewModel.cs lang:csharp %}
+```csharp MainWindowViewModel.cs
 public class MainWindowViewModel : ObservableObject
 {
     private ICommand? _click;
@@ -73,13 +73,13 @@ public class MainWindowViewModel : ObservableObject
         Upper = Upper.ToUpper();
     }
 }
-{% endcodeblock %}
+```
 
 So, that is one way of solving testing an async WPF ICommand. But it is not the only way.
 
 Windows Community Toolkit MVVM provides the `AsyncRelayCommand` which implements `IAsyncRelayCommand` providing an `ExecuteAsync` method returning a `Task` which can be awaited.
 
-{% codeblock lang:csharp %}
+```csharp
 [Test]
 public async Task OtherClick_ExpectUpperToBeUpperCase()
 {
@@ -89,19 +89,20 @@ public async Task OtherClick_ExpectUpperToBeUpperCase()
     
     Assert.That(mainWindowViewModel.Upper, Is.EqualTo("BEFORE"));
 }
-{% endcodeblock %}
+```
 
 And in this case we need to declare the command as an `IAsyncRelayCommand`
 
-{% codeblock lang:csharp %}
+```csharp
     private IAsyncRelayCommand? _otherClick;
 
-    public IAsyncRelayCommand OtherClick => _otherClick ??= new AsyncRelayCommand(Execute);
-{% endcodeblock %}
+    public IAsyncRelayCommand OtherClick
+        => _otherClick ??= new AsyncRelayCommand(Execute);
+```
 
 and use the `ExecuteAsync` method in our test
 
-{% codeblock lang:csharp %}
+```csharp
 [Test]
 public async Task OtherClick_ExpectUpperToBeUpperCase()
 {
@@ -111,11 +112,10 @@ public async Task OtherClick_ExpectUpperToBeUpperCase()
     
     Assert.That(mainWindowViewModel.Upper, Is.EqualTo("BEFORE"));
 }
-{% endcodeblock %}
+```
 
 # Conclusion
 
 As a developer, I think it is always good to be pragmatic but this does not avoid to search for better solutions.
 
 <?# githubCard user=laurentkempe repo=AsyncVoidCommandTesting align=left /?>
-

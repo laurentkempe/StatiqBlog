@@ -1,7 +1,21 @@
 ﻿@inherits MyStatiqRazorPage<IDocument>
 
 <script src="https://cdn.plyr.io/3.6.11/plyr.js"></script>
+<script src="/assets/js/script.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js" integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/csharp.min.js" integrity="sha512-NKJhIO85eCiJVk0X0s/Uzj68kuLM1CcuegT+DQQQCNXuDCYvLbcooA6fNw8NAyCqIWygDmZWjTUJBMRQJvLZMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/powershell.min.js" integrity="sha512-PVIVtLKjh5pCdwB7HXBljv/R9z6kD7oehVC/33JVzh7STv2OIbYetUPkUTVB9NMSgsmFWZkpeeQWGIoWNvlWOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/languages/json.min.js" integrity="sha512-CYNXYs/v5lf987Bm4mWE+5ZnOdxNoKqBrro4AtHg012BQDFj7b1V3YQyAPhYF/jGcxqkPpudoe8dCkkdmAH+cQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/assets/js/highlightjs-badge.min.js"></script>
 <script>
+    var pres = document.querySelectorAll("pre>code");
+    for (var i = 0; i < pres.length; i++) {
+       hljs.highlightBlock(pres[i]);
+    }
+    const options = {
+       copyIconClass: "fas fa-copy",
+       checkIconClass: "fas fa-check text-success"
+    };
+    window.highlightJsBadge(options);
     const players = Plyr.setup('.lk-player');
 </script>
-<script src="/assets/js/script.min.js"></script>

@@ -66,14 +66,14 @@ NUKE CLI .NET tool will help you to create and execute NUKE builds, or even upda
 
 To simplify your life, you can extend your [PowerShell, ZSH or BASH with auto-completion](https://nuke.build/docs/running-builds/global-tool.html#shell-snippets) so that you don't have to remember all nuke details and just tab!
 
-{% codeblock lang:powershell %}
+```powershell
 Register-ArgumentCompleter -Native -CommandName nuke -ScriptBlock {
     param($commandName, $wordToComplete, $cursorPosition)
         nuke :complete "$wordToComplete" | ForEach-Object {
            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
         }
 }
-{% endcodeblock %}
+```
 
 ## Create your first NUKE build project
 
@@ -97,7 +97,7 @@ or with the PowerShell script created
 
 NUKE build is implemented as a console application. I removed some minor parts to make it easier to understand.
 
-{% codeblock Build.cs lang:csharp %}
+```csharp {Build.cs}
 class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Compile);
@@ -139,7 +139,7 @@ class Build : NukeBuild
         });
 
 }
-{% endcodeblock %}
+```
 
 The entry point of the console application is `Main` and by default it calls `Compile` on line 3. With your preferred IDE you can use code navigation to get to the `Compile`code. `Compile` is a `Target` and we can see that this is not a magic string which has been the case with other build tools 👍🏼.
 
@@ -147,18 +147,19 @@ A `Configuration` `Parameter` is defined which can be passed to our build to spe
 
 A `Solution` is defined which is used later on the `Compile` `Target`. Through the usage of the C# attribute `[Solution]`, the solution file will be found using either command-line arguments, environment variables, or finally `_build\config\parameters.json` file created when you generated the NUKE project.
 
-{% codeblock _build\config\parameters.json lang:json %}
+
+```json {_build\config\parameters.json}
 {
   "$schema": "./build.schema.json",
   "Solution": "NukeBuildAutomation.sln"
 }
-{% endcodeblock %}
+```
 
 Or it could be done like this
 
-{% codeblock Build.cs lang:csharp %}
+```csharp {Build.cs}
     [Solution(".\\NukeBuildAutomation.sln")] readonly Solution Solution;
-{% endcodeblock %}
+```
 
 Then some `AbsolutePath` are defined for `SourceDirectory`, `TestsDirectory`, `OutputDirectory`showing how easy it is to compose paths. Those are used in the `Clean` `Target` in which it is used to clean folder with a nice syntax `SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory)`.
 
@@ -186,7 +187,7 @@ the `Clean` target will be executed before the `Compile` target.
 
 The following code example shows NUKE fluent API which can be used with some pre-defined [CLI tools](https://nuke.build/docs/authoring-builds/cli-tools.html). In that concrete case we are using [JetBrains dotCover command line](https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html) to run our tests with and generate code coverage report.
 
-{% codeblock Build.Tests.cs lang:csharp %}
+```csharp {Build.Tests.cs}
 partial class Build
 {
     const string TestResultsXmlSuffix = "_TestResults.xml";
@@ -214,7 +215,7 @@ partial class Build
     
     AbsolutePath GetDotCoverOutputFile(string testAssembly) => OutputDirectory / $"dotCover_{Path.GetFileName(testAssembly)}.dcvr";
 }
-{% endcodeblock %}
+```
 
 # Conclusion
 

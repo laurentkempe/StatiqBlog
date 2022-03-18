@@ -2,3 +2,30 @@
     margin: 20px auto;
     max-width: 500px;
 }
+
+pre > code.hljs {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f7f8f8;
+    display: block;
+    -webkit-hyphens: none;
+    hyphens: none;
+    line-height: 1.5;
+    margin: 2.3rem 0;
+    overflow-x: auto;
+    padding: 1rem;
+    white-space: pre;
+}
+.code-badge {
+    padding: 6px !important;
+    margin: 2px !important;
+    font-size: 0.8em;
+    background: #fafbfb !important;
+    color: #bbb !important;
+ }
+.code-badge-language {
+    display: none;
+}
+.code-badge-copy-icon {
+    font-size: 1.3em !important;
+}
