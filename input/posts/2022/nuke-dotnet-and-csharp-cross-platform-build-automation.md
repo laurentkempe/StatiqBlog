@@ -97,7 +97,7 @@ or with the PowerShell script created
 
 NUKE build is implemented as a console application. I removed some minor parts to make it easier to understand.
 
-```csharp {Build.cs}
+```csharp {data-file=Build.cs}
 class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Compile);
@@ -148,7 +148,7 @@ A `Configuration` `Parameter` is defined which can be passed to our build to spe
 A `Solution` is defined which is used later on the `Compile` `Target`. Through the usage of the C# attribute `[Solution]`, the solution file will be found using either command-line arguments, environment variables, or finally `_build\config\parameters.json` file created when you generated the NUKE project.
 
 
-```json {_build\config\parameters.json}
+```json {data-file=_build\config\parameters.json}
 {
   "$schema": "./build.schema.json",
   "Solution": "NukeBuildAutomation.sln"
@@ -157,7 +157,7 @@ A `Solution` is defined which is used later on the `Compile` `Target`. Through t
 
 Or it could be done like this
 
-```csharp {Build.cs}
+```csharp {data-file=Build.cs}
     [Solution(".\\NukeBuildAutomation.sln")] readonly Solution Solution;
 ```
 
@@ -187,7 +187,7 @@ the `Clean` target will be executed before the `Compile` target.
 
 The following code example shows NUKE fluent API which can be used with some pre-defined [CLI tools](https://nuke.build/docs/authoring-builds/cli-tools.html). In that concrete case we are using [JetBrains dotCover command line](https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html) to run our tests with and generate code coverage report.
 
-```csharp {Build.Tests.cs}
+```csharp {data-file=Build.Tests.cs}
 partial class Build
 {
     const string TestResultsXmlSuffix = "_TestResults.xml";

@@ -52,7 +52,7 @@ The first one fails because nothing awaits the execution of the WPF command. The
 
 And here is the code of the `MainWindowViewModel` class.
 
-```csharp MainWindowViewModel.cs
+```csharp {data-file=MainWindowViewModel.cs}
 public class MainWindowViewModel : ObservableObject
 {
     private ICommand? _click;
