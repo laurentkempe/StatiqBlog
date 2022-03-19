@@ -36,8 +36,9 @@
         @await Html.PartialAsync("_partial/footer.cshtml", Document)
     </div>
 
-    @await Html.PartialAsync("_partial/cover.cshtml", Document)
-    @await Html.PartialAsync("_partial/script.cshtml", Document)
 </div>
+@await Html.PartialAsync("_partial/about.cshtml", Document)
+@await Html.PartialAsync("_partial/cover.cshtml", Document)
+@await Html.PartialAsync("_partial/script.cshtml", Document)
 </body>
 </html>

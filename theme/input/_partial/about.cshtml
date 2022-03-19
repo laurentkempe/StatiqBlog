@@ -1,0 +1,38 @@
+@inherits MyStatiqRazorPage<IDocument>
+
+@{
+    var author = Context.GetAuthor(Localization);
+}
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        @if (!string.IsNullOrEmpty(author.Picture))
+        {
+            <img id="about-card-picture" src="@author.Picture" alt="@Localization.Get("global.author_picture")"/>
+        }
+        <h4 id="about-card-name">@author.Name</h4>
+        @if (!string.IsNullOrEmpty(author.Bio))
+        {
+            <div id="about-card-bio">@author.Bio</div> @* TODO <%- markdown(__('')) %> *@
+        }
+        @if (!string.IsNullOrEmpty(author.Job))
+        {
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                @author.Job @* TODO <%- markdown(__('author.job')) %> *@
+            </div>
+        }
+        @if (!string.IsNullOrEmpty(author.Location))
+        {
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br/>
+                @author.Location
+            </div>
+        }
+    </div>
+</div>

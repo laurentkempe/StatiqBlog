@@ -11,8 +11,6 @@ public static class DocumentExtensions
         => new(document);
     public static Page AsPage(this IDocument document)
         => new(document);
-    public static Author GetAuthor(this IDocument document)
-        => new(document);
     public static IEnumerable<BlogElementBase> AsBlogElements(this IDocument document)
         => document.GetChildren().Select(doc => doc.AsBlogPost());
     public static IEnumerable<BlogPost> AsBlogPosts(this DocumentList<IDocument> documents)

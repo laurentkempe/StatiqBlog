@@ -9,5 +9,5 @@ public abstract class MyStatiqRazorPage<TModel> : StatiqRazorPage<TModel>
         Localization = new Localization(() => Outputs, () => Document);
     }
 
-    protected Localization Localization { get; }
+    public Localization Localization { get; }
 }

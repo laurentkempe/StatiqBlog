@@ -6,5 +6,5 @@ namespace Blog.Statiq.Helpers;
 
 public static class ThemeExtensions
 {
-   public static Theme Theme(this StatiqRazorPage<IDocument> page) => new(page.Document);
+   public static Theme Theme(this StatiqRazorPage<IDocument> page) => new(page);
 }

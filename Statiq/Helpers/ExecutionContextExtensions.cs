@@ -7,8 +7,8 @@ public static class ExecutionContextExtensions
 {
     public static SideBar GetSidebar(this IExecutionContext executionContext)
         => TypeHelper.Convert<SideBar>(executionContext.GetMetadata(SideBar.Key));
-    public static Author GetAuthor(this IExecutionContext executionContext)
-        => new(executionContext);
+    public static Author GetAuthor(this IExecutionContext executionContext, Localization localization)
+        => new(executionContext, localization);
     public static Deployment GetDeployment(this IExecutionContext executionContext)
         => TypeHelper.Convert<Deployment>(executionContext);
 }

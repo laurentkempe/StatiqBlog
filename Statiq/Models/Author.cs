@@ -4,24 +4,23 @@ namespace Blog.Statiq.Models;
 
 public class Author
 {
-    public Author(IExecutionContext executionContext)
+    public Author(IMetadata metadata, Localization? localization)
     {
-        Email = executionContext.GetString("author:email");
-        Picture = executionContext.GetString("author:picture");
-        Twitter = executionContext.GetString("author:twitter");
-        Location = executionContext.GetString("author:location");
+        Email = metadata.GetString("author:email");
+        Picture = metadata.GetString("author:picture");
+        Twitter = metadata.GetString("author:twitter");
+        Location = metadata.GetString("author:location");
+        Name = metadata.GetString("author2");
+
+        Bio = localization?.Get("author.bio") ?? "Cannot read bio";
+        Job = localization?.Get("author.job") ?? "Cannot read job";
     }
     
-    public Author(IDocument document)
-    {
-        Email = document.GetString("author:email");
-        Picture = document.GetString("author:picture");
-        Twitter = document.GetString("author:twitter");
-        Location = document.GetString("author:location");
-    }
-    
+    public string Name { get; }
     public string Email { get; }
     public string Location { get; }
     public string Picture { get; }
     public string Twitter { get; }
+    public string? Bio { get; }
+    public string? Job { get; }
 }

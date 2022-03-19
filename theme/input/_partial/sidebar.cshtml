@@ -1,7 +1,7 @@
 @inherits MyStatiqRazorPage<IDocument>
 
 @{
-    var author = Context.GetAuthor();
+    var author = Context.GetAuthor(Localization);
     var sidebarBehavior = ViewData["sidebarBehavior"];
     var sideBarMenus = Context.GetSidebar().SideBarMenus;
 }
@@ -20,7 +20,7 @@
                 <h4 class="sidebar-profile-name">@Metadata["author2"]</h4>
                 @if (!string.IsNullOrWhiteSpace(Localization.Get("author.bio")))
                 {
-                    <h5 class="sidebar-profile-bio">@Localization.Get("author.bio")</h5>
+                    <h5 class="sidebar-profile-bio"><p>@Localization.Get("author.bio")</p></h5>
                 }
             </div>
         }
