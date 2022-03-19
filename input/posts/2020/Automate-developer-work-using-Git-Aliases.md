@@ -48,10 +48,10 @@ To check out the branch and be able to work on it, from the command line we need
 
 With the following simple Git alias, located in your [.gitconfig](https://git-scm.com/docs/git-config)
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 [alias]
 co = checkout
-{% endcodeblock %}
+```
 
 you now type
 
@@ -73,27 +73,27 @@ From getting the feature branch name, we want to extract the ticket number and u
 
 To get the current branch name, we use the following alias:
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 # Get current branch name
 currentbranch = rev-parse --abbrev-ref HEAD
-{% endcodeblock %}
+```
 
 To get the ticket number, we compose the previous alias we the following one
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 # Get Jira ticket number from current branch name
 jiran = "!f() { git currentbranch |
                 sed "s/feature.//" |
                 grep -o -E "PRJ+-[0-9]+";
               }; f"
-{% endcodeblock %}
+```
 
 This one looks a bit more complex and we will get back to it to explain it in more detail. Finally, we can create our interesting and time saver new alias.
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 # Open Browser on Jira ticket
 j = "!explorer https://company.atlassian.net/browse/$(git jiran)"
-{% endcodeblock %}
+```
 
 Now, using simple branch naming convention and little script code we are able to open the web browser and navigate to the web page describing the ticket requirements. And this by only typing "git j" ❤.
 
@@ -116,7 +116,7 @@ We can leverage lots of power of Unix combined to Git aliases to achieve our goa
 
 First, we need to find the feature branch from the ticket number
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 # Find feature branch from ticket number
 fb = "!f() { git branch -a |
              grep "feature/.*$1.*" |
@@ -124,22 +124,21 @@ fb = "!f() { git branch -a |
              sed "s/origin.//" |
              sort -u;
            }; f"
-{% endcodeblock %}
-
+```
 
 Then we combine this new alias in the final cfb alias, which checks out the branch and pull so that you are up to date and can continue to work
 
-{% codeblock .gitconfig %}
+``` {data-file=.gitconfig}
 # Checkout feature branch from ticket number
 cfb = "!f() { featureBranch=$(git fb $1);
               git checkout $featureBranch;
               git pull;
             }; f"
-{% endcodeblock %}
+```
 
 # Presentation
 
-{% reveal https://laurentkempe.com/presentations/Automate%20Dev%20work%20using%20Git%20aliases/index.html#/ 800 600 %}
+<?# Reveal Src=https://laurentkempe.com/presentations/Automate%20Dev%20work%20using%20Git%20aliases/index.html#/ /?>
 
 Press f key to see the presentation full screen, or [navigate to it](https://laurentkempe.com/presentations/Automate%20Dev%20work%20using%20Git%20aliases/index.html#/).
 
