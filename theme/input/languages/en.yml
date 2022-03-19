@@ -62,6 +62,8 @@ pagination:
     of: "of {0}"
     newer_posts: "NEWER POSTS"
     older_posts: "OLDER POSTS"
+    newer_presentations: "NEWER PRESENTATIONS"
+    older_presentations: "OLDER PRESENTATIONS"
     previous: "PREVIOUS"
     next: "NEXT"
 
@@ -84,6 +86,7 @@ post:
         
 presentation:
     see_more: "Watch it"
+    see_slides: "Slides"
 
 author:
     # Your biography (Markdown and HTML supported)

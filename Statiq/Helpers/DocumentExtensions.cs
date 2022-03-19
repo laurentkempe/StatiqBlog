@@ -16,7 +16,7 @@ public static class DocumentExtensions
     public static IEnumerable<BlogElementBase> AsBlogElements(this IDocument document)
         => document.GetChildren().Select(doc => doc.AsBlogPost());
     public static IEnumerable<BlogPost> AsBlogPosts(this DocumentList<IDocument> documents)
-        => documents.Select(document => document.AsBlogPost());
-    public static IEnumerable<Presentation> AsPresentations(this DocumentList<IDocument> documents)
-        => documents.Select(document => document.AsPresentation());
+        => documents.Select(doc => doc.AsBlogPost());
+    public static IEnumerable<Presentation> AsPresentations(this IDocument document)
+        => document.GetChildren().Select(doc => doc.AsPresentation());
 }

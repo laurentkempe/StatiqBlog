@@ -4,6 +4,8 @@
     var next = Model.GetDocument(Keys.Next);
     var index = Model.GetString(Keys.Index);
     var totalPages = Model.GetString(Keys.TotalPages);
+    
+    var paginationType = ViewData["paginationType"];
 }
 <div class="pagination-bar">
     <ul class="pagination">
@@ -13,9 +15,9 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@previous.GetLink()"
-                    aria-label="@Localization.Get("pagination.newer_posts")">
+                    aria-label="@Localization.Get($"pagination.newer_{paginationType}")">
                     <i class="fa fa-angle-left text-base icon-mr"></i>
-                    <span>@Localization.Get("pagination.newer_posts")</span>
+                    <span>@Localization.Get($"pagination.newer_{paginationType}")</span>
                 </a>
             </li>
         }
@@ -25,8 +27,8 @@
                 <a
                     class="btn btn--default btn--small"
                     href="@next.GetLink()"
-                    aria-label="@Localization.Get("pagination.older_posts")">
-                    <span>@(Localization.Get("pagination.older_posts"))</span>
+                    aria-label="@Localization.Get($"pagination.older_{paginationType}")">
+                    <span>@(Localization.Get($"pagination.older_{paginationType}"))</span>
                     <i class="fa fa-angle-right text-base icon-ml"></i>
                 </a>
             </li>

@@ -1,5 +1,12 @@
 @inherits MyStatiqRazorPage<IEnumerable<BlogElementBase>>
 
+@{
+    var viewData = new ViewDataDictionary(ViewData)
+    {
+        { "paginationType", "posts" }
+    };
+}
+
 <section class="postShorten-group main-content-wrap">
     @foreach (var blogElement in Model)
     {
@@ -34,5 +41,5 @@
             }
         </article>
     }
-    @await Html.PartialAsync("pagination.cshtml", Document)
+    @await Html.PartialAsync("pagination.cshtml", Document, viewData)
 </section>

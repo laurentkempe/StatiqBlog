@@ -10,4 +10,6 @@ public class Presentation : BlogElementBase
 
     public string Video => Document.GetString("video");
     public string VideoStart => Document.GetString("start") ?? "0";
+    public override string? Permalink => $"/presentations/{base.Permalink}";
+    public string? Slides => Document.GetString("slides");
 }
