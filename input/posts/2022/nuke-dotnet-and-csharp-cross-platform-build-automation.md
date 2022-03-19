@@ -223,7 +223,7 @@ There is much more to write about NUKE than just the basics. You can read more a
 
 # Presentation
 
-{% reveal https://laurentkempe.com/presentations/dotNET%20build%20automation%20with%20NUKE/#/ 800 600 %}
+<?# Reveal src=https://laurentkempe.com/presentations/dotNET%20build%20automation%20with%20NUKE/#/ /?>
 
 Press f key to see the presentation full screen, or [navigate to it](https://laurentkempe.com/presentations/dotNET%20build%20automation%20with%20NUKE/#/).
 
