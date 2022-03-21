@@ -21,7 +21,7 @@ We are creating a standard console application in which we want to leverage the 
 
 We can get the [Dapr proto files](https://github.com/dapr/dapr/tree/master/dapr/proto) from the Dapr project on Github. Those files are included in the project in a Dapr folder at the root of the project. We need to include some nuget packages to be able to generate C# code from the proto files as we can see on the **GrpcClient.csproj** file.
 
-{% codeblock GrpcClient.csproj lang:xml %}
+```xml {data-file=GrpcClient.csproj}
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -57,21 +57,21 @@ We can get the [Dapr proto files](https://github.com/dapr/dapr/tree/master/dapr/
   </ItemGroup>
 
 </Project>
-{% endcodeblock %}
+```
 
 # Using the generated gRPC client
 
 Looking at the **dapr.proto** we see in which C# namespace the client code will be generated.
 
-{% codeblock dapr.proto lang:proto %}
+```proto {data-file=dapr.proto}
 option csharp_namespace = "Dapr.Client.Autogen.Grpc.v1";
-{% endcodeblock %}
+```
 
 We can now use the generated client and specify which service we want to call using the `InvokeServiceRequest` specifying the `Id` which is the *app-id* of the Dapr sidecar so in our case *proxy*. Then, we specify that we want to call the method *weatherforecastproxy*, with an HTTP Get and pass the `QueryString`.
 
 Then we call `daprClient.InvokeService` to invoke the Dapr service through the sidecars, get the response as JSON which we deserialize, and display the results.
 
-{% codeblock Program.cs lang:csharp %}
+```csharp {data-file=Program.cs}
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
@@ -105,13 +105,13 @@ foreach (var weatherForecast in weatherForecasts)
 {
     Console.WriteLine($"Date: {weatherForecast.Date}, {weatherForecast.Summary}, {weatherForecast.TemperatureC}°");
 }
-{% endcodeblock %}
+```
 
 Notice that we connect to the *app-id* **proxy** on the URI **127.0.0.1:3500** which is the gRPC port of our proxy service. We are invoking the **weatherforecastproxy** method on the service. The proxy service is an HTTP service that we are calling with gRPC thanks to Dapr sidecar. That proxy service is then calling the **backend** service also exposed through HTTP but accessible through gRPC again thanks to the Dapr sidecar.
 
-{% alert info %}
+<?! alert info ?>
 [All calls between Dapr sidecars go over gRPC](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/#service-invocation) for performance. Only calls between services and Dapr sidecars can be either HTTP or gRPC
-{% endalert %}
+<?!/ alert ?>
 
 # Starting proxy and backend Dapr sidecar
 
@@ -119,11 +119,11 @@ You can use the start.ps1 PowerShell script if you have Windows Terminal install
 
 Here is the output of our client.
 
-{% codeblock %}
+```
 [{"date":"2021-03-26T17:52:47.5849398+01:00","temperatureC":4,"temperatureF":39,"summary":"Scorching"},{"date":"2021-03-27T17:52:47.5850893+01:00","temperatureC":22,"temperatureF":71,"summary":"Bracing"}]
 Date: 3/26/2021 5:52:47 PM, Scorching, 4°
 Date: 3/27/2021 5:52:47 PM, Bracing, 22°
-{% endcodeblock %}
+```
 
 # Conclusion
 We have seen that Dapr provides a way to communicate with other applications using gRPC and without taking any dependencies to any third-party framework.

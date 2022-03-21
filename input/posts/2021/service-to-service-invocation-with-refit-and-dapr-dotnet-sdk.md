@@ -21,7 +21,7 @@ Coupled to the [Dapr .NET SDK](https://github.com/dapr/dotnet-sdk) it is a great
 
 The only difference from the previous blog post source code for the `IWeatherForecastClient` interface is that we decorate the interface with a *Get* attribute coming from Refit and specifying the method on the service which is called, here *weatherforecast*.
 
-{% codeblock IWeatherForecastClient.cs lang:csharp %}
+```csharp {data-file=IWeatherForecastClient.cs}
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Refit;
@@ -34,11 +34,11 @@ namespace WeatherForecastProxyService
         Task<IEnumerable<WeatherForecast>> GetWeatherForecast(int count);
     }
 }
-{% endcodeblock %}
+```
 
 As previously, we inject the interface in our web API controller of our first service, so that it can call the second service.
 
-{% codeblock WeatherForecastProxyController.cs lang:csharp %}
+```csharp {data-file=WeatherForecastProxyController.cs}
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastProxyController : ControllerBase
@@ -56,11 +56,11 @@ As previously, we inject the interface in our web API controller of our first se
             return await _weatherForecastClient.GetWeatherForecast(count);
         }
     }
-{% endcodeblock %}
+```
 
 Finally, we need to configure the ASP.NET IOC container, so that it can inject the client based on `IWeatherForecastClient` created by Refit into the controller. Again, we leverage the Dapr .NET SDK to create the HttpClient using the Dapr appid *backend* which was used to start our backend service through Dapr. This is the way that the HttpClient knows how to call our *backend* service and decoupling it from its real address, letting Dapr handle the resolution of its location.
 
-{% codeblock Startup.cs lang:csharp %}
+```csharp {data-file=Startup.cs}
     public void ConfigureServices(IServiceCollection services)
     {
         ...
@@ -69,7 +69,7 @@ Finally, we need to configure the ASP.NET IOC container, so that it can inject t
             _ => RestService.For<IWeatherForecastClient>(
                      DaprClient.CreateInvokeHttpClient("backend")));
     }
-{% endcodeblock %}
+```
 
 Here is the same result
 

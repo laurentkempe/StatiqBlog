@@ -20,7 +20,7 @@ It is possible to invoke service by just leveraging the HTTP protocol and a simp
 
 # Calling Dapr sidecar with .NET HttpClient
 
-{% codeblock Calling Dapr sidecar with .NET HttpClient lang:csharp %}
+```csharp {data-title=Calling Dapr sidecar with .NET HttpClient}
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -38,17 +38,17 @@ foreach (var weatherForecast in weatherForecasts)
     Console.WriteLine(
         $"Date:{weatherForecast.Date}, TemperatureC:{weatherForecast.TemperatureC}, Summary:{weatherForecast.Summary}");
 }
-{% endcodeblock %}
+```
 
 And the results looks like this
 
-{% codeblock Results lang:powershell %}
+```powershell csharp {data-title=Results}
 Date:3/10/2021 9:21:30 PM, TemperatureC:10, Summary:Sweltering
 Date:3/11/2021 9:21:30 PM, TemperatureC:-18, Summary:Sweltering
 Date:3/12/2021 9:21:30 PM, TemperatureC:17, Summary:Freezing
 Date:3/13/2021 9:21:30 PM, TemperatureC:-17, Summary:Bracing
 Date:3/14/2021 9:21:30 PM, TemperatureC:-12, Summary:Chilly
-{% endcodeblock %}
+```
 
 This has the advantage that your code depends only on .NET, no third-party dependencies. The drawback is that you don't get any help to build the URI to call the service.
 
@@ -56,7 +56,7 @@ You can get some help using the [Dapr .NET SDK](https://github.com/dapr/dotnet-s
 
 # Calling Dapr sidecar with Dapr HttpClient
 
-{% codeblock Calling Dapr sidecar with Dapr HttpClient lang:csharp %}
+```csharp {data-title=Calling Dapr sidecar with Dapr HttpClient}
 using System;
 using System.Collections.Generic;
 using System.Net.Http.Json;
@@ -74,13 +74,13 @@ foreach (var weatherForecast in weatherForecasts)
     Console.WriteLine(
         $"Date:{weatherForecast.Date}, TemperatureC:{weatherForecast.TemperatureC}, Summary:{weatherForecast.Summary}");
 }
-{% endcodeblock %}
+```
 
 We get exactly the same output result but this time we just had to craft an easy URI *"http://weatherforecastservice/weatherforecast"* composed only of the Dapr **app-id** and the **method-name** of our service.
 
 # Calling Dapr sidecar with DaprClient
 
-{% codeblock Calling Dapr sidecar with Dapr .NET SDK lang:csharp %}
+```csharp {data-title=Calling Dapr sidecar with Dapr .NET SDK}
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -98,7 +98,7 @@ foreach (var weatherForecast in weatherForecasts)
     Console.WriteLine(
         $"Date:{weatherForecast.Date}, TemperatureC:{weatherForecast.TemperatureC}, Summary:{weatherForecast.Summary}");
 }
-{% endcodeblock %}
+```
 
 Using the DaprClient we only had to specify the **HTTP method**, the Dapr **app-id** and the **method-name** of our service.
 

@@ -15,9 +15,9 @@ Till now, we have seen two [Dapr building blocks](https://laurentkempe.com/tags/
 
 Today's applications often need to be called from other external applications or call external services.
 
-{% alert info %}
+<?! alert info ?>
 A binding provides a bi-directional connection to an external cloud/on-premise service or system. Dapr allows you to invoke the external service through the Dapr binding API, and it allows your application to be triggered by events sent by the connected service.
-{% endalert %}
+<?!/ alert ?>
 
 What is the difference between just being called or calling yourself the external service? Like for previous building blocks the benefits are mostly similar
 <p></p>
@@ -36,7 +36,7 @@ We will implement a very simple application that will poll an external [Time ser
 
 As previously those are configured in the **dapr/components** folder.
 
-{% codeblock scheduleHttpJobCron.yaml lang:yaml %}
+```yaml {data-file=scheduleHttpJobCron.yaml}
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
@@ -48,11 +48,11 @@ spec:
   metadata:
     - name: schedule
       value: "@every 10s"
-{% endcodeblock %}
+```
 
 The Dapr Cron binding named *scheduleHttpJob* will be triggering each 10 seconds.
 
-{% codeblock httpJob.yaml lang:yaml %}
+```yaml {data-file=httpJob.yaml}
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
@@ -64,7 +64,7 @@ spec:
   metadata:
     - name: url
       value: http://worldtimeapi.org/api/timezone/Europe/Paris
-{% endcodeblock %}
+```
 
 The Dapr Http binding named *httpJob* will call the WorldTimeAPI service to get the current time in Paris.
 
@@ -72,7 +72,7 @@ Now that we have the Dapr configurations done, we need to have some code that wi
 
 To tie together the two Dapr bindings we create an ASP.NET controller that will be called by the *scheduleHttpJob* binding using an HTTP POST on the route *scheduleHttpJob*. The controller will use the *httpJob* binding to call the external service.
 
-{% codeblock ScheduledHttpJobController.cs lang:csharp %}
+```csharp {data-file=ScheduledHttpJobController.cs}
 [Route("scheduleHttpJob")]
 [ApiController]
 public class ScheduledHttpJobController : ControllerBase
@@ -99,7 +99,7 @@ public class ScheduledHttpJobController : ControllerBase
         _logger.LogInformation($"⏰ in Paris {timeData?.utc_datetime}");
     }
 }
-{% endcodeblock %}
+```
 
 # Starting the application
 
@@ -107,12 +107,12 @@ A start.ps1 script is provided in the GitHub repository. It will start the ASP.N
 
 And here are the results displayed after starting the application and waiting ten seconds that the cron input binding triggers and call the ASP.NET controller
 
-{% codeblock %}
+```
 == APP == info: Worker.Controllers.ScheduledHttpJobController[0]
 == APP ==       ScheduledHttpJobController called 😎
 == APP == info: Worker.Controllers.ScheduledHttpJobController[0]
 == APP ==       ⏰ in Paris 10/19/2021 1:29:04 PM
-{% endcodeblock %}
+```
 
 # Conclusion
 

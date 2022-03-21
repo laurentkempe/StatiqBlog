@@ -30,12 +30,12 @@ To be able to follow this simple example you will have to
 
 Let's create a basic web API using a .NET template
 
-{% codeblock Creating a .NET web API lang:powershell %}
+```powershell {data-title=Creating a .NET web API}
 mkdir WeatherForecastService
 cd WeatherForecastService
 dotnet new webapi
 dotnet run
-{% endcodeblock %}
+```
 
 We now have a simple web API which we can call using any web browser using the URL https://localhost:5001/weatherforecast. Nothing too special about it at the moment.
 
@@ -43,9 +43,9 @@ We now have a simple web API which we can call using any web browser using the U
 
 Dapr uses the [sidecar pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/sidecar), so we will run our web API and expose it through a Dapr sidecar.
 
-{% codeblock Running our web API with Dapr lang:powershell %}
+```powershell {data-title=Running our web API with Dapr}
 dapr run --app-id weatherforecastservice --dapr-http-port 3500 --app-port 5001 --app-ssl -- dotnet run
-{% endcodeblock %}
+```
 
 Let's break down this command to understand it:
 
@@ -66,9 +66,9 @@ http://localhost:3500/v1.0/invoke/weatherforecastservice/method/weatherforecast
 
 With this last URI, we invoke the Dapr sidecar by using the native invoke API built into Dapr. In this case, we call the API with HTTP but you can also call it with gRPC. The way to call it is standardized in the following way
 
-{% codeblock HTTP lang:powershell %}
+```powershell {data-title=HTTP}
 http://localhost:<dapr-http-port>/v1.0/invoke/<app-id>/method/<method-name>
-{% endcodeblock %}
+```
 
 So, having such a standard way of calling services using the **[service invocation](https://docs.dapr.io/developing-applications/building-blocks/service-invocation/service-invocation-overview/)** Dapr building block gives you access to built-in
 
@@ -80,9 +80,9 @@ So, having such a standard way of calling services using the **[service invocati
 
 One other great benefit is that you don't need to care in your application code about those things as those are externalized and handled by Dapr. So, you write code like you are used to and enrich your service with Dapr.
 
-{% alert info %}
+<?! alert info ?>
 You might have some performance concerns and you can read more about this topic on [Dapr performance considerations](https://docs.microsoft.com/en-us/dotnet/architecture/dapr-for-net-developers/dapr-at-20000-feet#dapr-performance-considerations).
-{% endalert %}
+<?!/ alert ?>
 
 # Conclusion
 

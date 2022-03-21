@@ -20,15 +20,15 @@ The little application used to illustrate the Dapr secrets management building b
 
 The secrets management building block is a building block that comes with a new capability which we didn't talk about in the previous posts, the components.
 
-{% alert info %}
+<?! alert info ?>
 Dapr uses a modular design where functionality is delivered as a component. Each component has an interface definition. All of the components are pluggable so that you can swap out one component with the same interface for another.
 
 A building block can use any combination of components.
-{% endalert %}
+<?!/ alert ?>
 
 This is one of the great power of Dapr. Here is the interface declaration for the secrets management building block which each component needs to implement.
 
-{% codeblock SecretStore lang:protobuf %}
+```protobuf {data-file=SecretStore}
 type SecretStore interface {
   // Init authenticates with the actual secret store and performs other init operation
   Init(metadata Metadata) error
@@ -39,7 +39,7 @@ type SecretStore interface {
   // BulkGetSecrets retrieves all secrets in the store and returns a map of decrypted string/string values
   BulkGetSecret(req BulkGetSecretRequest) (BulkGetSecretResponse, error)
 }
-{% endcodeblock %}
+```
 
 Currently, we can have access transparently to all of those components to handle secrets:
 
@@ -58,7 +58,7 @@ In this post, we are using local file storage to store the Twitter secrets, whic
 
 This is the first time we are seeing the components folder in which you can define components for your application. In today's post, we are defining a local secret store for local development and this is the only thing you would need to change when you would be ready to go into production with your application. The super nice part is that you could go to Azure, AWS, Google Cloud Platform, or any places in which secret components exist just by the change of a configuration file.
 
-{% codeblock local-secret-store.yaml lang:yaml %}
+```yaml {data-file=local-secret-store.yaml}
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
@@ -71,17 +71,17 @@ spec:
     value: ./client/components/secrets.json
   - name: nestedSeparator
     value: ":"
-{% endcodeblock %}
+```
 
 In this configuration we are defining the *name* of the component, **local-secret-store**  to be able to reference it from our code. Then, the type of component *secretstores.local.file* and where the secret file is stored.
 
 And here is the local secrets file.
 
-{% alert warning %}
+<?! alert warning ?>
 You should not push this file to your code repository, as it contains your secrets!
-{% endalert %}
+<?!/ alert ?>
 
-{% codeblock secrets.json lang:json %}
+```json {data-file=secrets.json}
 {
   "twitterSecrets": {
     "consumerKey": "TOADD",
@@ -90,7 +90,7 @@ You should not push this file to your code repository, as it contains your secre
     "accessSecret": "TOADD"
   }
 }
-{% endcodeblock %}
+```
 
 ## Starting Dapr sidecar
 
@@ -104,7 +104,7 @@ We just define the default gRPC port which the Dapr .NET SDK will be using in ou
 
 Our super simple application is again a [C# 9 top-level statements application](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/top-level-statements) using the [Dapr .NET SDK](https://docs.dapr.io/developing-applications/sdks/dotnet/) to access the Dapr secrets building block and the local file storage component by calling one of its API *GetBulkSecretAsync*. Then we build a *twitterClient* using Tweetinvi getting information from the authenticated user, of which you provided the secrets, to display her description.
 
-{% codeblock Program.cs lang:csharp %}
+```csharp {data-file=Program.cs}
 using System;
 using System.Linq;
 using Dapr.Client;
@@ -126,7 +126,7 @@ var twitterClient =
 
 var user = await twitterClient.Users.GetAuthenticatedUserAsync();
 Console.WriteLine(user.Description);
-{% endcodeblock %}
+```
 
 Here you can see the result:
 
