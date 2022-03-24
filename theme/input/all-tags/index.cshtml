@@ -1,6 +1,3 @@
-ArchiveSources: => $"posts/**/*"
-ArchiveDestination: => $"../output/all-tags/index.html"
----
 @inherits MyStatiqRazorPage<IDocument>
 
 <div id="archives" class="main-content-wrap">
@@ -10,7 +7,8 @@ ArchiveDestination: => $"../output/all-tags/index.html"
     <h4 class="archive-result text-color-base text-xlarge"
         data-message-zero="@Localization.Get("global.tags_found.zero")"
         data-message-one="@Localization.Get("global.tags_found.one")"
-        data-message-other="@Localization.Get("global.tags_found.other")"></h4>
+        data-message-other="@Localization.Get("global.tags_found.other")">
+    </h4>
     <section>
         @{
             var posts = Document.GetChildren().AsBlogPosts().ToList();
@@ -28,7 +26,7 @@ ArchiveDestination: => $"../output/all-tags/index.html"
         {
             <div id="@tagName-list" class="archive box" data-tag="@tagName.ToLower()">
                 <h4 class="archive-title">
-                    <a class="link-unstyled" href="@Metadata["tag_dir"]/@tagName"> @* TODO convert tagName to slug as original; tag.slug *@
+                    <a class="link-unstyled" href="../tags/@SlugBuilder.Create("", tagName)">
                         @tagName (@posts.CountPostsPerTag(tagName))
                     </a>
                 </h4>

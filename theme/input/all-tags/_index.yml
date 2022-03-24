@@ -1,0 +1,2 @@
+ArchiveSources: => $"posts/**/*"
+ArchiveDestination: => $"../output/all-tags/index.html"

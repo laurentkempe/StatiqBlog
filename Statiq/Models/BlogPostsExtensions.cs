@@ -1,4 +1,6 @@
-﻿namespace Blog.Statiq.Models;
+﻿using Blog.Statiq.Helpers;
+
+namespace Blog.Statiq.Models;
 
 public static class BlogPostsExtensions
 {

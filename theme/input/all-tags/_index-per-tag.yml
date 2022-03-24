@@ -1,0 +1,8 @@
+ArchiveSources: => $"posts/**/*"
+ArchiveKey: tags
+ArchivePageSize: => 10
+ArchiveOrderKey: permalink
+ArchiveOrderDescending: true
+ArchiveKeyComparer: => StringComparer.OrdinalIgnoreCase.ToConvertingEqualityComparer()
+ArchiveDestination: >
+  => GetInt("Index") <= 1 ? $"tags/{@SlugBuilder.Create("", GetString("GroupKey"))}/index.html" : $"tags/{@SlugBuilder.Create("", GetString("GroupKey"))}/page/{GetInt("Index")}/index.html"

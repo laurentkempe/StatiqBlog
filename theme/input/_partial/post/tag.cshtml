@@ -13,7 +13,7 @@
 {
     foreach (var tag in tags.OrderBy(s => s, StringComparer.OrdinalIgnoreCase))
     {
-        <a class="tag tag--primary tag--small t-none-link" href="/tags/@tag/" rel="tag">@tag</a>
+        <a class="tag tag--primary tag--small t-none-link" href="/tags/@SlugBuilder.Create("", tag)/" rel="tag">@tag</a>
     }
 }
 
