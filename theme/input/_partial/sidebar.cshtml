@@ -20,7 +20,7 @@
                 <h4 class="sidebar-profile-name">@Metadata["author2"]</h4>
                 @if (!string.IsNullOrWhiteSpace(Localization.Get("author.bio")))
                 {
-                    <h5 class="sidebar-profile-bio"><p>@Localization.Get("author.bio")</p></h5>
+                    <h5 class="sidebar-profile-bio"><p>@Localization.GetMarkdownRendered("author.bio")</p></h5>
                 }
             </div>
         }

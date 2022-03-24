@@ -14,16 +14,16 @@
             <img id="about-card-picture" src="@author.Picture" alt="@Localization.Get("global.author_picture")"/>
         }
         <h4 id="about-card-name">@author.Name</h4>
-        @if (!string.IsNullOrEmpty(author.Bio))
+        @if (!string.IsNullOrEmpty(author.Bio.Value))
         {
-            <div id="about-card-bio">@author.Bio</div> @* TODO <%- markdown(__('')) %> *@
+            <div id="about-card-bio">@author.Bio</div>
         }
-        @if (!string.IsNullOrEmpty(author.Job))
+        @if (!string.IsNullOrEmpty(author.Job.Value))
         {
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                @author.Job @* TODO <%- markdown(__('author.job')) %> *@
+                @author.Job
             </div>
         }
         @if (!string.IsNullOrEmpty(author.Location))

@@ -1,4 +1,7 @@
-﻿using Statiq.Common;
+﻿using Microsoft.AspNetCore.Html;
+using NetlifySharp;
+using Statiq.Common;
+using HtmlHelper = Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper;
 
 namespace Blog.Statiq.Models;
 
@@ -11,9 +14,9 @@ public class Author
         Twitter = metadata.GetString("author:twitter");
         Location = metadata.GetString("author:location");
         Name = metadata.GetString("author2");
-
-        Bio = localization?.Get("author.bio") ?? "Cannot read bio";
-        Job = localization?.Get("author.job") ?? "Cannot read job";
+        
+        Bio = new HtmlString(localization?.GetMarkdownRendered("author.bio") ?? "Cannot read bio");
+        Job = new HtmlString(localization?.GetMarkdownRendered("author.job") ?? "Cannot read job");
     }
     
     public string Name { get; }
@@ -21,6 +24,6 @@ public class Author
     public string Location { get; }
     public string Picture { get; }
     public string Twitter { get; }
-    public string? Bio { get; }
-    public string? Job { get; }
+    public HtmlString Bio { get; }
+    public HtmlString Job { get; }
 }

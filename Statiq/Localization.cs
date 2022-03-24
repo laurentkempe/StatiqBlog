@@ -1,5 +1,6 @@
 using System.Globalization;
 using Statiq.Common;
+using Statiq.Markdown;
 
 namespace Blog.Statiq;
 
@@ -27,6 +28,14 @@ public class Localization
             3 => metadata.GetMetadata(keys[0]).GetMetadata(keys[1]).GetString(keys[2]),
             _ => "!!! Error: Translation key is not in the correct format"
         };
+    }
+
+    public string GetMarkdownRendered(string key)
+    {
+        using var writer = new StringWriter();
+        MarkdownHelper.RenderMarkdown(null, _getDocument(), Get(key), writer);
+            
+        return writer.ToString();
     }
 
     public string GetLocalizedMonth(int month)
