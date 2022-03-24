@@ -43,11 +43,11 @@ You can see such a link on [Cacao README.md file](https://github.com/laurentkemp
 
 This link is built as following
 
-{% codeblock Cacao install hyperlink lang:html  %}
+``` Cacao install hyperlink lang:html  %}
 <a href='http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/laurentkempe/Cacao/master/PrepareMyCacao.ps1'>
   Install my tools!
 </a>
-{% endcodeblock %}
+```
 
 So easy and so powerful. You append the hyperlink to the raw URL of your script to an URL which will install Boxstarter, and that does the trick!
 

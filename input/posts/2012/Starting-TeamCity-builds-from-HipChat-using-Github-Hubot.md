@@ -29,7 +29,7 @@ This time we want to have Hubot calling the TeamCity server so we need to add a 
 
 Our script is heavily inspired from the TeamCity.coffee script, and here is a first version:
 
-{% codeblock TeamCity.coffee lang:coffeescript http://underscorejs.org/#compact TeamCity.coffee %}
+``` TeamCity.coffee lang:coffeescript http://underscorejs.org/#compact TeamCity.coffee %}
 # Starts a build on TeamCity.
 #
 # You need to set the following variables:
@@ -52,7 +52,7 @@ module.exports = (robot) ->
         if err
           msg.send "Team city says: #{err}"
           return</host></user>
-{% endcodeblock %}
+```
 
 By the way I started to learn CoffeeScript so this is more hacking then something really productive.
 

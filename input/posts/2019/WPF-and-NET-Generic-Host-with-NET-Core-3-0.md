@@ -34,7 +34,7 @@ We need to modify the App.xaml so that it doesn't use StartupUri. Which sets the
 
 We replace *StartupUri* by *Startup* calling *Application_Startup* and when we are at it, we also add *Exit* and *Application_Exit*. This will let us know when the application starts/stops so that we can start/stop the host.
 
-{% codeblock lang:csharp App.xaml %}
+``` lang:csharp App.xaml %}
 <Application x:Class="wpfGenericHost.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -43,9 +43,9 @@ We replace *StartupUri* by *Startup* calling *Application_Startup* and when we a
              Exit="Application_Exit">
     <Application.Resources />         
 </Application>
-{% endcodeblock %}
+```
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public partial class App : Application
 {
     public App()
@@ -60,11 +60,11 @@ public partial class App : Application
     {
     }
 }
-{% endcodeblock %}
+```
 
 The App constructor seems to be the right place to build our new Host. *Application_Startup* the place to start the host and *Application_Exit* the place to stop the host.
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public partial class App : Application
 {
     private IHost _host;
@@ -87,17 +87,17 @@ public partial class App : Application
         }
     }
 }
-{% endcodeblock %}
+```
 
 # Dependency injection (DI)
 
 A first capability that .NET Generic Host is bringing is Dependency injection. We can inject some dependencies to the *MainWindow* as we delegate it's creation to the IOC container in *Application_Startup*. In this example, we are injecting a simple interface called *ITextService* with one method *GetText()*.
 
-{% alert info %}
+<?! alert info ?>
 In a real application, we definitely would be able to inject a View Model like *MainWindowViewModel* which would itself have other dependencies provided by the IOC container.
-{% endalert %}
+<?!/ alert ?>
 
-{% codeblock lang:csharp MainWindow.xaml.cs %}
+``` lang:csharp MainWindow.xaml.cs %}
 public partial class MainWindow : Window
 {
     public MainWindow(ITextService textService)
@@ -107,9 +107,9 @@ public partial class MainWindow : Window
         Label.Content = textService.GetText();
     }
 }
-{% endcodeblock %}
+```
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public partial class App : Application
 {
     private IHost _host;
@@ -135,7 +135,7 @@ public partial class App : Application
 
     ...
 }
-{% endcodeblock %}
+```
 
 # Configuration
 
@@ -143,20 +143,20 @@ The second capability of .NET Generic Host we want to explore is Configuration. 
 
 The configuration is handled by a concrete class called *Settings* and the *appsettings.json* configuration file. Both have a property called *Text*.
 
-{% codeblock lang:csharp Settings.cs %}
+``` lang:csharp Settings.cs %}
 public class Settings
 {
     public string Text { get; set; }
 }
-{% endcodeblock %}
+```
 
-{% codeblock lang:json appsettings.json %}
+``` lang:json appsettings.json %}
 {
     "Text": "Hello WPF .NET Core 3.0\nfrom .NET Generic Host!"
 }
-{% endcodeblock %}
+```
 
-{% codeblock lang:csharp TextService.cs %}
+``` lang:csharp TextService.cs %}
 class TextService : ITextService
 {
     private string _text;
@@ -171,11 +171,11 @@ class TextService : ITextService
         return _text;
     }
 }
-{% endcodeblock %}
+```
 
 We register the *Settings* class in the IOC container so that it is resolved and injected as *IOptions<Settings>* in our concrete class *TextService*.
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public partial class App : Application
 {
     private IHost _host;
@@ -201,13 +201,13 @@ public partial class App : Application
     }
     ...
 }
-{% endcodeblock %}
+```
 
 # Logging
 
 The final capability of .NET Generic Host we want to have a look at is Logging. In our simple example, we will just add the possibility to output logs to the Console. Again, we are injecting an *ILogger* into our concrete class *TextService* to be able to write a piece of information to our logs.
 
-{% codeblock lang:csharp TextService.cs %}
+``` lang:csharp TextService.cs %}
 class TextService : ITextService
 {
     private string _text;
@@ -224,9 +224,9 @@ class TextService : ITextService
         return _text;
     }
 }
-{% endcodeblock %}
+```
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public partial class App : Application
 {
     private IHost _host;
@@ -254,7 +254,7 @@ public partial class App : Application
     }
     ...
 }
-{% endcodeblock %}
+```
 
 # Result
 

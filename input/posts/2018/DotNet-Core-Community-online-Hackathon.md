@@ -31,9 +31,9 @@ I went and started to read [contribution guide](https://github.com/dotnet/corefx
 
 I tried to have the tests running inside Visual Studio, but after some pains and no success with [ReSharper](https://www.jetbrains.com/resharper/?fromMenu) and [Visual Studio]((https://visualstudio.microsoft.com/), I asked some help on the gitter which [Viktor Hofer](https://github.com/ViktorHofer) [provided kindly](https://gitter.im/dotnet/corefx-hackathon?at=5b1259f5f9f2e56cf234c485). You need to use the command 
 
-{% codeblock Running tests from MSBuild lang:language  %}
+``` Running tests from MSBuild lang:language  %}
 msbuild /t:RebuildAndTest
-{% endcodeblock %}
+```
 
 By running the tests I found an issue with one tests and quickly guessed that it was because my Windows 10 Pro installation is in en-US and I set my first day of the week to Monday! So I reported the [issue on Github](https://github.com/dotnet/corefx/issues/30074). The issue went through a discussion in the team and was finally fixed after being first rejected. I have to say that I agree that when someone clones a repository and run the tests, then everything should be working even in a weird setting like mine.
 

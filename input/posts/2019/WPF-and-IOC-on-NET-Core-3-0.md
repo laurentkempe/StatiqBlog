@@ -28,7 +28,7 @@ The goal of this post is to see how we could use Microsoft Extensions Dependency
 
 We create our project from the command line.
 
-{% codeblock lang:shell %}
+``` lang:shell %}
 ❯ mkdir WpfIoc
 ❯ cd WpfIoc
 ❯ dotnet.exe --version
@@ -56,7 +56,7 @@ Build succeeded.
     0 Error(s)
 
 Time Elapsed 00:00:01.63
-{% endcodeblock %}
+```
 
 What we want to achieve is to bootstrap the application and inject in the constructor of our MainWindow a service which will be called to display some text on the main window of the application.
 
@@ -64,7 +64,7 @@ What we want to achieve is to bootstrap the application and inject in the constr
 
 First, we need to add the reference to the *Microsoft Extensions DependencyInjection*.
 
-{% codeblock lang:xml WpfIoc.csproj %}
+``` lang:xml WpfIoc.csproj %}
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
@@ -78,20 +78,20 @@ First, we need to add the reference to the *Microsoft Extensions DependencyInjec
   </ItemGroup>
 
 </Project>
-{% endcodeblock %}
+```
 
 Then we create an interface *ITextService* which will be injected by the container into the MainWindow class.
 
-{% codeblock lang:csharp ITextService.cs %}
+``` lang:csharp ITextService.cs %}
 public interface ITextService
 {
     string GetText();
 }
-{% endcodeblock %}
+```
 
  In fact, it is a concrete implementation of that interface which will be injected *TextService*.
 
-{% codeblock lang:csharp TextService.cs %}
+``` lang:csharp TextService.cs %}
 class TextService : ITextService
 {
     private string _text;
@@ -106,23 +106,23 @@ class TextService : ITextService
         return _text;
     }
 }
-{% endcodeblock %}
+```
 
 Then we need to configure our IOC container.
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 services.AddSingleton<ITextService>(provider => new TextService("Hi WPF .NET Core 3.0!"));
-{% endcodeblock %}
+```
 
 So this also means that we need to have our IOC container creating our WPF MainWindow, no problem it is just another normal C# class.
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 services.AddSingleton<MainWindow>();
-{% endcodeblock %}
+```
 
 Next piece which we need to put in place is the one linking all the other pieces together; the IOC container! That's quite easy we just need to extend the App class to create *ServiceCollection* add the dependencies we want the IOC container to manage and then to call *BuildServiceProvider*.  
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 public App()
 {
     var serviceCollection = new ServiceCollection();
@@ -136,21 +136,21 @@ private void ConfigureServices(IServiceCollection services)
     services.AddSingleton<ITextService>(provider => new TextService("Hi WPF .NET Core 3.0!"));
     services.AddSingleton<MainWindow>();
 }
-{% endcodeblock %}
+```
 
 Then, on the *App_OnStartup* we are using the ServiceProvider to get an instance of *MainWindow* which would get the *ITextService* injected in its constructor.  
 
-{% codeblock lang:csharp App.xaml.cs %}
+``` lang:csharp App.xaml.cs %}
 private void App_OnStartup(object sender, StartupEventArgs e)
 {
     var mainWindow = _serviceProvider.GetService<MainWindow>();
     mainWindow.Show();
 }
-{% endcodeblock %}
+```
 
 We also modified *App.xaml* to call *App_OnStartup*.
 
-{% codeblock lang:xml App.xaml %}
+``` lang:xml App.xaml %}
 <Application x:Class="wpfioc.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -159,11 +159,11 @@ We also modified *App.xaml* to call *App_OnStartup*.
     <Application.Resources>
     </Application.Resources>
 </Application>
-{% endcodeblock %}
+```
 
 Finally, we modify the XAML of the MainWindow to display some text in a Label.
 
-{% codeblock lang:xml MainWindow.xaml %}
+``` lang:xml MainWindow.xaml %}
 <Window x:Class="WpfIoc.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -180,11 +180,11 @@ Finally, we modify the XAML of the MainWindow to display some text in a Label.
         <Label Name="Label" Content="Hello .NET Core!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" />
     </Grid>
 </Window>
-{% endcodeblock %}
+```
 
 And we inject through the constructor, the *ITextService* interface which is used to set the Label text.
 
-{% codeblock lang:csharp MainWindow.xaml.cs %}
+``` lang:csharp MainWindow.xaml.cs %}
     public partial class MainWindow : Window
     {
         public MainWindow(ITextService textService)
@@ -194,7 +194,7 @@ And we inject through the constructor, the *ITextService* interface which is use
             Label.Content = textService.GetText();
         }
     }
-{% endcodeblock %}
+```
 
 # Result
 

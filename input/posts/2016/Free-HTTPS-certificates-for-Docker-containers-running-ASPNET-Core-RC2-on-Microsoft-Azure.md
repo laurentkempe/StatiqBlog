@@ -38,9 +38,9 @@ Following the [documentation of HTTPS-PORTAL](https://github.com/SteveLTN/https-
 
 I fell into a trap, so be aware of it! I got first NGINX 502 Bad gateway error. I thought that the docker-compose.yml part for hipchat had to declare an exposed port. In fact, it doesn't work like that. We are using links so that both containers are on the same internal network and that they can communicate. But that happens on their internal ports, so in our case for Kestrel and our Docker image, it is the port 5000. To realize that I had to connect to the container using
 
-{% alert info %}
+<?! alert info ?>
 \> docker exec -i -t CONTAINER /bin/bash
-{% endalert %}
+<?!/ alert ?>
 
 I installed wget, got the IP of the Kestrel container and tried to connect to it using wget also to get an error. That's the moment I realized about the port!
 

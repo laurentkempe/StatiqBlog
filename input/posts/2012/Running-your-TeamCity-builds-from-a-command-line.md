@@ -42,7 +42,7 @@ Nice ,but we want to get a step further and be able to start the build from Powe
 
 To achieve this goal you add those two functions to your PowerShell profile:
 
-{% codeblock Microsoft.PowerShell_profile.ps1 lang:powershell %}
+``` Microsoft.PowerShell_profile.ps1 lang:powershell %}
 function Get-Web($url, 
     [switch]$self,
     $credential, 
@@ -103,7 +103,7 @@ function tcBuild([string]$branch) {
 
     Get-Web $url -credential $credentials
 }
-{% endcodeblock %}
+```
 
 Please adapt the tcBuild script by replacing the YourServerUrl, YourBuildId, Username, Password by your personal values.
 

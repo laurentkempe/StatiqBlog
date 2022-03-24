@@ -21,14 +21,14 @@ I am using the [.NET Core CLI](https://docs.microsoft.com/en-us/dotnet/core/tool
 
  I am using the default gRPC .NET Core template to generate the server part. The template creates a greet.proto file which I will duplicate between the server and the client project. As I want to experience with the [streaming capability of gRPC](https://www.grpc.io/docs/guides/concepts/), I am modifying the greet.proto file adding the keyword stream in front of the SayHello HelloReply response.
 
-{% alert info %}
+<?! alert info ?>
 Server streaming RPC
 A server-streaming RPC is similar to our simple example, except **the server sends back a stream of responses after getting the client’s request message**. After sending back all its responses, the server’s status details (status code and optional status message) and optional trailing metadata are sent back to complete on the server side. **The client completes once it has all the server’s responses**.
-{% endalert %}
+<?!/ alert ?>
 
  Here is how the greet.proto looks like.
 
-{% codeblock greet.proto %}
+``` greet.proto %}
 syntax = "proto3";
 
 option csharp_namespace = "grpcAsyncStreamServer";
@@ -50,11 +50,11 @@ message HelloRequest {
 message HelloReply {
   string message = 1;
 }
-{% endcodeblock %}
+```
 
 I modify the code of the GreeterService class coming from the template to stream 10 HelloReply back to the client, with a small delay of 200ms in between each string returned to simulate some work.
 
-{% codeblock GreeterService.cs lang:csharp %}
+``` GreeterService.cs lang:csharp %}
 public class GreeterService : Greeter.GreeterBase
 {
     private readonly ILogger<GreeterService> _logger;
@@ -76,13 +76,13 @@ public class GreeterService : Greeter.GreeterBase
         }
     }
 }
-{% endcodeblock %}
+```
 
 # Client
 
 For the client, I am creating a new Console application and copying the greet.proto into a new folder which I name Protos. Then I need to add the dependencies that you can see on the following csproj, so that at compilation time, the proto file is projected to C# code which I can use in my code. That's nice because it means that you also get after a first compilation IntelliSense auto-completion.
 
-{% codeblock grpcAsyncStreamClient.csproj lang:xml %}
+``` grpcAsyncStreamClient.csproj lang:xml %}
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -109,17 +109,17 @@ For the client, I am creating a new Console application and copying the greet.pr
   </ItemGroup>
   
 </Project>
-{% endcodeblock %}
+```
 
 We can now use the new C# 8 Async stream to iterate on the server answers asynchronously.
 
-{% alert info %}
+<?! alert info ?>
 C# has support for iterator methods and async methods, but no support for a method that is both an iterator and an async method. We should rectify this by allowing for await to be used in a new form of async iterator, one that returns an IAsyncEnumerable<T> or IAsyncEnumerator<T> rather than an IEnumerable<T> or IEnumerator<T>, with IAsyncEnumerable<T> consumable in a new await foreach. An IAsyncDisposable interface is also used to enable asynchronous cleanup.
-{% endalert %}
+<?!/ alert ?>
 
 The code is greatly readable with this.
 
-{% codeblock Program.cs lang:csharp %}
+``` Program.cs lang:csharp %}
 static class Program
 {
     static async Task Main(string[] args)
@@ -135,7 +135,7 @@ static class Program
         }
     }
 }
-{% endcodeblock %}
+```
 
 # Conclusion
 

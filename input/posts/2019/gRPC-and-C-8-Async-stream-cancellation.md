@@ -18,13 +18,13 @@ In the previous post "[gRPC and C# 8 Async stream](https://laurentkempe.com/2019
 
 I need to extend a bit the original code of the *GreeterService* to take care of the client request to stop the streaming. This is done through the usage of *ServerCallContext* which exposes a *CancellationToken*.
 
-{% alert info %}
+<?! alert info ?>
 Note: we don't need to change anything to our greet.proto file! The cancellation capability is coming out of the box from the framework.
-{% endalert %}
+<?!/ alert ?>
 
 Then we need to check if the client requests the cancellation using *IsCancellationRequested* and in that case, stop writing back into the responseStream. Easy!
 
-{% codeblock GreeterService.cs lang:csharp %}
+``` GreeterService.cs lang:csharp %}
 public class GreeterService : Greeter.GreeterBase
 {
     private readonly ILogger< GreeterService> _logger;
@@ -51,7 +51,7 @@ public class GreeterService : Greeter.GreeterBase
         }
     }
 }
-{% endcodeblock %}
+```
 
 # Client
 
@@ -61,7 +61,7 @@ As we did for the server, we need to use cancellation token for that, which we s
 
 Then we need to surround our code with *try...catch* catching RpcException with a status code of *StatusCode.Cancelled*. Easy too!
 
-{% codeblock Program.cs lang:csharp %}
+``` Program.cs lang:csharp %}
 static class Program
 {
     static async Task Main(string[] args)
@@ -92,7 +92,7 @@ static class Program
         }
     }
 }
-{% endcodeblock %}
+```
 
 # Conclusion
 
