@@ -24,7 +24,7 @@ Note: we don't need to change anything to our greet.proto file! The cancellation
 
 Then we need to check if the client requests the cancellation using *IsCancellationRequested* and in that case, stop writing back into the responseStream. Easy!
 
-``` GreeterService.cs lang:csharp %}
+```csharp {data-file=GreeterService.cs}
 public class GreeterService : Greeter.GreeterBase
 {
     private readonly ILogger< GreeterService> _logger;
@@ -61,7 +61,7 @@ As we did for the server, we need to use cancellation token for that, which we s
 
 Then we need to surround our code with *try...catch* catching RpcException with a status code of *StatusCode.Cancelled*. Easy too!
 
-``` Program.cs lang:csharp %}
+```csharp {data-file=Program.cs}
 static class Program
 {
     static async Task Main(string[] args)

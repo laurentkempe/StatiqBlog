@@ -28,7 +28,7 @@ The goal of this post is to see how we could use Microsoft Extensions Dependency
 
 We create our project from the command line.
 
-``` lang:shell %}
+```shell
 ❯ mkdir WpfIoc
 ❯ cd WpfIoc
 ❯ dotnet.exe --version
@@ -64,7 +64,7 @@ What we want to achieve is to bootstrap the application and inject in the constr
 
 First, we need to add the reference to the *Microsoft Extensions DependencyInjection*.
 
-``` lang:xml WpfIoc.csproj %}
+```xml {data-file=WpfIoc.csproj}
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
@@ -82,7 +82,7 @@ First, we need to add the reference to the *Microsoft Extensions DependencyInjec
 
 Then we create an interface *ITextService* which will be injected by the container into the MainWindow class.
 
-``` lang:csharp ITextService.cs %}
+```csharp {data-file=ITextService.cs}
 public interface ITextService
 {
     string GetText();
@@ -91,7 +91,7 @@ public interface ITextService
 
  In fact, it is a concrete implementation of that interface which will be injected *TextService*.
 
-``` lang:csharp TextService.cs %}
+```csharp {data-file=TextService.cs}
 class TextService : ITextService
 {
     private string _text;
@@ -110,19 +110,19 @@ class TextService : ITextService
 
 Then we need to configure our IOC container.
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 services.AddSingleton<ITextService>(provider => new TextService("Hi WPF .NET Core 3.0!"));
 ```
 
 So this also means that we need to have our IOC container creating our WPF MainWindow, no problem it is just another normal C# class.
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 services.AddSingleton<MainWindow>();
 ```
 
 Next piece which we need to put in place is the one linking all the other pieces together; the IOC container! That's quite easy we just need to extend the App class to create *ServiceCollection* add the dependencies we want the IOC container to manage and then to call *BuildServiceProvider*.  
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public App()
 {
     var serviceCollection = new ServiceCollection();
@@ -140,7 +140,7 @@ private void ConfigureServices(IServiceCollection services)
 
 Then, on the *App_OnStartup* we are using the ServiceProvider to get an instance of *MainWindow* which would get the *ITextService* injected in its constructor.  
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 private void App_OnStartup(object sender, StartupEventArgs e)
 {
     var mainWindow = _serviceProvider.GetService<MainWindow>();
@@ -150,7 +150,7 @@ private void App_OnStartup(object sender, StartupEventArgs e)
 
 We also modified *App.xaml* to call *App_OnStartup*.
 
-``` lang:xml App.xaml %}
+```xml {data-file=App.xaml}
 <Application x:Class="wpfioc.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -163,7 +163,7 @@ We also modified *App.xaml* to call *App_OnStartup*.
 
 Finally, we modify the XAML of the MainWindow to display some text in a Label.
 
-``` lang:xml MainWindow.xaml %}
+```xml {data-file=MainWindow.xaml}
 <Window x:Class="WpfIoc.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -184,7 +184,7 @@ Finally, we modify the XAML of the MainWindow to display some text in a Label.
 
 And we inject through the constructor, the *ITextService* interface which is used to set the Label text.
 
-``` lang:csharp MainWindow.xaml.cs %}
+```csharp {data-file=MainWindow.xaml.cs}
     public partial class MainWindow : Window
     {
         public MainWindow(ITextService textService)

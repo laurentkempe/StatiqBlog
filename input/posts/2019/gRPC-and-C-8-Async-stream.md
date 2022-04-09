@@ -22,13 +22,13 @@ I am using the [.NET Core CLI](https://docs.microsoft.com/en-us/dotnet/core/tool
  I am using the default gRPC .NET Core template to generate the server part. The template creates a greet.proto file which I will duplicate between the server and the client project. As I want to experience with the [streaming capability of gRPC](https://www.grpc.io/docs/guides/concepts/), I am modifying the greet.proto file adding the keyword stream in front of the SayHello HelloReply response.
 
 <?! alert info ?>
-Server streaming RPC
+Server streaming RPC<br/>
 A server-streaming RPC is similar to our simple example, except **the server sends back a stream of responses after getting the client’s request message**. After sending back all its responses, the server’s status details (status code and optional status message) and optional trailing metadata are sent back to complete on the server side. **The client completes once it has all the server’s responses**.
 <?!/ alert ?>
 
  Here is how the greet.proto looks like.
 
-``` greet.proto %}
+```protobuf {data-file=greet.proto}
 syntax = "proto3";
 
 option csharp_namespace = "grpcAsyncStreamServer";
@@ -54,7 +54,7 @@ message HelloReply {
 
 I modify the code of the GreeterService class coming from the template to stream 10 HelloReply back to the client, with a small delay of 200ms in between each string returned to simulate some work.
 
-``` GreeterService.cs lang:csharp %}
+```csharp {data-file=GreeterService.cs}
 public class GreeterService : Greeter.GreeterBase
 {
     private readonly ILogger<GreeterService> _logger;
@@ -82,7 +82,7 @@ public class GreeterService : Greeter.GreeterBase
 
 For the client, I am creating a new Console application and copying the greet.proto into a new folder which I name Protos. Then I need to add the dependencies that you can see on the following csproj, so that at compilation time, the proto file is projected to C# code which I can use in my code. That's nice because it means that you also get after a first compilation IntelliSense auto-completion.
 
-``` grpcAsyncStreamClient.csproj lang:xml %}
+```xml {data-file=grpcAsyncStreamClient.csproj}
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -119,7 +119,7 @@ C# has support for iterator methods and async methods, but no support for a meth
 
 The code is greatly readable with this.
 
-``` Program.cs lang:csharp %}
+```csharp {data-file=Program.cs}
 static class Program
 {
     static async Task Main(string[] args)
