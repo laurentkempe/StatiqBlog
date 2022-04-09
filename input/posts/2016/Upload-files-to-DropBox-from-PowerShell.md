@@ -20,7 +20,41 @@ So I decided that I could write a little PowerShell script to achieve that uploa
 
 Here it is
 
-{% gist 9e71a307e1d216d17e5adf1589e51c5e dropbox-upload.ps1 %}
+```powershell {data-file=dropbox-upload.ps1  docker_build.log data-gist=9e71a307e1d216d17e5adf1589e51c5e}
+<#
+
+.SYNOPSIS
+This is a Powershell script to upload a file to DropBox using their REST API.
+
+.DESCRIPTION
+This Powershell script will upload file to DropBox using their REST API with the parameters you provide.
+
+.PARAMETER SourceFilePath
+The path of the file to upload.
+.PARAMETER TargetFilePath
+The path of the file on DropBox.
+
+.ENV PARAMETER DropBoxAccessToken
+The DropBox access token.
+#>
+
+Param(
+    [Parameter(Mandatory=$true)]
+    [string]$SourceFilePath,
+    [Parameter(Mandatory=$true)]
+    [string]$TargetFilePath
+)
+
+$arg = '{ "path": "' + $TargetFilePath + '", "mode": "add", "autorename": true, "mute": false }'
+$authorization = "Bearer " + (get-item env:DropBoxAccessToken).Value
+
+$headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+$headers.Add("Authorization", $authorization)
+$headers.Add("Dropbox-API-Arg", $arg)
+$headers.Add("Content-Type", 'application/octet-stream')
+ 
+Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $SourceFilePath -Headers $headers
+```
 
 The script is getting one environment variable *DropBoxAccessToken*, which represents the DropBox access token because I don't want to see the access token logged into our TeamCity logs.
 

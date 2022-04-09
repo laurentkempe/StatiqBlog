@@ -31,6 +31,6 @@ Again easy, just configure a build which takes the .nupkg from one folder and th
 
 ![tc-nuget-server-3](https://farm2.staticflickr.com/1671/25828490813_5a089e7001_o.png)
 
-So when Telerik release a new version we just need to upload all the .nupkg files to the folder *C:\Telerik\* and run the build!
+So when Telerik release a new version we just need to upload all the .nupkg files to the folder C:\Telerik\ and run the build!
 
 One more step in the good direction of automation!
