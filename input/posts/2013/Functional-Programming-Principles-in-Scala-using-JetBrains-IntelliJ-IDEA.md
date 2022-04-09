@@ -71,4 +71,4 @@ There is still two tests to fix in the first assignment, this is why there are r
 
 But as you can see now you have a full Scala development environment based on the great JetBrains IntelliJ IDEA IDE! Now you can code with pleasure!
 
-I really enjoy the first week assignments and implemented the first two as [coding Kata](http://www.laurentkempe.com/post/Test-Driven-Development-Kata-String-Calculator.aspx)! And I even involved France-Anne for the second one; first time that she is coding something ![Smile](/images/wlEmoticon-smile.png) . Very nice!
+I really enjoy the first week assignments and implemented the first two as [coding Kata](http://www.laurentkempe.com/post/Test-Driven-Development-Kata-String-Calculator.aspx)! And I even involved France-Anne for the second one; first time that she is coding something 😀. Very nice!
