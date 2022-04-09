@@ -45,7 +45,7 @@ I have greatly reduced the burden using [Azure DevOps](https://azure.microsoft.c
 Microsoft is supporting the open source community with [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) with 10 parallel jobs with unlimited minutes for CI/CD! Thanks for that.
 
 You can watch a great quick intro video from [Abel Wang](https://twitter.com/AbelSquidHead) to get a better idea
-{% youtube NuYDAs3kNV8 %}
+<?# Plyr video=NuYDAs3kNV8 /?>
 
 ## Build pipeline
 
@@ -77,7 +77,75 @@ The remaining manual tasks are
 
 This is the *azure-pipelines.yml* file which automates the whole build step!
 
-{% gist dcc375c8bd03fb0367b5b6835464b45c azure-pipelines.yml %}
+```yaml {data-file=azure-pipelines.yml data-gist=dcc375c8bd03fb0367b5b6835464b45c}
+# .NET Desktop
+# Build and run tests for .NET Desktop or Windows classic desktop solutions.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
+
+pool:
+  vmImage: 'VS2017-Win2016'
+
+variables:
+  patch: $[counter('versioncounter', 0)]
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+name: 3.9.3.$(patch)
+
+steps:
+- task: NuGetToolInstaller@0
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: bleddynrichards.Assembly-Info-Task.Assembly-Info-Task.Assembly-Info-NetFramework@2
+  displayName: 'Update Assembly Version'
+  inputs:
+    VersionNumber: '$(Build.BuildNumber)'
+    FileVersionNumber: '$(Build.BuildNumber)'
+    InformationalVersion: '$(Build.BuildNumber)'
+
+- task: VsixToolsUpdateVersion@1
+  displayName: 'Update Vsix Version'
+  inputs:
+    FileName: $(Build.SourcesDirectory)\$(system.teamProject).Extension\source.extension.vsixmanifest
+    VersionNumber: '$(Build.BuildNumber)'
+  
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: CopyFiles@2
+  displayName: 'Copy Artifacts to Staging'
+  inputs: 
+    contents: '**\?(*.vsix|extension-manifest.json|README-Marketplace.md)'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    flattenFolders: true
+
+- task: CopyFiles@2
+  displayName: 'Copy Vsix to Chocolatey'
+  inputs: 
+    contents: '**\?(*.vsix)'
+    targetFolder: '$(Build.Repository.LocalPath)/ChocolateyPackage/GitDiffMargin/tools/'
+    flattenFolders: true
+
+- task: gep13.chocolatey-azuredevops.chocolatey-azuredevops.ChocolateyCommand@0
+  displayName: 'Chocolatey pack'
+  inputs:
+    packWorkingDirectory: '$(Build.Repository.LocalPath)/ChocolateyPackage/GitDiffMargin/'
+    packNuspecFileName: GitDiffMargin.nuspec
+    packVersion: '$(Build.BuildNumber)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: '$(system.teamProject)'
+```
 
 By the way, you can get nice [clickable build status badge](https://docs.microsoft.com/en-us/rest/api/azure/devops/build/badge/get%20build%20badge%20data?view=azure-devops-rest-5.0) like the following one
 
@@ -94,29 +162,57 @@ In this step, we would like to automate the following
 7. Login to Chocolatey.org, upload by hand the nupkg, adapt the description and publish
 
 For that, we created a release pipeline job named "Marketplace - Github - Choco" with 3 tasks connected to our previously defined build pipeline artifacts
-{% image center clear https://farm8.staticflickr.com/7807/32349146347_f88d9b1fce_o.png 653 423 Azure DevOps Release pipeline %}
+<?# image center clear group=azuredevops https://farm8.staticflickr.com/7807/32349146347_f88d9b1fce_o.png alt="Azure DevOps Release pipeline"/?>
 
 In the details
-{% image center clear https://farm8.staticflickr.com/7840/47290958411_251b163117_o.png 642 296 Azure DevOps Release pipeline tasks %}
+<?# image center clear group=azuredevops https://farm8.staticflickr.com/7840/47290958411_251b163117_o.png alt="Azure DevOps Release pipeline tasks" /?>
 
 The first task publish Git Diff Margin to Visual Studio Extension using [Azure DevOps Extension Tasks](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.vsts-developer-tools-build-tasks)
 
-{% gist dcc375c8bd03fb0367b5b6835464b45c azure-vs-release-pipelines.yml %}
+```yaml {data-file=azure-vs-release-pipelines.yml data-gist=dcc375c8bd03fb0367b5b6835464b45c}
+steps:
+- task: ms-devlabs.vsts-developer-tools-build-tasks.publish-vs-extension-build-task.PublishVSExtension@1
+  displayName: 'Publish Visual Studio Extension'
+  inputs:
+  connectedServiceName: 'Visual Studio Marketplace'
+  vsixFile: '$(System.DefaultWorkingDirectory)/_GitDiffMargin CI/GitDiffMargin/GitDiffMargin.vsix'
+  rootFolder: '$(System.DefaultWorkingDirectory)/_GitDiffMargin CI/GitDiffMargin'
+  publisherId: LaurentKempe
+```
 
 The second task creates a GitHub release draft using [GitHub Release task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
 
-{% gist dcc375c8bd03fb0367b5b6835464b45c azure-github-release-pipelines.yml %}
+```yaml {data-file=azure-github-release-pipelines.yml data-gist=dcc375c8bd03fb0367b5b6835464b45c}
+steps:
+- task: GitHubRelease@0
+  displayName: 'GitHub release (create)'
+  inputs:
+    gitHubConnection: laurentkempe
+    repositoryName: laurentkempe/GitDiffMargin
+    title: 'v$(Build.BuildNumber)'
+    assets: '$(System.DefaultWorkingDirectory)/_GitDiffMargin CI/GitDiffMargin/GitDiffMargin.vsix'
+    isDraft: true
+```
 
 The third task publish to Chocolatey using [Chocolatey](https://marketplace.visualstudio.com/items?itemName=gep13.chocolatey-azuredevops)
 
-{% gist dcc375c8bd03fb0367b5b6835464b45c azure-chocolatey-release-pipelines.yml %}
+```yaml {data-file=azure-chocolatey-release-pipelines.yml data-gist=dcc375c8bd03fb0367b5b6835464b45c}
+steps:
+- task: gep13.chocolatey-azuredevops.chocolatey-azuredevops.ChocolateyCommand@0
+  displayName: 'Chocolatey push'
+  inputs:
+    command: push
+    pushWorkingDirectory: '$(System.DefaultWorkingDirectory)/_GitDiffMargin CI/GitDiffMargin'
+    pushNupkgFileName: 'GitDiffMargin.$(Build.BuildNumber).nupkg'
+    pushApikey: 'YOUR_API_KEY'
+```
 
 The release pipeline is triggered manually when I am ready to publish a new version
 
-{% image center clear https://farm8.staticflickr.com/7820/46376429945_e3fde68d19_o.png 661 142 Azure DevOps Releasing %}
+<?# image center clear group=azuredevops https://farm8.staticflickr.com/7820/46376429945_e3fde68d19_o.png alt="Azure DevOps Releasing" /?>
 
 And if everything worked correctly you see the following result
-{% image center clear https://farm8.staticflickr.com/7883/40326503893_58116c2328_o.png 687 497 Azure DevOps Release result %}
+<?# image center clear group=azuredevops https://farm8.staticflickr.com/7883/40326503893_58116c2328_o.png alt="Azure DevOps Release result" /?>
 
 And now people have access to the latest version of Git Diff Margin on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=LaurentKempe.GitDiffMargin), on [Github release](https://github.com/laurentkempe/GitDiffMargin/releases/tag/v3.9.3) and on [Chocolatey](https://www.chocolatey.org/packages/GitDiffMargin/).
 

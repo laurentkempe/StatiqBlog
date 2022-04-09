@@ -34,7 +34,7 @@ We need to modify the App.xaml so that it doesn't use StartupUri. Which sets the
 
 We replace *StartupUri* by *Startup* calling *Application_Startup* and when we are at it, we also add *Exit* and *Application_Exit*. This will let us know when the application starts/stops so that we can start/stop the host.
 
-``` lang:csharp App.xaml %}
+```xml {data-file=App.xaml}
 <Application x:Class="wpfGenericHost.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -45,7 +45,7 @@ We replace *StartupUri* by *Startup* calling *Application_Startup* and when we a
 </Application>
 ```
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public partial class App : Application
 {
     public App()
@@ -64,7 +64,7 @@ public partial class App : Application
 
 The App constructor seems to be the right place to build our new Host. *Application_Startup* the place to start the host and *Application_Exit* the place to stop the host.
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public partial class App : Application
 {
     private IHost _host;
@@ -97,7 +97,7 @@ A first capability that .NET Generic Host is bringing is Dependency injection. W
 In a real application, we definitely would be able to inject a View Model like *MainWindowViewModel* which would itself have other dependencies provided by the IOC container.
 <?!/ alert ?>
 
-``` lang:csharp MainWindow.xaml.cs %}
+```csharp {data-file=MainWindow.xaml.cs}
 public partial class MainWindow : Window
 {
     public MainWindow(ITextService textService)
@@ -109,7 +109,7 @@ public partial class MainWindow : Window
 }
 ```
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public partial class App : Application
 {
     private IHost _host;
@@ -143,20 +143,20 @@ The second capability of .NET Generic Host we want to explore is Configuration. 
 
 The configuration is handled by a concrete class called *Settings* and the *appsettings.json* configuration file. Both have a property called *Text*.
 
-``` lang:csharp Settings.cs %}
+```csharp {data-file=Settings.cs}
 public class Settings
 {
     public string Text { get; set; }
 }
 ```
 
-``` lang:json appsettings.json %}
+```json {data-file=appsettings.json}
 {
     "Text": "Hello WPF .NET Core 3.0\nfrom .NET Generic Host!"
 }
 ```
 
-``` lang:csharp TextService.cs %}
+```csharp {data-file=TextService.cs}
 class TextService : ITextService
 {
     private string _text;
@@ -175,7 +175,7 @@ class TextService : ITextService
 
 We register the *Settings* class in the IOC container so that it is resolved and injected as *IOptions<Settings>* in our concrete class *TextService*.
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public partial class App : Application
 {
     private IHost _host;
@@ -207,7 +207,7 @@ public partial class App : Application
 
 The final capability of .NET Generic Host we want to have a look at is Logging. In our simple example, we will just add the possibility to output logs to the Console. Again, we are injecting an *ILogger* into our concrete class *TextService* to be able to write a piece of information to our logs.
 
-``` lang:csharp TextService.cs %}
+```csharp {data-file=TextService.cs}
 class TextService : ITextService
 {
     private string _text;
@@ -226,7 +226,7 @@ class TextService : ITextService
 }
 ```
 
-``` lang:csharp App.xaml.cs %}
+```csharp {data-file=App.xaml.cs}
 public partial class App : Application
 {
     private IHost _host;
