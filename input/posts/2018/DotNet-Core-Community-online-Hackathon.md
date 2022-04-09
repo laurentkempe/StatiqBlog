@@ -31,7 +31,7 @@ I went and started to read [contribution guide](https://github.com/dotnet/corefx
 
 I tried to have the tests running inside Visual Studio, but after some pains and no success with [ReSharper](https://www.jetbrains.com/resharper/?fromMenu) and [Visual Studio]((https://visualstudio.microsoft.com/), I asked some help on the gitter which [Viktor Hofer](https://github.com/ViktorHofer) [provided kindly](https://gitter.im/dotnet/corefx-hackathon?at=5b1259f5f9f2e56cf234c485). You need to use the command 
 
-``` Running tests from MSBuild lang:language  %}
+```shell data-alt="Running tests from MSBuild"
 msbuild /t:RebuildAndTest
 ```
 
