@@ -22,6 +22,7 @@ public class ImageShortcode : SyncShortcode
         var classes = new List<string> { "figure" };
         var group = "";
         var pathToImage = "";
+        var alt = "";
         
         var state = 0;
        
@@ -30,6 +31,7 @@ public class ImageShortcode : SyncShortcode
             if (state == 1)
             {
                 pathToImage = value;
+                state = 2;
             }
 
             if (state == 0 && key.IsNullOrEmpty())
@@ -42,6 +44,11 @@ public class ImageShortcode : SyncShortcode
                 state = 1;
                 group = value;
             }
+
+            if (state == 2 && !key.IsNullOrEmpty() && key.Equals("alt", StringComparison.OrdinalIgnoreCase))
+            {
+                alt = value;
+            }
         }
         
         /*
@@ -50,7 +57,7 @@ public class ImageShortcode : SyncShortcode
 
         // Build HTML structure
         var html = @$"<div class='{string.Join(' ', classes)}'>";
-        html +=  @$"<img class=""fig-img"" src=""{pathToImage}"" />";
+        html +=  @$"<img class=""fig-img"" src=""{pathToImage}"" alt=""{alt}"" />";
 
         // Build HTML structure
         // var html = @$"<div class='{figureClass} {string.Join(' ', classes)}'"' +
