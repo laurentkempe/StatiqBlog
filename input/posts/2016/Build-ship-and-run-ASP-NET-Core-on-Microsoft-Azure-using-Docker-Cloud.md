@@ -51,10 +51,47 @@ Currently, we have a machine, a node in Docker Cloud wording, so we are ready to
 
 To create our stack, we are re-using our docker-compose.yml file set up in the previous post
 
-<div style="clear:both;"></div>{% gist d529fcdf54724a900533f26fa4a768c3 docker-compose.yml %}
+```yaml {data-file=docker-compose.yml data-gist=d529fcdf54724a900533f26fa4a768c3}
+https-portal:
+  image: steveltn/https-portal
+  ports:
+    - '80:80'
+    - '443:443'
+  links:
+    - hipchatconnect
+  restart: always
+  environment:
+    DOMAINS: 'hipchat.laurentkempe.com -> http://hipchatconnect:5000'
+    STAGE: 'production'
+    # STAGE: local
+    # FORCE_RENEW: 'true'
+
+hipchatconnect:
+image: laurentkempe/hipchatconnect
+environment:
+BASE_URL: 'https://hipchat.laurentkempe.com'..\dotnet\dotnet.exe new console
+```
 
 which we modify slightly to describe our stack
-<div style="clear:both;"></div>{% gist 29165d3e6874cf4cc27d83ead5b8bd28 stackfile.yml %}
+
+```yaml {data-file=stackfile.yml data-gist=29165d3e6874cf4cc27d83ead5b8bd28}
+hipchatconnect:
+  autoredeploy: true
+  environment:
+    - 'BASE_URL=https://hipchat.laurentkempe.com'
+  image: 'laurentkempe/hipchatconnect:latest'
+https-portal:
+  environment:
+    - 'DOMAINS=hipchat.laurentkempe.com -> http://hipchatconnect:5000'
+    - STAGE=production
+  image: 'steveltn/https-portal:latest'
+  links:
+    - hipchatconnect
+  ports:
+    - '80:80'
+    - '443:443'
+  restart: always
+```
 
 The only difference, except the reordering, is to instruct automatic redeployment of the hipchatconnect container when an update of its image occurs in Docker Cloud registry, with the following line
 

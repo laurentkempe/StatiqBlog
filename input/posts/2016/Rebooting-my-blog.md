@@ -3,7 +3,6 @@ title: Rebooting my blog
 permalink: /2016/03/29/Rebooting-my-blog/
 date: 2016-03-29 20:18:33
 disqusIdentifier: 20160329201833
-tags:
 ---
 After almost 6 years using [BlogEngine.NET](http://dotnetblogengine.net/) and a bit more of a year without any new post I decided that it was time to reboot my blog!
 <!-- more -->

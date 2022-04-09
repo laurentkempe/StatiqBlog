@@ -27,15 +27,320 @@ Finally, I started the port which took me something like two to three hours!
 
 I ended up with the following code for the *Program.cs* file. The interesting part is the **UseUrls()** which I didn't have while trying to make it run with Docker, then it wasn't bound to the right network, and the application wasn't accessible outside of the Docker container.
 
-{% gist 38b53ab6c53b15a9630580b6115d2067 Program.cs %}
+```csharp {data-file=Program.cs  docker_build.log data-gist=38b53ab6c53b15a9630580b6115d2067}
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+
+namespace HipChatConnect
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Get environment variables
+            var config = new ConfigurationBuilder()
+                .AddEnvironmentVariables("")
+                .Build();
+            var url = config["ASPNETCORE_URLS"] ?? "http://*:5000";
+            var env = config["ASPNETCORE_ENVIRONMENT"] ?? "Development";
+
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseUrls(url)
+                .UseEnvironment(env)
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
+        }
+    }
+}
+```
 
 Then I had some difficulties to have [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) working the way I wanted, but in fact, it ended up being an issue of returning JSON from my HipChat Connect GetGlance method. So it is quite easy to configure it in the *Configure()* method.
 
-{% gist 38b53ab6c53b15a9630580b6115d2067 Startup.cs %}
+```csharp {data-file=Startup.cs  docker_build.log data-gist=38b53ab6c53b15a9630580b6115d2067}
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+
+namespace HipChatConnect
+{
+    public class Startup
+    {
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
+
+        public IConfigurationRoot Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.Configure<AppSettings>(settings => settings.NGrokUrl = Configuration["NGROK_URL"]);
+
+            // Add framework services.
+            services.AddCors();
+            services.AddMvc();
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        {
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddDebug();
+
+            app.UseStaticFiles();
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("*")
+                    .WithMethods("GET")
+                    .WithHeaders("accept", "content-type", "origin");
+            });
+            app.UseMvc();
+        }
+    }
+}
+```
 
 Next step was to port from NancyFx module to ASP.NET Core RC2 controller, which was quite natural with the *Route*, *HttpGet*, *HttpPost*, *FromBody* and *FromQuery* attributes. The main point of interest is the **ValidateToken()** method which validates a JWT token using a **SymmetricSecurityKey**, and that wasn't straight!
 
-{% gist 38b53ab6c53b15a9630580b6115d2067 HipChatConnectController.cs %}
+```csharp {data-file=HipChatConnectController.cs  docker_build.log data-gist=38b53ab6c53b15a9630580b6115d2067}
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Nubot.Plugins.Samples.HipChatConnect.Models;
+
+namespace HipChatConnect.Controllers
+{
+    [Route("/hipchat")]
+    public class HipChatConnectController : Controller
+    {
+        private readonly IOptions<AppSettings> _settings;
+        private static readonly ConcurrentDictionary<string, object> Cache = new ConcurrentDictionary<string, object>();
+
+        public HipChatConnectController(IOptions<AppSettings> settings)
+        {
+            _settings = settings;
+        }
+
+        [HttpGet("atlassian-connect.json")]
+        public async Task<string> Get()
+        {
+            var baseUri = _settings.Value?.NGrokUrl ?? "http://localhost:52060/";
+
+            return await Task.FromResult(GetCapabilitiesDescriptor(baseUri));
+        }
+
+        [HttpPost("installable")]
+        public async Task<HttpStatusCode> Installable([FromBody]InstallationData installationData)
+        {
+            Cache.TryAdd(installationData.oauthId, installationData);
+
+            var capabilitiesRoot = await GetCapabilitiesRoot(installationData);
+
+            var accessToken = await GetAccessToken(installationData, capabilitiesRoot);
+
+            return Cache.TryAdd("accessToken", accessToken) ? HttpStatusCode.OK : HttpStatusCode.NotFound;
+        }
+
+        [HttpGet("uninstalled")]
+        public async Task<IActionResult> UnInstalled([FromQuery(Name = "redirect_url")]string redirectUrl,
+                                                     [FromQuery(Name = "installable_url")]string installableUrl)
+        {
+            var client = new HttpClient();
+
+            var httpResponse = await client.GetAsync(installableUrl);
+            httpResponse.EnsureSuccessStatusCode();
+
+            var jObject = await httpResponse.Content.ReadAsAsync<JObject>();
+
+            object anobject ;
+            Cache.TryRemove((string)jObject["oauthId"], out anobject);
+
+            return await Task.FromResult(Redirect(redirectUrl));
+        }
+
+        [HttpGet("glance")]
+        public string GetGlance([FromQuery(Name = "signed_request")]string signedRequest)
+        {
+            if (ValidateToken(signedRequest))
+            {
+                return BuildInitialGlance();
+            }
+
+            return "";
+        }
+
+        private static string GetCapabilitiesDescriptor(string baseUri)
+        {
+            var capabilitiesDescriptor = new
+            {
+                name = "Nubot",
+                description = "An add-on to talk to Nubot.",
+                key = "nubot-addon",
+                links = new
+                {
+                    self = $"{baseUri}/hipchat/atlassian-connect.json",
+                    homepage = $"{baseUri}/hipchat/atlassian-connect.json"
+                },
+                vendor = new
+                {
+                    name = "Laurent Kempe",
+                    url = "http://laurentkempe.com"
+                },
+                capabilities = new
+                {
+                    hipchatApiConsumer = new
+                    {
+                        scopes = new[]
+                        {
+                            "send_notification",
+                            "view_room"
+                        }
+                    },
+                    installable = new
+                    {
+                        callbackUrl = $"{baseUri}/hipchat/installable",
+                        uninstalledUrl = $"{baseUri}/hipchat/uninstalled"
+                    },
+                    glance = new[]
+                    {
+                        new
+                        {
+                            name = new
+                            {
+                                value = "Hello TC"
+                            },
+                            queryUrl = $"{baseUri}/hipchat/glance",
+                            key = "nubot.glance",
+                            target = "nubot.sidebar",
+                            icon = new Icon
+                            {
+                                url = $"{baseUri}/nubot/TC.png",
+                                url2 = $"{baseUri}/nubot/TC2.png"
+                            }
+                        }
+                    }
+                }
+            };
+
+            return JsonConvert.SerializeObject(capabilitiesDescriptor);
+        }
+
+        private async Task<CapabilitiesRoot> GetCapabilitiesRoot(InstallationData installationData)
+        {
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync(new Uri(installationData.capabilitiesUrl));
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadAsAsync<CapabilitiesRoot>();
+        }
+
+        private async Task<AccessToken> GetAccessToken(InstallationData installationData, CapabilitiesRoot capabilitiesRoot)
+        {
+            var client = new HttpClient();
+
+            var dataContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("grant_type", "client_credentials"),
+                new KeyValuePair<string, string>("scope", "send_notification")
+            });
+
+            var credentials = Encoding.ASCII.GetBytes($"{installationData.oauthId}:{installationData.oauthSecret}");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+                Convert.ToBase64String(credentials));
+
+            var tokenResponse =
+                await client.PostAsync(new Uri(capabilitiesRoot.capabilities.oauth2Provider.tokenUrl), dataContent);
+            return await tokenResponse.Content.ReadAsAsync<AccessToken>();
+        }
+
+        private bool ValidateToken(string jwt)
+        {
+            var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+            var readToken = jwtSecurityTokenHandler.ReadToken(jwt);
+
+            object installationDataObject;
+            if (!Cache.TryGetValue(readToken.Issuer, out installationDataObject))
+            {
+                return false;
+            }
+
+            var installationData = (InstallationData)installationDataObject;
+
+            var validationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = installationData.oauthId,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(installationData.oauthSecret)),
+                ValidateAudience = false,
+                ValidateLifetime = true
+            };
+
+            try
+            {
+                SecurityToken token;
+                var validatedToken = jwtSecurityTokenHandler.ValidateToken(jwt, validationParameters, out token);
+                return validatedToken != null;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        private static string BuildInitialGlance()
+        {
+            var response = new
+            {
+                label = new
+                {
+                    type = "html",
+                    value = "<b>4</b> Builds"
+                },
+                status = new
+                {
+                    type = "lozenge",
+                    value = new
+                    {
+                        label = "GOOD",
+                        type = "success"
+                    }
+                },
+                metadata = new
+                {
+                    customData = new { customAttr = "customValue" }
+                }
+            };
+
+            return JsonConvert.SerializeObject(response);
+        }
+    }
+}
+```
 
 To be able to test the HipChat Connect add-on, I needed to be able to expose my application from my local development machine to the internet so that I can add the add-on to one HipChat room and for that I used [ngrok](https://ngrok.com/)!
 
@@ -49,7 +354,28 @@ To be able to make it work with ASP.NET Core RC2 I had to fine tune the command 
 
 And to finish, I wanted to have the project running in a Docker container using [Docker for Windows](http://laurentkempe.com/2016/04/30/Docker-for-Windows-Beta-review/). To achieve that goal I used the following *Dockerfile*
 
-{% gist 38b53ab6c53b15a9630580b6115d2067 Dockerfile %}
+```yaml {data-file=Dockerfile  docker_build.log data-gist=38b53ab6c53b15a9630580b6115d2067}
+FROM microsoft/dotnet
+
+# Set environment variables
+ENV ASPNETCORE_URLS="http://*:5000"
+ENV ASPNETCORE_ENVIRONMENT="Development"
+
+# Copy files to app directory
+COPY . /app
+
+# Set working directory
+WORKDIR /app
+
+# Restore NuGet packages
+RUN ["dotnet", "restore"]
+
+# Open up port
+EXPOSE 5000
+
+# Run the app
+ENTRYPOINT ["dotnet", "run"]
+```
 
 Built the Docker image with
 

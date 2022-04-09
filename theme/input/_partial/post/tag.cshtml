@@ -1,6 +1,6 @@
 @inherits MyStatiqRazorPage<IEnumerable<string>>
 @{
-    var tags = Model;
+    var tags = Model.ToList();
     
     var viewData = new ViewDataDictionary(ViewData)
     {
