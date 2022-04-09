@@ -22,9 +22,9 @@ Since long, I am using **[Chocolatey](https://chocolatey.org/)**, **the package 
 
 That's already a fantastic step forward, you type one command line like this
 
-{% blockquote  %}
+```shell
 choco install git -y
-{% endblockquote %}
+```
 
 and you get Git installed without doing anything, except typing the command! No need to search on which website you need to download the software, download it, maybe extract it to finally be able to run it and click next-next-next (eh Cédric). Just one command on the command line and you are done. Great, no?
 
@@ -32,7 +32,7 @@ But after re-installing my machine this way a first time and a second time I wan
 
 So I searched some examples on Github and cooked my own script which I open sourced and called it **[Cacao](https://github.com/laurentkempe/Cacao/blob/master/PrepareMyCacao.ps1)**. A nice name, no :D?
 
-{% image fancybox center group:martinique https://farm5.staticflickr.com/4616/40521281581_57a9b1d503_o.jpg https://farm5.staticflickr.com/4616/40521281581_3d775063cc.jpg 375 500 Cabosse de cacaoyer, Martinique  %}
+<?# image fancybox center group=martinique https://farm5.staticflickr.com/4616/40521281581_57a9b1d503_o.jpg 375 500 alt="Cabosse de cacaoyer, Martinique" /?>
 
 So now, when I have installed my Windows 10 machine from scratch I just need to install Boxstarter, download my script and launch it! A very nice step forward indeed.
 
@@ -43,7 +43,7 @@ You can see such a link on [Cacao README.md file](https://github.com/laurentkemp
 
 This link is built as following
 
-``` Cacao install hyperlink lang:html  %}
+```html {data-alt="Cacao install hyperlink"}
 <a href='http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/laurentkempe/Cacao/master/PrepareMyCacao.ps1'>
   Install my tools!
 </a>
@@ -57,8 +57,8 @@ During the Build2018 Microsoft got interested in that topic, which is great, and
 
 One fantastic side effect is that now I can also update all my tools by running one command
 
-{% blockquote %}
+```shell
 choco upgrade all -y
-{% endblockquote %}
+```
 
 Like they say, there’s never been a better time to be a developer!
