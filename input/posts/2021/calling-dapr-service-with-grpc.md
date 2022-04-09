@@ -63,7 +63,7 @@ We can get the [Dapr proto files](https://github.com/dapr/dapr/tree/master/dapr/
 
 Looking at the **dapr.proto** we see in which C# namespace the client code will be generated.
 
-```proto {data-file=dapr.proto}
+```protobuf {data-file=dapr.proto}
 option csharp_namespace = "Dapr.Client.Autogen.Grpc.v1";
 ```
 
