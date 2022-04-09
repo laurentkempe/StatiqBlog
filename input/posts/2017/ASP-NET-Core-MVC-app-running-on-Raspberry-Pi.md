@@ -20,35 +20,142 @@ Again you will need to install the .NET Core 2.0 SDK on your Windows machine. Th
 
 So now when I run dotnet with the help flag, I see the following, and I am sure to run the correct version
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetHelp %}
+```shell {data-file=dotnetHelp data-gist=38e29bb3942d167a252d13e56d8a45a9}
+C:\Projects\pi
+> dotnet -h
+.NET Command Line Tools (2.0.0-preview1-005791)
+Usage: dotnet [host-options] [command] [arguments] [common-options]
+```
 
 Next, we will create the [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/) project using the following
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 createProject %}
+```shell {data-file=createProject data-gist=38e29bb3942d167a252d13e56d8a45a9}
+> mkdir mvc
+> cd mvc
+> dotnet new mvc
+The template "ASP.NET Core Web App" was created successfully.
+This template contains technologies from parties other than Microsoft, see https://github.com/dotnet/templating/blob/rel/vs2017/post-rtw/template_feed/THIRD-PARTY-NOTICES for details.
+
+Processing post-creation actions...
+Running 'dotnet restore' on C:\Projects\pi\mvc\mvc.csproj...
+Restore succeeded.
+```
 
 Now we have to adapt the **mvc.csproj** like this
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 mvc.csproj %}
+```xml {data-file=mvc.csproj data-gist=38e29bb3942d167a252d13e56d8a45a9}
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RuntimeFrameworkVersion>2.0.0-preview1-001978-00</RuntimeFrameworkVersion>
+    <RuntimeIdentifiers>ubuntu.16.04-arm</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.0-preview1-*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0-preview1-*" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0-preview1-*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0-preview1-*" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.0-preview1-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0-preview1-*" />
+  </ItemGroup>
+
+</Project>
+```
 
 We removed the *PackageTargetFallback* and added *RuntimeFrameworkVersion*, *RuntimeIdentifiers*.
 
 To get access on the network to our ASP.NET Core MVC application we must first adapt the generated **Program.cs** file, to add the line **.UseUrls("http://*:8000")**
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 Program.cs %}
+```csharp {data-file=Program.cs data-gist=38e29bb3942d167a252d13e56d8a45a9}
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+
+namespace mvc
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseUrls("http://*:8000")
+                .UseIISIntegration()
+                .ConfigureConfiguration((context, configBuilder) => {
+                    configBuilder
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                    .AddJsonFile($"appsettings.{context.HostingEnvironment.EnvironmentName}.json", optional: true)
+                    .AddEnvironmentVariables();
+                })
+                .ConfigureLogging(loggerFactory => loggerFactory
+                    .AddConsole()
+                    .AddDebug())
+                .UseStartup<Startup>()
+                .Build();
+
+            host.Run();
+        }
+    }
+}
+```
 
 This code change will instruct the framework to bind to all network cards available on the PI, and thus make the web application accessible from your network.
 
 Then we need to run the restore command
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetRestore %}
+```shell {data-file=dotnetRestore data-gist=38e29bb3942d167a252d13e56d8a45a9}
+> dotnet restore
+
+  Restoring packages for C:\Projects\pi\mvc\mvc.csproj...
+  Restoring packages for C:\Projects\pi\mvc\mvc.csproj...
+  Restore completed in 2.01 sec for C:\Projects\pi\mvc\mvc.csproj.
+  Lock file has not changed. Skipping lock file write. Path: C:\Projects\pi\mvc\obj\project.assets.json
+  Restore completed in 2.82 sec for C:\Projects\pi\mvc\mvc.csproj.
+
+  NuGet Config files used:
+      C:\Projects\pi\mvc\NuGet.Config
+      C:\Users\laure\AppData\Roaming\NuGet\NuGet.Config
+      C:\Program Files (x86)\NuGet\Config\Microsoft.VisualStudio.Offline.config
+
+  Feeds used:
+      https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
+      https://dotnet.myget.org/F/aspnetcore-ci-dev/api/v3/index.json
+      https://dotnet.myget.org/F/msbuild/api/v3/index.json
+      https://api.nuget.org/v3/index.json
+      C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
+```
 
 Then we publish 
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetPublish %}
+```shell {data-file=dotnetPublish data-gist=38e29bb3942d167a252d13e56d8a45a9}
+> dotnet publish -r ubuntu.16.04-arm
+Microsoft (R) Build Engine version 15.2.93.5465
+Copyright (C) Microsoft Corporation. All rights reserved.
 
-We use WinSCP to copy all the files create in the folder *C:\Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm32\publish\* to the Raspberry Pi. Then we run the application from Putty
+  mvc -> C:\Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm\mvc.dll
+  mvc -> C:\Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm\publish\
+```
 
-<div style="clear:both;"></div>{% gist 38e29bb3942d167a252d13e56d8a45a9 dotnetMVC %}
+We use WinSCP to copy all the files create in the folder C:\Projects\pi\mvc\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm32\publish\ to the Raspberry Pi. Then we run the application from Putty
+
+```shell {data-file=dotnetMVC data-gist=38e29bb3942d167a252d13e56d8a45a9}
+laurent@laurent-desktop:~/core/mvc$ dotnet mvc.dll
+Hosting environment: Production
+Content root path: /home/laurent/core/mvc
+Now listening on: http://[::]:8000
+Application started. Press Ctrl+C to shut down.
+```
 
 Now we are ready to display our first web page using ASP.NET Core MVC running on the Raspberry Pi 3. The first time your browse the site, it will be slow because the Raspberry Pi needs to compile the Razor Page, but you will finally end in front of
 
