@@ -20,11 +20,10 @@ In my case, I find it very helpful to understand how the framework is working. S
 
 Finally, the team uploaded the PDBs of ASP.NET Core 2.0 on the Microsoft Symbol Servers. And it is coming with a bonus feature of Visual Studio 2017 15.3; Source Link Support for Windows PDB File Format, which makes everything easy again.
 
-{% blockquote Microsoft https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#source-link-support-for-windows-pdb-file-format
- Visual Studio 2017 version 15.3 Release Notes %}
-
+<?# Blockquote Microsoft https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#source-link-support-for-windows-pdb-file-format
+ Visual Studio 2017 version 15.3 Release Notes ?>
 Source Link is now supported for Windows PDB file format (in addition to Portable PDBs). Compilers that support it can put the necessary information in the Windows PDB file format and the debugger can retrieve source files based on that information.
-{% endblockquote %}
+<?#/ Blockquote ?>
 
 In this post, I will show you the fastest way to setup Visual Studio 2017 15.3 so that you can debug into ASP.NET Core 2.0 source code!
 
