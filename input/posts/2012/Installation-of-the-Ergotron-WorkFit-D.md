@@ -43,9 +43,6 @@ During Christmas I worked with my brother [Mathieu](http://myaustraliantrip.blog
 
 So, **I like very much my new Ergotron WorkFit-D and the LX Dual Side-by-Side every day and night** I am working home.
 
-Here are some more pictures
-<div><object width="400" height="300"><embed type="application/x-shockwave-flash" src="http://www.flickr.com/apps/slideshow/show.swf?v=109615" allowfullscreen="true" flashvars="offsite=true&lang=en-us&page_show_url=%2Fphotos%2Flaurentkempe%2Fsets%2F72157629629270505%2Fshow%2F&page_show_back_url=%2Fphotos%2Flaurentkempe%2Fsets%2F72157629629270505%2F&set_id=72157629629270505&jump_to=" width="400" height="300"></object></div>  
-
 I still have some work to do to have my home office the way I want it, but this is work in progress.
 
 **Disclaimer: I was provided these materials free, so my opinion might be biased.**

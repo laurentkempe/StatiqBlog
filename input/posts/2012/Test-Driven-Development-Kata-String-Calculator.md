@@ -14,6 +14,6 @@ But what is a TDD Kata? It is an implementation exercise starting with unit test
 <!-- more -->
 
 The goal of this video is to present one of those session I did recently of this practice that I really find interesting.
-{% youtube 79N60Wm0ntA %}
+<?# Plyr video=79N60Wm0ntA /?>
 
 The video was also published on [Tech Head Brothers](http://www.techheadbrothers.com/Articles.aspx/test-driven-development-kata-string-calculator), my french portal about .NET.

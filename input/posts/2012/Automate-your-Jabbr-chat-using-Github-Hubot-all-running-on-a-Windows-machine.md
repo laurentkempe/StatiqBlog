@@ -29,11 +29,11 @@ You should end up with your own local installation of Jabbr, something like the 
 
 ![](http://farm8.staticflickr.com/7124/7588325302_bb78e34a5b_o.png)
 
-Then create a user using **/nick [user] [password] **
+Then create a user using **/nick [user] [password]**
 
 Now let’s create a Jabbr room which will be joined by our Hubot later on.
 
-You just need to use the Jabbr command: **/create [room] **
+You just need to use the Jabbr command: **/create [room]**
 
 Let’s use Development as the name of our room.
 
@@ -47,28 +47,27 @@ But before we need to to install nodejs and Hubot, just follow my previous post 
 
 So here it is!
 
-> mkdir hubot-local
-> 
-> cd hubot-local
-> 
-> npm install hubot
-> 
-> cd node_modules\hubot
-> 
-> npm install https://github.com/smoak/hubot-jabbr/tarball/master
+```shell
+mkdir hubot-local
 
-<strike>So now we need to integrate Scott Jabbr Hubot adapter. To achieve that from the same prompt your installed Hubot, you will need to install one dependency of the Jabbr adapter which is njabbr so go on and type</strike>
+cd hubot-local
+
+npm install hubot
+
+cd node_modules\hubot
+
+npm install https://github.com/smoak/hubot-jabbr/tarball/master
+```
+
+~~So now we need to integrate Scott Jabbr Hubot adapter. To achieve that from the same prompt your installed Hubot, you will need to install one dependency of the Jabbr adapter which is njabbr so go on and type~~
 
 > <strike>npm install njabbr</strike>
 
-<strike>Now you would need to clone </strike>[<strike>Hubot Jabbr adapter</strike>](https://github.com/smoak/hubot-jabbr)<strike> and get the file src/jabbr.coffee and copy it in the adapter /hubot/src/adapters folder of hubot.</strike>
+~~Now you would need to clone [Hubot Jabbr adapter](https://github.com/smoak/hubot-jabbr) and get the file src/jabbr.coffee and copy it in the adapter /hubot/src/adapters folder of hubot.~~
 
-<strike>Finally just adapt the /hubot/src/robot.coffee to add the new Jabbr adapter like this</strike>
+~~Finally just adapt the /hubot/src/robot.coffee to add the new Jabbr adapter like this~~
 
-> <strike>HUBOT_DEFAULT_ADAPTERS = [ "campfire", "shell"**, "jabbr"** ]
-> </strike>
-> 
->  
+> <strike>HUBOT_DEFAULT_ADAPTERS = [ "campfire", "shell"**, "jabbr"** ]</strike>
 
 And the last step is to configure some environment variable used by the Jabbr adapter so that hubot connects to the Jabbr chat application and room.
 

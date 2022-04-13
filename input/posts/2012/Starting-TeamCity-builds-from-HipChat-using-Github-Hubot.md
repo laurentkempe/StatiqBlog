@@ -29,7 +29,7 @@ This time we want to have Hubot calling the TeamCity server so we need to add a 
 
 Our script is heavily inspired from the TeamCity.coffee script, and here is a first version:
 
-``` TeamCity.coffee lang:coffeescript http://underscorejs.org/#compact TeamCity.coffee %}
+```coffeescript TeamCity.coffee http://underscorejs.org/#compact TeamCity.coffee %}
 # Starts a build on TeamCity.
 #
 # You need to set the following variables:

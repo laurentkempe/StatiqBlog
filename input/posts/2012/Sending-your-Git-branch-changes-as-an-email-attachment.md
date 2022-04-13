@@ -22,61 +22,66 @@ Ok so I came up with a quick hack. I wanted to have a way to send all the new, o
 
 First of all I needed first to be able to determine on which Git branch I was curently. I googled and find the following
 
-> function Get-GitBranch {
->     $symbolicref = git symbolic-ref HEAD
->     $branch = $symbolicref.substring($symbolicref.LastIndexOf("/") +1)
->     return $branch
-> }
-
+```powershell
+function Get-GitBranch {
+    $symbolicref = git symbolic-ref HEAD
+    $branch = $symbolicref.substring($symbolicref.LastIndexOf("/") +1)
+    return $branch
+}
+```
 Then I wanted to be able to Zip all the files, but to achieve I had to determine which were the files to Zip. this is done using the following 
 
-> git diff --name-only HEAD..master
-
+```shell
+git diff --name-only HEAD..master
+```
 And making a Zip out of the list of files is done like this
 
-> function Zip-GitBranch([string]$zipFilename) {
-> 
->     $branch = Get-GitBranch
->    
->     if (!$zipFilename) {
->         $zipFilename = [string]::Format(".\{0}.zip", $branch)
->     }
-> 
->     $files = git diff --name-only HEAD..master
-> 
->     foreach($file in $files) {
->          & 'C:\Program Files\7-Zip\7z.exe' a $zipFilename $file
->     }
->    
->     return $zipFilename
-> }
+```powershell
+function Zip-GitBranch([string]$zipFilename) {
 
-*<font face="Georgia">Finally I wanted to be able to send the zip as an attachment of an email using Outlook</font>*
+    $branch = Get-GitBranch
+    
+    if (!$zipFilename) {
+    $zipFilename = [string]::Format(".\{0}.zip", $branch)
+    }
+    
+    $files = git diff --name-only HEAD..master
 
-> function MailZip-GitBanch($Recipient) {
->    
->     if (!$Recipient) {
->         Write-Host "You need to pass the email of the recipient as parameter"
->         return
->     }
->    
->     $branch = Get-GitBranch
->     $zipFilename = [string]::Format(".\{0}.zip", $branch)
->     $attachement = [IO.Path]::GetFullPath( $zipFilename )
-> 
->     Zip-GitBranch($attachement)
->        
->     $ol = New-Object -comObject Outlook.Application
->     $Mail = $ol.CreateItem(0)
->     $Mail.Recipients.Add($Recipient)
->     $Mail.Subject = "Changes for the branch: " + $branch
->     $Mail.Body = "Check out the email attachement to see the changes made to the branch: " + $branch
->     $Mail.Attachments.Add($attachement)
->     $Mail.Send()
-> }
+    foreach($file in $files) {
+    & 'C:\Program Files\7-Zip\7z.exe' a $zipFilename $file
+    }
+    
+    return $zipFilename
+}
+```
+Finally I wanted to be able to send the zip as an attachment of an email using Outlook
 
-*<font face="Georgia">Now I can type the following command to send my changes to my friend</font>*
+```powershell
+function MailZip-GitBanch($Recipient) {
 
-> *<font face="Georgia">MailZip-GitBranch myemail@email.com</font>*
+    if (!$Recipient) {
+        Write-Host "You need to pass the email of the recipient as parameter"
+        return
+    }
+    
+    $branch = Get-GitBranch
+    $zipFilename = [string]::Format(".\{0}.zip", $branch)
+    $attachement = [IO.Path]::GetFullPath( $zipFilename )
 
-*<font face="Georgia">You can find the whole script on the [following gist](https://gist.github.com/2371417).</font>*
+    Zip-GitBranch($attachement)
+    
+    $ol = New-Object -comObject Outlook.Application
+    $Mail = $ol.CreateItem(0)
+    $Mail.Recipients.Add($Recipient)
+    $Mail.Subject = "Changes for the branch: " + $branch
+    $Mail.Body = "Check out the email attachement to see the changes made to the branch: " + $branch
+    $Mail.Attachments.Add($attachement)
+    $Mail.Send()
+}
+```
+Now I can type the following command to send my changes to my friend
+
+```shell
+MailZip-GitBranch myemail@email.com
+```
+You can find the whole script on the [following gist](https://gist.github.com/2371417).

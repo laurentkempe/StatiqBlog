@@ -34,4 +34,52 @@ My personal preferred approach is:
 
 For example here is one of my test using that approach:
 
-<script src="https://gist.github.com/4117094.js"> </script>
+
+```csharp
+[Test]
+public void Execute_ImportSuccessFulWithoutModifiedText_ExpectNoModelChangedMessageSent()
+{
+    //Arrange
+    var importCommand = makeImportAllTextsCommand(new ImportStatistics {ImportedCount = 0});
+
+    var messageSent = false;
+    Messenger.Default.Register<ModelChangedMessage>(this, message => messageSent = true);
+
+    //Act
+    importCommand.Execute(null);
+    importCommand.TaskSUT.Wait();
+
+    //Assert
+    Assert.That(messageSent, Is.False);
+}
+
+private static ImportAllTextsCommandSUT makeImportAllTextsCommand(ImportStatistics importStatisticsToReturn)
+{
+    var fileDialog = MockRepository.GenerateStub<IFileDialog>();
+    fileDialog.Stub(dialog => dialog.ShowOpenFileDialog(null))
+              .IgnoreArguments().Return("c:\texts.xlsx");
+
+    var excelService = MockRepository.GenerateStub<IExcelService>();
+    excelService
+        .Stub(service => service.Import("c:\texts.xlsx"))
+        .IgnoreArguments()
+        .Return(importStatisticsToReturn);
+
+    var importCommand = new ImportAllTextsCommandSUT(excelService, fileDialog);
+    return importCommand;
+}
+
+private class ImportAllTextsCommandSUT : ImportAllTextsCommand
+{
+    public ImportAllTextsCommandSUT(IExcelService excelService, IFileDialog fileDialog)
+        : base(excelService, fileDialog)
+    {
+    }
+
+    public Task TaskSUT
+    {
+        get { return Task; }
+    }
+}
+```
+
