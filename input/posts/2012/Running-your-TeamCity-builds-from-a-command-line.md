@@ -42,7 +42,7 @@ Nice ,but we want to get a step further and be able to start the build from Powe
 
 To achieve this goal you add those two functions to your PowerShell profile:
 
-``` Microsoft.PowerShell_profile.ps1 lang:powershell %}
+```powershell
 function Get-Web($url, 
     [switch]$self,
     $credential, 

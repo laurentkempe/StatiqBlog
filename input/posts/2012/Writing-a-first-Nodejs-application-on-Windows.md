@@ -27,13 +27,14 @@ Then start a PowerShell window and type “node -v” you should see v0.6.14.
 
 Now start you preferred text editor and create a new file server.js and copy paste the code from the home page of Node.js
 
-> <span class="kwrd">var</span> http = require(<span class="str">'http'</span>);
-http.createServer(<span class="kwrd">function</span> (req, res) {
-  res.writeHead(200, {<span class="str">'Content-Type'</span>: <span class="str">'text/plain'</span>});
-  res.end(<span class="str">'Hello World\n'</span>);
-}).listen(1337, <span class="str">'127.0.0.1'</span>);
-console.log(<span class="str">'Server running at http://127.0.0.1:1337/'</span>);
-
+```javascript
+var http = require('http');
+http.createServer(function(req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+console.log('Server running at http://127.0.0.1:1337/');
+```
 
 <style type="text/css">
 

@@ -23,8 +23,9 @@ The idea was to extend our [GitHub Hubot](http://hubot.github.com/) hosted on [H
 From AppHarbor support here is the information we need about “[Developing a service hook](http://support.appharbor.com/kb/api/developing-a-service-hook)”
 
 > We will send a POST request content-type "application/json" and the following body:
-> 
->         {
+ 
+```json
+{
   "application": {
     "name": "Foo"
   }, 
@@ -37,6 +38,7 @@ From AppHarbor support here is the information we need about “[Developing a se
   }
 }
 
+```
 We need to build a Hubot script; which are CoffeeScript, to have an HTTP endpoint listening to this Post payload. Then it needs to read the payload and format it to be able to send it in readable message to the Campfire / HipChat room.
 
 With the release 2.1.3 of Hubot there is a new easy way to have an HTTP Listener:
@@ -76,7 +78,30 @@ Currently this is working only with the Campfire adapter, the HipChat one is cra
 
 Here is the whole script
 
-<script src="https://gist.github.com/2562466.js"> </script>
+```coffeescript
+module.exports = (robot) ->
+  robot.router.post "/hubot/appharbor", (req, res) ->
+    robot.logger.info "Message received for appharbor"
+
+    builtApplicationName = req.body.application.name
+    buildStatus = req.body.build.status
+
+    robot.logger.info "AppHarbor build '#{buildStatus}' for application: '#{builtApplicationName}'"
+
+    user = robot.userForId 'broadcast'
+    user.room = 'YourRoomID'
+    user.type = 'groupchat'
+
+    message = "AppHarbor build '#{buildStatus}' for application: '#{builtApplicationName}'"
+
+    robot.logger.info "User: '#{user.room}','#{user.type}'"
+    robot.logger.info "Message: '#{message}'"
+
+    robot.send user, "#{message}"
+
+    res.writeHead 200, {'Content-Type': 'text/plain'}
+    res.end 'Thanks'
+```
 
 And finally here is the result of posting a sample payload using [fiddler](http://fiddler2.com/fiddler2/) 
 
