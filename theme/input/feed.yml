@@ -15,5 +15,5 @@ FeedItemAuthor: => Metadata["author2"]
 FeedItemLink: => string.Format($"{Metadata["FeedId"]}{Metadata["permalink"]}")
 FeedItemDescription : => Metadata["Excerpt"]
 FeedItemContent: => ""
-FeedItemImageLink: => Metadata["thumbnailImage"]
+FeedItemImageLink: => GetString("thumbnailImage")
 FeedItemPublished: => GetDateTime("date")
