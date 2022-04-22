@@ -19,17 +19,17 @@ So following the instruction "Logging in TeamCity Visual Studio plugin" : [Repor
 
 Looking at the produced logs I found this:
 
-```text
-9:28:24 PM.987: Thread:31: svn.exe info "xml" "non-interactive" "p:\@@projects\_handsup\portal"      
-9:28:24 PM.987: Thread:31: Failed to execute svn. code 1, error svn: Try "svn help" for more info svn: Syntax error parsing revision "projects\_handsup\portal" , output <?xml version="1.0"?> <info>      
-9:28:24 PM.991: Thread:31: EXCEPTION: svn: Try "svn help" for more info      
-svn: Syntax error parsing revision "projects\_handsup\portal".      
-Svn has exited with code "1".      
+```text    
+9:28:24 PM.987: Thread:31: svn.exe info "xml" "non-interactive" "p:\_projects\handsup\portal"
+9:28:24 PM.987: Thread:31: Failed to execute svn. code 1, error svn: Try "svn help" for more info svn: Syntax error parsing revision "projects\handsup\portal" , output <?xml version="1.0"?> <info>
+9:28:24 PM.991: Thread:31: EXCEPTION: svn: Try "svn help" for more info
+svn: Syntax error parsing revision "projects\_handsup\portal".
+Svn has exited with code "1".
 SvnInfoUuidCommand failed
 ```
 
 I tried then the svn command from the command prompt and got the same error!
 
-I finally renamed the path to my project from "p:\@@projects\_handsup\portal" to "p:\projects\_handsup\portal"
+I finally renamed the path to my project from "p:\_projects\handsup\portal" to "p:\projects\handsup\portal"
 
 And now it works again! So forget strange characters in your path!
