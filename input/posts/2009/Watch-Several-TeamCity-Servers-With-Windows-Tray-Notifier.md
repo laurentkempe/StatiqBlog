@@ -27,11 +27,11 @@ Browsing [TeamCity](http://www.jetbrains.com/teamcity/index.html) documentation 
 
 So now I am able to have two TeamCity Tray notifier open:
 
-[![](http://weblogs.asp.net/blogs/lkempe/4075997580_e7abf7683e_o1_thumb_29F29315.png)](http://weblogs.asp.net/blogs/lkempe/4075997580_e7abf7683e_o1_5C2A092C.png) 
+![](/images/2009/Watch-Several-TeamCity-Servers-With-Windows-Tray-Notifier-1.png)
 
 What I also like is to be able to start programs by typing the Windows key and then some text, here for example “te”
 
-[![4076003432_6c2b8f449f_o[1]](http://weblogs.asp.net/blogs/lkempe/4076003432_6c2b8f449f_o1_thumb_2BEF4644.png "4076003432_6c2b8f449f_o[1]")](http://weblogs.asp.net/blogs/lkempe/4076003432_6c2b8f449f_o1_01638B34.png) 
+![](/images/2009/Watch-Several-TeamCity-Servers-With-Windows-Tray-Notifier-2.png)
 
 To achieve this I created three shortcuts with the different servers configuration and then I placed the shortcuts in my folder C:\Users\Laurent\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\User Pinned\StartMenu in which it is indexed.
 

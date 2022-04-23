@@ -61,4 +61,4 @@ and the FullVersion is defined as this, using TeamCity [BUILD_VCS_NUMBER](http:/
 
 And now the Publish webpage display the version correctly!
 
-[![4094558371_70b24140cc_o[1]](http://weblogs.asp.net/blogs/lkempe/4094558371_70b24140cc_o1_thumb_5F82F1DE.png "4094558371_70b24140cc_o[1]")](http://weblogs.asp.net/blogs/lkempe/4094558371_70b24140cc_o1_670E614B.png)
+![Automating Publish of ClickOnce with TeamCity version](/images/2009/Automating-Publish-of-ClickOnce-with-TeamCity.png)

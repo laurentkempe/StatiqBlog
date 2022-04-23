@@ -10,9 +10,9 @@ alias:
 ---
 Today at [Innoveo Solutions](http://www.innoveo.com/) we had our daily Stand Up meeting using Skype as I am at home. It worked really good ! I can’t wait to experience it on the new plasma TV that we have in our meeting room!
 
-[![4028288873_799bc9aef2_o[1]](http://weblogs.asp.net/blogs/lkempe/4028288873_799bc9aef2_o1_thumb_45DF6FB5.png "4028288873_799bc9aef2_o[1]")](http://weblogs.asp.net/blogs/lkempe/4028288873_799bc9aef2_o1_4205934A.png) 
+![Daily stand up meeting using Skype](/images/2009/Daily_standup_meeting_using_Skype_1.png)
 <!-- more -->
 
 And a Chicken entering the meeting ! Hey Bojan :-)
 
-[![4029051070_a90ca3a4e8_o[1]](http://weblogs.asp.net/blogs/lkempe/4029051070_a90ca3a4e8_o1_thumb_33826F27.png "4029051070_a90ca3a4e8_o[1]")](http://weblogs.asp.net/blogs/lkempe/4029051070_a90ca3a4e8_o1_4325CC90.png)
+![Daily stand up meeting using Skype Chicken](/images/2009/Daily_standup_meeting_using_Skype_2.png)

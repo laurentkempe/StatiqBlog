@@ -25,12 +25,10 @@ alias:
 
 Here are the information you need to enter into Microsoft SQL Server Management Studio. You will get those from 
 
-[![3842366844_c64803c044_o[1]](http://weblogs.asp.net/blogs/lkempe/3842366844_c64803c044_o1_thumb_4C39FECF.png "3842366844_c64803c044_o[1]")](http://weblogs.asp.net/blogs/lkempe/3842366844_c64803c044_o1_2FFCE27C.png) 
-
+![](/images/2009/How-to-connect-to-SQL-Azure-1.png)
 You will get this error message, just click OK
 
-[![3842373284_54932c057f_o[1]](http://weblogs.asp.net/blogs/lkempe/3842373284_54932c057f_o1_thumb_317D3CE9.png "3842373284_54932c057f_o[1]")](http://weblogs.asp.net/blogs/lkempe/3842373284_54932c057f_o1_6CB118B4.png) 
-
+![](/images/2009/How-to-connect-to-SQL-Azure-2.png)
 According to [Stan Kitsis – MSFT](http://social.msdn.microsoft.com/Profile/en-US/?user=Stan%20Kitsis%20-%20MSFT&referrer=http%3a%2f%2fsocial.msdn.microsoft.com%2fForums%2fen-US%2fssdsgetstarted%2fthread%2f73a35b8d-28d8-442e-9589-27d1c38ece6f&rh=2E4GwI8mKjrhaaGn4hTAEWcMRxrCexEDmfuOVZ5mzwU%3d&sp=forums)<abbr> (MSFT</abbr><abbr>, Moderator) ([link](http://social.msdn.microsoft.com/Forums/en-US/ssdsgetstarted/thread/73a35b8d-28d8-442e-9589-27d1c38ece6f)): </abbr>
 
 > I'm not aware of a way to get around this message.  We are planning to enable support for SET ANSI_NULLS in the next service update so hopefully the experience will be better.
