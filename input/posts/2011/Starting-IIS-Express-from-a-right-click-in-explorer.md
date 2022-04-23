@@ -15,13 +15,15 @@ Tonight trying out Orchard 1.1 I just wanted to start by right clicking and gett
 
 So I just modified my old Windows Registry .reg file and adapted it to IIS Express: 
 
-> Windows Registry Editor Version 5.00
-> 
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\VS2005 WebServer]
-> @="IIS Express Here"
-> 
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\VS2005 WebServer\command]
-> @="C:\\Program Files (x86)\\IIS Express\\iisexpress.exe /path:\"%1\""
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\VS2005 WebServer]
+@="IIS Express Here"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Folder\shell\VS2005 WebServer\command]
+@="C:\\Program Files (x86)\\IIS Express\\iisexpress.exe /path:\"%1\""
+```
 
 Take care that this is a file for 64 bits Windows OS, adapt to your path. Then you can double click on the .reg file to save the settings in the registry.
 

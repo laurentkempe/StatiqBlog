@@ -24,54 +24,16 @@ So ReSharper proposed to make the property private which for sure was not ok for
 
 Some time ago I started to assign some design DataContext to be able to navigate from View to my ViewModel just by pressing **Go to Declaration** (CTRL-B in IDEA scheme) in ReSharper.
 
-<style type="text/css">
-.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, "Courier New", courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
-.code { font-size: 12px; color: #000; font-family: Consolas, "Courier New", Courier, Monospace; background-color: #F1F1F1; line-height: normal; }
-.code p		{ padding: 5px; }
-.code .rem	{ color: #008000; }
-.code .kwrd	{ color: #0000ff; }
-.code .str	{ color: #006080; }
-.code .op	{ color: #0000c0; }
-.code .preproc { color: #0000ff; }
-.code .asp	{ background-color: #ffff00; }
-.code .html { color: #800000; }
-.code .attr { color: #ff0000; }
-.code .alt	{ background-color: #f4f4f4; }
-.code .lnum	{ color: #606060; }
-</style>
-
-<pre class="code"><span style="color: blue">&lt;</span><span style="color: #a31515">UserControl </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Class</span><span style="color: blue">="skyeEditor.View.StatusBarView"
-             </span><span style="color: red">xmlns</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">x</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml"
-             </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">mc</span><span style="color: blue">="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">d</span><span style="color: blue">="http://schemas.microsoft.com/expression/blend/2008"
-             </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">ViewModel</span><span style="color: blue">="clr-namespace:skyeEditor.ViewModel"
-             </span><span style="color: red">mc</span><span style="color: blue">:</span><span style="color: red">Ignorable</span><span style="color: blue">="d"
-             </span><strong><span style="color: red">d</span><span style="color: blue">:</span><span style="color: red">DataContext</span><span style="color: blue">="{</span><span style="color: #a31515">d</span><span style="color: blue">:</span><span style="color: #a31515">DesignInstance </span><span style="color: red">Type</span></strong><span style="color: blue"><strong>=ViewModel:StatusBarViewModel}"</strong>&gt;
-</span></pre>
+```xml
+<UserControl x:Class="skyeEditor.View.StatusBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ViewModel="clr-namespace:skyeEditor.ViewModel"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=ViewModel:StatusBarViewModel}">
+```
 
 This for sure helps ReSharper code inspection as you can see on the following screenshot
 

@@ -42,112 +42,87 @@ Quite a difference ! And BlogEngine showing me the results
 
 And here is the code, it is using .NET Framework 4 and the parallelization of queries to treat files:
 
-<style type="text/css">
-.csharpcode, .csharpcode pre
+```csharp
+#region using
+
+using System;
+using System.IO;
+using System.Linq;
+using System.Xml;
+using System.Xml.Linq;
+
+#endregion
+
+namespace BlogEngineSpamDelete
 {
-	font-size: small;
-	color: black;
-	font-family: consolas, "Courier New", courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-    line-height: 135%;
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }</style>
-
-<pre class="csharpcode"><span class="preproc">#region</span> <span class="kwrd">using</span>
-
-<span class="kwrd">using</span> System;
-<span class="kwrd">using</span> System.IO;
-<span class="kwrd">using</span> System.Linq;
-<span class="kwrd">using</span> System.Xml;
-<span class="kwrd">using</span> System.Xml.Linq;
-
-<span class="preproc">#endregion</span>
-
-<span class="kwrd">namespace</span> BlogEngineSpamDelete
-{
-    <span class="kwrd">internal</span> <span class="kwrd">class</span> Program
+    internal class Program
     {
-        <span class="kwrd">private</span> <span class="kwrd">static</span> <span class="kwrd">void</span> Main(<span class="kwrd">string</span>[] args)
+        private static void Main(string[] args)
         {
-            var files = Directory.GetFiles(<span class="str">@"C:\Temp\blogengine\posts"</span>, <span class="str">"*.xml"</span>);
-            <span class="kwrd">foreach</span> (var file <span class="kwrd">in</span> files.AsParallel())
+            var files = Directory.GetFiles(@"C:\Temp\blogengine\posts", "*.xml");
+            foreach (var file in files.AsParallel())
             {
                 FixPost(file);
             }
         }
 
-        <span class="kwrd">private</span> <span class="kwrd">static</span> <span class="kwrd">void</span> FixPost(<span class="kwrd">string</span> file)
+        private static void FixPost(string file)
         {
             XDocument doc;
-            <span class="kwrd">using</span> (var stream = File.OpenRead(file))
+            using (var stream = File.OpenRead(file))
             {
                 doc = XDocument.Load(stream);
             }
 
-            var comments = from comment <span class="kwrd">in</span> doc.Descendants(XName.Get(<span class="str">"comment"</span>, String.Empty))
+            var comments = from comment in doc.Descendants(XName.Get("comment", String.Empty))
                            select comment;
 
-            var spamComments = from comment <span class="kwrd">in</span> comments.ToArray()
-                               let data = <span class="kwrd">new</span> CommentState(comment.Attribute(<span class="str">"spam"</span>).Value,
-                                                           comment.Attribute(<span class="str">"approved"</span>).Value,
-                                                           comment.Attribute(<span class="str">"deleted"</span>).Value) 
-                               <span class="kwrd">where</span> ShouldDeleteSpamAndUnApproved(data)
+            var spamComments = from comment in comments.ToArray()
+                               let data = new CommentState(comment.Attribute("spam").Value,
+                                                           comment.Attribute("approved").Value,
+                                                           comment.Attribute("deleted").Value) 
+                               where ShouldDeleteSpamAndUnApproved(data)
                                select comment;
 
-            <span class="kwrd">foreach</span> (var spamComment <span class="kwrd">in</span> spamComments)
+            foreach (var spamComment in spamComments)
             {
                 spamComment.Remove();
             }
 
-            <span class="kwrd">using</span> (var writer = XmlWriter.Create(file, <span class="kwrd">new</span> XmlWriterSettings {Indent = <span class="kwrd">true</span>}))
+            using (var writer = XmlWriter.Create(file, new XmlWriterSettings {Indent = true}))
             {
                 doc.WriteTo(writer);
             }
         }
 
-        <span class="kwrd">private</span> <span class="kwrd">static</span> <span class="kwrd">bool</span> ShouldDeleteSpam(CommentState commentState)
+        private static bool ShouldDeleteSpam(CommentState commentState)
         {
-            <span class="kwrd">return</span> !commentState.Approved &amp;&amp; 
+            return !commentState.Approved && 
                    (commentState.Spam || commentState.Deleted);
         }
         
-        <span class="kwrd">private</span> <span class="kwrd">static</span> <span class="kwrd">bool</span> ShouldDeleteSpamAndUnApproved(CommentState commentState)
+        private static bool ShouldDeleteSpamAndUnApproved(CommentState commentState)
         {
-            <span class="kwrd">return</span> !commentState.Approved || 
+            return !commentState.Approved || 
                    commentState.Spam ||
                    commentState.Deleted;
         }
 
-        <span class="kwrd">private</span> <span class="kwrd">class</span> CommentState
+        private class CommentState
         {
-            <span class="kwrd">public</span> CommentState(String spam, String approved, String deleted)
+            public CommentState(String spam, String approved, String deleted)
             {
-                Approved = <span class="kwrd">bool</span>.Parse(approved);
-                Spam = <span class="kwrd">bool</span>.Parse(spam);
-                Deleted = <span class="kwrd">bool</span>.Parse(deleted);
+                Approved = bool.Parse(approved);
+                Spam = bool.Parse(spam);
+                Deleted = bool.Parse(deleted);
             }
 
-            <span class="kwrd">public</span> <span class="kwrd">bool</span> Approved { get; <span class="kwrd">private</span> set; }
-            <span class="kwrd">public</span> <span class="kwrd">bool</span> Spam { get; <span class="kwrd">private</span> set; }
-            <span class="kwrd">public</span> <span class="kwrd">bool</span> Deleted { get; <span class="kwrd">private</span> set; }
+            public bool Approved { get; private set; }
+            public bool Spam { get; private set; }
+            public bool Deleted { get; private set; }
         }
     }
-}</pre>
+}
+```
 
 **Update**: I also posted the code on bitbucket: [https://bitbucket.org/lkempe/blogenginespamdelete](https://bitbucket.org/lkempe/blogenginespamdelete)

@@ -17,22 +17,22 @@ So currently I use Git Svn to work on one of our product at [Innoveo Solutions](
 
 And here is the list of what I personally gained as a developer:
 
-1.  **2 steps commit**       
+1.  **2 steps commit**
 
     1.  Stage/commit, Push    
-2.  **Local history / branching **      
+2.  **Local history / branching**
 
     1.  No connection to central repository needed to branch/to look at history    
-3.  **Experiment / Refactoring / Spikes **      
+3.  **Experiment / Refactoring / Spikes**
 
     1.  Commit changes on one path, if wrong rollback    
-4.  **Smarter Merging **      
+4.  **Smarter Merging**
 
     1.  Git’s focus on content rather file location 
     2.  Better at resolving merge conflicts for you (e.g. renames) 
     3.  Branching/Merging is daily workflow not anymore an ‘exceptional case’    
-5.  **Stash changes **
-6.  **Rebase / Rewriting history **      
+5.  **Stash changes**
+6.  **Rebase / Rewriting history**      
 
     1.  Until push you can use interactive rebase      
 

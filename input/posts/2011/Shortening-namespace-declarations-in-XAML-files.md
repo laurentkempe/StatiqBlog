@@ -20,57 +20,22 @@ The application is using [Telerik RadControls for WPF](http://www.telerik.com/pr
 
 I was facing the issue of having more and more namespace declarations like the following for **RadInput** and **Rad**:
 
-<style type="text/css">
-.csharpcode, .csharpcode pre
-{
-	font-size: small;
-	color: black;
-	font-family: consolas, "Courier New", courier, monospace;
-	background-color: #ffffff;
-	/*white-space: pre;*/
-}
-.csharpcode pre { margin: 0em; }
-.csharpcode .rem { color: #008000; }
-.csharpcode .kwrd { color: #0000ff; }
-.csharpcode .str { color: #006080; }
-.csharpcode .op { color: #0000c0; }
-.csharpcode .preproc { color: #cc6633; }
-.csharpcode .asp { background-color: #ffff00; }
-.csharpcode .html { color: #800000; }
-.csharpcode .attr { color: #ff0000; }
-.csharpcode .alt 
-{
-	background-color: #f4f4f4;
-	width: 100%;
-	margin: 0em;
-}
-.csharpcode .lnum { color: #606060; }
-.code { font-size: 12px; color: #000; font-family: Consolas, "Courier New", Courier, Monospace; background-color: #F1F1F1; line-height: normal; }
-.code p		{ padding: 5px; }
-.code .rem	{ color: #008000; }
-.code .kwrd	{ color: #0000ff; }
-.code .str	{ color: #006080; }
-.code .op	{ color: #0000c0; }
-.code .preproc { color: #0000ff; }
-.code .asp	{ background-color: #ffff00; }
-.code .html { color: #800000; }
-.code .attr { color: #ff0000; }
-.code .alt	{ background-color: #f4f4f4; }
-.code .lnum	{ color: #606060; }
-</style>
 
-<pre class="code"><span style="color: blue">&lt;</span><span style="color: #a31515">Window </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Class</span><span style="color: blue">="skyeEditor.View.Dialogs.ProductSettingsDialog"
-        </span><span style="color: red">xmlns</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">x</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml"
-        </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">RadInput</span><span style="color: blue">="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
-        </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">Rad</span><span style="color: blue">="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
-</span></pre>
+```xaml
+<Window x:Class="skyeEditor.View.Dialogs.ProductSettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:RadInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+        xmlns:Rad="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+```
 
 Searching for a solution I thought of ASP.NET in which you can declare in the web.config things like that:
 
-> &lt;pages pageBaseType="System.Web.Mvc.WebViewPage"&gt;
->   &lt;namespaces&gt;
->     &lt;add namespace="MyNamespace" /&gt;
+```xml
+<pages pageBaseType=”System.Web.Mvc.WebViewPage”>
+    <namespaces>
+        <add namespace=”MyNamespace” />
+```
 
 My goal was to have one namespace declaration for example **telerik** and be able to use it in all my XAML files without having to declare too much. 
 
@@ -82,35 +47,39 @@ Followed by an article from [Sandino Di Mattia](http://blog.sandrinodimattia.net
 
 Using the idea I was able to add the following to the **AssemblyInfo.cs** of my own project:
 
-<pre class="code">[<span style="color: blue">assembly</span>: <span style="color: #2b91af">XmlnsDefinition</span>(<span style="color: #a31515">"telerik"</span>,
-                           <span style="color: #a31515">"Telerik.Windows.Controls"</span>,
-                           AssemblyName = <span style="color: #a31515">"Telerik.Windows.Controls"</span>)]
+```csharp
+[assembly: XmlnsDefinition("telerik",
+                           "Telerik.Windows.Controls",
+                           AssemblyName = "Telerik.Windows.Controls")]
 
-[<span style="color: blue">assembly</span>: <span style="color: #2b91af">XmlnsDefinition</span>(<span style="color: #a31515">"telerik"</span>,
-                           <span style="color: #a31515">"Telerik.Windows.Controls"</span>,
-                           AssemblyName = <span style="color: #a31515">"Telerik.Windows.Controls.Input"</span>)]
+[assembly: XmlnsDefinition("telerik",
+                           "Telerik.Windows.Controls",
+                           AssemblyName = "Telerik.Windows.Controls.Input")]
 
-[<span style="color: blue">assembly</span>: <span style="color: #2b91af">XmlnsDefinition</span>(<span style="color: #a31515">"telerik"</span>,
-                           <span style="color: #a31515">"Telerik.Windows.Controls"</span>,
-                           AssemblyName = <span style="color: #a31515">"Telerik.Windows.Controls.Navigation"</span>)]
+[assembly: XmlnsDefinition("telerik",
+                           "Telerik.Windows.Controls",
+                           AssemblyName = "Telerik.Windows.Controls.Navigation")]
 
-[<span style="color: blue">assembly</span>: <span style="color: #2b91af">XmlnsDefinition</span>(<span style="color: #a31515">"telerik"</span>,
-                           <span style="color: #a31515">"Telerik.Windows.Controls"</span>,
-                           AssemblyName = <span style="color: #a31515">"Telerik.Windows.Controls.RibbonView"</span>)]</pre>
-                           
+[assembly: XmlnsDefinition("telerik",
+                           "Telerik.Windows.Controls",
+                           AssemblyName = "Telerik.Windows.Controls.RibbonView")]
+```
 And then my XAML file declaration looks like that:
 
-<pre class="code"><span style="color: blue">&lt;</span><span style="color: #a31515">Window </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Class</span><span style="color: blue">="skyeEditor.View.Dialogs.ProductSettingsDialog"
-        </span><span style="color: red">xmlns</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">x</span><span style="color: blue">="http://schemas.microsoft.com/winfx/2006/xaml"
-        </span><span style="color: red">xmlns</span><span style="color: blue">:</span><span style="color: red">telerik</span><span style="color: blue">="http://schemas.telerik.com/2008/xaml/presentation"
-</span></pre>
+
+```xml
+<Window x:Class="skyeEditor.View.Dialogs.ProductSettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+```
 
 And I can use everywhere for all Telerik RadControls for WPF with the prefix **telerik** 
 
-<pre class="code"><span style="color: blue">&lt;</span><span style="color: #a31515">telerik</span><span style="color: blue">:</span><span style="color: #a31515">RadComboBox </span><span style="color: red">ItemsSource</span><span style="color: blue">="{</span><span style="color: #a31515">Binding </span><span style="color: red">ProductNodeLabels</span><span style="color: blue">}"
-                        </span><span style="color: red">SelectedItem</span><span style="color: blue">="{</span><span style="color: #a31515">Binding </span><span style="color: red">SelectedProductNodeLabel</span><span style="color: blue">}"
-                        </span><span style="color: red">Margin</span><span style="color: blue">="0,0,0,5" /&gt;
-</span></pre>
+```xml
+<telerik:RadComboBox ItemsSource="{Binding ProductNodeLabels}"
+                     SelectedItem="{Binding SelectedProductNodeLabel}"
+                     Margin="0,0,0,5" />
+```
 
 A little step but a nice improvement!
