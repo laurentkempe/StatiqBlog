@@ -13,4 +13,4 @@ This is an interessting video about the plugin [eclipse4SL](http://www.eclipse4s
 This plugin allows Eclipse / Java developers to build RIA with Silverlight and collaboration between Web Designers, .NET Developers and Java Developers.
 <!-- more -->
 
-<iframe style="width: 500px; height: 375px" src="http://silverlight.services.live.com/invoke/66613/Eclipse%20Tools%20for%20Silverlight%20-%20Interoperability%20in%20action/iframe.html" frameborder="0" scrolling="no"></iframe>
+It was based on Silverlight, so it is not anymore available.

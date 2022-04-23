@@ -13,13 +13,13 @@ Next month I will attend with my colleague Robert the [“WPF FOR LOB”](http:/
 We will be at the conference hotel [Radisson Edwardian Heathrow Hotel](http://www.radissonedwardian.com/londonuk_heathrow), where the training take place.
 <!-- more -->
 
-**[Jaime Rodriquez](http://blogs.msdn.com/jaimer/) **and **[Karl Shifflett](http://karlshifflett.wordpress.com/) **have been organizing a “WPF FOR LOB” to provide **2 days of free WPF training for developers.**
+**[Jaime Rodriquez](http://blogs.msdn.com/jaimer/)** and **[Karl Shifflett](http://karlshifflett.wordpress.com/)** have been organizing a “WPF FOR LOB” to provide **2 days of free WPF training for developers.**
 
 > **Overview**
-> This two day training is designed to teach developers how to create Line of Business (LOB) applications using Windows Presentation Foundation (WPF). 
+> This two day training is designed to teach developers how to create Line of Business (LOB) applications using Windows Presentation Foundation (WPF). 
 > 
 > *   Day One is an introduction to the WPF graphics subsystem, the tools used to build WPF applications, and the core UI services: styling, data binding, templating, layout and input-
-> *   The second day begins with interop (Windows Forms and Win32)  and then quickly dives into LOB topics, including building applications using the Model-View-ViewModel pattern, creating unit testable applications,  implementing data validation, and error handling. 
+> *   The second day begins with interop (Windows Forms and Win32)  and then quickly dives into LOB topics, including building applications using the Model-View-ViewModel pattern, creating unit testable applications,  implementing data validation, and error handling. 
 > 
 > After completion, attendees will have a solid understanding of WPF, its advantages over other Microsoft UI platforms, and how to use the **M-V-VM pattern** to create great WPF LOB applications.
 > 

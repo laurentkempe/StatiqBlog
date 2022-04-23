@@ -13,30 +13,33 @@ I tend to use a lot the [Live Template of ReSharper](http://www.jetbrains.com/re
 Today I updated the [File Template](http://www.jetbrains.com/resharper/features/code_templates.html#File_Templates) I use to write my [NUnit](http://nunit.com/index.php) tests like this:
 <!-- more -->
 
-using NUnit.Framework; 
 
-namespace $NAMESPACE$     
-{      
-    // ReSharper disable InconsistentNaming 
+```csharp
+using NUnit.Framework;
 
-    [TestFixture]     
-    public class $CLASSNAME$      
-    {          
-        /*      
-         * ... hold ...      
-         *       
-         * Arrange - Act - Assert      
-         */ 
+namespace \(NAMESPACE\)
+{
+    // ReSharper disable InconsistentNaming
 
-        [Test]     
-        public void $FIRST_TEST_NAME$()      
-        {      
-            $END$      
-        }      
-    } 
+    [TestFixture]
+    public class \(CLASSNAME\)
+    {       
+        /*
+         * ... hold ...
+         *
+         * Arrange - Act - Assert
+         */
 
-   // ReSharper restore InconsistentNaming     
+        [Test]
+        public void \(FIRST_TEST_NAME\)()
+        {
+            \(END\)
+        }
+    }
+
+   // ReSharper restore InconsistentNaming
 }
+```
 
 where I have the variable names defined as this:
 
