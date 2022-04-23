@@ -54,7 +54,7 @@ I liked the easy CLI Tools interaction with Fluent API with almost all the tools
 
 Leverage the power of the [NUKE IDE extensions](https://nuke.build/docs/running-builds/from-ides.html) to ease the creation, edition, debugging and execution of NUKE builds.
 
-![NUKE rider extension](/images/nuke_rider_extension.png)
+![NUKE rider extension](/images/2022/nuke_rider_extension.png)
 
 ## Install NUKE CLI .NET tool
 
@@ -77,7 +77,7 @@ Register-ArgumentCompleter -Native -CommandName nuke -ScriptBlock {
 
 ## Create your first NUKE build project
 
-![NUKE setup](/images/nuke%20setup.png)
+![NUKE setup](/images/2022/nuke%20setup.png)
 
 From the project you want to build run
 
@@ -173,7 +173,7 @@ A super nice feature is to be able to visualize our target relationships with a 
 
 > nuke --plan
 
-![NUKE plan](/images/nuke%20plan.png)
+![NUKE plan](/images/2022/nuke%20plan.png)
 
 With such an execution plan defined by our targets, we can see that the `Clean` target is executed before the `Restore` target and the `Compile` target is executed after the `Restore` target. We also see that if the `Clean` target is not specified as a command line parameter it won't be executed.
 
