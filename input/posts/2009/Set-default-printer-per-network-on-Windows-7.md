@@ -15,10 +15,10 @@ Today I was back to work at [Innoveo Solutions](http://www.innoveo.com/) and add
 
 With Windows 7 it is really easy to configure, click on the **Start **button then **Devices and Printers**, you will get to that dialog:
 
-[![3853083357_9b691cf277_o[1]](http://weblogs.asp.net/blogs/lkempe/3853083357_9b691cf277_o1_thumb_2357147E.png "3853083357_9b691cf277_o[1]")](http://weblogs.asp.net/blogs/lkempe/3853083357_9b691cf277_o1_44C6DFE7.png) 
+![](/images/2009/Set-default-printer-per-network-on-Windows-7-1.png)
 
 Click on the Manage default printers and you will get a second dialog in which you can click **Change my default printer when I change networks** and configure which printer belongs to which network:
 
-[![3853884296_e90bc5290c_o[1]](http://weblogs.asp.net/blogs/lkempe/3853884296_e90bc5290c_o1_thumb_0243563D.png "3853884296_e90bc5290c_o[1]")](http://weblogs.asp.net/blogs/lkempe/3853884296_e90bc5290c_o1_0BCC3A80.png) 
+![](/images/2009/Set-default-printer-per-network-on-Windows-7-2.png)
 
 Simple and easy.

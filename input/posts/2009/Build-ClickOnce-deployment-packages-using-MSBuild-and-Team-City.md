@@ -1,6 +1,6 @@
 ---
 title: "Build ClickOnce deployment packages using MSBuild and Team City"
-permalink: /2009/10/27/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City/
+permalink: ~~/2009/10/27/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City/~~
 date: 10/27/2009 8:25:26 PM
 updated: 10/27/2009 8:25:26 PM
 disqusIdentifier: 20091027082526
@@ -15,22 +15,20 @@ To start I had to create new build configurations on [Team City](http://www.jetb
 1.  **Targets**: Rebuild Publish 
 2.  **Configuration**:** **One per build configurations; e.g** **DeployClickOnce, integrationDeployClickOnce   
 
-[![Targets and Configuration](http://weblogs.asp.net/blogs/lkempe/4049721154_08aa444fd1_o1_thumb_12F817BA.png "Targets and Configuration")](http://weblogs.asp.net/blogs/lkempe/4049721154_08aa444fd1_o1_1C3452FB.png) 
+![Targets and Configuration](/images/2009/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City-1.png)
 
 Then in my Visual Studio 2008 solution I created several Solution configuration reflecting the different configurations that I needed during my deployment, e.g. DeployClickOnce
 
-[![Visual Studio 2008 solutions](http://weblogs.asp.net/blogs/lkempe/4048977891_8fef52e1df_o1_thumb_4F606697.png "Visual Studio 2008 solutions")](http://weblogs.asp.net/blogs/lkempe/4048977891_8fef52e1df_o1_2D580AD1.png) 
+![Visual Studio 2008 solutions](/images/2009/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City-2.png)
 
 Then using the project properties from the solution explorer in Visual Studio I had to set all Publish options I was interested in; Publish Location, Installation Folder Url, Install Mode and Settings, Prerequisites…
 
-[![4048988539_2a9f77285f_o[1]](http://weblogs.asp.net/blogs/lkempe/4048988539_2a9f77285f_o1_thumb_614C5E8A.png "4048988539_2a9f77285f_o[1]")](http://weblogs.asp.net/blogs/lkempe/4048988539_2a9f77285f_o1_1B4BC744.png)
-
+![](/images/2009/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City-3.png)
 The issue now is that the Publish Version automatically increment the revision with each publish. But this doesn’t work with our continuous integration server Team City as it would need to checkin the modified file back to subversion. SO a different approach was needed.
 
 The solution I used is to use the [Build Number](http://www.jetbrains.net/confluence/display/TCD4/Predefined+Properties#PredefinedProperties-buildNumber) offered by Team City, so I had to modify the MSBuild script to use the the BUILD_NUMBER. To do that, right click in the Solution Explorer on our project and select Edit Project File:
 
-[![4049748852_2ea06972ca_o[1]](http://weblogs.asp.net/blogs/lkempe/4049748852_2ea06972ca_o1_thumb_238F5101.png "4049748852_2ea06972ca_o[1]")](http://weblogs.asp.net/blogs/lkempe/4049748852_2ea06972ca_o1_650A035A.png) 
-
+![](/images/2009/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City-4.png)
 Then you will face the your MSBuild script, and you will have to search for the configuration that we defined some steps before:
   <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:68c8585d-4f35-4bb1-bc7f-3e5d6368c615" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #fff; max-height: 300px; overflow: auto"> 
 

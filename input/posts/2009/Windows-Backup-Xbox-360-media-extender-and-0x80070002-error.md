@@ -32,6 +32,5 @@ Searching on the Internet I found a [forum post](http://social.technet.microsoft
 > 5. Exclude the Contacts and Searches directories for the user.
 > 6. Proceed with configuration and save settings.
 
-[![4071003833_d19380d9ab_o[1]](http://weblogs.asp.net/blogs/lkempe/4071003833_d19380d9ab_o1_thumb_762C3546.png "4071003833_d19380d9ab_o[1]")](http://weblogs.asp.net/blogs/lkempe/4071003833_d19380d9ab_o1_0EDC1E31.png) 
-
+![](/images/2009/Windows-Backup-Xbox-360-media-extender-and-0x80070002-error.png)
 Restarted backup and now it works!

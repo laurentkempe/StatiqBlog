@@ -15,8 +15,8 @@ In fact I used the same [BUILD_VCS_NUMBER_<simplified VCS root name>](http://www
 
 Go in the General Settings of your build and adapt as following:
 
-[![4097914182_2e086aabc1_o[1]](http://weblogs.asp.net/blogs/lkempe/4097914182_2e086aabc1_o1_thumb_56C71DFD.png "4097914182_2e086aabc1_o[1]")](http://weblogs.asp.net/blogs/lkempe/4097914182_2e086aabc1_o1_2739253E.png) 
+![](/images/2009/Displaying-application-version-on-TeamCity-home-page-1.png)
 
 When your software is built it will now display the version:
 
-[![4097158651_22d00c0ac1_o[1]](http://weblogs.asp.net/blogs/lkempe/4097158651_22d00c0ac1_o1_thumb_2101B2D6.png "4097158651_22d00c0ac1_o[1]")](http://weblogs.asp.net/blogs/lkempe/4097158651_22d00c0ac1_o1_54AA1F34.png)
+![](/images/2009/Displaying-application-version-on-TeamCity-home-page-2.png)

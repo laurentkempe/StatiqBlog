@@ -15,7 +15,7 @@ Follow up on those two posts “[How to measure programmer productivity using TD
 
 As you might know I am a fan of ReSharper and when I am doing Test Driven Development I hate having to switch from keyboard to mouse to run the test I just wrote. So searching for ReSharper Keyboard command I found **Resharper_UnitTest_ContextRun** which I assign to the **Ctrl+Shift+<**.
 
-![](http://weblogs.asp.net/blogs/lkempe/3986142655_a489b88d41_o1_58609135.png) 
+![](/images/2009/Unit-Tests-without-leaving-the-keyboard.png)
 
 Now I can run the unit test I just wrote with just a combination of keys which are really near to each other so really easy!
 
