@@ -13,6 +13,13 @@ It is an important date for me, because tonight the first platform built in the 
 And here is the picture of the team:
 <!-- more -->
 
-![](http://www.techheadbrothers.com/images/blog/ecenter-team.jpg)
+![ecenter team](/images/2006/ecenter-team.jpg)
 
-<span style="FONT-WEIGHT: bold">Standing up:</span><br>Constantin, <strong>Laurent (it's me)</strong>, Roy, Nick, Rolf, Cédric, Thomas, Peter<br><br><span style="FONT-WEIGHT: bold">Kneeling:</span><br>Didier, Philippe, Lorenz, Oli, Bojan
+**Standing up**
+
+Constantin, **Laurent (it's me)**, Roy, Nick, Rolf, Cédric, Thomas, Peter
+
+**Kneeling**
+
+Didier, Philippe, Lorenz, Oli, Bojan
+

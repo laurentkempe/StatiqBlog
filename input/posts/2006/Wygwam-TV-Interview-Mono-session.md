@@ -5,10 +5,8 @@ date: 11/11/2006 10:55:33 PM
 updated: 11/11/2006 10:55:33 PM
 disqusIdentifier: 20061111105533
 tags: [".NET"]
-alias:
- - /post/Wygwam-TV-Interview-Mono-session.aspx/index.html
 ---
-[![](http://www.techheadbrothers.com/images/blog/wygtv.jpg)](http://www.wygwam.com/TechEd/Default.html?cat=Interviews&vid=16) 
+![](/images/2006/wygtv.jpg) 
 
 After [mono](http://www.mono-project.com/Main_Page) session I have been interviewed in French by [Patrice](http://blogs.developpeur.org/patrice/default.aspx) from [Wygwam](http://www.wygwam.com/). You might find the interview on the [following page](http://www.wygwam.com/TechEd/Default.html?cat=Interviews&vid=16). And all the video they have recorded al [Wygwam TV](http://www.wygwam.com/TechEd/).
 <!-- more -->
@@ -27,4 +25,4 @@ The discussion brought by someone on the assistance about the real goal of mono 
 
 **Open source is a development model not a business model**. And even if you want to use open source in your business you need to pay, something called support. The only way to save on the license/support using open source software is to have gurus internally that are working on open source projects, and for example install something like debian distribution. Because then you wont need external support.
 
-**Do you really thing that companies like novell/suse/red hat are philanthropic? **For sure not they need also to make money for living.
+**Do you really thing that companies like novell/suse/red hat are philanthropic?** For sure not they need also to make money for living.

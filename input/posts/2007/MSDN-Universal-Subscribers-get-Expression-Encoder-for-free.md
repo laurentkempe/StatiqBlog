@@ -5,15 +5,13 @@ date: 9/6/2007 6:00:14 PM
 updated: 5/7/2010 7:45:43 AM
 disqusIdentifier: 20070906060014
 tags: ["Silverlight", "Expression Studio", "Expression Encoder"]
-alias:
- - /post/MSDN-Universal-Subscribers-get-Expression-Encoder-for-free.aspx/index.html
 ---
 If you are a lucky MSDN Universal subscriber then you can get [Expression Encoder](http://www.microsoft.com/expression/products/download.aspx?key=encoder) ([released yesterday with Silverlight 1.0](http://weblogs.asp.net/lkempe/archive/2007/09/05/silverlight-released-with-a-bonus-for-my-brother-mathieu.aspx)) for free. How ?
 
 Juts use the key you have for [Expression Studio](http://www.microsoft.com/expression/products/download.aspx?key=studio) delivered on MSDN Subscriber Downloads, on the page Subscription Product Keys.
 <!-- more -->
 
-![](http://www.techheadbrothers.com/images/blog/expressionencoderlicense.jpg) 
+![](/images/2007/expressionencoderlicense.jpg)
 
 This was posted on the [newsgroup](http://www.microsoft.com/communities/newsgroups/en-us/default.aspx?dg=microsoft.public.expression.mediaencoder&cat=&lang=en&cr=US)
 

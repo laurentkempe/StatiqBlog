@@ -13,4 +13,4 @@ This morning I was able to integrate [Atlas](http://atlas.asp.net/) in the new r
 *Congratulations to the Atlas Team!!! Great work.*
 <!-- more -->
 
-![](http://www.techheadbrothers.com/images/blog/atlas_authors.jpg)
+![](/images/2006/atlas_authors.jpg)

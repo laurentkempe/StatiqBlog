@@ -5,35 +5,55 @@ date: 6/13/2006 6:38:00 AM
 updated: 6/13/2006 6:38:00 AM
 disqusIdentifier: 20060613063800
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "ASP.NET AJAX"]
-alias:
- - /post/Trip-in-the-Atlas-Part-2.aspx/index.html
 ---
 This time the targeted scenario was to implement a login the way I saw it on [on10.net](http://www.on10.net/).
 
-Using the [Atlas Control Toolkit](http://atlas.asp.net/default.aspx?tabid=47&subtabid=477), I started to implement the scenario with a [ModalPopup](http://atlas.asp.net/atlastoolkit/ModalPopup/ModalPopup.aspx) atlas control surrounding an ASP.NET Login.
+Using the [Atlas Control Toolkit](http://atlas.asp.net/default.aspx?tabid=47&subtabid=477), I started to implement the scenario with a [ModalPopup](http://atlas.asp.net/atlastoolkit/ModalPopup/ModalPopup.aspx) atlas control surrounding an ASP.NET Login.
 <!-- more -->
 
 After some drag and drop on the designer I hit the F5, and I was in front of my Modal login. Nice, but no postback, so no login. Tehn I came with the idea to add the property UseSubmitBehavoir to false for OK/Cancel button like so:
 
-<font color="#0000ff" size="2"><</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Button</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="OkButton"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">Text</font><font color="#0000ff" size="2">="OK"</font><font size="2"> </font><font color="#ff0000" size="2">OnClick</font><font color="#0000ff" size="2">="OkButton_Click"</font><font size="2"> </font><font color="#ff0000" size="2">UseSubmitBehavior</font><font color="#0000ff" size="2">=false></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Button</font><font color="#0000ff" size="2">></font>
+```html
+<asp:Button ID=”OkButton”
+            runat=”server”
+            Text=”OK”
+            OnClick=”OkButton_Click”
+            UseSubmitBehavior=false>
+</asp:Button>
+```
 
 I had then my postback, but all controls in my login template were empty. After spending some time on that without success I gave up.
 
 But yesterday evening I came back to this and downloaded the latest bits of the [Atlas Control Toolkit from CodePlex](http://www.codeplex.com/Wiki/View.aspx?ProjectName=AtlasControlToolkit). By the way [Korby](http://blogs.msdn.com/korbyp/), I can't wait getting my projects there ;-) And restarted the implementation using the demo web application they deliver with it. And there it worked fine. 
-<font color="#0000ff" size="2">
 
+```html
+<asp:Panel ID=”LoginPanel” runat=”server” CssClass=”modalPopup” Style=”display: none”>
+   <asp:Login ID=”Login1” runat=”server” LoginButtonText=”S’identifier”
+              PasswordLabelText=”Mot de passe:”
+              PasswordRequiredErrorMessage=”Le mot de passe est requis.”
+              RememberMeText=”Se souvenir de moi.”
+              TitleText=”Identifiez vous “
+              UserNameLabelText=”Nom d’utilisateur:”
+              UserNameRequiredErrorMessage=”Le nom d’utilisateur est requis.”>
+   </asp:Login>
+   <asp:Button ID=”CancelButton” runat=”server” Text=”Cancel”></asp:Button></asp:Panel>
 
-<</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Panel</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="LoginPanel"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">CssClass</font><font color="#0000ff" size="2">="modalPopup"</font><font size="2"> </font><font color="#ff0000" size="2">Style</font><font color="#0000ff" size="2">="display: none"><br>   </font><font color="#0000ff" size="2"><</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Login</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="Login1"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">LoginButtonText</font><font color="#0000ff" size="2">="S'identifier"</font><font size="2"> </font><font color="#ff0000" size="2">PasswordLabelText</font><font color="#0000ff" size="2">="Mot de passe:" </font><font color="#ff0000" size="2">PasswordRequiredErrorMessage</font><font color="#0000ff" size="2">="Le mot de passe est requis."</font><font size="2"> </font><font color="#ff0000" size="2">RememberMeText</font><font color="#0000ff" size="2">="Se souvenir de moi." </font><font color="#ff0000" size="2">TitleText</font><font color="#0000ff" size="2">="Identifiez vous "</font><font size="2"> </font><font color="#ff0000" size="2">UserNameLabelText</font><font color="#0000ff" size="2">="Nom d'utilisateur:"</font><font size="2"> </font><font color="#ff0000" size="2">UserNameRequiredErrorMessage</font><font color="#0000ff" size="2">="Le nom d'utilisateur est requis."><br>   </font><font color="#0000ff" size="2"></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Login</font><font color="#0000ff" size="2">><br>   </font><font color="#0000ff" size="2"><</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Button</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="CancelButton"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">Text</font><font color="#0000ff" size="2">="Cancel"></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Button</font><font color="#0000ff" size="2">></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">Panel</font><font color="#0000ff" size="2">></font>
+   <span class=”login”>
 
-<font color="#0000ff" size="2">   <</font><font color="#800000" size="2">span</font><font size="2"> </font><font color="#ff0000" size="2">class</font><font color="#0000ff" size="2">="login"></font>
+      <asp:LinkButton ID=”LinkButton1” runat=”server” Text=”S’identifier”></asp:LinkButton>   |
+      <asp:HyperLink ID=”HyperLink1” runat=”server” NavigateUrl=”~/Register.aspx”>
+          S’enregistrer
+      </asp:HyperLink>
+   </span>
 
-<font color="#0000ff" size="2">      <</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">LinkButton</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="LinkButton1"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">Text</font><font color="#0000ff" size="2">="S'identifier"></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">LinkButton</font><font color="#0000ff" size="2">></font><font size="2">   |<br>      </font><font color="#0000ff" size="2"><</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">HyperLink</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="HyperLink1"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"</font><font size="2"> </font><font color="#ff0000" size="2">NavigateUrl</font><font color="#0000ff" size="2">="~/Register.aspx"></font><font size="2">S'enregistrer</font><font color="#0000ff" size="2"></</font><font color="#800000" size="2">asp</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">HyperLink</font><font color="#0000ff" size="2">><br>   </</font><font color="#800000" size="2">span</font><font color="#0000ff" size="2">></font>
-
-<font color="#0000ff" size="2"><</font><font color="#800000" size="2">atlasToolkit</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">ModalPopupExtender</font><font size="2"> </font><font color="#ff0000" size="2">ID</font><font color="#0000ff" size="2">="ModalPopupExtender1"</font><font size="2"> </font><font color="#ff0000" size="2">runat</font><font color="#0000ff" size="2">="server"><br></font><font color="#0000ff" size="2">   <</font><font color="#800000" size="2">atlasToolkit</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">ModalPopupProperties</font><font size="2"> </font><font color="#ff0000" size="2">TargetControlID</font><font color="#0000ff" size="2">="LinkButton1"</font><font size="2"> </font><font color="#ff0000" size="2">PopupControlID</font><font color="#0000ff" size="2">="LoginPanel" </font><font color="#ff0000" size="2">BackgroundCssClass</font><font color="#0000ff" size="2">="modalBackground"</font><font size="2"> </font><font color="#ff0000" size="2">CancelControlID</font><font color="#0000ff" size="2">="CancelButton"</font><font size="2"> </font><font color="#0000ff" size="2">/><br></</font><font color="#800000" size="2">atlasToolkit</font><font color="#0000ff" size="2">:</font><font color="#800000" size="2">ModalPopupExtender</font><font color="#0000ff" size="2">>
-
-</font>
-
+<atlasToolkit:ModalPopupExtender ID=”ModalPopupExtender1” runat=”server”>
+   <atlasToolkit:ModalPopupProperties TargetControlID=”LinkButton1”
+                                      PopupControlID=”LoginPanel”
+                                      BackgroundCssClass=”modalBackground”
+                                      CancelControlID=”CancelButton” />
+</atlasToolkit:ModalPopupExtender>
+```
 
 And now with some slight modification to my implementation it is also working fine as you can see:
 
-![atlas login](http://www.techheadbrothers.com/images/blog/atlaslogin.jpg)
+![atlas login](/images/2006/atlaslogin.jpg)

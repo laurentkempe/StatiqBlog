@@ -5,12 +5,10 @@ date: 8/14/2006 11:02:00 PM
 updated: 8/14/2006 11:02:00 PM
 disqusIdentifier: 20060814110200
 tags: ["Tools", "ASP.NET"]
-alias:
- - /post/Windows-Live-Writer-Beta-1.aspx/index.html
 ---
 Microsoft just released a beta version of a new tool called [Windows Live Writer Beta 1](http://windowslivewriter.spaces.live.com/).
 
-![Windows Live Wrtier](http://www.techheadbrothers.com/images/blog/WindowsLiveWriter_DDEE/windowslivewriter15.jpg) 
+![Windows Live Wrtier](/images/2006/windowslivewriter15.jpg) 
 <!-- more -->
 
 You might download it on this page: [Microsoft Windows Live Writer](http://download.microsoft.com/download/f/9/a/f9a19f2d-cec4-4a25-9b0b-eb9655ea7561/Writer.msi)

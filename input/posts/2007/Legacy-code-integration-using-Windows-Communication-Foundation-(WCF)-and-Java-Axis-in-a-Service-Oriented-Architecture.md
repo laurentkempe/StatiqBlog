@@ -5,8 +5,6 @@ date: 6/22/2007 4:17:11 AM
 updated: 6/22/2007 4:17:11 AM
 disqusIdentifier: 20070622041711
 tags: ["Web Services", "WCF", "Interoperability", "Java", "Axis", ".NET Framework 3.0", "SOA", "SOAP"]
-alias:
- - /post/Legacy-code-integration-using-Windows-Communication-Foundation-(WCF)-and-Java-Axis-in-a-Service-Oriented-Architecture.aspx/index.html
 ---
 What are the options when you need to integrate Windows legacy code in a heterogeneous [Service Oriented Architecture](http://en.wikipedia.org/wiki/Service-oriented_architecture) (SOA)?  
 
@@ -21,7 +19,7 @@ So at last it was time to check [.NET](http://msdn2.microsoft.com/en-us/netframe
 
 The general idea was to define a layered solution. From bottom up I first defined an interoperability layer using [.NET Interop](http://msdn2.microsoft.com/en-us/library/sd10k43k(VS.80).aspx) to be able to call the C++ DLLs from .NET. Then on top of this first layer I added another layer exposing the whole as a web service.  
 
-![](http://www.techheadbrothers.com/images/blog/legacylayer.jpg)  
+![](/images/2007/legacylayer.jpg)  
 
 Now that I had the backend web service working I had to call it from Java. So are all those promises of web service interoperability just working out of the box?  
 
@@ -59,14 +57,17 @@ And finally the last one was that the legacy C++ Dlls where using [ifstream](htt
 
 The solution I came to, thanks to [David Wang](http://blogs.msdn.com/david.wang/) (yes you also [Richard](http://blogs.codes-sources.com/richardc/default.aspx) ;-), was to use this little method before calling into the legacy Dlls, changing the current directory:
 
-        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><summary>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> Sets the current directory.
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"></summary>
-</span>        <span style="color: rgb(0,0,255)">private</span> <span style="color: rgb(0,0,255)">static</span> <span style="color: rgb(0,0,255)">void</span> SetCurrentDirectory()
-        {
-            <span style="color: rgb(0,0,255)">string</span> binpath = <span style="color: rgb(43,145,175)">Path</span>.Combine(<span style="color: rgb(43,145,175)">HostingEnvironment</span>.ApplicationPhysicalPath, <span style="color: rgb(163,21,21)">"bin"</span>);
-            <span style="color: rgb(43,145,175)">Directory</span>.SetCurrentDirectory(binpath);
-        }
+```csharp
+/// <summary>
+///   Sets the current directory.
+/// </summary>
+private static void SetCurrentDirectory()
+{
+    string binpath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, “bin”);
+    Directory.SetCurrentDirectory(binpath);
+}
+```
+
 [](http://11011.net/software/vspaste)
 
 

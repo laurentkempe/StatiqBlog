@@ -27,55 +27,48 @@ changed. Nice.
 
 So I render this:
 
+```html
 <div class="THBMenu">  
- <div 
-class="AspNet-Menu-Horizontal">  
-  <ul 
-class="AspNet-Menu">  
-   <li 
-class="AspNet-Menu-Leaf">  
-    <a 
-href="/Website/Default.aspx" 
-class="AspNet-Menu-Link">  
-     Accueil  
-    </a>  
-   </li>  
-   <li 
-class="AspNet-Menu-Leaf">  
-    <a 
-href="/Website/Articles.aspx" 
-class="AspNet-Menu-Link">  
-     Articles  
-    </a>  
-   </li>  
-   <li 
-class="AspNet-Menu-Leaf">  
-    <a 
-href="/Website/Astuces.aspx" 
-class="**AspNet-Menu-Link-Selected**">  
-     Astuces  
-    </a>  
-   </li>
+ <div class="AspNet-Menu-Horizontal">  
+  <ul class="AspNet-Menu">  
+   <li class="AspNet-Menu-Leaf">  
+    <a href="/Website/Default.aspx" class="AspNet-Menu-Link">  
+     Accueil  
+    </a>  
+   </li>  
+   <li class="AspNet-Menu-Leaf">  
+    <a href="/Website/Articles.aspx" class="AspNet-Menu-Link">  
+     Articles  
+    </a>  
+   </li>  
+   <li class="AspNet-Menu-Leaf">  
+    <a href="/Website/Astuces.aspx" class="**AspNet-Menu-Link-Selected**">  
+     Astuces  
+    </a>  
+   </li>
+```
 
 To achieve this I modified the method BuildItem in the file MenuAdapter.cs 
 like this:
 
-<font color="blue">if</font> (item != Control.SelectedItem)
-    writer.WriteAttribute(<font color="maroon">"class"</font>, <font color="maroon">"AspNet-Menu-Link"</font>);
-<font color="blue">else</font>
-    writer.WriteAttribute(<font color="maroon">"class"</font>, <font color="maroon">"AspNet-Menu-Link-Selected"</font>);
+
+```csharp
+if (item != Control.SelectedItem)
+    writer.WriteAttribute(“class”, “AspNet-Menu-Link”);
+else
+    writer.WriteAttribute(“class”, “AspNet-Menu-Link-Selected”);
+```
 
 And then I added the new thing in the CSS, MenuExample.css: 
 
+```css
 .THBMenu ul.AspNet-Menu li.AspNet-Menu-Leaf a.AspNet-Menu-Link-Selected
 {
     color: #1A2633;
     background: url(../../PersistantImage.ashx?theme=Default&file=Rounded.gif) no-repeat bottom center;
 }
+```
 
 For such a result:
 
-![](http://www.techheadbrothers.com/images/blog/CSS friendly control adapters 01.jpg)
-
-[ Currently Playing : Because I Want You - Placebo - Meds (03:22) 
-]
+![](/images/2006/CSS_friendly_control_adapters_01.jpg)

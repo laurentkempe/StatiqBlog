@@ -13,17 +13,17 @@ OK I fixed my main issue. I wasn't able to have my plugin loaded by Jetbrains Om
 I had to install MSBee so I don't need to install VS 03 again. And now back to the old days of command line I have to compile using such a command:
 <!-- more -->
 
-msbuild BlogThisUsingWriterPlugin.csproj /t:Rebuild /p:TargetFX1_1=true
+> msbuild BlogThisUsingWriterPlugin.csproj /t:Rebuild /p:TargetFX1_1=true
 
 After modifying my csproj MSBuild file to use MSBee
 
 So this is how it look likes in Omea Reader
 
-[![](http://www.techheadbrothers.com/images/blog/c09af96e7bd2_18F4/image0_thumb1.png)](http://www.techheadbrothers.com/images/blog/c09af96e7bd2_18F4/image03.png) 
+![](/images/2006/BlogThisUsingWriterPlugin-coming-soon-1.png) 
 
 And the result in Windows Live Writer:
 
-[![](http://www.techheadbrothers.com/images/blog/c09af96e7bd2_18F4/image0_thumb2.png)](http://www.techheadbrothers.com/images/blog/c09af96e7bd2_18F4/image06.png)
+![](/images/2006/BlogThisUsingWriterPlugin-coming-soon-2.png)
 
 Not bad.
 
