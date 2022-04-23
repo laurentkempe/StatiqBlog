@@ -15,7 +15,7 @@ From the beginning we have adopted the **Model-View-ViewModel** architecture. Ha
 
 The solution came out after a discussion with [Laurent Bugnion](http://www.galasoft.ch/intro_en.html), the famous author of [**MVVM Light Toolkit**](http://www.galasoft.ch/mvvm/getstarted/). At that time we used the V1 that already helped a lot in this decoupling.
 
-Now with **[MVVM Light Toolkit V2](http://blog.galasoft.ch/archive/2009/10/03/mvvm-light-toolkit-v2-whatrsquos-new.aspx)** it is even better with the new Messenger API. What we also really appreciated in comparison to other frameworks is that it is really **light **and the ability to open and edit the user interface into Expression Blend.
+Now with **[MVVM Light Toolkit V2](http://blog.galasoft.ch/archive/2009/10/03/mvvm-light-toolkit-v2-whatrsquos-new.aspx)** it is even better with the new Messenger API. What we also really appreciated in comparison to other frameworks is that it is really **light** and the ability to open and edit the user interface into Expression Blend.
 
 So Thank you [Laurent](http://www.galasoft.ch/intro_en.html) for this GREAT framework and I looking forward for V3!
 
