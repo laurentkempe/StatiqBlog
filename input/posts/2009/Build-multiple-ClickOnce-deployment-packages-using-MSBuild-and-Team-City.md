@@ -14,9 +14,9 @@ I have multiple ClickOnce deployment packages created using TeamCity and MSBuild
 <!-- more -->
 
 So I changed to use TeamCity [BUILD_VCS_NUMBER_<simplified VCS root name>](http://www.jetbrains.net/confluence/display/TCD4/Predefined+Properties)
-  <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:938d7efb-f5b5-4dca-90a2-68001b35ba46" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #fff; max-height: 300px; overflow: auto"> 
 
-1.  <span style="color:#0000ff"><!--</span><span style="color:#008000"> ClickOnce getting build number from Team City </span><span style="color:#0000ff">--></span>
-2.  <span style="color:#0000ff"><</span><span style="color:#a31515">ApplicationRevision</span><span style="color:#0000ff">></span>$(BUILD_VCS_NUMBER_MyApplication_Trunk)<span style="color:#0000ff"></</span><span style="color:#a31515">ApplicationRevision</span><span style="color:#0000ff">></span> </div> </div> </div>  
+````xml
+<ApplicationRevision>$(BUILD_VCS_NUMBER_MyApplication_Trunk)</ApplicationRevision>
+````
 
 And now all my ClickOnce packages have the same Application Revision which is better !

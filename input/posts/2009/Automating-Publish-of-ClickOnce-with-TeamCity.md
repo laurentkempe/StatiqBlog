@@ -29,27 +29,35 @@ I made a copy of Publish.htm to Publish.htm.ori on each targeted deploy director
 Then I modified my MSBuild script to do the following:
 
 1.  Copy Publish.html.ori to Publish.htm
-2.  Use FileUpdate of [MSBuild Community Tasks](http://msbuildtasks.tigris.org/) to search the 2.0.0.x string and replace it with the version  <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:75c64077-df36-4b1f-aa27-b6be7cb8c39c" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #fff; max-height: 300px; overflow: auto"> 
+2.  Use FileUpdate of [MSBuild Community Tasks](http://msbuildtasks.tigris.org/) to search the 2.0.0.x string and replace it with the version 
 
-1.  <span style="color:#0000ff"><!--</span><span style="color:#008000"> Deploy Click Once</span><span style="color:#0000ff">--></span>
-2.  <span style="color:#0000ff"><</span><span style="color:#a31515">Target</span><span style="color:#0000ff"> </span><span style="color:#ff0000">Name</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">DeployClickOnce</span>"<span style="color:#0000ff">></span>
-3.    <span style="color:#0000ff"><</span><span style="color:#a31515">Message</span><span style="color:#0000ff"> </span><span style="color:#ff0000">Text</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">####### Deploy ClickOnce $(Configuration)|$(Platform)  ---------#</span>"<span style="color:#0000ff"> /></span>
-4.    <span style="color:#0000ff"><</span><span style="color:#a31515">Exec</span><span style="color:#0000ff"> </span><span style="color:#ff0000">Command</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">xcopy /E /Y $(ClickOnceSrc)\*.* $(ClickOnceDestination)</span>"<span style="color:#0000ff"> /></span>
-5.    <span style="color:#0000ff"><</span><span style="color:#a31515">Copy</span><span style="color:#0000ff"> </span><span style="color:#ff0000">SourceFiles</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">$(ClickOnceDestination)\Publish.htm.ori</span>"<span style="color:#0000ff"> </span><span style="color:#ff0000">DestinationFiles</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">$(ClickOnceDestination)\Publish.htm</span>"<span style="color:#0000ff"> /></span>
-6.    <span style="color:#0000ff"><</span><span style="color:#a31515">FileUpdate</span>
-7.      <span style="color:#0000ff"></span><span style="color:#ff0000">Files</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">$(ClickOnceDestination)\Publish.htm</span>"
-8.      <span style="color:#0000ff"></span><span style="color:#ff0000">Regex</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">2.0.0.x</span>"
-9.      <span style="color:#0000ff"></span><span style="color:#ff0000">ReplacementText</span><span style="color:#0000ff">=</span>"<span style="color:#0000ff">$(FullVersion)</span>"<span style="color:#0000ff"> /></span>
-10.  <span style="color:#0000ff"></</span><span style="color:#a31515">Target</span><span style="color:#0000ff">></span> </div> </div> </div>  
+```xml
+<!-- Deploy Click Once-->
+<Target Name="DeployClickOnce">
+
+  <Message Text="####### Deploy ClickOnce $(Configuration)|$(Platform)  ---------#" />
+
+  <Exec Command="xcopy /E /Y $(ClickOnceSrc)*.* $(ClickOnceDestination)" />
+
+  <Copy SourceFiles="$(ClickOnceDestination)\Publish.htm.ori"
+        DestinationFiles="$(ClickOnceDestination)\Publish.htm" />
+
+  <FileUpdate Files="$(ClickOnceDestination)\Publish.htm"
+              Regex="2.0.0.x"
+              ReplacementText="$(FullVersion)" />
+
+</Target>
+```
 
 and the FullVersion is defined as this, using TeamCity [BUILD_VCS_NUMBER](http://www.jetbrains.net/confluence/display/TCD4/Predefined+Properties), which is Latest VCS revision:
-  <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:b9120155-0f8c-4e96-bcd7-88d1207c1621" class="wlWriterEditableSmartContent"> <div style="border: #000080 1px solid; color: #000; font-family: 'Courier New', Courier, Monospace; font-size: 10pt"> <div style="background: #fff; max-height: 300px; overflow: auto"> 
 
-1.  <span style="color:#0000ff"><</span><span style="color:#a31515">Major</span><span style="color:#0000ff">></span>2<span style="color:#0000ff"></</span><span style="color:#a31515">Major</span><span style="color:#0000ff">></span>
-2.  <span style="color:#0000ff"><</span><span style="color:#a31515">Minor</span><span style="color:#0000ff">></span>0<span style="color:#0000ff"></</span><span style="color:#a31515">Minor</span><span style="color:#0000ff">></span>
-3.  <span style="color:#0000ff"><</span><span style="color:#a31515">Build</span><span style="color:#0000ff">></span>0<span style="color:#0000ff"></</span><span style="color:#a31515">Build</span><span style="color:#0000ff">></span>
-4.  <span style="color:#0000ff"><</span><span style="color:#a31515">Revision</span><span style="color:#0000ff">></span>$(BUILD_VCS_NUMBER_app_Trunk)<span style="color:#0000ff"></</span><span style="color:#a31515">Revision</span><span style="color:#0000ff">></span>
-5.  <span style="color:#0000ff"><</span><span style="color:#a31515">FullVersion</span><span style="color:#0000ff">></span>$(Major).$(Minor).$(Build).$(Revision)<span style="color:#0000ff"></</span><span style="color:#a31515">FullVersion</span><span style="color:#0000ff">>  </</span><span style="color:#a31515">PropertyGroup</span><span style="color:#0000ff">></span> </div> </div> </div>  
+```xml
+<Major>2</Major>
+<Minor>0</Minor>
+<Build>0</Build>
+<Revision>$(BUILD_VCS_NUMBER_app_Trunk)</Revision>
+<FullVersion>\((Major).\)(Minor).\((Build).\)(Revision)</FullVersion>
+```  
 
 And now the Publish webpage display the version correctly!
 
