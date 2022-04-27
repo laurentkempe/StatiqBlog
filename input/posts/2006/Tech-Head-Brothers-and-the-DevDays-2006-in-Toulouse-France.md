@@ -23,4 +23,4 @@ This year edition of the French DevDays held in Toulouse the 30th March, 2006 wa
 
 And a picture of the audience
 
-![](http://www.techheadbrothers.com/images/devdays2006/salle.jpg)
+![](/images/2006/salle.jpg)
