@@ -5,8 +5,6 @@ date: 10/5/2006 6:17:08 AM
 updated: 10/5/2006 6:17:08 AM
 disqusIdentifier: 20061005061708
 tags: ["Visual Studio", "VSTO"]
-alias:
- - /post/VSTO-2005-and-Web-Expression-CTP.aspx/index.html
 ---
 What? How can you link those two!!!???
 

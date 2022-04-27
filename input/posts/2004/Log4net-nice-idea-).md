@@ -4,8 +4,6 @@ permalink: /2004/11/05/Log4net-nice-idea-)/
 date: 11/5/2004 7:49:00 AM
 updated: 11/5/2004 7:49:00 AM
 disqusIdentifier: 20041105074900
-alias:
- - /post/Log4net-nice-idea-).aspx/index.html
 ---
 If you are using [log4net](http://logging.apache.org/log4net/) like me then I am sure you will like this idea. I combined it with [ReSharper.](http://www.jetbrains.com/resharper/)
 

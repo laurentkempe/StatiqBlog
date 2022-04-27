@@ -5,8 +5,6 @@ date: 4/25/2008 6:23:00 PM
 updated: 4/25/2008 6:23:00 PM
 disqusIdentifier: 20080425062300
 tags: ["Tech Head Brothers", "continuous integration", "Team City", "NDepend"]
-alias:
- - /post/Using-NDepend-in-Team-City-build-management-tool.aspx/index.html
 ---
 In my effort to bring a good development environment for the next version of [Tech Head Brothers](http://www.techheadbrothers.com/) portal, in which we should be (at the moment) three to develop, I went on with the integration of [NDepend](http://www.ndepend.com/), the wonderful tool of [Patrick Smacchia](http://codebetter.com/blogs/patricksmacchia/), with the just as well [JetBrains](http://www.jetbrains.com/) [Team City](http://www.jetbrains.com/teamcity) build management server.
 

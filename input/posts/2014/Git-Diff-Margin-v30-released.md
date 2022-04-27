@@ -5,8 +5,6 @@ date: 9/24/2014 8:04:39 AM
 updated: 9/24/2014 8:16:07 AM
 disqusIdentifier: 20140924080439
 tags: ["Visual Studio"]
-alias:
- - /post/Git-Diff-Margin-v30-released.aspx/index.html
 ---
 25 Days after the v2.0 I am pleased to announce the v3.0 of [Git Diff Margin](http://visualstudiogallery.msdn.microsoft.com/cf49cf30-2ca6-4ea0-b7cc-6a8e0dadc1a8)!
 

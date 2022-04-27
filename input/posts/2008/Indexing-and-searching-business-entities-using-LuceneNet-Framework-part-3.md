@@ -5,8 +5,6 @@ date: 3/7/2008 7:59:25 PM
 updated: 3/7/2008 7:59:25 PM
 disqusIdentifier: 20080307075925
 tags: ["Tools", "ASP.NET 2.0", "Interoperability", "innoveo solutions", "C#", "Architecture", "Generics", "Reflection"]
-alias:
- - /post/Indexing-and-searching-business-entities-using-LuceneNet-Framework-part-3.aspx/index.html
 ---
 *![](http://farm3.static.flickr.com/2032/2105387404_33d2e9ed92_o.gif) *
 

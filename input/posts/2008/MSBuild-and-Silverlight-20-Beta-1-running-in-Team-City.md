@@ -5,8 +5,6 @@ date: 5/20/2008 5:07:11 AM
 updated: 5/20/2008 5:07:11 AM
 disqusIdentifier: 20080520050711
 tags: ["Silverlight", "continuous integration", "MSBuild"]
-alias:
- - /post/MSBuild-and-Silverlight-20-Beta-1-running-in-Team-City.aspx/index.html
 ---
 If you want to integrate [Silverlight 2.0 Beta 1](http://silverlight.net/GetStarted/) in your [Continuous Integration](http://en.wikipedia.org/wiki/Continuous_Integration) system, in my case [Team City](http://www.jetbrains.com/teamcity)), it is better to read the readme of [Silverlight 2.0 Beta 1 SDK here](http://www.microsoft.com/silverlight/resources/readme.aspx?v=2.0&sdk=true).
 

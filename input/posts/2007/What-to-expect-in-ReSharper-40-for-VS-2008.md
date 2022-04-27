@@ -5,8 +5,6 @@ date: 12/28/2007 4:10:22 AM
 updated: 12/28/2007 4:10:22 AM
 disqusIdentifier: 20071228041022
 tags: ["Tools"]
-alias:
- - /post/What-to-expect-in-ReSharper-40-for-VS-2008.aspx/index.html
 ---
 I just got an email from JetBrains with some content about ReSharper 4.0 for Visual Studio 2008, that I am sharing here: 
 

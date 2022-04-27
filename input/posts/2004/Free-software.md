@@ -5,8 +5,6 @@ date: 8/1/2004 7:54:00 AM
 updated: 8/1/2004 7:54:00 AM
 disqusIdentifier: 20040801075400
 tags: ["Work"]
-alias:
- - /post/Free-software.aspx/index.html
 ---
 I am reading through the different blog I subscribed to and saw that interesting entry. I have so many discussions at work concerning Free Software compared to Microsoft way of doing business with Not Free Software. Thats Life, real Life. Another way of seeing the real life is pointed by an opened letter from Clemens Vasters, [here](http://staff.newtelligence.net/clemensv/PermaLink.aspx?guid=8fe41294-a988-4c73-948a-1bfab622fcce). So true.
 

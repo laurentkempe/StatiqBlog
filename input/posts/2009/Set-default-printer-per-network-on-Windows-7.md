@@ -5,8 +5,6 @@ date: 8/25/2009 6:09:54 AM
 updated: 5/7/2010 7:52:04 AM
 disqusIdentifier: 20090825060954
 tags: ["Windows 7"]
-alias:
- - /post/Set-default-printer-per-network-on-Windows-7.aspx/index.html
 ---
 I installed Windows 7 the day after it was released on MSDN. I am discovering daily new things that improve my productivity and I am really delighted about it.
 

@@ -5,8 +5,6 @@ date: 3/6/2008 5:04:32 AM
 updated: 3/6/2008 5:04:32 AM
 disqusIdentifier: 20080306050432
 tags: ["Silverlight"]
-alias:
- - /post/Just-downloadinginstalling-Silverlight-20-Beta-1.aspx/index.html
 ---
 Those bits has just been released at [MIX 08](http://visitmix.com/2008) in Las Vegas!
 

@@ -5,8 +5,6 @@ date: 11/1/2007 12:56:23 AM
 updated: 11/1/2007 12:56:23 AM
 disqusIdentifier: 20071101125623
 tags: ["Note to self"]
-alias:
- - /post/Business-entity-and-C-extension-methods.aspx/index.html
 ---
 In place of writing something like:
 

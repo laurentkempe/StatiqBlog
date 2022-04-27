@@ -5,8 +5,6 @@ date: 6/27/2007 4:28:25 PM
 updated: 6/27/2007 4:28:25 PM
 disqusIdentifier: 20070627042825
 tags: ["ASP.NET 2.0", "Web Services", "VSTO", "WCF", "SOAP"]
-alias:
- - /post/Migration-from-WSE-3-to-WCF.aspx/index.html
 ---
 I started to migrate the [Tech Head Brothers](http://www.techheadbrothers.com/) authoring tool and portal from Web Service Enhancement 3 (WSE 3) to Windows Communication Foundation (WCF). This is a next step in the integration of .NET Framework 3 in Tech Head Brothers portal.
 

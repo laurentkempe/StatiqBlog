@@ -4,8 +4,6 @@ permalink: /2006/04/29/Flicker-Fix/
 date: 4/29/2006 8:53:00 AM
 updated: 4/29/2006 8:53:00 AM
 disqusIdentifier: 20060429085300
-alias:
- - /post/Flicker-Fix.aspx/index.html
 ---
 If you read my last post "[First 
 experience with CSS friendly control adapters beta](http://weblogs.asp.net/lkempe/archive/2006/04/29/444390.aspx)" you might have realized 

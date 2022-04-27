@@ -5,8 +5,6 @@ date: 6/14/2008 2:25:29 AM
 updated: 6/14/2008 2:25:29 AM
 disqusIdentifier: 20080614022529
 tags: ["Silverlight", "Scrum"]
-alias:
- - /post/Silverlight-2-Beta-2-Unable-to-start-debugging!.aspx/index.html
 ---
 <div class="wlWriterHeaderFooter" style="float:right; margin:0px; padding:0px 0px 4px 8px;"><script type="text/javascript">digg_url = "http://weblogs.asp.net/lkempe/archive/2008/06/13/silverlight-2-beta-2-unable-to-start-debugging.aspx";digg_title = "Silverlight 2 Beta 2 - Unable to start debugging!";digg_bgcolor = "#FFFFFF";digg_skin = "normal";</script><script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script><script type="text/javascript">digg_url = undefined;digg_title = undefined;digg_bgcolor = undefined;digg_skin = undefined;</script></div>
 

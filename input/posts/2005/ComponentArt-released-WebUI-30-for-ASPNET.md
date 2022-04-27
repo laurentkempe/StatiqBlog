@@ -5,8 +5,6 @@ date: 9/11/2005 5:25:00 AM
 updated: 9/11/2005 5:25:00 AM
 disqusIdentifier: 20050911052500
 tags: ["Tech Head Brothers"]
-alias:
- - /post/ComponentArt-released-WebUI-30-for-ASPNET.aspx/index.html
 ---
 
 

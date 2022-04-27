@@ -5,8 +5,6 @@ date: 7/28/2004 6:12:00 AM
 updated: 7/28/2004 6:12:00 AM
 disqusIdentifier: 20040728061200
 tags: ["Tools"]
-alias:
- - /post/Skype-v10-is-out.aspx/index.html
 ---
 [Download it here](http://www.skype.net/download.html).
 

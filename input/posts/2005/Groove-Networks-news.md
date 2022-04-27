@@ -5,8 +5,6 @@ date: 4/9/2005 9:30:00 PM
 updated: 4/9/2005 9:30:00 PM
 disqusIdentifier: 20050409093000
 tags: ["Tools"]
-alias:
- - /post/Groove-Networks-news.aspx/index.html
 ---
 [Microsoft 
 completes Groove Networks acquisition](http://www.microsoft.com/presspass/features/2005/mar05/03-10GrooveQA.asp). "**Ozzie**, the creator 

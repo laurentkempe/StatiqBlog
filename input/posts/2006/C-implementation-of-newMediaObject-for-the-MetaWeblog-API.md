@@ -5,8 +5,6 @@ date: 8/28/2006 4:46:34 AM
 updated: 8/28/2006 4:46:34 AM
 disqusIdentifier: 20060828044634
 tags: ["Tech Head Brothers", "ASP.NET"]
-alias:
- - /post/C-implementation-of-newMediaObject-for-the-MetaWeblog-API.aspx/index.html
 ---
 If you have a blog you might know about the [MetaWeblog API](http://www.xmlrpc.com/metaWeblogApi). I implemented it for [Tech Head Brothers](http://www.techheadbrothers.com/) portal to be able to post news from a client. Today I am using Live Writer to post on my blog and I also wanted to have the possibility to post news on the new version of [Tech Head Brothers](http://www.techheadbrothers.com/) portal but with pictures and without the usage of a ftp server.
 

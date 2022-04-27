@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm4.staticflickr.com/3798/9553182109_bcac5e189d_q.jpg
 coverCaption: "Whale in Cape Bridgewater, Australia"
 tags: ["Coursera", "IntelliJ", "Jetbrains", "Scala"]
-alias:
- - /post/Functional-Programming-Principles-in-Scala-using-JetBrains-IntelliJ-IDEA.aspx/index.html
 ---
 <!-- [![Another great shot of our friend the Whale of last week in Cape Bridgewater](http://farm4.staticflickr.com/3798/9553182109_bcac5e189d_m.jpg)](http://www.flickr.com/photos/laurentkempe/9553182109/ "Another great shot of our friend the Whale of last week in Cape Bridgewater by Laurent Kempé, on Flickr") -->
 

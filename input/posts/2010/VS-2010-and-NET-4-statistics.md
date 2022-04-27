@@ -5,8 +5,6 @@ date: 4/10/2010 3:01:45 AM
 updated: 4/11/2010 1:00:18 PM
 disqusIdentifier: 20100410030145
 tags: ["Visual Studio", ".NET Framework 4", "Microsoft"]
-alias:
- - /post/VS-2010-and-NET-4-statistics.aspx/index.html
 ---
 [Soma](http://blogs.msdn.com/somasegar) just published some info about Microsoft [“dogfooding” VS 2010 and .NET 4](http://blogs.msdn.com/somasegar/archive/2010/04/08/dogfooding-vs-2010-and-net-4.aspx)
 

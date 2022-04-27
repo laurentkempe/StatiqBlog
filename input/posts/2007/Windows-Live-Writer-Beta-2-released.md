@@ -5,8 +5,6 @@ date: 6/1/2007 3:21:03 AM
 updated: 6/1/2007 3:21:03 AM
 disqusIdentifier: 20070601032103
 tags: ["Tools"]
-alias:
- - /post/Windows-Live-Writer-Beta-2-released.aspx/index.html
 ---
 > This release incorporates a ton of feedback from our discussion forums and your blogs. Here are some of the new features you'll find in Beta 2:
 > 

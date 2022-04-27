@@ -5,8 +5,6 @@ date: 6/17/2005 5:48:00 AM
 updated: 6/17/2005 5:48:00 AM
 disqusIdentifier: 20050617054800
 tags: ["Microsoft MVP", "Tech Head Brothers"]
-alias:
- - /post/TechEd-Europe-Ill-be-there!.aspx/index.html
 ---
 <table>
   <tbody>

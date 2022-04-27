@@ -4,8 +4,6 @@ permalink: /2009/01/28/ASPNET-MVC-goes-RC/
 date: 1/28/2009 7:52:10 AM
 updated: 1/28/2009 7:52:10 AM
 disqusIdentifier: 20090128075210
-alias:
- - /post/ASPNET-MVC-goes-RC.aspx/index.html
 ---
 With a very nice timing Microsoft team just published [ASP.NET MVC RC](http://go.microsoft.com/fwlink/?LinkID=141184&clcid=0x409) !
 

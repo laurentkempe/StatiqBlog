@@ -5,8 +5,6 @@ date: 4/18/2008 7:19:33 AM
 updated: 4/18/2008 7:19:33 AM
 disqusIdentifier: 20080418071933
 tags: ["Open XML"]
-alias:
- - /post/Finally-the-new-CTP-April-of-the-Open-XML-Format-SDK-is-online.aspx/index.html
 ---
 This is something I was waiting to continue my work on the new publishing tool for [Tech Head Brothers](http://www.techheadbrothers.com/). 
 

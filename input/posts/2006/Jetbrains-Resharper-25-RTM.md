@@ -5,8 +5,6 @@ date: 12/13/2006 6:41:37 AM
 updated: 12/13/2006 6:41:37 AM
 disqusIdentifier: 20061213064137
 tags: ["Tools", ".NET Framework 2.0", "Visual Studio"]
-alias:
- - /post/Jetbrains-Resharper-25-RTM.aspx/index.html
 ---
 As you certainly know I you sometimes read my blog I am absolutely addicted to that tool and can't work without it anymore in Visual Studio 2005.
 

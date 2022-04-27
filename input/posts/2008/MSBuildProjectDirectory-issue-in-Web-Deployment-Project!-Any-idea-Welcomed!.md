@@ -5,8 +5,6 @@ date: 4/4/2008 3:31:50 AM
 updated: 4/4/2008 3:31:50 AM
 disqusIdentifier: 20080404033150
 tags: ["Tech Head Brothers", "continuous integration", "Team City"]
-alias:
- - /post/MSBuildProjectDirectory-issue-in-Web-Deployment-Project!-Any-idea-Welcomed!.aspx/index.html
 ---
 I go crazy with a stupid error!
 

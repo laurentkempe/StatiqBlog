@@ -5,8 +5,6 @@ date: 2/25/2004 7:36:00 AM
 updated: 2/25/2004 7:36:00 AM
 disqusIdentifier: 20040225073600
 tags: [".NET Development"]
-alias:
- - /post/InfoPath-2003-Service-Pack-1-(SP-1)-Preview-and-Toolkit-for-Visual-Studio-NET-.aspx/index.html
 ---
 I started to look at Infopath long time ago and was waiting for that solution. I was really surprised to see Infopath with something else then .NET to wrtie code for it. That's over. :-)
 

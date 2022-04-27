@@ -4,8 +4,6 @@ permalink: /2004/03/17/Longhorn-and-Biometrics-Bis/
 date: 3/17/2004 6:31:00 AM
 updated: 3/17/2004 6:31:00 AM
 disqusIdentifier: 20040317063100
-alias:
- - /post/Longhorn-and-Biometrics-Bis.aspx/index.html
 ---
 I checked a bit what I can find in Longhorn concerning that Biometric stuff. And I found that it is [BAPI](http://www.iosoftware.com/pages/Products/Biometric%20API/index.asp): bapi.dll, . That specification was bought some long time ago from i/o software and I remember that it was planned to have this integrated in Windows XP. I think that Microsoft did not included it because the biometric technology was not ready at that time.
 

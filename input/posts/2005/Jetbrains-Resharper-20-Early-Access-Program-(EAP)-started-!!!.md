@@ -5,8 +5,6 @@ date: 7/20/2005 6:55:00 AM
 updated: 7/20/2005 6:55:00 AM
 disqusIdentifier: 20050720065500
 tags: ["Tools", ".NET Framework 2.0"]
-alias:
- - /post/Jetbrains-Resharper-20-Early-Access-Program-(EAP)-started-!!!.aspx/index.html
 ---
 **Great news** from [Jetbrains](http://www.jetbrains.com/) tonight with the launch of the 
 ReSharper 2.0 EAP started. You can download the version for Visual Studio 2003 

@@ -5,8 +5,6 @@ date: 5/27/2006 6:33:00 PM
 updated: 5/7/2010 7:46:43 AM
 disqusIdentifier: 20060527063300
 tags: ["ASP.NET 2.0", "ASP.NET AJAX", "ASP.NET"]
-alias:
- - /post/Fix-of-Flicker-Fix.aspx/index.html
 ---
 If you read my post about [Flicker Fix](/lkempe/archive/2006/04/29/444392.aspx) that was included and removed from the first distribution of <u><font color="#006ff7">CSS friendly control adapters beta</font></u> you might have heard that it created a security hole.
 

@@ -5,8 +5,6 @@ date: 1/11/2008 10:49:18 PM
 updated: 1/11/2008 10:49:18 PM
 disqusIdentifier: 20080111104918
 tags: ["Vista"]
-alias:
- - /post/Get-rid-of-extra-pixels-in-Vista-Toolbars.aspx/index.html
 ---
 When you use *Lock  the Taskbar* in Windows Vista the toolbars shift from some pixels before locking and it is really annoying!
 

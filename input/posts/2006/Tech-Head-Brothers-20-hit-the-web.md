@@ -5,8 +5,6 @@ date: 9/26/2006 3:29:15 AM
 updated: 9/26/2006 3:29:15 AM
 disqusIdentifier: 20060926032915
 tags: ["Tech Head Brothers", "ASP.NET"]
-alias:
- - /post/Tech-Head-Brothers-20-hit-the-web.aspx/index.html
 ---
 It is with a **tremendous pleasure **that we launched with my brother [Mathieu](http://myaustraliantrip.blogspot.com/) the new version of [**Tech Head Brothers**](http://www.techheadbrothers.com/) portal. It has been a long journey, but finally it is online and currently received a positive response.
 

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7040/6829836492_39e190a19d_q.jpg
 coverCaption: "Grande Anse, Le Diamant, Martinique"
 tags: ["GitHub", "hubot", "HipChat", "Campfire", "CoffeeScripts"]
-alias:
- - /post/Using-Appharbor-service-hook-to-get-build-status-in-HipChat-rooms.aspx/index.html
 ---
 <!-- [![STA_0178](http://farm8.staticflickr.com/7040/6829836492_39e190a19d_m.jpg)](http://www.flickr.com/photos/laurentkempe/6829836492/ "STA_0178 by Laurent Kempé, on Flickr") -->
 [Appharbor](https://appharbor.com) provides a [service hook](http://support.appharbor.com/kb/3rd-party-integrations/developing-a-service-hook) which let’s you get informed when a build is finished sending both succeeded and failed builds.

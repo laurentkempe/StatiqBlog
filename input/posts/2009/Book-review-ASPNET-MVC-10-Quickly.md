@@ -5,8 +5,6 @@ date: 7/3/2009 5:39:42 AM
 updated: 7/3/2009 5:39:42 AM
 disqusIdentifier: 20090703053942
 tags: ["ASP.NET MVC"]
-alias:
- - /post/Book-review-ASPNET-MVC-10-Quickly.aspx/index.html
 ---
 [![](http://images.packtpub.com/images/100x123/184719754X.png)](http://www.packtpub.com/asp-net-model-view-controller-1-0-quickly/book) I had the pleasure to read [ASP.NET MVC 1.0 Quickly](http://www.packtpub.com/asp-net-model-view-controller-1-0-quickly/book) from another [ASP.NET MVP](https://mvp.support.microsoft.com/communities/mvp.aspx?product=1&competency=ASP/ASP.NET) and blogger, [Maarten Balliauw](http://blog.maartenballiauw.be/) published by [Packt Publishing](http://www.packtpub.com/). 
 

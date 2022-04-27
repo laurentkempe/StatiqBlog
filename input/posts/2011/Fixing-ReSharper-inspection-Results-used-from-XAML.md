@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5297/5515390031_ee3ab01e4a_q.jpg
 coverCaption: "Rocher du diamant depuis la grande anse du diamant, Le Diamant, Martinique"
 tags: ["ReSharper", "XAML", "WPF", "Silverlight", "WP7"]
-alias:
- - /post/Fixing-ReSharper-inspection-Results-used-from-XAML.aspx/index.html
 ---
 <!--[![Rocher du diamant depuis la grande anse du diamant](http://farm6.static.flickr.com/5297/5515390031_ee3ab01e4a_m.jpg)](http://www.flickr.com/photos/laurentkempe/5515390031/ "Rocher du diamant depuis la grande anse du diamant by Laurent Kempé, on Flickr")-->
 Finishing this week sprint I decided to inspect some code using [ReSharper 6.1 EAP](http://confluence.jetbrains.net/display/ReSharper/ReSharper+Early+Access+Program) and I started to give ReSharper a chance to help me find some of broken code.

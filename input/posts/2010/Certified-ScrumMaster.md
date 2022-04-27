@@ -5,8 +5,6 @@ date: 5/5/2010 6:15:04 PM
 updated: 5/5/2010 6:15:04 PM
 disqusIdentifier: 20100505061504
 tags: ["Scrum", "innoveo solutions", "Jobping"]
-alias:
- - /post/Certified-ScrumMaster.aspx/index.html
 ---
 As you might have read on [Didier’s blog](http://didierbeck.com/2010/01/laurent-is-a-certified-scrummaster/) or even on [Innoveo’s blog](http://blog.innoveo.com/post/Laurent-is-a-Certified-ScrumMaster!.aspx) I passed the ScrumMaster’s certification end of last year. Yeah I know I am late to post this ;-)
 

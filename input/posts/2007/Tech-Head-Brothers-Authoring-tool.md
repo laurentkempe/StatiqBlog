@@ -5,8 +5,6 @@ date: 8/31/2007 6:42:19 AM
 updated: 8/31/2007 6:42:19 AM
 disqusIdentifier: 20070831064219
 tags: ["Tech Head Brothers", "VSTO", "WCF", ".NET Framework 3.0"]
-alias:
- - /post/Tech-Head-Brothers-Authoring-tool.aspx/index.html
 ---
 I just updated the source code of my [Tech Head Brothers Authoring tool](http://www.codeplex.com/THBAuthoring) on [Codeplex](http://www.codeplex.com/).
 

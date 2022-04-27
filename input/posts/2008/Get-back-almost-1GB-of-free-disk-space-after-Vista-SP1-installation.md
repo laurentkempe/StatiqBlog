@@ -5,8 +5,6 @@ date: 4/6/2008 7:32:29 PM
 updated: 5/7/2010 7:45:45 AM
 disqusIdentifier: 20080406073229
 tags: ["Vista"]
-alias:
- - /post/Get-back-almost-1GB-of-free-disk-space-after-Vista-SP1-installation.aspx/index.html
 ---
 If you have installed SP1 of Vista you certainly recognized that your drive lost around 1Gb of free space.
 

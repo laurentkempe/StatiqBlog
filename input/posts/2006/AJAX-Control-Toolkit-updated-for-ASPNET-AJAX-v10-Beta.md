@@ -5,8 +5,6 @@ date: 10/20/2006 9:10:26 PM
 updated: 10/20/2006 9:10:26 PM
 disqusIdentifier: 20061020091026
 tags: ["ASP.NET 2.0", "ASP.NET"]
-alias:
- - /post/AJAX-Control-Toolkit-updated-for-ASPNET-AJAX-v10-Beta.aspx/index.html
 ---
 This new release includes all adaptations to the toolkit working with the new version of ASP.NET AJAX.
 

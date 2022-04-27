@@ -5,8 +5,6 @@ date: 9/27/2006 7:29:31 AM
 updated: 9/27/2006 7:29:31 AM
 disqusIdentifier: 20060927072931
 tags: ["ecenter solutions"]
-alias:
- - /post/Lead-and-harness-the-passion-in-those-around-you.aspx/index.html
 ---
 Very interesting post about Architects by Nick Malik 
 

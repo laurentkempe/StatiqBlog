@@ -5,8 +5,6 @@ date: 7/18/2006 7:16:00 AM
 updated: 7/18/2006 7:16:00 AM
 disqusIdentifier: 20060718071600
 tags: [".NET Framework 2.0"]
-alias:
- - /post/Tech-Head-Brothers-Authoring-Tool-Part-1-Video.aspx/index.html
 ---
 I have quickly posted a [video showing the insertion of an image and source code](http://www.youtube.com/watch?v=pqLqv_sSOgo) using the [Tech Head Brothers Authoring tool](http://www.codeplex.com/Wiki/View.aspx?ProjectName=THBAuthoring) on [YouTube](http://youtube.com).
 

@@ -5,8 +5,6 @@ date: 11/30/2007 4:10:00 AM
 updated: 11/30/2007 4:10:00 AM
 disqusIdentifier: 20071130041000
 tags: ["Visual Studio", "innoveo solutions"]
-alias:
- - /post/Linked-files-in-Visual-Studio-projects.aspx/index.html
 ---
 <div> 
 

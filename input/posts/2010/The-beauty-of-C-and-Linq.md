@@ -5,8 +5,6 @@ date: 1/26/2010 5:57:12 AM
 updated: 1/26/2010 5:57:12 AM
 disqusIdentifier: 20100126055712
 tags: ["C#", "Linq"]
-alias:
- - /post/The-beauty-of-C-and-Linq.aspx/index.html
 ---
 Today I faced the following challenge to solve: return all possible combinations of three source collections.
 

@@ -5,8 +5,6 @@ date: 8/12/2008 1:48:41 AM
 updated: 5/7/2010 7:45:47 AM
 disqusIdentifier: 20080812014841
 tags: ["Visual Studio"]
-alias:
- - /post/Visual-Studio-2008-Service-Pack-1-released.aspx/index.html
 ---
 Before installing it better use the [Visual Studio 2008 Service Pack preparation Tool](http://www.microsoft.com/downloads/details.aspx?FamilyId=A494B0E0-EB07-4FF1-A21C-A4663E456D9D&displaylang=en)
 

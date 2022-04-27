@@ -5,8 +5,6 @@ date: 9/7/2008 8:18:16 PM
 updated: 9/7/2008 8:18:16 PM
 disqusIdentifier: 20080907081816
 tags: ["Tech Head Brothers", "VSTO", "WCF", "SOAP", "Office 2007", "Open XML", "WordML"]
-alias:
- - /post/Video-of-Tech-Head-Brothers-new-authoring-tool-based-on-Word-2007.aspx/index.html
 ---
 In the following video I present the different features of the new authoring tool for my portal [Tech Head Brothers](http://www.techheadbrothers.com/). 
 

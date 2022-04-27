@@ -5,8 +5,6 @@ date: 3/27/2007 6:30:01 AM
 updated: 3/27/2007 6:30:01 AM
 disqusIdentifier: 20070327063001
 tags: ["ASP.NET 2.0", "ASP.NET AJAX", "ASP.NET"]
-alias:
- - /post/ASPNET-AJAX-and-ASPNET-Validators.aspx/index.html
 ---
 If you are using ASP.NET Validators in UpdatePanel consider the post of [Matt Gibbs](http://blogs.msdn.com/mattgi/) : "[ASP.NET AJAX Validators](http://blogs.msdn.com/mattgi/archive/2007/01/23/asp-net-ajax-validators.aspx)".
 

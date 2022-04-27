@@ -4,8 +4,6 @@ permalink: /2009/04/10/ATI-Drivers-installation-on-my-HP-NW8440-notebook/
 date: 4/10/2009 4:32:53 PM
 updated: 4/10/2009 4:32:53 PM
 disqusIdentifier: 20090410043253
-alias:
- - /post/ATI-Drivers-installation-on-my-HP-NW8440-notebook.aspx/index.html
 ---
 From quite some time I had a crash when running the ATI Catalyst installer and I finally found what was the issue.
 

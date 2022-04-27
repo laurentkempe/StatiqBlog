@@ -4,8 +4,6 @@ permalink: /2005/04/05/Issue-with-my-W2k3-server-after-SP1-installation/
 date: 4/5/2005 4:07:00 AM
 updated: 4/5/2005 4:07:00 AM
 disqusIdentifier: 20050405040700
-alias:
- - /post/Issue-with-my-W2k3-server-after-SP1-installation.aspx/index.html
 ---
 The server is booting till the w2k3 boot screen then it resets and reboot 
   

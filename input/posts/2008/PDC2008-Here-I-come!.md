@@ -5,8 +5,6 @@ date: 10/23/2008 4:01:23 AM
 updated: 10/23/2008 4:01:23 AM
 disqusIdentifier: 20081023040123
 tags: ["PDC 2008"]
-alias:
- - /post/PDC2008-Here-I-come!.aspx/index.html
 ---
 <style>
 .schedule {font-family:segoe,verdana,arial;font-size:9pt;color:#715442;}

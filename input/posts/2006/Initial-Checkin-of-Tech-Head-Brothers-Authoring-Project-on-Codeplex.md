@@ -5,8 +5,6 @@ date: 7/8/2006 1:27:00 AM
 updated: 7/8/2006 1:27:00 AM
 disqusIdentifier: 20060708012700
 tags: ["Tech Head Brothers", "Team System", ".NET"]
-alias:
- - /post/Initial-Checkin-of-Tech-Head-Brothers-Authoring-Project-on-Codeplex.aspx/index.html
 ---
 I just made my first checkins on [CodePlex](http://www.codeplex.com/) for the project [Tech Head Brothers Authoring](http://www.codeplex.com/Wiki/View.aspx?ProjectName=THBAuthoring).
 

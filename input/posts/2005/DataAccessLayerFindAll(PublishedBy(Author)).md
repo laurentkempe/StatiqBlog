@@ -5,8 +5,6 @@ date: 3/10/2005 7:43:00 AM
 updated: 3/10/2005 7:43:00 AM
 disqusIdentifier: 20050310074300
 tags: ["Whidbey", "ASP.NET 2.0", ".NET Framework 2.0"]
-alias:
- - /post/DataAccessLayerFindAll(PublishedBy(Author)).aspx/index.html
 ---
 
 

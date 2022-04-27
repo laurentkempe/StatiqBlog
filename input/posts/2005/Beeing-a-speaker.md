@@ -5,8 +5,6 @@ date: 5/22/2005 10:03:00 PM
 updated: 5/22/2005 10:03:00 PM
 disqusIdentifier: 20050522100300
 tags: ["Microsoft MVP", "Tech Head Brothers", "Web Services"]
-alias:
- - /post/Beeing-a-speaker.aspx/index.html
 ---
 
 

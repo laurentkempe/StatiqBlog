@@ -5,8 +5,6 @@ date: 2/17/2008 4:40:32 PM
 updated: 2/17/2008 4:40:32 PM
 disqusIdentifier: 20080217044032
 tags: ["Tech Head Brothers", "VSTO", ".NET Framework 3.5", "Office 2007"]
-alias:
- - /post/Tech-Head-Brothers-new-authoring-tool-step-3.aspx/index.html
 ---
 I started working on the GUI defining the Ribbon.
 

@@ -5,8 +5,6 @@ date: 11/1/2007 7:59:12 PM
 updated: 11/1/2007 7:59:12 PM
 disqusIdentifier: 20071101075912
 tags: ["Tools", "innoveo solutions", "ReSharper"]
-alias:
- - /post/Nice-ReSharper-feature.aspx/index.html
 ---
 This morning due to a modification error I made in a [ReSharper](http://www.jetbrains.com/resharper) [Live Template](http://www.jetbrains.com/resharper/features/code_templates.html#Live_Templates_full) I discovered a cool feature, see the following picture in which [ReSharper](http://www.jetbrains.com/resharper) shows you that you made a recursive call:
 

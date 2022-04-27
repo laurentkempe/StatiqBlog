@@ -5,8 +5,6 @@ date: 12/28/2007 4:02:36 AM
 updated: 12/28/2007 4:02:36 AM
 disqusIdentifier: 20071228040236
 tags: ["Expression Studio"]
-alias:
- - /post/quot3bExportquot3b-Expression-Blend-animation-to-Video-how-.aspx/index.html
 ---
 I have made an animation using [Microsoft Expression Blend 2](http://www.microsoft.com/expression/products/overview.aspx?key=blend) December Preview that I would like to export to a Video, anyone made that already? How?
 

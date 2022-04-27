@@ -5,8 +5,6 @@ date: 5/4/2005 4:55:00 AM
 updated: 5/4/2005 4:55:00 AM
 disqusIdentifier: 20050504045500
 tags: ["Tools", "Groove Virtual Office"]
-alias:
- - /post/Groove-31a-on-a-Windows-2003-Server.aspx/index.html
 ---
 I updated my Windows 2003 server with the latest [Groove Virtual Office](http://www.groove.net) version 3.1a (3.1.1.2364) and now it doesn't crash anymore at start time. I was told that this version supports Windows 2003 but I can't find anything online saying so.
 

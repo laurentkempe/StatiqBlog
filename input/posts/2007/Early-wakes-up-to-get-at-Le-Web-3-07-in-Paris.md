@@ -5,8 +5,6 @@ date: 12/11/2007 6:45:41 PM
 updated: 12/11/2007 6:45:41 PM
 disqusIdentifier: 20071211064541
 tags: ["innoveo solutions", "LeWeb307"]
-alias:
- - /post/Early-wakes-up-to-get-at-Le-Web-3-07-in-Paris.aspx/index.html
 ---
 ![](http://farm3.static.flickr.com/2383/2102351587_238d37e0cb.jpg)
 

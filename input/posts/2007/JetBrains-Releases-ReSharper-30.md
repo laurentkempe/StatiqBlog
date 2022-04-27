@@ -5,8 +5,6 @@ date: 6/22/2007 1:47:32 AM
 updated: 6/22/2007 1:47:32 AM
 disqusIdentifier: 20070622014732
 tags: ["Tools", "Visual Studio"]
-alias:
- - /post/JetBrains-Releases-ReSharper-30.aspx/index.html
 ---
 They did it again!!! The great tool became even better.
 

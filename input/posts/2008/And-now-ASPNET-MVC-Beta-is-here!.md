@@ -5,8 +5,6 @@ date: 10/16/2008 8:25:11 PM
 updated: 10/16/2008 8:25:11 PM
 disqusIdentifier: 20081016082511
 tags: ["ASP.NET MVC"]
-alias:
- - /post/And-now-ASPNET-MVC-Beta-is-here!.aspx/index.html
 ---
 What a week just before Microsoft PDC 2008! After [Silverlight 2 release](http://weblogs.asp.net/lkempe/archive/2008/10/14/silverlight-2-is-really-released-now.aspx) it is the turn of ASP.NET Framework to be released in Beta.
 

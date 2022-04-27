@@ -5,8 +5,6 @@ date: 5/6/2010 1:47:49 AM
 updated: 5/6/2010 1:47:49 AM
 disqusIdentifier: 20100506014749
 tags: ["innoveo solutions", "Jetbrains"]
-alias:
- - /post/IntelliJ-9-CSS-editor.aspx/index.html
 ---
 Today at [Innoveo Solutions](http://www.innoveo.com/)  I work on [CSS](http://www.w3.org/Style/CSS/) and [XHTML](http://www.w3.org/TR/xhtml1/) for our Skye® product.
 

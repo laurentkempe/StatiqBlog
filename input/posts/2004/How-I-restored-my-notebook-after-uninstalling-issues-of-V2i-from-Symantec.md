@@ -5,8 +5,6 @@ date: 7/8/2004 6:43:00 AM
 updated: 7/8/2004 6:43:00 AM
 disqusIdentifier: 20040708064300
 tags: ["Infrastructure"]
-alias:
- - /post/How-I-restored-my-notebook-after-uninstalling-issues-of-V2i-from-Symantec.aspx/index.html
 ---
 <P>After uninstalling V2i from Symantec I was asked to reboot my notebook. The reboot took for ever so I decide after 30 minutes to switch it off. Problems started when I rebooted, lots of drivers where missing and it seems that I lost the plug and play features. One of the first driver I decided to recover was the Sound driver. This is the way I recover from that sound driver issue.</P>
 <OL>

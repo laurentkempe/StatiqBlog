@@ -5,8 +5,6 @@ date: 6/16/2007 6:27:14 AM
 updated: 6/16/2007 6:27:14 AM
 disqusIdentifier: 20070616062714
 tags: ["ASP.NET AJAX", "Silverlight", "ASP.NET AJAX Control Toolkit "]
-alias:
- - /post/ModalPopup-and-Silverlight.aspx/index.html
 ---
 If you place on a web page a [ModalPopup](http://ajax.asp.net/ajaxtoolkit/ModalPopup/ModalPopup.aspx) and a [Silverlight](http://silverlight.net/) control, you might end up with the ModalPopup hided by the Silverlight control.
 

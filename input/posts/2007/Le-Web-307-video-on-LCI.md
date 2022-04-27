@@ -5,8 +5,6 @@ date: 12/19/2007 5:51:26 PM
 updated: 12/19/2007 5:51:26 PM
 disqusIdentifier: 20071219055126
 tags: ["innoveo solutions"]
-alias:
- - /post/Le-Web-307-video-on-LCI.aspx/index.html
 ---
 As you might now I was with [Didier](http://www.didierbeck.com/) at [Le Web 3'07](http://www.leweb3.com/) as you can read it on our different posts:
 

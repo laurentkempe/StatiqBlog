@@ -5,8 +5,6 @@ date: 4/14/2007 10:01:39 PM
 updated: 4/14/2007 10:01:39 PM
 disqusIdentifier: 20070414100139
 tags: ["Tools", "Visual Studio", ".NET", "Vista"]
-alias:
- - /post/Going-to-Vista.aspx/index.html
 ---
 After several issues using Windows XP with ATI Drivers I decided to update to Vista my new professional notebook, a great [HP nw 8440 with 4Gb memory](http://h10010.www1.hp.com/wwpc/us/en/sm/WF06a/321957-321957-64295-321838-3329741-1839152.html) :-). The update went as I thought, I was not able to reboot on Vista, after trying to fix it till 2AM with the tools on Vista DVD, it was without any luck and as I am not a real fan about updating OS, I decided to do a full install of Vista. So my dear friends of [ecenter solutions](http://www.ecenter-solutions.com/), or what ever ;-), you will have to try yourself the update or to do another full installation. I see your face Bojan ;-)
 

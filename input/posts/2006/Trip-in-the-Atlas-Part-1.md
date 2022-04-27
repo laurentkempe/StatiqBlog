@@ -5,8 +5,6 @@ date: 6/13/2006 6:11:54 AM
 updated: 6/13/2006 6:11:54 AM
 disqusIdentifier: 20060613061154
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "ASP.NET AJAX"]
-alias:
- - /post/Trip-in-the-Atlas-Part-1.aspx/index.html
 ---
 
 

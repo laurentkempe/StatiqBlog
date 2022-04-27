@@ -5,8 +5,6 @@ date: 12/2/2007 5:50:03 PM
 updated: 12/2/2007 5:50:03 PM
 disqusIdentifier: 20071202055003
 tags: ["ASP.NET 2.0", "Visual Studio", "ASP.NET"]
-alias:
- - /post/Setting-correctly-your-configuration-for-Web-Deployment-Projects-VS08.aspx/index.html
 ---
 I read on [MSDN Forums](http://forums.asp.net/t/1151526.aspx) that it is not possible to use other configuration than Release and Debug. This is wrong.
 

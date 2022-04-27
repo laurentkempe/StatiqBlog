@@ -5,8 +5,6 @@ date: 4/23/2008 7:16:19 AM
 updated: 4/23/2008 7:16:19 AM
 disqusIdentifier: 20080423071619
 tags: ["Tech Head Brothers", "continuous integration", "Team City"]
-alias:
- - /post/Continuous-integration-and-Nightly-build-with-Team-City.aspx/index.html
 ---
 I finally found some time this evening to re-configure Team City and adapt my MSBuild script to be able to achieve the following build configuration for [Tech Head Brothers](http://www.techheadbrothers.com/) portal:
 

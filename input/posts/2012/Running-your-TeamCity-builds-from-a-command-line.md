@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5257/5561493976_859ff775f3_q.jpg
 coverCaption: "Plage le long de la Savane des Pétrifications, Martinique"
 tags: ["Team City", "Productivity", "Agile", "Git", "PowerShell"]
-alias:
- - /post/Running-your-TeamCity-builds-from-a-command-line.aspx/index.html
 ---
 <!-- [![Plage le long de la Savane des Pétrifications](http://farm6.staticflickr.com/5257/5561493976_859ff775f3_m.jpg)](http://www.flickr.com/photos/laurentkempe/5561493976/ "Plage le long de la Savane des Pétrifications by Laurent Kempé, on Flickr") -->  
 

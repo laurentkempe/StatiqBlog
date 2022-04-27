@@ -5,8 +5,6 @@ date: 3/3/2005 8:45:00 AM
 updated: 3/3/2005 8:45:00 AM
 disqusIdentifier: 20050303084500
 tags: ["Tech Head Brothers", ".NET Development", "Whidbey", "ASP.NET 2.0"]
-alias:
- - /post/Conversion-from-Visual-Studio-Net-2003-to-Visual-Studio-2005.aspx/index.html
 ---
 This evening (hum morning ;) I decided to give a try to the conversion 
 wizard integrated in Visual Studio 2005 that let you import older 1.1 

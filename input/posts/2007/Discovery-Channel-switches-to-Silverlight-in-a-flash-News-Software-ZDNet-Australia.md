@@ -5,8 +5,6 @@ date: 6/28/2007 4:01:25 PM
 updated: 6/28/2007 4:01:25 PM
 disqusIdentifier: 20070628040125
 tags: ["Silverlight"]
-alias:
- - /post/Discovery-Channel-switches-to-Silverlight-in-a-flash-News-Software-ZDNet-Australia.aspx/index.html
 ---
 Another publication talking about the Silverlight implementation made by my brother [Mathieu](http://www.techheadbrothers.com/Auteurs.aspx?Id=337eb7bf-2bba-417c-be9d-20488ba6732a)!!! Wonderful!
 

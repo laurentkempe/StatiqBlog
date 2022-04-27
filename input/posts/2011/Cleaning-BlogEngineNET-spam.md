@@ -8,8 +8,6 @@ coverImage: https://farm6.staticflickr.com/5266/5561291406_3371746e56_b.jpg
 coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5266/5561291406_3371746e56_q.jpg
 coverCaption: "La savane des pétrification, Martinique"
-alias:
- - /post/Cleaning-BlogEngineNET-spam.aspx/index.html
 ---
 <!--[![Martinique 2011](http://farm6.static.flickr.com/5136/5561350588_1d52c313f9_m.jpg)](http://www.flickr.com/photos/laurentkempe/5561350588/ "Martinique 2011 by Laurent Kempé, on Flickr")-->
 

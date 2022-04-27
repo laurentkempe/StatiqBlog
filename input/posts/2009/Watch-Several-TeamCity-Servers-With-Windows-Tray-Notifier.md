@@ -5,8 +5,6 @@ date: 11/5/2009 4:49:39 AM
 updated: 11/5/2009 4:49:39 AM
 disqusIdentifier: 20091105044939
 tags: ["Team City"]
-alias:
- - /post/Watch-Several-TeamCity-Servers-With-Windows-Tray-Notifier.aspx/index.html
 ---
 Browsing [TeamCity](http://www.jetbrains.com/teamcity/index.html) documentation this evening I discovered that it is possible to [Watch Several TeamCity Servers With Windows Tray Notifier](http://www.jetbrains.net/confluence/display/TCD5/How+To...#HowTo...-WatchSeveralTeamCityServersWithWindowsTrayNotifier)
 

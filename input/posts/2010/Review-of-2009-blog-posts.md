@@ -4,8 +4,6 @@ permalink: /2010/01/09/Review-of-2009-blog-posts/
 date: 1/9/2010 7:12:20 PM
 updated: 1/9/2010 7:12:20 PM
 disqusIdentifier: 20100109071220
-alias:
- - /post/Review-of-2009-blog-posts.aspx/index.html
 ---
 Find here a list of all my 38 posts for 2009! In the bold, the posts which got most traffic.
 

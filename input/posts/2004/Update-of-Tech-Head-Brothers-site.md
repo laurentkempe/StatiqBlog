@@ -5,8 +5,6 @@ date: 6/5/2004 8:23:00 AM
 updated: 6/5/2004 8:23:00 AM
 disqusIdentifier: 20040605082300
 tags: ["Tech Head Brothers", ".NET Development"]
-alias:
- - /post/Update-of-Tech-Head-Brothers-site.aspx/index.html
 ---
 I refactored quit a lot of code on my site [Tech Head Brothers](http://www.techheadbrothers.com "Tech Head Brothers") this week and went to bed late (around 1:30 AM each day). But now it is running better and faster. I removed the rendering to Pdf using [NFop](http://sourceforge.net/projects/nfop/) of the articles because it works locally on my TEST server but not on the PROD one.<br><br>One of the speed improvement is due to the complete reimplementation of a user control that download a RSS to publishnews on my site. The issue with the previous method was that the cache was buggy. Now what I am doing is to to use two values in cache, one is the RSS document (a XML document as a string) and that one never expire:
 <font size="2">

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7480/16005747085_1d45cdda13_q.jpg
 coverCaption: "Anse Cafard, Martinique"
 tags: ["Team City", "Git"]
-alias:
- - /post/TeamCity-9-project-settings-versioning-in-Git.aspx/index.html
 ---
 <!-- [![Anse Cafard](https://farm8.staticflickr.com/7480/16005747085_1d45cdda13_m.jpg)](https://www.flickr.com/photos/laurentkempe/16005747085 "Anse Cafard by Laurent Kempé, on Flickr") -->
 

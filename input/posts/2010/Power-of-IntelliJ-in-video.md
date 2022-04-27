@@ -5,8 +5,6 @@ date: 6/16/2010 2:02:41 AM
 updated: 6/16/2010 2:02:41 AM
 disqusIdentifier: 20100616020241
 tags: ["IntelliJ", "Jetbrains", "Productivity"]
-alias:
- - /post/Power-of-IntelliJ-in-video.aspx/index.html
 ---
 Today I was listening and some time watching (it helps to have two monitors :) the following video that I got from [Jetbrains blog](http://blogs.jetbrains.com/idea/) post, [Vaclav Pech Talking at JAX 2010](http://blogs.jetbrains.com/idea/2010/05/vaclav-pech-talking-at-jax-2010/)
 

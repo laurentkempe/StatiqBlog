@@ -5,8 +5,6 @@ date: 5/12/2010 5:15:00 PM
 updated: 5/12/2010 5:15:00 PM
 disqusIdentifier: 20100512051500
 tags: ["Jobping"]
-alias:
- - /post/Fundamental-Laws-from-David-S-Platt-on-MSDN-Magazine.aspx/index.html
 ---
 Yesterday I got the new issue of MSDN Magazine in my mailbox and as often I started to go quickly around it to get an overview of what kind of subject’s it talks about. And as often I end up at the last page’s article which is the first I am reading.
 

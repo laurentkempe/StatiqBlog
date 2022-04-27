@@ -5,8 +5,6 @@ date: 9/3/2006 9:44:10 PM
 updated: 9/3/2006 9:44:10 PM
 disqusIdentifier: 20060903094410
 tags: ["Tools"]
-alias:
- - /post/Windows-Media-Player-11-Beta-2-Xbox-360-and-blue-room-radio.aspx/index.html
 ---
  You might have seen that [Windows Media Player Beta 2 is out](http://www.microsoft.com/windows/windowsmedia/player/11/default.aspx). And this morning switching my Xbox 360 on I also realized one of the new cool feature: 
 

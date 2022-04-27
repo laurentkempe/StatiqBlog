@@ -5,8 +5,6 @@ date: 10/14/2009 6:12:53 AM
 updated: 4/28/2010 8:02:22 PM
 disqusIdentifier: 20091014061253
 tags: ["WPF", "innoveo solutions", "MVVM"]
-alias:
- - /post/MVVM-Light-Toolkit-V2.aspx/index.html
 ---
 At [Innoveo Solutions](http://www.innoveo.com/) we are using .NET and WPF for our [Innoveo Skye](http://www.innoveo.com/Products.aspx)® Editor application. Skye® Editor is a distribution channel editor targeting business people letting them edit and configure their insurance products. 
 

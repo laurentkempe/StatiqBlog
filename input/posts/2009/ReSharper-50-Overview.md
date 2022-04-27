@@ -5,8 +5,6 @@ date: 10/13/2009 3:29:45 AM
 updated: 10/13/2009 3:29:45 AM
 disqusIdentifier: 20091013032945
 tags: ["ReSharper"]
-alias:
- - /post/ReSharper-50-Overview.aspx/index.html
 ---
 As part of the [Jetbrains Academy](http://weblogs.asp.net/lkempe/archive/2009/09/06/joining-jetbrains-academy.aspx) I am using/testing [ReSharper](http://www.jetbrains.com/resharper/index.html) 5 for around a month now. It is quite stable for a pre-release and I have lots of fun using it, and as always a productivity boost. Some of my preferred features are: External Sources, ASP.NET MVC integration, Solution-Wide Warnings and Suggestions, Upgrade-to-LINQ Actions. Till now I wasn’t able to test the Native NUnit Support, but this is definitely something I will test in the near future.
 

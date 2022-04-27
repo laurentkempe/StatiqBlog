@@ -4,8 +4,6 @@ permalink: /2005/04/13/X-develop-Professional-10-released/
 date: 4/13/2005 7:05:00 AM
 updated: 4/13/2005 7:05:00 AM
 disqusIdentifier: 20050413070500
-alias:
- - /post/X-develop-Professional-10-released.aspx/index.html
 ---
 Direct From [TheServerSide.net](http://www.theserverside.net/) "Omnicore has 
 released X-develop Professional 1.0. X-develop is a new multi-language IDE for 

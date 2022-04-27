@@ -5,8 +5,6 @@ date: 11/14/2007 5:23:30 PM
 updated: 11/14/2007 5:23:30 PM
 disqusIdentifier: 20071114052330
 tags: ["Tools"]
-alias:
- - /post/CSV-AdStats-40-realized.aspx/index.html
 ---
 If you are an Adsense user you can't miss that free tool from [my friend Nix](http://blogs.codes-sources.com/nix/).
 

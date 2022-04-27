@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm9.staticflickr.com/8299/7764455174_84625faf34_q.jpg
 coverCaption: "Calzarellu, Corse, France"
 tags: ["Git", "Gitlab", "Team City"]
-alias:
- - /post/TeamCity-and-Gitlab-working-together-with-SSH-Keys.aspx/index.html
 ---
 <!-- [![Calzarellu](http://farm9.staticflickr.com/8299/7764455174_84625faf34_m.jpg)](http://www.flickr.com/photos/laurentkempe/7764455174/ "Calzarellu by Laurent Kempé, on Flickr") -->
 On February I posted about “[Running your TeamCity builds from PowerShell for any Git branch](http://www.laurentkempe.com/post/Running-your-TeamCity-builds-from-a-command-line.aspx)” and now I have to configure a new ssh key so that [TeamCity](http://www.jetbrains.com/teamcity/) can connect to [Gitlab](http://www.gitlabhq.com/).

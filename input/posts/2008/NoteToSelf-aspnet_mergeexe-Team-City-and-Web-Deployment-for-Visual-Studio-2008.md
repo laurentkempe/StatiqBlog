@@ -5,8 +5,6 @@ date: 3/1/2008 2:50:20 AM
 updated: 5/10/2010 7:50:39 PM
 disqusIdentifier: 20080301025020
 tags: ["Note to self"]
-alias:
- - /post/NoteToSelf-aspnet_mergeexe-Team-City-and-Web-Deployment-for-Visual-Studio-2008.aspx/index.html
 ---
 I had to modify the Microsoft.WebDeployment.targets file to be able to compile through Team City the Web Deployment 2008 project !
 

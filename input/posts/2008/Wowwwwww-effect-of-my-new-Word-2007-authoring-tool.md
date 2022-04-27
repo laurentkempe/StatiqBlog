@@ -5,8 +5,6 @@ date: 8/22/2008 6:59:58 AM
 updated: 8/22/2008 6:59:58 AM
 disqusIdentifier: 20080822065958
 tags: ["Tech Head Brothers", "VSTO", ".NET Framework 3.5", "Office 2007", "Open XML", "Linq", "WordML"]
-alias:
- - /post/Wowwwwww-effect-of-my-new-Word-2007-authoring-tool.aspx/index.html
 ---
 I have reached now another step on the new authoring tool for [Tech Head Brothers](http://www.techheadbrothers.com/) portal by having some authors installing this new version and starting beta testing it. Has you can see, with the following [twit](http://www.twitter.com/), it seems that the tool is on the good way:
 

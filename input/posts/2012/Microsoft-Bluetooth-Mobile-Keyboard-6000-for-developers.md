@@ -4,8 +4,6 @@ permalink: /2012/08/28/Microsoft-Bluetooth-Mobile-Keyboard-6000-for-developers/
 date: 8/28/2012 6:30:58 PM
 updated: 8/28/2012 6:30:58 PM
 disqusIdentifier: 20120828063058
-alias:
- - /post/Microsoft-Bluetooth-Mobile-Keyboard-6000-for-developers.aspx/index.html
 ---
 <!-- [![WP_000463_DxO](http://farm9.staticflickr.com/8435/7878722224_7f534bc7eb_m.jpg)](http://www.flickr.com/photos/laurentkempe/7878722224/ "WP_000463_DxO by Laurent Kempé, on Flickr") -->
 

@@ -5,8 +5,6 @@ date: 9/15/2007 7:49:34 AM
 updated: 9/15/2007 7:49:34 AM
 disqusIdentifier: 20070915074934
 tags: ["Fun"]
-alias:
- - /post/What-were-you-developing-10-years-ago-.aspx/index.html
 ---
 I found browsing the Internet an old software I developed [Xit](http://aminet.net/package/util/pack/XIT). 
 

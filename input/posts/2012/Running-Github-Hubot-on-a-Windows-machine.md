@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7053/6975717721_11b528a835_q.jpg
 coverCaption: "Anse Cafard, Martinique"
 tags: ["hubot", "GitHub", "Windows 7"]
-alias:
- - /post/Running-Github-Hubot-on-a-Windows-machine.aspx/index.html
 ---
 <!-- [![IMG_0063](http://farm8.staticflickr.com/7053/6975717721_11b528a835_m.jpg)](http://www.flickr.com/photos/laurentkempe/6975717721/ "IMG_0063 by Laurent Kempé, on Flickr") -->
 I finally managed to get [Github Hubot](http://hubot.github.com/) running on my Windows 7 64 bits machine. Thanks to  [Sean Copenhaver](https://github.com/copenhas) & [Thomas Kahlow](https://github.com/kahlow) which pointed me to the correct direction on the ‘[Run hubot on windows](https://github.com/github/hubot/issues/166#issuecomment-5391161)’ discussion.

@@ -5,8 +5,6 @@ date: 12/12/2007 11:26:32 PM
 updated: 12/12/2007 11:26:32 PM
 disqusIdentifier: 20071212112632
 tags: ["Tools"]
-alias:
- - /post/Why-again-this-error!!!-flash-crash.aspx/index.html
 ---
 I can get it, I updated for the x times the flash plugin and still getting this error again and again. 
 

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7040/6978718001_f2bdaca933_q.jpg
 coverCaption: "Green sea turle, Anse Noire, Martinique"
 tags: [".NET", "C#", "TDD"]
-alias:
- - /post/Using-ThreadSleep-in-unit-test-A-good-idea.aspx/index.html
 ---
 <!-- [![Turtle](http://farm8.staticflickr.com/7040/6978718001_f2bdaca933_m.jpg)](http://www.flickr.com/photos/laurentkempe/6978718001/ "Turtle by Laurent Kempé, on Flickr") -->
 In my humble opinion it is definitely not a good idea! Why?

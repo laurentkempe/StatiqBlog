@@ -5,8 +5,6 @@ date: 7/10/2010 12:59:35 AM
 updated: 9/17/2010 9:56:52 PM
 disqusIdentifier: 20100710125935
 tags: ["Team City", "continuous integration", "innoveo solutions", "Jobping"]
-alias:
- - /post/Run-old-build-using-TeamCity.aspx/index.html
 ---
 At [Jobping](http://www.jobping.com) and [Innoveo](http://www.innoveo.com/) we are using [TeamCity](http://www.jetbrains.com/teamcity/index.html) from Jetbrains to automate our different builds.
 

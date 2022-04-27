@@ -5,8 +5,6 @@ date: 7/1/2005 4:46:00 PM
 updated: 7/1/2005 4:46:00 PM
 disqusIdentifier: 20050701044600
 tags: ["Tools"]
-alias:
- - /post/Microsoft-opens-Windows-Desktop-Search-and-new-great-possibilities.aspx/index.html
 ---
 
 

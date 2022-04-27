@@ -5,8 +5,6 @@ date: 7/10/2009 7:27:09 AM
 updated: 7/10/2009 7:27:09 AM
 disqusIdentifier: 20090710072709
 tags: ["Silverlight"]
-alias:
- - /post/Silverlight-3-RTM-Released.aspx/index.html
 ---
 Microsoft just released Silverlight 3!
 

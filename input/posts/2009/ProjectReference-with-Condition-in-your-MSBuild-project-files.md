@@ -5,8 +5,6 @@ date: 12/3/2009 7:24:42 AM
 updated: 12/3/2009 7:24:42 AM
 disqusIdentifier: 20091203072442
 tags: ["Visual Studio", "ReSharper", "continuous integration", "Team City", "MSBuild"]
-alias:
- - /post/ProjectReference-with-Condition-in-your-MSBuild-project-files.aspx/index.html
 ---
 Since some time I have the current scenario where I need to have conditional reference in a project. Basically the application must reference an assembly in one case in other it should reference another one. This was working correctly from an MSBuild point of view as the first implemented solution let me compile and run the application on my development machine and it was also working for our [TeamCity](http://www.jetbrains.com/teamcity/index.html) build server. So everything was fine in this perfect word expect one thing!
 

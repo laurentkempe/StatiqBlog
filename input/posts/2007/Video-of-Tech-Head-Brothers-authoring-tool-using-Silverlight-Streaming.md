@@ -5,8 +5,6 @@ date: 8/31/2007 6:59:00 AM
 updated: 8/31/2007 6:59:00 AM
 disqusIdentifier: 20070831065900
 tags: ["Tech Head Brothers", "VSTO", "Silverlight", "WCF", "Silverlight Streaming"]
-alias:
- - /post/Video-of-Tech-Head-Brothers-authoring-tool-using-Silverlight-Streaming.aspx/index.html
 ---
 This is a video demonstrating the offline usage of the [Tech Head Brothers authoring tool](http://www.codeplex.com/THBAuthoring).
 

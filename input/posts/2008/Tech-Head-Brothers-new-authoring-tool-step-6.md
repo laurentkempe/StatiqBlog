@@ -5,8 +5,6 @@ date: 2/27/2008 5:54:51 AM
 updated: 2/27/2008 5:54:51 AM
 disqusIdentifier: 20080227055451
 tags: ["Tech Head Brothers", "Visual Studio", "VSTO", "Office 2007"]
-alias:
- - /post/Tech-Head-Brothers-new-authoring-tool-step-6.aspx/index.html
 ---
 Another day another step!
 

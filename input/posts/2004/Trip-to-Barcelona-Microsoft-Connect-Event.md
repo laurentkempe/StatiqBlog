@@ -5,8 +5,6 @@ date: 10/20/2004 9:04:00 PM
 updated: 10/20/2004 9:04:00 PM
 disqusIdentifier: 20041020090400
 tags: ["Microsoft MVP", "Tech Head Brothers"]
-alias:
- - /post/Trip-to-Barcelona-Microsoft-Connect-Event.aspx/index.html
 ---
 Today I am flying to Barcelona - Spain and leaving the horrible weather here in Zürich - Switzerland (same at home in Mulhouse - France). I am attending Microsoft Connect Event, and really hope to see a bit of blue sky there because it has been to much time without sun here.
 

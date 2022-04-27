@@ -5,8 +5,6 @@ date: 10/20/2006 8:32:00 PM
 updated: 10/20/2006 8:32:00 PM
 disqusIdentifier: 20061020083200
 tags: ["ASP.NET 2.0", "ASP.NET"]
-alias:
- - /post/ASPNET-AJAX-v10-Beta-Available.aspx/index.html
 ---
 Microsoft just released the new version of ASP.NET AJAX as Beta, there are going out of the CTP cycles.
 

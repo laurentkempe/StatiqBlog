@@ -5,8 +5,6 @@ date: 5/20/2008 5:14:11 AM
 updated: 5/20/2008 5:14:11 AM
 disqusIdentifier: 20080520051411
 tags: ["Tools", "ReSharper"]
-alias:
- - /post/JetBrains-ReSharper-40-EAP-First-Beta-Candidate-released.aspx/index.html
 ---
 [JetBrains](http://www.jetbrains.com/) just released a [First Candidate release of ReSharper 4.0 marked as Stable](http://www.jetbrains.net/confluence/display/ReSharper/ReSharper+4.0+Nightly+Builds)!
 

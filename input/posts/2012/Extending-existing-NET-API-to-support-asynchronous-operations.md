@@ -8,8 +8,6 @@ coverImage: https://farm6.staticflickr.com/5057/5517072642_bc446224c7_b.jpg
 coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5057/5517072642_bc446224c7_q.jpg
 coverCaption: "Palmier sur la plage de la grande anse, Le Diamant, Martinique"
-alias:
- - /post/Extending-existing-NET-API-to-support-asynchronous-operations.aspx/index.html
 ---
 <!-- [![Palmier sur la plage de la grande anse du diamant](http://farm6.staticflickr.com/5057/5517072642_bc446224c7_m.jpg)](http://www.flickr.com/photos/laurentkempe/5517072642/ "Palmier sur la plage de la grande anse du diamant by Laurent Kempé, on Flickr") -->
 

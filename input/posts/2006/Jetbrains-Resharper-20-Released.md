@@ -5,8 +5,6 @@ date: 5/24/2006 7:40:00 AM
 updated: 5/24/2006 7:40:00 AM
 disqusIdentifier: 20060524074000
 tags: ["Tools", "Visual Studio"]
-alias:
- - /post/Jetbrains-Resharper-20-Released.aspx/index.html
 ---
 [Scott](/scottgu/archive/2006/05/22/Resharper-2.0-Released.aspx) was faster on that one. Nevermind I wanted to post it also because I find this tool awesome and can't really work without it anymore and it helps a lot in the development of new [Tech Head Brothers](http://www.techheadbrothers.com) website.
 

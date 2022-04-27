@@ -5,8 +5,6 @@ date: 11/24/2007 4:21:01 AM
 updated: 11/24/2007 4:21:01 AM
 disqusIdentifier: 20071124042101
 tags: ["Visual Studio", "ReSharper"]
-alias:
- - /post/ReSharper-and-Visual-Studio-2008.aspx/index.html
 ---
 [Ilya Ryzhenkov](http://www.blogger.com/profile/14966746474791511643) just published a post about "[ReSharper and Visual Studio 2008](http://resharper.blogspot.com/2007/11/resharper-and-visual-studio-2008.html)".
 

@@ -5,8 +5,6 @@ date: 6/3/2010 3:11:49 AM
 updated: 6/3/2010 3:11:49 AM
 disqusIdentifier: 20100603031149
 tags: ["Team City", "Jobping", "Tech Head Brothers"]
-alias:
- - /post/Build-and-Deployment-automation-VCS-Root-and-Labeling-in-TeamCity.aspx/index.html
 ---
 As you might now from reading my blog I tend to automate as much as I can. 
 

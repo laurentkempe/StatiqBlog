@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7421/9599787416_582f4ab142_q.jpg
 coverCaption: "Byron Bay Light House, Australia"
 tags: ["Team City", "Git", "Stash"]
-alias:
- - /post/Optimizing-release-build-process-using-JetBrains-TeamCity-and-Atlassian-Stash.aspx/index.html
 ---
 <!-- [![Byron Bay Light House](http://farm8.staticflickr.com/7421/9599787416_582f4ab142_m.jpg)](http://www.flickr.com/photos/laurentkempe/9599787416/ "Byron Bay Light House by Laurent Kempé, on Flickr") -->   
 

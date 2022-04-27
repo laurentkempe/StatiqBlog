@@ -5,8 +5,6 @@ date: 4/29/2004 12:00:00 AM
 updated: 4/29/2004 12:00:00 AM
 disqusIdentifier: 20040429120000
 tags: ["Tech Head Brothers"]
-alias:
- - /post/Visual-Studio-for-Office-and-Web-Service-using-DIME.aspx/index.html
 ---
 I started yesterday to work on the second release of the publishing tool that we are using to write articles on my site [Tech Head Brothers](http://www.techheadbrothers.com "Tech Head Brothers"). The first version what packing everything needed (XML, pictures, source zip) into one zip file that the author was emailing me for publishing. The new idea is to have a Web Service on the web site that directly accept this zip file as a Dime attachment. So the author can directly post his article to the web site without passing it to me. I am so lazy ;-)
 

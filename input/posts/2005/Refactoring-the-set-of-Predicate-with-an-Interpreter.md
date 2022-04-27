@@ -5,8 +5,6 @@ date: 3/12/2005 9:09:00 AM
 updated: 3/12/2005 9:09:00 AM
 disqusIdentifier: 20050312090900
 tags: ["Tech Head Brothers", "Whidbey", "ASP.NET 2.0", ".NET Framework 2.0"]
-alias:
- - /post/Refactoring-the-set-of-Predicate-with-an-Interpreter.aspx/index.html
 ---
 
 

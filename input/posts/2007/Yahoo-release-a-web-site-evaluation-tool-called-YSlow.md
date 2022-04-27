@@ -5,8 +5,6 @@ date: 8/19/2007 11:07:30 PM
 updated: 8/19/2007 11:07:30 PM
 disqusIdentifier: 20070819110730
 tags: ["Tools", "ASP.NET 2.0", "ASP.NET"]
-alias:
- - /post/Yahoo-release-a-web-site-evaluation-tool-called-YSlow.aspx/index.html
 ---
 [YSlow](http://developer.yahoo.com/yslow/) is a new web tool published by Yahoo. It let you test a total of 13 rules against your web site to check if it is efficient.
 

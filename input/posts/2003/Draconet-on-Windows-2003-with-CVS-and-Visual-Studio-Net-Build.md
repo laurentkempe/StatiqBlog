@@ -5,8 +5,6 @@ date: 12/10/2003 9:01:00 AM
 updated: 12/10/2003 9:01:00 AM
 disqusIdentifier: 20031210090100
 tags: ["Tools"]
-alias:
- - /post/Draconet-on-Windows-2003-with-CVS-and-Visual-Studio-Net-Build.aspx/index.html
 ---
 I finally managed :-) to have [Draco.net](http://draconet.sourceforge.net) working on Windows 2003 Server with cvs. I always had a [100% cpu usage](http://www.mail-archive.com/draconet-users@lists.sourceforge.net/msg00069.html) when Draco.net detected a change and that was due to a cvs process.
 

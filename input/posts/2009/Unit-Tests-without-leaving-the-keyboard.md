@@ -5,8 +5,6 @@ date: 10/8/2009 4:24:54 PM
 updated: 5/7/2010 7:46:47 AM
 disqusIdentifier: 20091008042454
 tags: ["Visual Studio", "ReSharper", "unit test", "TDD"]
-alias:
- - /post/Unit-Tests-without-leaving-the-keyboard.aspx/index.html
 ---
 I like the Roy Osherove blog: [Five Whys](http://5whys.com/), Leadership in software teams.
 

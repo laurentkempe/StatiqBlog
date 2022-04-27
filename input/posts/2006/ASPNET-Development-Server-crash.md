@@ -5,8 +5,6 @@ date: 8/3/2006 6:09:00 PM
 updated: 8/3/2006 6:09:00 PM
 disqusIdentifier: 20060803060900
 tags: ["ASP.NET 2.0", "Visual Studio", ".NET"]
-alias:
- - /post/ASPNET-Development-Server-crash.aspx/index.html
 ---
 This morning I had a strange crash of ASP.NET Development Server, it is the first time that it happens and I was really stressed about it.
 

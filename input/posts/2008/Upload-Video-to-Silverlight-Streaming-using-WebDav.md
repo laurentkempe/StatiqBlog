@@ -5,8 +5,6 @@ date: 6/21/2008 11:50:02 PM
 updated: 6/21/2008 11:50:02 PM
 disqusIdentifier: 20080621115002
 tags: ["Silverlight Streaming"]
-alias:
- - /post/Upload-Video-to-Silverlight-Streaming-using-WebDav.aspx/index.html
 ---
 Follow up on the post from [Laurent](http://weblogs.asp.net/lduveau/) “[Expression Encoder 2 publish to Silverlight Streaming plugin](http://weblogs.asp.net/lduveau/archive/2008/06/20/expression-encoder-2-publish-to-silverlight-streaming-plugin.aspx)”.
 

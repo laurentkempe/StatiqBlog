@@ -5,8 +5,6 @@ date: 9/6/2008 4:15:56 AM
 updated: 5/7/2010 7:45:44 AM
 disqusIdentifier: 20080906041556
 tags: ["Tech Head Brothers", "Web Services", "VSTO", "WCF", "SOAP", ".NET Framework 3.5", "Office 2007", "Open XML", "WordML"]
-alias:
- - /post/New-step-in-my-authoring-tool-using-Word-2007.aspx/index.html
 ---
 This evening I took the time to implement a new step on the new version of [Tech Head Brothers](http://www.techheadbrothers.com/) authoring tool.
 

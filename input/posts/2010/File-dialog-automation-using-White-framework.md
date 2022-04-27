@@ -5,8 +5,6 @@ date: 7/16/2010 3:22:07 AM
 updated: 5/2/2012 12:53:45 AM
 disqusIdentifier: 20100716032207
 tags: ["acceptance test", "white"]
-alias:
- - /post/File-dialog-automation-using-White-framework.aspx/index.html
 ---
 Today [TeamCity](http://www.jetbrains.com/teamcity/index.html) was showing me one functional test failure on my WPF application.
 

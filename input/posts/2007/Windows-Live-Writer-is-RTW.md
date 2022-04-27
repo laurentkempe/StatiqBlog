@@ -5,8 +5,6 @@ date: 11/7/2007 6:16:26 PM
 updated: 11/7/2007 6:16:26 PM
 disqusIdentifier: 20071107061626
 tags: ["Tech Head Brothers", "Tools", "innoveo solutions"]
-alias:
- - /post/Windows-Live-Writer-is-RTW.aspx/index.html
 ---
 It is announced on the [blog of the team](http://windowslivewriter.spaces.live.com/blog/cns!D85741BB5E0BE8AA!1442.entry).
 

@@ -5,8 +5,6 @@ date: 5/28/2013 6:20:00 AM
 updated: 5/28/2013 4:16:36 PM
 disqusIdentifier: 20130528062000
 tags: ["Git", "GitHub"]
-alias:
- - /post/Git-and-GitHub-Training.aspx/index.html
 ---
 Today I had the pleasure to attend “Git and GitHub Training” held by [Tim Berglund](http://timberglund.com/) one of the GitHubber, so called because he is working at [Github](https://github.com/).
 

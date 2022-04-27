@@ -5,8 +5,6 @@ date: 11/15/2007 10:31:32 PM
 updated: 11/15/2007 10:31:32 PM
 disqusIdentifier: 20071115103132
 tags: ["innoveo solutions", "continuous integration"]
-alias:
- - /post/Remove-svn-folders-from-your-builds.aspx/index.html
 ---
 When you use [Subversion](http://subversion.tigris.org/) you will have on your file system some .svn folders, normally there are hidden.
 

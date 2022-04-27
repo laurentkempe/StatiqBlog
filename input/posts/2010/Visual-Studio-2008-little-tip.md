@@ -5,8 +5,6 @@ date: 1/7/2010 7:27:59 AM
 updated: 1/7/2010 7:27:59 AM
 disqusIdentifier: 20100107072759
 tags: ["Visual Studio"]
-alias:
- - /post/Visual-Studio-2008-little-tip.aspx/index.html
 ---
 Tonight I found a little tip that you might already know but for me it was the first time I realize that.
 

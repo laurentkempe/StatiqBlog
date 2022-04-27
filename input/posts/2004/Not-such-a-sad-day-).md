@@ -5,8 +5,6 @@ date: 10/14/2004 4:09:00 AM
 updated: 10/14/2004 4:09:00 AM
 disqusIdentifier: 20041014040900
 tags: ["Whidbey", "ASP.NET 2.0"]
-alias:
- - /post/Not-such-a-sad-day-).aspx/index.html
 ---
 I knew I read it somewhere !!! Latest release of Whidbey permits to hide the components on the designer. Use the <strong>View</strong> menu <strong>Non Visual Controls</strong>, shortcut Ctrl+Shift+N.
 

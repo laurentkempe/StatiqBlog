@@ -5,8 +5,6 @@ date: 12/4/2009 6:03:37 AM
 updated: 12/4/2009 6:03:37 AM
 disqusIdentifier: 20091204060337
 tags: ["Team City"]
-alias:
- - /post/TeamCity-50-Released!.aspx/index.html
 ---
 JetBrains just published [TeamCity](http://www.jetbrains.com/teamcity/index.html) 5.
 

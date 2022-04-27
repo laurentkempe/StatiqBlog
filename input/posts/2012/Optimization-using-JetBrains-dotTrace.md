@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm9.staticflickr.com/8150/6969851740_a5dbe52669_q.jpg
 coverCaption: "Vosges, France"
 tags: ["dotTrace", "Jetbrains", "C#", "innoveo solutions"]
-alias:
- - /post/Optimization-using-JetBrains-dotTrace.aspx/index.html
 ---
 <!-- [![WP_000092](http://farm9.staticflickr.com/8150/6969851740_a5dbe52669_m.jpg)](http://www.flickr.com/photos/laurentkempe/6969851740/ "WP_000092 by Laurent Kempé, on Flickr") -->
 

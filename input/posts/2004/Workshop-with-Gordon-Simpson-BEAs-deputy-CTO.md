@@ -5,8 +5,6 @@ date: 5/8/2004 10:44:00 PM
 updated: 5/8/2004 10:44:00 PM
 disqusIdentifier: 20040508104400
 tags: ["Work"]
-alias:
- - /post/Workshop-with-Gordon-Simpson-BEAs-deputy-CTO.aspx/index.html
 ---
 As reported by [Didier](http://www.didierbeck.com/) [here](http://didier.beck.free.fr/2004_05_01_blogs.php#108388364599363660). We had the chance last thursday evening to meet Mr Gordon Simpson, deputy CTO of [BEA Systems](http://www.bea.com/).<br><br>![](http://didier.beck.free.fr/pics/diverse/simpson.jpg)
 

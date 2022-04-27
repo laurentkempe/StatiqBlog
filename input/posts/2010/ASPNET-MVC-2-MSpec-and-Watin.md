@@ -5,8 +5,6 @@ date: 5/19/2010 5:07:53 PM
 updated: 10/15/2010 11:20:48 AM
 disqusIdentifier: 20100519050753
 tags: ["Watin", "MSpec", "Jobping"]
-alias:
- - /post/ASPNET-MVC-2-MSpec-and-Watin.aspx/index.html
 ---
 The other day I posted about “[Automated functional tests using Watin and MSpec](http://www.laurentkempe.com/post/Automated-functional-tests-using-Watin-and-MSpec.aspx)” which we do at [Jobping](http://www.jobping.com) as a spike to automate our functional tests on our ASP.NET MVC 2 site.
 

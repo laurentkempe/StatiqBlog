@@ -5,8 +5,6 @@ date: 1/26/2005 8:32:00 AM
 updated: 1/26/2005 8:32:00 AM
 disqusIdentifier: 20050126083200
 tags: ["Microsoft MVP", "Tech Head Brothers"]
-alias:
- - /post/My-brother-opened-a-blog-!!!.aspx/index.html
 ---
 
 

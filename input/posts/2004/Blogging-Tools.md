@@ -5,8 +5,6 @@ date: 5/12/2004 2:50:00 AM
 updated: 5/12/2004 2:50:00 AM
 disqusIdentifier: 20040512025000
 tags: ["Tools"]
-alias:
- - /post/Blogging-Tools.aspx/index.html
 ---
 I have tried several tools to read blogs and to publish on mine, I wanted to have one that combines all.
 

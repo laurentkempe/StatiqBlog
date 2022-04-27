@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7184/6972712717_29c1c987ab_q.jpg
 coverCaption: "Grande Anse, Le Diamant, Martinique"
 tags: ["nodejs"]
-alias:
- - /post/Writing-a-first-Nodejs-application-on-Windows.aspx/index.html
 ---
 <!-- [![Plage de la Grande Anse du Diamant](http://farm8.staticflickr.com/7184/6972712717_29c1c987ab_m.jpg)](http://www.flickr.com/photos/laurentkempe/6972712717/ "Plage de la Grande Anse du Diamant by Laurent Kempé, on Flickr") -->   
 

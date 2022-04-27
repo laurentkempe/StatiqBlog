@@ -5,8 +5,6 @@ date: 12/11/2007 7:25:15 PM
 updated: 12/11/2007 7:25:15 PM
 disqusIdentifier: 20071211072515
 tags: ["innoveo solutions"]
-alias:
- - /post/Launch-of-innoveo-solutions-blog.aspx/index.html
 ---
 A few seconds ago [Didier](http://www.didierbeck.com/) and I just launched [innoveo solutions blog](http://blog.innoveo.com/home.aspx).
 

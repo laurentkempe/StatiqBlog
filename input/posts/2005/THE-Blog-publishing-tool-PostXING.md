@@ -5,8 +5,6 @@ date: 1/29/2005 9:42:00 AM
 updated: 1/29/2005 9:42:00 AM
 disqusIdentifier: 20050129094200
 tags: ["Tools"]
-alias:
- - /post/THE-Blog-publishing-tool-PostXING.aspx/index.html
 ---
 I tried and used lots of blog tool as you might read on my blog. But I was 
 always searching for a light weight publisher tool. Not the big one that also 

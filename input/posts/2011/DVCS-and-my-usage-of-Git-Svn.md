@@ -5,8 +5,6 @@ date: 11/7/2011 11:14:00 PM
 updated: 11/12/2011 10:44:36 PM
 disqusIdentifier: 20111107111400
 tags: ["Git", "DVCS"]
-alias:
- - /post/DVCS-and-my-usage-of-Git-Svn.aspx/index.html
 ---
 Sometime ago I moved “away” from subversion has my Version Control System (VCS) because I felt not free of my way of working with it. I found a great was to improve my work experience by using Git Svn in front of our central Subversion repository.
 

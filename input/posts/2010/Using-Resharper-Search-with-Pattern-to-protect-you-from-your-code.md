@@ -5,8 +5,6 @@ date: 11/19/2010 12:02:53 AM
 updated: 11/19/2010 12:02:53 AM
 disqusIdentifier: 20101119120253
 tags: ["ReSharper", "Jetbrains"]
-alias:
- - /post/Using-Resharper-Search-with-Pattern-to-protect-you-from-your-code.aspx/index.html
 ---
 Today I faced a nasty bug, a null pointer exception in a property databound to our WPF application. This had some nasty side effects, and for sure this part of the code didn’t had any unit test, too bad! For sure now it has.
 

@@ -5,8 +5,6 @@ date: 10/14/2008 6:57:25 PM
 updated: 10/14/2008 6:57:25 PM
 disqusIdentifier: 20081014065725
 tags: ["Silverlight"]
-alias:
- - /post/Silverlight-2-is-really-released-NOW!.aspx/index.html
 ---
 ![](http://farm4.static.flickr.com/3061/2940512325_e0403323a5_o.png) 
 

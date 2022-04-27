@@ -5,8 +5,6 @@ date: 9/6/2009 9:16:31 PM
 updated: 5/7/2010 7:52:09 AM
 disqusIdentifier: 20090906091631
 tags: ["Windows 7"]
-alias:
- - /post/Devices-and-Printers-empty-on-Windows-7.aspx/index.html
 ---
 For some days I had the following issue on my Windows 7 installation: clicking on the start orb then on Devices and Printers would open the window, show a progress bar and then nothing else, a completely empty folder.
 

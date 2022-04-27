@@ -5,8 +5,6 @@ date: 3/27/2008 1:08:13 AM
 updated: 3/27/2008 1:08:13 AM
 disqusIdentifier: 20080327010813
 tags: ["Tools", "innoveo solutions"]
-alias:
- - /post/Integration-of-VisualSVN-(TortoiseSVN)-and-JIRA.aspx/index.html
 ---
 The aim is to be able to associate a bug/feature described into [JIRA](http://www.atlassian.com/software/jira/) to source code changes made into the [Subversion](http://subversion.tigris.org/) repository.
 

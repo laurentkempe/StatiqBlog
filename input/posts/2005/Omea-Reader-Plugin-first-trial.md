@@ -5,8 +5,6 @@ date: 2/10/2005 7:35:00 AM
 updated: 2/10/2005 7:35:00 AM
 disqusIdentifier: 20050210073500
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/Omea-Reader-Plugin-first-trial.aspx/index.html
 ---
 I started to develop an [Omea 
 Reader](http://www.jetbrains.com/omea/reader/) Plugin using Omea OpenAPI. The OpenAPI is a set of tools, 

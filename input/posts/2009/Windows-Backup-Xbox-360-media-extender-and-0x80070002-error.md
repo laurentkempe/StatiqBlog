@@ -5,8 +5,6 @@ date: 11/3/2009 6:57:20 PM
 updated: 11/3/2009 6:57:20 PM
 disqusIdentifier: 20091103065720
 tags: ["Windows 7", "media extender", "xbox 360"]
-alias:
- - /post/Windows-Backup-Xbox-360-media-extender-and-0x80070002-error.aspx/index.html
 ---
 Yesterday I bought a new Western Digital external hard drive of 1TB for 109CHF, incredible how cheap it is now.
 

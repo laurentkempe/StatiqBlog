@@ -5,8 +5,6 @@ date: 8/21/2009 6:49:16 PM
 updated: 8/21/2009 6:49:16 PM
 disqusIdentifier: 20090821064916
 tags: ["Azure", "SQL Azure"]
-alias:
- - /post/How-to-connect-to-SQL-Azure.aspx/index.html
 ---
 **From Microsoft SQL Server Management Studio** (tips from the [SQL Azure — Getting Started](http://social.msdn.microsoft.com/Forums/en-US/ssdsgetstarted/threads "SQL Azure — Getting Started") forum, [this post](http://social.msdn.microsoft.com/Forums/en-US/ssdsgetstarted/thread/aca1d494-0b52-4661-b022-86c4101ba6ca)) :
 

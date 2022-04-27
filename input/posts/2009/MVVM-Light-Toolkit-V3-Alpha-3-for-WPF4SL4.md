@@ -5,8 +5,6 @@ date: 12/1/2009 5:50:19 PM
 updated: 12/1/2009 5:50:19 PM
 disqusIdentifier: 20091201055019
 tags: ["Silverlight", "MVVM"]
-alias:
- - /post/MVVM-Light-Toolkit-V3-Alpha-3-for-WPF4SL4.aspx/index.html
 ---
 [Laurent Bugnion](http://blog.galasoft.ch/Default.aspx) just published [MVVM Light Toolkit V3 Alpha 3](http://mvvmlight.codeplex.com) which support WPF 4 and Silverlight 4!
 

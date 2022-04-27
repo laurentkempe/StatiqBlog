@@ -5,8 +5,6 @@ date: 11/16/2004 6:02:00 AM
 updated: 11/16/2004 6:02:00 AM
 disqusIdentifier: 20041116060200
 tags: ["Infrastructure"]
-alias:
- - /post/Back-to-correct-speed.aspx/index.html
 ---
 Over the weekend I realized that my notebook became quite slow and was always reading something on the HD, even without any memory pressure. When I was to some music, starting an application was really corrupting the sound. So after some I realized that my Primary IDE controller went from DMA back to the old PIO mode. To solve this issue I reinstalled the the primary IDE port using the Device Manager, and after two reboots it went back to DMA and a acceptable speed.
 

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm3.staticflickr.com/2869/11098125944_08a562bd51_q.jpg
 coverCaption: "Byron Bay, Australia"
 tags: ["NDepend", "Team City", "dotCover"]
-alias:
- - /post/Using-TeamCity-integrated-dotCover-coverage-files-with-NDepend.aspx/index.html
 ---
 <!-- [![Byron Bay 2013-08-26 038_DxO](http://farm3.staticflickr.com/2869/11098125944_08a562bd51_m.jpg)](http://www.flickr.com/photos/laurentkempe/11098125944/ "Byron Bay 2013-08-26 038_DxO by Laurent Kempé, on Flickr")-->
 

@@ -5,8 +5,6 @@ date: 4/24/2004 9:09:00 AM
 updated: 4/24/2004 9:09:00 AM
 disqusIdentifier: 20040424090900
 tags: ["Microsoft MVP"]
-alias:
- - /post/Two-Brothers-at-the-Microsoft-MVP-Summit-2004.aspx/index.html
 ---
 <strong>Working</strong> 
 

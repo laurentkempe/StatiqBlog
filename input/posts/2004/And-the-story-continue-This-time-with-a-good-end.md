@@ -5,8 +5,6 @@ date: 5/14/2004 5:36:00 AM
 updated: 5/14/2004 5:36:00 AM
 disqusIdentifier: 20040514053600
 tags: ["Work"]
-alias:
- - /post/And-the-story-continue-This-time-with-a-good-end.aspx/index.html
 ---
 After all servers problems from the last days, now I have an issue with IIS 5 on my notebook. I am currently working on a project for one of our subsidiaries in which we have to integrate a backend calculator application. In that project I have to restart IIS with the command <em>iisreset</em> to be able to compile my code and to deploy it, otherwise my dll is locked by IIS. I did it for sometime, and today I worked on the project and when I decided to restart IIS then I get an error message: "<strong>No such interface supported</strong>". What the hell is this? Come on I need to work. I searched a couple of hours on the web trying different things then I end up uninstalling IIS from my machine rebooting and manually deleting files that where lying on my hard drive. Then after the 128th reboot of the last two weeks I reinstalled it and it worked. :-) :-) :-) 
 

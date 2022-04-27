@@ -5,8 +5,6 @@ date: 11/3/2009 7:52:25 AM
 updated: 11/3/2009 7:52:25 AM
 disqusIdentifier: 20091103075225
 tags: ["continuous integration", "Team City", "ClickOnce"]
-alias:
- - /post/Building-ClickOnce-with-TeamCity.aspx/index.html
 ---
 [Migrating our TeamCity](http://weblogs.asp.net/lkempe/archive/2009/11/02/teamcity-migration-tip.aspx) server today I got the following error on the new server:
 

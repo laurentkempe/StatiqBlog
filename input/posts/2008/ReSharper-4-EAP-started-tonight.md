@@ -5,8 +5,6 @@ date: 2/16/2008 4:48:04 AM
 updated: 2/16/2008 4:48:04 AM
 disqusIdentifier: 20080216044804
 tags: ["Tools", "Visual Studio", "ReSharper"]
-alias:
- - /post/ReSharper-4-EAP-started-tonight.aspx/index.html
 ---
 You might get access to the early bits on [the following page](http://www.jetbrains.net/confluence/display/ReSharper/ReSharper+4.0+Nightly+Builds).
 

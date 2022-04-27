@@ -5,8 +5,6 @@ date: 9/7/2008 5:37:58 PM
 updated: 9/7/2008 5:37:58 PM
 disqusIdentifier: 20080907053758
 tags: ["PDC 2008"]
-alias:
- - /post/Meet-us-at-the-PDC-2008.aspx/index.html
 ---
 <div class="zemanta-img" "?"="">   
 

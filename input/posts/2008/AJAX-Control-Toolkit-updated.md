@@ -5,8 +5,6 @@ date: 3/1/2008 4:25:22 PM
 updated: 3/1/2008 4:25:22 PM
 disqusIdentifier: 20080301042522
 tags: ["ASP.NET AJAX", "ASP.NET AJAX Control Toolkit "]
-alias:
- - /post/AJAX-Control-Toolkit-updated.aspx/index.html
 ---
 No new controls but some great fixes! 
 

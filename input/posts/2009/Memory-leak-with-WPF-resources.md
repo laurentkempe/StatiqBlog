@@ -5,8 +5,6 @@ date: 4/17/2009 10:36:49 PM
 updated: 4/17/2009 10:36:49 PM
 disqusIdentifier: 20090417103649
 tags: ["Tools", "WPF"]
-alias:
- - /post/Memory-leak-with-WPF-resources.aspx/index.html
 ---
 I am working for a couple of months now with WPF and MVVM on an a business application using .NET Framework 3.5 SP1. Lately I faced a memory leak. Not the easy kind of memory leak with events handlers which keeps objects and its element tree alive, [as explained here](http://blogs.msdn.com/jgoldb/archive/2008/02/04/finding-memory-leaks-in-wpf-based-applications.aspx).
 

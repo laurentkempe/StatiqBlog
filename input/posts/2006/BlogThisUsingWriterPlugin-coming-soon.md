@@ -5,8 +5,6 @@ date: 8/17/2006 9:03:31 AM
 updated: 8/17/2006 9:03:31 AM
 disqusIdentifier: 20060817090331
 tags: ["Tools", "ASP.NET"]
-alias:
- - /post/BlogThisUsingWriterPlugin-coming-soon.aspx/index.html
 ---
 OK I fixed my main issue. I wasn't able to have my plugin loaded by Jetbrains Omea, and it seems that it is linked with the .NET Framework 2.0 that I use in my plugin, even if Omea Reader is running using .NET Framework 2.0 somehow it can't verify the plugin.
 

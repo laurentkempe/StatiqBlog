@@ -5,8 +5,6 @@ date: 9/15/2007 4:47:41 PM
 updated: 9/15/2007 4:47:41 PM
 disqusIdentifier: 20070915044741
 tags: ["Expression Studio"]
-alias:
- - /post/Microsoft-Expression-Expression-Blend-2-September-Preview-is-now-available!.aspx/index.html
 ---
 Good timing for me :)
 

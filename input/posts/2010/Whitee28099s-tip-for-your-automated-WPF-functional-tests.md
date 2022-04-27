@@ -5,8 +5,6 @@ date: 1/28/2010 5:24:03 AM
 updated: 1/28/2010 5:24:03 AM
 disqusIdentifier: 20100128052403
 tags: ["WPF", "unit test", "white"]
-alias:
- - /post/Whitee28099s-tip-for-your-automated-WPF-functional-tests.aspx/index.html
 ---
 When you build automated WPF functional test using [White](http://white.codeplex.com/) in which you need to open a file through a Windows open file dialog, you will be confronted with the following issue. Windows open file dialog remember the last path with which you opened a file.
 

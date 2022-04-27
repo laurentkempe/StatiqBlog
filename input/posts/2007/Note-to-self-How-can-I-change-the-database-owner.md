@@ -5,8 +5,6 @@ date: 9/27/2007 4:39:41 PM
 updated: 9/27/2007 4:39:41 PM
 disqusIdentifier: 20070927043941
 tags: ["Note to self", "SQL Server"]
-alias:
- - /post/Note-to-self-How-can-I-change-the-database-owner.aspx/index.html
 ---
 From: [http://www.mssqlcity.com/FAQ/Admin/DBOwner.htm](http://www.mssqlcity.com/FAQ/Admin/DBOwner.htm "http://www.mssqlcity.com/FAQ/Admin/DBOwner.htm")
 

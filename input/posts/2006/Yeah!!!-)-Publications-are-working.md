@@ -5,8 +5,6 @@ date: 3/18/2006 5:50:00 PM
 updated: 3/18/2006 5:50:00 PM
 disqusIdentifier: 20060318055000
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "Web Services", ".NET Framework 2.0"]
-alias:
- - /post/Yeah!!!-)-Publications-are-working.aspx/index.html
 ---
 Today is a big day with a **really cool** milestone for 
 **[Tech Head 

@@ -4,8 +4,6 @@ permalink: /2007/06/01/Download-details-Internet-Explorer-Developer-Toolbar/
 date: 6/1/2007 10:16:19 PM
 updated: 6/1/2007 10:16:19 PM
 disqusIdentifier: 20070601101619
-alias:
- - /post/Download-details-Internet-Explorer-Developer-Toolbar.aspx/index.html
 ---
 I absolutely missed that the final Internet Explorer Developer Toolbar was released on the 9 May 2007. Good and installed now.
 

@@ -5,8 +5,6 @@ date: 8/24/2004 6:41:00 AM
 updated: 8/24/2004 6:41:00 AM
 disqusIdentifier: 20040824064100
 tags: ["Tech Head Brothers", ".NET Development"]
-alias:
- - /post/New-milestone-reached-in-the-development-of-the-authoring-tool-for-Tech-Head-Brothers-French-portal.aspx/index.html
 ---
 In this version we now have:
 

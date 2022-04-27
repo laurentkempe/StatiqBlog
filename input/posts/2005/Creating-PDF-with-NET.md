@@ -4,8 +4,6 @@ permalink: /2005/03/16/Creating-PDF-with-NET/
 date: 3/16/2005 12:33:00 PM
 updated: 3/16/2005 12:33:00 PM
 disqusIdentifier: 20050316123300
-alias:
- - /post/Creating-PDF-with-NET.aspx/index.html
 ---
 
 

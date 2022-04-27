@@ -5,8 +5,6 @@ date: 6/9/2007 6:24:41 AM
 updated: 6/9/2007 6:24:41 AM
 disqusIdentifier: 20070609062441
 tags: ["ASP.NET AJAX"]
-alias:
- - /post/AJAX-Control-Toolkit-ToolkitScriptManager.aspx/index.html
 ---
 A new release (10606) is out, that you might [download on CodePlex](http://www.codeplex.com/AtlasControlToolkit).
 

@@ -5,8 +5,6 @@ date: 6/1/2008 7:41:20 AM
 updated: 5/7/2010 7:52:14 AM
 disqusIdentifier: 20080601074120
 tags: ["unit test", "mock"]
-alias:
- - /post/Mocking-NET-framework-SmtpClient-class.aspx/index.html
 ---
 This Saturday like the last two I planned to work on my wooden terrace, but with the weather we have for this year's spring, it was almost impossible. So I replaced that with some development.
 

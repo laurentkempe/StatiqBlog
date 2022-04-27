@@ -5,8 +5,6 @@ date: 11/8/2010 6:21:00 PM
 updated: 11/8/2010 6:21:01 PM
 disqusIdentifier: 20101108062100
 tags: ["BDD", "Web Application Testing"]
-alias:
- - /post/BDD-web-application-testing-using-easyB-and-Sahi.aspx/index.html
 ---
 I already talked about the way we are testing our web application at [Jobping](http://www.jobping.com/) in the following posts “[ASP.NET MVC 2, MSpec and Watin](http://www.laurentkempe.com/post/ASPNET-MVC-2-MSpec-and-Watin.aspx) ” and [”Automated functional tests using Watin and MSpec](http://www.laurentkempe.com/post/Automated-functional-tests-using-Watin-and-MSpec.aspx)”.
 

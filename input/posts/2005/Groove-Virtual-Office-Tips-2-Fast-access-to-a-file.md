@@ -4,8 +4,6 @@ permalink: /2005/05/22/Groove-Virtual-Office-Tips-2-Fast-access-to-a-file/
 date: 5/22/2005 10:40:00 PM
 updated: 5/22/2005 10:40:00 PM
 disqusIdentifier: 20050522104000
-alias:
- - /post/Groove-Virtual-Office-Tips-2-Fast-access-to-a-file.aspx/index.html
 ---
 We have seen in the first tips ["Fast access 
 to Workspaces"](http://weblogs.asp.net/lkempe/archive/2005/05/21/408188.aspx), in this one we will see how to access a file saved in file 

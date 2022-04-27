@@ -4,8 +4,6 @@ permalink: /2010/04/03/My-new-Blog/
 date: 4/3/2010 3:16:57 AM
 updated: 4/28/2010 8:00:57 PM
 disqusIdentifier: 20100403031657
-alias:
- - /post/My-new-Blog.aspx/index.html
 ---
 Starting from now on I will post on this blog [http://www.laurentkempe.com](http://www.laurentkempe.com/ "http://www.laurentkempe.com/")
 

@@ -5,8 +5,6 @@ date: 7/25/2007 5:54:46 PM
 updated: 5/7/2010 7:53:14 AM
 disqusIdentifier: 20070725055446
 tags: ["Tech Head Brothers", "ASP.NET AJAX", "ASP.NET AJAX Control Toolkit "]
-alias:
- - /post/Optimization-of-a-Web-Site-Using-Content-Expiration-(IIS-60).aspx/index.html
 ---
 As you might know, I am running the French .NET portal [Tech Head Brothers](http://www.techheadbrothers.com/) and I am always searching for good way to optimize it and make it run better.
 

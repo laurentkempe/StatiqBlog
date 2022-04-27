@@ -4,8 +4,6 @@ permalink: /2010/07/17/Unit-Test-using-test-doubles-aka-Mock-Stub-Fake-Dummy/
 date: 7/17/2010 12:31:53 AM
 updated: 7/17/2010 12:31:53 AM
 disqusIdentifier: 20100717123153
-alias:
- - /post/Unit-Test-using-test-doubles-aka-Mock-Stub-Fake-Dummy.aspx/index.html
 ---
 Following my post about [Application Acceptance Testing](http://www.laurentkempe.com/post/Application-Acceptance-Testing.aspx), we went, beginning of that week, in some very interesting discussions during a meeting at [Innoveo](http://www.innoveo.com/) in which I presented the differences between Mock and Stub in Unit Test. After the meeting as I often do I gather up from the web some posts which expressed in more details what I was talking about and made some extract of the posts.
 

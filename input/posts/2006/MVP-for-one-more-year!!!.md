@@ -5,8 +5,6 @@ date: 4/5/2006 7:23:00 AM
 updated: 4/5/2006 7:23:00 AM
 disqusIdentifier: 20060405072300
 tags: ["Microsoft MVP"]
-alias:
- - /post/MVP-for-one-more-year!!!.aspx/index.html
 ---
 I was renewed as Microsoft MVP in the category Visual Developer - 
 ASP/ASP.NET. Great!!!

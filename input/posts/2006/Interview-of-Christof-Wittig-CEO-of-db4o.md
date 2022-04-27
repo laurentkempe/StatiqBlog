@@ -5,8 +5,6 @@ date: 12/2/2006 6:51:14 PM
 updated: 12/2/2006 6:51:14 PM
 disqusIdentifier: 20061202065114
 tags: [".NET Framework 2.0"]
-alias:
- - /post/Interview-of-Christof-Wittig-CEO-of-db4o.aspx/index.html
 ---
 [Patrice Lamarche](http://blogs.codes-sources.com/patrice) had the opportunity to [interview Christoff Wittig](http://blogs.codes-sources.com/patrice/archive/2006/11/30/interview-christof-wittig-ceo-de-db4o.aspx), CEO of [db4objects](http://www.db4o.com).
 

@@ -5,8 +5,6 @@ date: 8/9/2008 6:26:19 AM
 updated: 8/9/2008 6:26:19 AM
 disqusIdentifier: 20080809062619
 tags: ["Tech Head Brothers", "VSTO", "WCF", "Office 2007"]
-alias:
- - /post/Tech-Head-Brothers-new-authoring-tool-step-8.aspx/index.html
 ---
 For three night now I focused on one scenario for the Tech Head Brothers authoring tool:
 

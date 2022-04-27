@@ -5,8 +5,6 @@ date: 11/18/2007 8:21:52 PM
 updated: 11/18/2007 8:21:52 PM
 disqusIdentifier: 20071118082152
 tags: ["innoveo solutions"]
-alias:
- - /post/Le-Web-3-in-Paris.aspx/index.html
 ---
 ![Le Web 3 '07](http://www.loiclemeur.com/english/leweb3registration2007small.jpeg)I will be in Paris for [Le Web 3 '07](http://www.leweb3.com/) from Monday 10 December 2007 evening to Thursday 13 December 2007 mid-day. 
 

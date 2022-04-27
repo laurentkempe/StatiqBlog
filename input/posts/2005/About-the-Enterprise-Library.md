@@ -4,8 +4,6 @@ permalink: /2005/01/29/About-the-Enterprise-Library/
 date: 1/29/2005 5:51:00 PM
 updated: 1/29/2005 5:51:00 PM
 disqusIdentifier: 20050129055100
-alias:
- - /post/About-the-Enterprise-Library.aspx/index.html
 ---
 [MSDN](http://msdn.microsoft.com) just published [some 
 pages](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/entlib.asp) describing each Application Blocks distributed in the [Enterprise 

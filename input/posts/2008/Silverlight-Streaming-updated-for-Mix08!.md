@@ -5,8 +5,6 @@ date: 2/29/2008 8:11:46 PM
 updated: 2/29/2008 8:11:46 PM
 disqusIdentifier: 20080229081146
 tags: ["Tech Head Brothers", "Silverlight", "Silverlight Streaming"]
-alias:
- - /post/Silverlight-Streaming-updated-for-Mix08!.aspx/index.html
 ---
 First of all it goes from 4Gb to 10Gb, **whouah**!
 

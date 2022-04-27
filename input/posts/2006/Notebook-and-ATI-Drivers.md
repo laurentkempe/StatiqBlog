@@ -5,8 +5,6 @@ date: 11/5/2006 6:46:34 PM
 updated: 11/5/2006 6:46:34 PM
 disqusIdentifier: 20061105064634
 tags: ["Tools"]
-alias:
- - /post/Notebook-and-ATI-Drivers.aspx/index.html
 ---
 I have a nx8220 notebook from HP. I was facing issues with the display drivers slowing down the whole machine. I still have some issues for example when I get the notebook off or put it on the docking station. The screen can't switch resolution from external to notebook screen.
 

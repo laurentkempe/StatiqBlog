@@ -4,8 +4,6 @@ permalink: /2006/08/16/Tech-Ed-Richard-not-TechHead-)/
 date: 8/16/2006 7:06:34 AM
 updated: 8/16/2006 7:06:34 AM
 disqusIdentifier: 20060816070634
-alias:
- - /post/Tech-Ed-Richard-not-TechHead-).aspx/index.html
 ---
 When I  was awarded the first time as MVP, one of the first MVP I met was [Richard Clark](http://blogs.developpeur.org/richardc/default.aspx), a cool guy. And I am happy to see some confusion in one of his last post ;)
 

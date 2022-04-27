@@ -5,8 +5,6 @@ date: 5/12/2004 1:59:00 AM
 updated: 5/12/2004 1:59:00 AM
 disqusIdentifier: 20040512015900
 tags: ["Work"]
-alias:
- - /post/Windows-2003-crashes-after-patching-Beginning-of-another-week-of-hell-(.aspx/index.html
 ---
 In the last blog I was talking about the end of two weeks of hell ([End of two weeks of hell](http://weblogs.asp.net/lkempe/archive/2004/05/08/128425.aspx)). I thought it was the end but it starts again this week :-(
 

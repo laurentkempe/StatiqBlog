@@ -5,8 +5,6 @@ date: 6/30/2004 6:32:00 AM
 updated: 6/30/2004 6:32:00 AM
 disqusIdentifier: 20040630063200
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/Visual-Studio-2005-Express-Beta-Products.aspx/index.html
 ---
 This evening I installed on Virtual PC:
 

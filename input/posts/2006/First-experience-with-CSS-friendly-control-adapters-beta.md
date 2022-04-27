@@ -4,8 +4,6 @@ permalink: /2006/04/29/First-experience-with-CSS-friendly-control-adapters-beta/
 date: 4/29/2006 8:41:00 AM
 updated: 4/29/2006 8:41:00 AM
 disqusIdentifier: 20060429084100
-alias:
- - /post/First-experience-with-CSS-friendly-control-adapters-beta.aspx/index.html
 ---
 I had the chance to realize that CSS friendly control adapters beta from the 
 ASP.NET Team was online for a short time and downloaded it, so I had the 

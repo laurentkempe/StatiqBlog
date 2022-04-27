@@ -5,8 +5,6 @@ date: 11/18/2007 8:32:39 PM
 updated: 11/18/2007 8:32:39 PM
 disqusIdentifier: 20071118083239
 tags: ["innoveo solutions"]
-alias:
- - /post/innoveo-solutions-new-office-almost-ready!.aspx/index.html
 ---
 On Friday I was doing home office but it seems that our new [innoveo solutions](http://www.innoveo.com/) office went a step further! 
 

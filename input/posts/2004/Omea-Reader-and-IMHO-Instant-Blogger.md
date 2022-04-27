@@ -5,8 +5,6 @@ date: 12/6/2004 8:07:00 PM
 updated: 12/6/2004 8:07:00 PM
 disqusIdentifier: 20041206080700
 tags: ["Tools"]
-alias:
- - /post/Omea-Reader-and-IMHO-Instant-Blogger.aspx/index.html
 ---
 <font face="Verdana" size="2">
 

@@ -5,8 +5,6 @@ date: 4/30/2008 5:05:10 AM
 updated: 5/7/2010 7:45:42 AM
 disqusIdentifier: 20080430050510
 tags: ["Tech Head Brothers", "continuous integration", "Team City"]
-alias:
- - /post/Run-NCover-through-MSBuild-in-Team-City.aspx/index.html
 ---
 After one comment of Chris Walquist on one of [my last post about Team City integration of NCover](http://weblogs.asp.net/lkempe/archive/2008/03/30/integration-of-ncover-into-team-city-for-tech-head-brothers.aspx) here is the way I run NCover through MSBuild in Team City.
 

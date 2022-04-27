@@ -5,8 +5,6 @@ date: 3/14/2009 12:53:38 AM
 updated: 3/14/2009 12:53:38 AM
 disqusIdentifier: 20090314125338
 tags: ["ReSharper"]
-alias:
- - /post/ReSharper-45-Beta-Released.aspx/index.html
 ---
 Jura Gorohovsky just posted on the release of a [public beta of ReSharper 4.5](http://blogs.jetbrains.com/dotnet/2009/03/resharper-45-beta-released/)
 

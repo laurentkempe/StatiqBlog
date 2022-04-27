@@ -4,8 +4,6 @@ permalink: /2009/10/27/Build-ClickOnce-deployment-packages-using-MSBuild-and-Tea
 date: 10/27/2009 8:25:26 PM
 updated: 10/27/2009 8:25:26 PM
 disqusIdentifier: 20091027082526
-alias:
- - /post/Build-ClickOnce-deployment-packages-using-MSBuild-and-Team-City.aspx/index.html
 ---
 The other day I was requested to automate our build process to issue different [ClickOnce](http://msdn.microsoft.com/en-us/library/t71a733d(VS.80).aspx) setup for the same application. The main difference was some configuration files pointing to different back end web services.
 

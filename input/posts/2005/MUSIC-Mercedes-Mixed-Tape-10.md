@@ -4,8 +4,6 @@ permalink: /2005/12/27/MUSIC-Mercedes-Mixed-Tape-10/
 date: 12/27/2005 11:57:00 PM
 updated: 12/27/2005 11:57:00 PM
 disqusIdentifier: 20051227115700
-alias:
- - /post/MUSIC-Mercedes-Mixed-Tape-10.aspx/index.html
 ---
 I often, not to say always, get the news from [Didier](http://www.didierbeck.com) (yeah you start to be old also ;) 
 and I really like the mixed tape so I decided to post about it.

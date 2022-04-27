@@ -5,8 +5,6 @@ date: 10/26/2008 10:50:03 PM
 updated: 10/26/2008 10:50:03 PM
 disqusIdentifier: 20081026105003
 tags: ["PDC 2008"]
-alias:
- - /post/Arrived-at-Los-Angeles-for-PDC-2008.aspx/index.html
 ---
 We finally arrived in Los Angeles, [Sébastien Ros](http://www.dotnetguru2.org/sebastienros/) and myself after quite a trip.
 

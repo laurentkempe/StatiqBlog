@@ -5,8 +5,6 @@ date: 4/9/2011 4:39:00 AM
 updated: 4/9/2011 4:48:56 AM
 disqusIdentifier: 20110409043900
 tags: ["Silverlight"]
-alias:
- - /post/Disabling-Silverlight-addon-in-IE9-is-not-such-a-good-idea.aspx/index.html
 ---
 The other day I disabled Silverlight add-on in IE9. Don’t ask me why I don’t really remember, and I prefer not.
 

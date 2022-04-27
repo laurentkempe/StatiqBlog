@@ -5,8 +5,6 @@ date: 10/17/2007 4:42:26 AM
 updated: 10/17/2007 4:42:26 AM
 disqusIdentifier: 20071017044226
 tags: ["Tech Head Brothers", "Silverlight", "Silverlight Streaming"]
-alias:
- - /post/Alpha-vertical-slice-of-Silverlight-Streaming-on-Tech-Head-Brothers.aspx/index.html
 ---
 Tonight I reached a new milestone on my current development for my portal Tech Head Brothers.
 

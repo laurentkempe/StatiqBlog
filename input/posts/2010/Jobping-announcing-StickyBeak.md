@@ -5,8 +5,6 @@ date: 6/26/2010 8:25:21 PM
 updated: 6/26/2010 8:25:21 PM
 disqusIdentifier: 20100626082521
 tags: ["Jobping", "ASP.NET", "ASP.NET MVC"]
-alias:
- - /post/Jobping-announcing-StickyBeak.aspx/index.html
 ---
 As said when we launched [Jobping](http://www.jobping.com) [Open Source Short Urls Service](http://blog.jobping.com/2010/05/jobping-open-source-short-urls-service.html), we at [Jobping](http://www.jobping.com) are committed to open source.
 

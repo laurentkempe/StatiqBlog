@@ -5,8 +5,6 @@ date: 1/28/2010 4:50:57 AM
 updated: 5/7/2010 7:53:18 AM
 disqusIdentifier: 20100128045057
 tags: ["WPF", "unit test", "white"]
-alias:
- - /post/Automated-WPF-functional-tests-using-White.aspx/index.html
 ---
 I’d like to introduce a tool that I have added for a month or two in my toolset. This tool is [White](http://white.codeplex.com/) from [ThoughtWorks](http://opensource.thoughtworks.com/). Here is the description of White: 
 

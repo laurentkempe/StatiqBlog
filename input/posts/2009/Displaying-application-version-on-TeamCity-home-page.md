@@ -5,8 +5,6 @@ date: 11/12/2009 6:00:06 PM
 updated: 11/12/2009 6:00:06 PM
 disqusIdentifier: 20091112060006
 tags: ["Team City"]
-alias:
- - /post/Displaying-application-version-on-TeamCity-home-page.aspx/index.html
 ---
 I wanted today to display the application version in front of our builds, something I already did on the past but never with the VCS version.
 

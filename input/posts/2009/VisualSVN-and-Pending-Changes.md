@@ -5,8 +5,6 @@ date: 11/30/2009 7:09:37 PM
 updated: 11/30/2009 7:09:37 PM
 disqusIdentifier: 20091130070937
 tags: ["VisualSVN"]
-alias:
- - /post/VisualSVN-and-Pending-Changes.aspx/index.html
 ---
 I am using and enjoying for some time now [VisualSVN](http://www.visualsvn.com/visualsvn/) plugin in Visual Studio 2008. I just discovered a nice feature that is not part of the normal menu but that you can easily add to; the pending changes window:
 

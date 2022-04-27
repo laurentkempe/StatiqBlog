@@ -4,8 +4,6 @@ permalink: /2003/06/27/Deployment/
 date: 6/27/2003 5:27:00 AM
 updated: 6/27/2003 5:27:00 AM
 disqusIdentifier: 20030627052700
-alias:
- - /post/Deployment.aspx/index.html
 ---
 
 

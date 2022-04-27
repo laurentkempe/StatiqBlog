@@ -5,8 +5,6 @@ date: 7/16/2005 6:05:00 AM
 updated: 7/16/2005 6:05:00 AM
 disqusIdentifier: 20050716060500
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "Team System"]
-alias:
- - /post/Team-System-projects-book-development-of-Tech-Head-Brothers-website.aspx/index.html
 ---
 First project about Team System is a book that I started with my friend 
 [Kader 

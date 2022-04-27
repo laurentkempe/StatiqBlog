@@ -5,8 +5,6 @@ date: 9/12/2007 4:36:51 PM
 updated: 9/12/2007 4:36:51 PM
 disqusIdentifier: 20070912043651
 tags: ["Silverlight", "Silverlight Streaming", "Expression Encoder"]
-alias:
- - /post/Silverlight-Streaming-hosting-and-Expression-Encoder.aspx/index.html
 ---
 ***How do you host your video content created with ***[***Expression Encoder***](http://www.microsoft.com/expression/products/overview.aspx?key=encoder)*** on ***[***Silverlight Streaming***](http://silverlight.live.com/)*** ?***
 

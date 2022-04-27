@@ -4,8 +4,6 @@ permalink: /2010/05/13/Automated-functional-tests-using-Watin-and-MSpec/
 date: 5/13/2010 9:54:12 AM
 updated: 5/14/2010 10:02:06 AM
 disqusIdentifier: 20100513095412
-alias:
- - /post/Automated-functional-tests-using-Watin-and-MSpec.aspx/index.html
 ---
 I am conducting a [spike](http://searchsoftwarequality.techtarget.com/sDefinition/0,,sid92_gci1306773,00.html) for a couple of evening on the way we might automate our functional tests at [Jobping](http://www.jobping.com).  
 

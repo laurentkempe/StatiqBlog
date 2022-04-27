@@ -5,8 +5,6 @@ date: 9/15/2007 7:08:49 AM
 updated: 9/15/2007 7:08:49 AM
 disqusIdentifier: 20070915070849
 tags: ["Fun"]
-alias:
- - /post/phew!-I-got-pressure-from-Richard-and-R2333bdo-).aspx/index.html
 ---
 <script type="text/javascript" src="http://web20.designinterviews.com/badge.php?_web=40890ae62590fb25be72723e&_20=efeb29d16e49ae93ada4793e137672fc"></script> 
 

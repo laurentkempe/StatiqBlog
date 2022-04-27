@@ -4,8 +4,6 @@ permalink: /2009/06/09/Did-you-know-that-if-youe28099re-an-MSDN-Subscriber-you-c
 date: 6/9/2009 6:55:34 PM
 updated: 6/9/2009 6:55:34 PM
 disqusIdentifier: 20090609065534
-alias:
- - /post/Did-you-know-that-if-youe28099re-an-MSDN-Subscriber-you-can-get-Telerik-WPF-controls-FREE-Misfit-Geek.aspx/index.html
 ---
 > Telerik, a leading vendor of .NET UI components and tools, has a special offer for all active MSDN subscribers !!
 <!-- more -->

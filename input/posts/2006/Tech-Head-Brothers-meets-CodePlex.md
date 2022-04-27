@@ -5,8 +5,6 @@ date: 6/30/2006 6:56:00 AM
 updated: 6/30/2006 6:56:00 AM
 disqusIdentifier: 20060630065600
 tags: ["Tech Head Brothers", "Team System"]
-alias:
- - /post/Tech-Head-Brothers-meets-CodePlex.aspx/index.html
 ---
 That's it!!! I decided to open the code of the second release of my authoring/publishing tool used on [Tech Head Brothers](http://www.techheadbrothers.com) portal.
 

@@ -5,8 +5,6 @@ date: 10/21/2010 5:54:59 AM
 updated: 10/21/2010 5:56:12 AM
 disqusIdentifier: 20101021055459
 tags: ["Team City", "ClickOnce"]
-alias:
- - /post/Building-ClickOnce-targeting-NET-Framework-4-with-TeamCity.aspx/index.html
 ---
 I already talked about this topic in a previous post, [Building ClickOnce with TeamCity](http://www.laurentkempe.com/post/Building-ClickOnce-with-TeamCity.aspx), which was about .NET framework 3.5. This time I will talk about .NET framework 4.
 

@@ -5,8 +5,6 @@ date: 11/6/2011 2:46:45 AM
 updated: 11/7/2011 11:11:51 PM
 disqusIdentifier: 20111106024645
 tags: ["WP7", "Windows Phone 7"]
-alias:
- - /post/Unlock-your-Windows-Phone-7-with-ChevronWP7-Labs.aspx/index.html
 ---
 ![](http://farm7.static.flickr.com/6234/6314988125_4b9a8ce740_o.png)
 

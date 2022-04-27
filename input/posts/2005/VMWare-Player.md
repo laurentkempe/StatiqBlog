@@ -5,8 +5,6 @@ date: 10/24/2005 3:23:00 PM
 updated: 10/24/2005 3:23:00 PM
 disqusIdentifier: 20051024032300
 tags: ["Tools"]
-alias:
- - /post/VMWare-Player.aspx/index.html
 ---
 VMWare realized a Player version of there virtualization software: [VMWare Player](http://www.vmware.com/products/player/). Basically it is 
 a version of VMWare that let you do almost everything except creating new 

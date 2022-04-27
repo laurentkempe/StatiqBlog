@@ -4,8 +4,6 @@ permalink: /2009/11/03/TeamCity-migration-tip/
 date: 11/3/2009 12:39:27 AM
 updated: 11/3/2009 12:39:27 AM
 disqusIdentifier: 20091103123927
-alias:
- - /post/TeamCity-migration-tip.aspx/index.html
 ---
 Today I am migrating a [TeamCity](http://www.jetbrains.com/teamcity/index.html) installation from an old server to a new server and discovered that it is really easy to do that!
 

@@ -5,8 +5,6 @@ date: 1/29/2005 6:33:00 PM
 updated: 1/29/2005 6:33:00 PM
 disqusIdentifier: 20050129063300
 tags: ["Microsoft MVP", ".NET Development"]
-alias:
- - /post/ComponentArt-launches-WebUI-Version-21.aspx/index.html
 ---
 <table>
   <tbody>

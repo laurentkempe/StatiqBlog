@@ -5,8 +5,6 @@ date: 11/30/2007 7:16:27 AM
 updated: 11/30/2007 7:16:27 AM
 disqusIdentifier: 20071130071627
 tags: ["Visual Studio"]
-alias:
- - /post/Nice-feature-of-Visual-Studio-20052008.aspx/index.html
 ---
 ![](http://farm3.static.flickr.com/2180/2073940961_2248d4831e_o.jpg)
 

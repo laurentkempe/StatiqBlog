@@ -5,8 +5,6 @@ date: 4/27/2010 5:03:57 PM
 updated: 4/27/2010 7:27:31 PM
 disqusIdentifier: 20100427050357
 tags: ["Jobping"]
-alias:
- - /post/Press-Release-Jobping-launches-niche-job-website-listing-Microsoft-skilled-vacancies.aspx/index.html
 ---
 [Press Release](http://blog.jobping.com/2010/04/jobping-launches-niche-job-website.html)
 

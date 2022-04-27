@@ -5,8 +5,6 @@ date: 9/27/2012 5:22:10 PM
 updated: 10/16/2012 5:46:31 AM
 disqusIdentifier: 20120927052210
 tags: ["C#", "TDD", "Kata", "ReSharper", "NCrunch"]
-alias:
- - /post/Test-Driven-Development-Kata-String-Calculator.aspx/index.html
 ---
 The subject of this article is the [String Calculator](http://osherove.com/tdd-kata-1/) proposed by Roy Osherove. The Kata is done in C# uses Visual Studio 2012, [JetBrains Resharper 7](www.jetbrains.com/resharper/) and [NCrunch](http://ncrunch.net).
 

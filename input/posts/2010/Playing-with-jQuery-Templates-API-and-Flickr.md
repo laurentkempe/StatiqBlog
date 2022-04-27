@@ -5,8 +5,6 @@ date: 10/5/2010 9:30:02 AM
 updated: 10/5/2010 9:30:02 AM
 disqusIdentifier: 20101005093002
 tags: ["jQuery"]
-alias:
- - /post/Playing-with-jQuery-Templates-API-and-Flickr.aspx/index.html
 ---
 Last week I spent some time playing with the today’s [announced jQuery Templates API](http://blog.jquery.com/2010/10/04/new-official-jquery-plugins-provide-templating-data-linking-and-globalization/)       
 It was funny to see the different announcement tonight; [Scott](http://weblogs.asp.net/scottgu/archive/2010/10/04/jquery-templates-data-link-and-globalization-accepted-as-official-jquery-plugins.aspx), [JQuery Blog](http://blog.jquery.com/2010/10/04/new-official-jquery-plugins-provide-templating-data-linking-and-globalization/), [James](http://www.jamessenior.com/2010/09/30/jquery-templating-in-the-wild/)…

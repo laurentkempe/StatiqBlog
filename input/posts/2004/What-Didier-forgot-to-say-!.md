@@ -4,8 +4,6 @@ permalink: /2004/08/27/What-Didier-forgot-to-say-!/
 date: 8/27/2004 7:05:00 AM
 updated: 8/27/2004 7:05:00 AM
 disqusIdentifier: 20040827070500
-alias:
- - /post/What-Didier-forgot-to-say-!.aspx/index.html
 ---
 Thats right that we had some great time yesterday!!! But before that we worked like hell. Thursday , Friday, Monday for a total of more then 50 hours of workwith Philippe. Lorenz joined us on Monday. And today it was the same (9AM to 11PM). So I think we deserved that free half a day an dwe enjoyed it.
 

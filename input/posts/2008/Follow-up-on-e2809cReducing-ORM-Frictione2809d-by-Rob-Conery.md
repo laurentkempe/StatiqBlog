@@ -5,8 +5,6 @@ date: 11/5/2008 7:20:24 AM
 updated: 11/5/2008 7:20:24 AM
 disqusIdentifier: 20081105072024
 tags: ["unit test", "Euss", "ORM", "Agile"]
-alias:
- - /post/Follow-up-on-e2809cReducing-ORM-Frictione2809d-by-Rob-Conery.aspx/index.html
 ---
 In my development process I do use what Rob is describing in his post “[Crazy Talk: Reducing ORM Friction](http://blog.wekeroad.com/blog/crazy-talk-reducing-orm-friction/)” with some slight differences.
 

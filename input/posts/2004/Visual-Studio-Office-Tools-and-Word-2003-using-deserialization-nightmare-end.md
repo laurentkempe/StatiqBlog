@@ -5,8 +5,6 @@ date: 8/28/2004 5:32:00 PM
 updated: 8/28/2004 5:32:00 PM
 disqusIdentifier: 20040828053200
 tags: ["Tech Head Brothers", ".NET Development"]
-alias:
- - /post/Visual-Studio-Office-Tools-and-Word-2003-using-deserialization-nightmare-end.aspx/index.html
 ---
 I finally fixed the issue I reported in the post "[New milestone reached in the development of the authoring tool for Tech Head Brothers French portal](http://weblogs.asp.net/lkempe/archive/2004/08/23/219122.aspx) ". I am still waiting some feedback from Peter (he might be in holidays).
 

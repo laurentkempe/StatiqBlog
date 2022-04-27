@@ -5,8 +5,6 @@ date: 4/1/2008 6:04:49 AM
 updated: 4/1/2008 6:04:49 AM
 disqusIdentifier: 20080401060449
 tags: ["Tech Head Brothers", "Team City"]
-alias:
- - /post/Team-City-31-Duplicate-Finder-for-Tech-Head-Brothers.aspx/index.html
 ---
 For the development of the next version of [Tech Head Brothers](http://www.techheadbrothers.com/) I wanted to have a continuous integration server running for our small team. I used for that [Team City 3](http://www.jetbrains.com/teamcity) from [JetBrains](http://www.jetbrains.com/). 
 

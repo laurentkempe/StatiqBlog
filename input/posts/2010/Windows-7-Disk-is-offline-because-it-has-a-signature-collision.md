@@ -5,8 +5,6 @@ date: 4/3/2010 2:56:31 AM
 updated: 9/25/2013 9:57:57 PM
 disqusIdentifier: 20100403025631
 tags: ["Windows 7"]
-alias:
- - /post/Windows-7-Disk-is-offline-because-it-has-a-signature-collision.aspx/index.html
 ---
 When I switched on today my second hard drive I had the following issue displayed 
 

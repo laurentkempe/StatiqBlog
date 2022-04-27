@@ -4,8 +4,6 @@ permalink: /2004/07/14/A-good-article-to-read-about-ways-to-update-your-code-to-
 date: 7/14/2004 8:51:00 AM
 updated: 7/14/2004 8:51:00 AM
 disqusIdentifier: 20040714085100
-alias:
- - /post/A-good-article-to-read-about-ways-to-update-your-code-to-make-it-more-testable.aspx/index.html
 ---
 It is about ways to change your coding so that your code is more testable but it is also a good reminder about good design. I really liked the [article](http://www.theserverside.net/articles/showarticle.tss?id=10WaysTestableCode), nice work [Justin](http://www.gehtland.com/).
 

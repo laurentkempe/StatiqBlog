@@ -5,8 +5,6 @@ date: 8/29/2014 5:50:54 PM
 updated: 8/29/2014 5:58:54 PM
 disqusIdentifier: 20140829055054
 tags: ["Visual Studio"]
-alias:
- - /post/Git-Diff-Margin-v20-released.aspx/index.html
 ---
 I am pleased to announce that Git Diff Margin v2.0 is released!
 

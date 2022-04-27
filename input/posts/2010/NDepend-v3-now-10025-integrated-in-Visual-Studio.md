@@ -5,8 +5,6 @@ date: 1/28/2010 7:01:47 PM
 updated: 1/28/2010 7:01:47 PM
 disqusIdentifier: 20100128070147
 tags: ["continuous integration", "Team City", "NDepend"]
-alias:
- - /post/NDepend-v3-now-10025-integrated-in-Visual-Studio.aspx/index.html
 ---
 [Patrick](http://codebetter.com/blogs/patricksmacchia/) just announced on his blog the launch of the new [NDepend v3](http://www.ndepend.com/Version3BetaProgram.aspx). It is still in beta but very stable. I am testing it for a month now and enjoy very much it’s integration in Visual Studio 2008. I was using it and will continue to use it in our continuous integration server, [TeamCity](http://www.jetbrains.com/teamcity/index.html). But getting feedback right out of the developer environment is a very interesting feature.
 

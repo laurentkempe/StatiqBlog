@@ -5,8 +5,6 @@ date: 6/6/2006 1:38:00 AM
 updated: 6/6/2006 1:38:00 AM
 disqusIdentifier: 20060606013800
 tags: ["Work"]
-alias:
- - /post/Second-step-of-a-long-migration-weekend-reached.aspx/index.html
 ---
 My migration weekend started on Friday at 5:00PM, you might read more about here : "[First step of a long migration weekend reached](/lkempe/archive/2006/06/03/First-step-of-a-long-migration-weekend-reached.aspx)".
 

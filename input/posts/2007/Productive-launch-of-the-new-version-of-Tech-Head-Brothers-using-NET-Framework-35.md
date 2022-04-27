@@ -5,8 +5,6 @@ date: 12/19/2007 7:38:55 AM
 updated: 12/19/2007 7:38:55 AM
 disqusIdentifier: 20071219073855
 tags: ["Tech Head Brothers"]
-alias:
- - /post/Productive-launch-of-the-new-version-of-Tech-Head-Brothers-using-NET-Framework-35.aspx/index.html
 ---
 I just pushed to production the new version of my French portal [Tech Head Brothers](http://www.techheadbrothers.com/) that uses .NET Framework 3.5.
 

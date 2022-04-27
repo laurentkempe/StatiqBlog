@@ -5,8 +5,6 @@ date: 3/19/2008 10:22:37 PM
 updated: 3/19/2008 10:22:37 PM
 disqusIdentifier: 20080319102237
 tags: ["Silverlight"]
-alias:
- - /post/Surface-Demo-Silverlight-2-Update-and-DeepZoom.aspx/index.html
 ---
 I have nothing to say! You should watch this demo from [Michael Schwarz](http://weblogs.asp.net/mschwarz), it is really impressive.
 

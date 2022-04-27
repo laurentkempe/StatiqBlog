@@ -5,8 +5,6 @@ date: 2/15/2008 6:20:05 PM
 updated: 2/15/2008 6:20:05 PM
 disqusIdentifier: 20080215062005
 tags: ["Vista"]
-alias:
- - /post/Vista-SP1-installed.aspx/index.html
 ---
 ![](http://farm3.static.flickr.com/2174/2266768032_274cc8d9f6_o.jpg)
 

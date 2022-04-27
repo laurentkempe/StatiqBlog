@@ -5,8 +5,6 @@ date: 11/9/2004 6:36:00 AM
 updated: 11/9/2004 6:36:00 AM
 disqusIdentifier: 20041109063600
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/CopySourceAsHtml-Visual-Studio-2003-plugin.aspx/index.html
 ---
 Ever wanted to copy paste some code from Visual Studio .NET 2003 to your blog tool (e.g. [Sauce Reader](http://www.synop.com/Products/SauceReader/)) and keep the colorization ?<br>Here is the solution, [CopySourceAsHtml](http://www.jtleigh.com/people/colin/blog/archives/2004/11/copysourceashtm_3.html), an awesome plugin from [Colin Coller](http://www.jtleigh.com/people/colin/blog/). The cool point is that if "<em>VS.NET can highlight it, CSAH can copy it, and your code should look the same in your browser as it does in your editor</em>". I was a bit disappointed not finding the context menu in the editor for other source then C# but you might add a keyboard shortcups as described on this [page](http://www.jtleigh.com/people/colin/blog/archives/2004/10/copysourceashtm_1.html).
 

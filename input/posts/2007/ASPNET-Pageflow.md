@@ -5,8 +5,6 @@ date: 6/8/2007 9:15:25 PM
 updated: 6/8/2007 9:15:25 PM
 disqusIdentifier: 20070608091525
 tags: ["ASP.NET"]
-alias:
- - /post/ASPNET-Pageflow.aspx/index.html
 ---
 I don't get it!!! I thought that pageflow will be soon integrated into ASP.NET directly! When will it be and in which form ?
 

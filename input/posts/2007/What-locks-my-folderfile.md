@@ -5,8 +5,6 @@ date: 10/10/2007 6:39:49 PM
 updated: 10/10/2007 6:39:49 PM
 disqusIdentifier: 20071010063949
 tags: ["Tools"]
-alias:
- - /post/What-locks-my-folderfile.aspx/index.html
 ---
 I guess you already had the following problem; you want to delete a folder or a file and the operating system just tell you that it is impossible because one application locks it. For sure you have no clue which is the bad application doing it!
 

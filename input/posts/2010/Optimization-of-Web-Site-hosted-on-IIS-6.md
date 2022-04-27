@@ -5,8 +5,6 @@ date: 1/3/2010 7:33:51 PM
 updated: 1/3/2010 7:33:51 PM
 disqusIdentifier: 20100103073351
 tags: ["IIS"]
-alias:
- - /post/Optimization-of-Web-Site-hosted-on-IIS-6.aspx/index.html
 ---
 The other day I had to re-install my whole server which is hosting [Tech Head Brothers](http://www.techheadbrothers.com/). I had also to redo the configuration to have IIS deliver compressed content. I was quite sure to have a post on this but the only thing I could find was “[Optimization of a Web Site - Using Content Expiration (IIS 6.0)](http://weblogs.asp.net/lkempe/archive/2007/07/25/optimization-of-a-web-site-using-content-expiration-iis-6-0.aspx)”
 

@@ -5,8 +5,6 @@ date: 11/11/2009 8:24:47 PM
 updated: 11/11/2009 8:24:47 PM
 disqusIdentifier: 20091111082447
 tags: ["continuous integration", "Team City", "MSBuild", "ClickOnce"]
-alias:
- - /post/Automating-Publish-of-ClickOnce-with-TeamCity.aspx/index.html
 ---
 The other day I published different posts about the way I automated our build process at [Innoveo Solutions](http://www.innoveo.com/) to generate different ClickOnce setup using [TeamCity](http://www.jetbrains.com/teamcity/index.html): 
 

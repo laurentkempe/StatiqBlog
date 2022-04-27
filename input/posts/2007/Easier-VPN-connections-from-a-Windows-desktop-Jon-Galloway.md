@@ -5,8 +5,6 @@ date: 9/6/2007 3:28:04 PM
 updated: 9/6/2007 3:28:04 PM
 disqusIdentifier: 20070906032804
 tags: ["Tools"]
-alias:
- - /post/Easier-VPN-connections-from-a-Windows-desktop-Jon-Galloway.aspx/index.html
 ---
 Jon made a great post about easier VPN usage.
 

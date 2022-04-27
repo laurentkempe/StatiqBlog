@@ -5,8 +5,6 @@ date: 2/25/2009 10:30:18 PM
 updated: 5/7/2010 7:45:43 AM
 disqusIdentifier: 20090225103018
 tags: ["Tech Head Brothers"]
-alias:
- - /post/Tech-Head-Brothers-in-StBarth-French-West-Indies.aspx/index.html
 ---
 Thanks to [Didier](http://www.didierbeck.com/), now [Tech Head Brothers](http://www.techheadbrothers.com/), my french .NET portal is also known in the French West Indies island of St.Barth.
 

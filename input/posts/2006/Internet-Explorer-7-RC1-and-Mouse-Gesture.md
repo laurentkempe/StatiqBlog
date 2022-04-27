@@ -5,8 +5,6 @@ date: 8/26/2006 10:07:40 PM
 updated: 8/26/2006 10:07:40 PM
 disqusIdentifier: 20060826100740
 tags: ["Tools"]
-alias:
- - /post/Internet-Explorer-7-RC1-and-Mouse-Gesture.aspx/index.html
 ---
 I downloaded for the first time the new version of Internet Explorer and I find quite cool.
 

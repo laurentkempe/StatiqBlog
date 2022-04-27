@@ -5,8 +5,6 @@ date: 7/15/2010 1:01:39 AM
 updated: 7/15/2010 1:01:39 AM
 disqusIdentifier: 20100715010139
 tags: ["Agile", "BDD", "innoveo solutions", "Jobping", "acceptance test"]
-alias:
- - /post/Application-Acceptance-Testing.aspx/index.html
 ---
 Yesterday evening I found a set of Google blog posts talking about web application acceptance testing which reflect Google experience through “Several years of experience across multiple project teams”.
 

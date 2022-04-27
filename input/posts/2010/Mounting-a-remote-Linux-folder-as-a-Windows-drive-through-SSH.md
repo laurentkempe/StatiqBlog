@@ -5,8 +5,6 @@ date: 11/27/2010 3:39:41 AM
 updated: 11/27/2010 3:39:41 AM
 disqusIdentifier: 20101127033941
 tags: ["Tools"]
-alias:
- - /post/Mounting-a-remote-Linux-folder-as-a-Windows-drive-through-SSH.aspx/index.html
 ---
 There are some times in which you need to come to some extreme solutions. Having two days of trials without success to have a portlet running in a local Tomcat with Day portal I came to the following solution.
 

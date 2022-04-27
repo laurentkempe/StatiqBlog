@@ -5,8 +5,6 @@ date: 6/1/2007 7:41:15 AM
 updated: 6/1/2007 7:41:15 AM
 disqusIdentifier: 20070601074115
 tags: ["Work"]
-alias:
- - /post/LinkedIn-and-Xing-profiles.aspx/index.html
 ---
 You might take a look to my LinkedIn and Xing profiles clicking on the following pictures:
 

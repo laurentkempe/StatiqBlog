@@ -5,8 +5,6 @@ date: 2/21/2009 5:54:16 PM
 updated: 2/21/2009 5:54:16 PM
 disqusIdentifier: 20090221055416
 tags: ["Silverlight", "Java"]
-alias:
- - /post/Eclipse4SL-e28093-Eclipse-Tools-for-Silverlight.aspx/index.html
 ---
 This is an interessting video about the plugin [eclipse4SL](http://www.eclipse4sl.org/) from [Soyatec](http://www.soyatec.com/).
 

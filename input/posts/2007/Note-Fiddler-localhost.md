@@ -5,8 +5,6 @@ date: 6/5/2007 6:21:49 PM
 updated: 5/7/2010 7:45:48 AM
 disqusIdentifier: 20070605062149
 tags: ["Tools", "Note"]
-alias:
- - /post/Note-Fiddler-localhost.aspx/index.html
 ---
 That's just a reminder for me about [Fiddler](http://www.fiddler2.com/) and localhost/127.0.0.1:
 

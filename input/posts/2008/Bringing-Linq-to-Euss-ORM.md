@@ -5,8 +5,6 @@ date: 5/16/2008 1:53:12 AM
 updated: 5/16/2008 1:53:12 AM
 disqusIdentifier: 20080516015312
 tags: ["Tech Head Brothers", "NDepend", "Euss", "ORM", "Linq"]
-alias:
- - /post/Bringing-Linq-to-Euss-ORM.aspx/index.html
 ---
 [Euss stand for Evaluant Universal Storage Services](http://euss.evaluant.com/), it's a great open source (MIT License) Object-Relational mapping framework.
 

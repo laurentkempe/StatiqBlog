@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm9.staticflickr.com/8094/8567352477_59d7bc06c0_q.jpg
 coverCaption: "Anse Cafard, Martinique"
 tags: ["Git", "Tools", "Visual Studio"]
-alias:
- - /post/Git-Diff-Margin-display-Git-Diff-on-the-margin-of-the-current-file.aspx/index.html
 ---
 <!-- [![Levé du jour](http://farm9.staticflickr.com/8094/8567352477_59d7bc06c0_m.jpg)](http://www.flickr.com/photos/laurentkempe/8567352477/ "Levé du jour by Laurent Kempé, on Flickr") -->
 

@@ -5,8 +5,6 @@ date: 4/2/2004 2:17:00 AM
 updated: 4/2/2004 2:17:00 AM
 disqusIdentifier: 20040402021700
 tags: [".NET Development"]
-alias:
- - /post/Best-Practices-for-Representing-XML-in-the-NET-Framework-Summary.aspx/index.html
 ---
 Thats a summary of the [article from Dare Obasanjo on MSDN](http://msdn.microsoft.com/xml/default.aspx?pull=/library/en-us/dnexxml/html/xml03172004.asp). 
 <h4>Classes with Fields or Properties that Hold XML</h4>If a class has a field or property that is an XML document or fragment, it should provide mechanisms for manipulating the property as both a string and as an <b>XmlReader</b>. 

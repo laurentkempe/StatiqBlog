@@ -5,8 +5,6 @@ date: 8/27/2010 9:18:30 AM
 updated: 8/27/2010 9:19:47 AM
 disqusIdentifier: 20100827091830
 tags: ["Windows 7"]
-alias:
- - /post/Windows-7-USBDVD-Download-Tool.aspx/index.html
 ---
 Tonight during the preparation of an usb stick using [Windows 7 USB/DVD Download](http://store.microsoft.com/Help/ISO-Tool) I got an error message about bootsect just at the end of the creation of bootable usb stick. Following the troubleshoot link I arrived on the following
 

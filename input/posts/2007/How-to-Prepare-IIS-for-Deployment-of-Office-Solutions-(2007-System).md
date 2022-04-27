@@ -5,8 +5,6 @@ date: 11/30/2007 8:07:45 AM
 updated: 11/30/2007 8:07:45 AM
 disqusIdentifier: 20071130080745
 tags: ["Note to self"]
-alias:
- - /post/How-to-Prepare-IIS-for-Deployment-of-Office-Solutions-(2007-System).aspx/index.html
 ---
 > Users can install Microsoft Office solutions by opening the deployment manifest from the Web. However, a secured installation of Internet Information Services (IIS) will block the .vsto file name extension. The MIME type must be defined in IIS before you deploy Office solutions by using IIS.
 

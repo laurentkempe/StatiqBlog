@@ -5,8 +5,6 @@ date: 6/22/2007 3:40:56 PM
 updated: 6/22/2007 3:40:56 PM
 disqusIdentifier: 20070622034056
 tags: ["Microsoft MVP"]
-alias:
- - /post/I-am-a-VIB-Very-Important-Blogger.aspx/index.html
 ---
 Nice :-) !!! First I was MVP now I am also VIB.
 

@@ -5,8 +5,6 @@ date: 9/10/2008 5:00:51 AM
 updated: 9/10/2008 5:00:51 AM
 disqusIdentifier: 20080910050051
 tags: ["Visual Studio", "WCF", ".NET Framework 3.5"]
-alias:
- - /post/WCF-Add-Service-Reference-issue-with-Visual-Studio-2008-SP1.aspx/index.html
 ---
 ![](http://farm4.static.flickr.com/3148/2844017150_6ffb53b2ac_o.png) The other day I faced a strange issue when I wanted to add a service reference to the [Tech Head Brothers](http://www.techheadbrothers.com/) authoring tool. The code generated wasn’t compiling with errors located in the file *Reference.cs*. 
 

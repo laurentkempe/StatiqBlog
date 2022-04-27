@@ -5,8 +5,6 @@ date: 4/23/2005 4:40:00 AM
 updated: 4/23/2005 4:40:00 AM
 disqusIdentifier: 20050423044000
 tags: ["Tech Head Brothers", "Tools", ".NET Development"]
-alias:
- - /post/VSTO-2003-with-NET-Framework-Beta-2.aspx/index.html
 ---
 
 

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5184/5561154518_845f00ec72_q.jpg
 coverCaption: "La table du diable depuis la Savane des Pétrifications, Martinique"
 tags: ["Team City", "Agile", "Git", "Productivity"]
-alias:
- - /post/Starting-TeamCity-builds-from-HipChat-using-Github-Hubot.aspx/index.html
 ---
 <!-- [![La table du diable depuis la Savane des Pétrifications](http://farm6.staticflickr.com/5184/5561154518_845f00ec72_m.jpg)](http://www.flickr.com/photos/laurentkempe/5561154518/ "La table du diable depuis la Savane des Pétrifications by Laurent Kempé, on Flickr") -->   
 

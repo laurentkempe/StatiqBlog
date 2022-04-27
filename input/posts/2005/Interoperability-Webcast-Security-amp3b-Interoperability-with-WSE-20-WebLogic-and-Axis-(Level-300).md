@@ -5,8 +5,6 @@ date: 1/27/2005 7:36:00 AM
 updated: 1/27/2005 7:36:00 AM
 disqusIdentifier: 20050127073600
 tags: [".NET Development", "Web Services"]
-alias:
- - /post/Interoperability-Webcast-Security-amp3b-Interoperability-with-WSE-20-WebLogic-and-Axis-(Level-300).aspx/index.html
 ---
 
 

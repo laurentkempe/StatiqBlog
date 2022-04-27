@@ -5,8 +5,6 @@ date: 6/13/2008 5:01:11 PM
 updated: 6/13/2008 5:01:11 PM
 disqusIdentifier: 20080613050111
 tags: ["Tools", "ReSharper"]
-alias:
- - /post/ReSharper-40-with-C-30-support-JetBrains-releases-the-ultimate-Visual-Studio-plugin.aspx/index.html
 ---
 [![](http://farm4.static.flickr.com/3263/2575121850_a280df26f4_o.png)](http://www.jetbrains.com/resharper/index.html)[JetBrains](http://www.jetbrains.com/) has released their ultimate Visual Studio plugin, [ReSharper 4.0](http://www.jetbrains.com/resharper/index.html). 
 

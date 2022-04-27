@@ -5,8 +5,6 @@ date: 6/1/2010 6:57:29 AM
 updated: 9/17/2010 9:56:49 PM
 disqusIdentifier: 20100601065729
 tags: ["Team City", "Jobping"]
-alias:
- - /post/Using-Gmail-as-TeamCity-smtp-server.aspx/index.html
 ---
 Some time ago when I had to reinstall our [Jobping](http://www.jobping.com) Continuous Integration server, which is [Team City](http://www.jetbrains.com/teamcity/?fromServer) I also decided not to reinstall any smtp server but to use Gmail server.
 

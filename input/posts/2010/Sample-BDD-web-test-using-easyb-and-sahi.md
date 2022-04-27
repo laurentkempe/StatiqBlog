@@ -5,8 +5,6 @@ date: 11/9/2010 5:50:39 PM
 updated: 11/9/2010 5:50:39 PM
 disqusIdentifier: 20101109055039
 tags: ["BDD", "Web Application Testing"]
-alias:
- - /post/Sample-BDD-web-test-using-easyb-and-sahi.aspx/index.html
 ---
 I blogged yesterday about “[BDD web application testing using easyB and Sahi](http://www.laurentkempe.com/post/BDD-web-application-testing-using-easyB-and-Sahi.aspx)”
 

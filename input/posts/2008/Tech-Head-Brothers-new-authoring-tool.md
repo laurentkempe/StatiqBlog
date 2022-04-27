@@ -5,8 +5,6 @@ date: 2/15/2008 7:25:23 AM
 updated: 2/15/2008 7:25:23 AM
 disqusIdentifier: 20080215072523
 tags: ["Tech Head Brothers", "Visual Studio", "VSTO", ".NET Framework 3.5", "Office 2007"]
-alias:
- - /post/Tech-Head-Brothers-new-authoring-tool.aspx/index.html
 ---
 ![](http://farm3.static.flickr.com/2206/2265076929_dea257e7f3_o.jpg) 
 

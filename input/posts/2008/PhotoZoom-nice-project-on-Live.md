@@ -5,8 +5,6 @@ date: 3/15/2008 4:43:23 PM
 updated: 3/15/2008 4:43:23 PM
 disqusIdentifier: 20080315044323
 tags: ["Silverlight"]
-alias:
- - /post/PhotoZoom-nice-project-on-Live.aspx/index.html
 ---
 It shows a way to create photo sets using DeepZoom and Silverlight 2. 
 

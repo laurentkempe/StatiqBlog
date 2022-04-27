@@ -5,8 +5,6 @@ date: 5/7/2010 3:58:30 AM
 updated: 5/7/2010 3:58:30 AM
 disqusIdentifier: 20100507035830
 tags: ["innoveo solutions", "Jetbrains", "IntelliJ", "Productivity"]
-alias:
- - /post/IntelliJ-9-and-changeset.aspx/index.html
 ---
 Day after day I find little gems in [IntelliJ 9](http://www.jetbrains.com/idea/index.html) that just make me more productive and give me more time to deal with the real interesting things.
 

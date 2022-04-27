@@ -5,8 +5,6 @@ date: 1/9/2008 6:39:37 AM
 updated: 5/7/2010 7:46:44 AM
 disqusIdentifier: 20080109063937
 tags: ["Tools"]
-alias:
- - /post/ReSharper-40-Roadmap.aspx/index.html
 ---
 JetBrains just published a [Roadmap for ReSharper 4.0](http://www.jetbrains.net/confluence/display/ReSharper/ReSharper+4.0+Roadmap) with a soon to come Early Access Program (I can't wait anymore :)
 

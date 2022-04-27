@@ -5,8 +5,6 @@ date: 9/20/2006 6:28:43 AM
 updated: 9/20/2006 6:28:43 AM
 disqusIdentifier: 20060920062843
 tags: ["Microsoft MVP"]
-alias:
- - /post/Microsoft-France-Development-MVP.aspx/index.html
 ---
 Microsoft France just published a page on which it lists all [French Developer MVP](http://www.microsoft.com/france/msdn/communautes/mvp.mspx).
 

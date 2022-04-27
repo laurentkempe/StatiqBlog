@@ -5,8 +5,6 @@ date: 5/14/2010 1:38:56 AM
 updated: 5/14/2010 11:01:03 AM
 disqusIdentifier: 20100514013856
 tags: ["Jobping"]
-alias:
- - /post/Jobping-Open-Source-URL-Shortener-Goes-to-Version-05.aspx/index.html
 ---
 We have updated our url shortener for[ Jobping](http://www.jobping.com/). [jobp.in](http://jobp.in/) has moved along to Version 0.5. While maintaining as little features as possible!
 

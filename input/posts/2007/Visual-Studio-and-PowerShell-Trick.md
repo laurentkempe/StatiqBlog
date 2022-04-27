@@ -5,8 +5,6 @@ date: 11/30/2007 3:30:45 AM
 updated: 11/30/2007 3:30:45 AM
 disqusIdentifier: 20071130033045
 tags: ["Visual Studio", "innoveo solutions", "white"]
-alias:
- - /post/Visual-Studio-and-PowerShell-Trick.aspx/index.html
 ---
 This end of afternoon I worked on the mapping part of my new project for [innoveo solutions](http://www.innoveo.com/), a blog engine.
 

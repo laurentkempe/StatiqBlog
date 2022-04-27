@@ -5,8 +5,6 @@ date: 11/17/2005 5:27:00 AM
 updated: 11/17/2005 5:27:00 AM
 disqusIdentifier: 20051117052700
 tags: ["Tools"]
-alias:
- - /post/InVirtus-VM-Optimizer-20-.aspx/index.html
 ---
 <font face="Verdana" size="2">I am using VM for a while now, most of the time to 
 have alpha, ctp, beta...</font>

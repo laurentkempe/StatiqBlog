@@ -4,8 +4,6 @@ permalink: /2008/01/18/Head-hunters-what-the-hell!/
 date: 1/18/2008 7:23:26 AM
 updated: 1/18/2008 7:23:26 AM
 disqusIdentifier: 20080118072326
-alias:
- - /post/Head-hunters-what-the-hell!.aspx/index.html
 ---
 Those last week I got 4 emails and a contact through messenger from 3 different head hunters of the same company! They are really **aggressively** searching for .NET and Sharepoint peoples.
 

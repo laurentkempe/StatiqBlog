@@ -5,8 +5,6 @@ date: 7/10/2009 7:33:01 AM
 updated: 7/10/2009 7:33:01 AM
 disqusIdentifier: 20090710073301
 tags: ["Expression Blend"]
-alias:
- - /post/Expression-Blend-3-2b-SketchFlow-RC.aspx/index.html
 ---
 Microsoft just released Expression Blend 3 + SketchFlow RC.
 

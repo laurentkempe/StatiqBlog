@@ -5,8 +5,6 @@ date: 10/17/2004 9:28:00 PM
 updated: 4/28/2010 8:02:23 PM
 disqusIdentifier: 20041017092800
 tags: ["Microsoft MVP"]
-alias:
- - /post/Speaker-at-Rencontre-ASPNET-.aspx/index.html
 ---
 On the 29 of September I was invited by [Microsoft France](http://www.microsoft.com/france/) in [Strasbourg](http://www.strasbourg.fr/StrasbourgFr/GB) - France to be a speaker at there conference 'Rencontres ASP.NET' to talk about [ASP.NET](http://www.microsoft.com/france/asp.net/default.mspx) and the [Starter Kits](http://www.asp.net/Default.aspx?tabindex=8&tabid=47).<br>It was such an interesting experience to face around 80 peoples and to talk about ASP.NET. It started with 3-4 minutes of stress then the rest of the presentation went ok.<br>I hope to do again such experience.
 

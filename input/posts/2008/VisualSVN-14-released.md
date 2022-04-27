@@ -5,8 +5,6 @@ date: 4/22/2008 5:57:31 AM
 updated: 4/22/2008 5:57:31 AM
 disqusIdentifier: 20080422055731
 tags: ["Tools", "Visual Studio"]
-alias:
- - /post/VisualSVN-14-released.aspx/index.html
 ---
 [VisualSVN](http://www.visualsvn.com/release-1.4.html), the plugin for [Subversion](http://subversion.tigris.org/) in Visual Studio 2003, 2005 & 2008 was just updated with some new good features:
 

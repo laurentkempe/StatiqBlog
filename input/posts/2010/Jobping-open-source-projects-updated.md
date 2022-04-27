@@ -5,8 +5,6 @@ date: 10/21/2010 6:18:02 AM
 updated: 10/21/2010 6:47:10 AM
 disqusIdentifier: 20101021061802
 tags: ["Jobping", "Open Source"]
-alias:
- - /post/Jobping-open-source-projects-updated.aspx/index.html
 ---
 Beginning of October we announced, through [Mark’s blog](http://markkemper1.blogspot.com/),  the update of the two open source projects we have at [Jobping](http://www.jobping.com/) 
 

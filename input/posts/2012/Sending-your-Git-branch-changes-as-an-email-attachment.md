@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm8.staticflickr.com/7046/6829846914_6d316434c6_q.jpg
 coverCaption: "Anse Noire, Martinique"
 tags: ["DVCS", "Git", "PowerShell"]
-alias:
- - /post/Sending-your-Git-branch-changes-as-an-email-attachment.aspx/index.html
 ---
 <!-- [![IMG_1586](http://farm8.staticflickr.com/7046/6829846914_6d316434c6_m.jpg)](http://www.flickr.com/photos/laurentkempe/6829846914/ "IMG_1586 by Laurent Kempé, on Flickr") -->
 The other day I wanted to send per email some code to a friend which doesn’t use [Git](http://git-scm.com/). He is using Svn and I use [Git Svn](http://schacon.github.com/git/git-svn.html) in front of this Svn repository. Why I do that? Don’t get me started…

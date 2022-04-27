@@ -5,8 +5,6 @@ date: 7/29/2005 8:09:00 AM
 updated: 7/29/2005 8:09:00 AM
 disqusIdentifier: 20050729080900
 tags: ["Tech Head Brothers"]
-alias:
- - /post/dotTrace-published-by-JetBrains.aspx/index.html
 ---
 [dotTrace](http://www.jetbrains.com/profiler/features/), again a 
 tool released by [JetBrains](http://www.jetbrains.com/) during 

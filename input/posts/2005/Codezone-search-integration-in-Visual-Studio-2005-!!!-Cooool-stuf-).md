@@ -5,8 +5,6 @@ date: 8/18/2005 6:53:00 AM
 updated: 8/18/2005 6:53:00 AM
 disqusIdentifier: 20050818065300
 tags: ["Tech Head Brothers", "Whidbey", ".NET Framework 2.0"]
-alias:
- - /post/Codezone-search-integration-in-Visual-Studio-2005-!!!-Cooool-stuf-).aspx/index.html
 ---
 
 

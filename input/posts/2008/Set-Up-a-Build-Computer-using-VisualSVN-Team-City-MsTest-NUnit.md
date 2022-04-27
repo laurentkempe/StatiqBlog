@@ -5,8 +5,6 @@ date: 3/21/2008 8:55:32 AM
 updated: 3/21/2008 8:55:32 AM
 disqusIdentifier: 20080321085532
 tags: ["Tech Head Brothers", "innoveo solutions", "continuous integration", "Team City", "unit test"]
-alias:
- - /post/Set-Up-a-Build-Computer-using-VisualSVN-Team-City-MsTest-NUnit.aspx/index.html
 ---
 When I started to work on the new version of [Tech Head Brothers](http://www.techheadbrothers.com/) I decided to use the new version of the unit testing framework from Microsoft. Before making this decision I read that it was much better and faster in several places. As I also wanted to get code coverage I thought it was a good idea.
 

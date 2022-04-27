@@ -5,8 +5,6 @@ date: 5/11/2005 4:27:00 AM
 updated: 5/11/2005 4:27:00 AM
 disqusIdentifier: 20050511042700
 tags: ["Tools"]
-alias:
- - /post/Codesmith-30-Release-Candidate-1-announced.aspx/index.html
 ---
 [CodeSmith 3.0](http://www.codesmithtools.com/) enables software 
 developers to efficiently:

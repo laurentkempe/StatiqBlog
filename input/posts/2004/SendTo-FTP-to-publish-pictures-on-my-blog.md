@@ -5,8 +5,6 @@ date: 6/5/2004 5:17:00 AM
 updated: 6/5/2004 5:17:00 AM
 disqusIdentifier: 20040605051700
 tags: ["Tools"]
-alias:
- - /post/SendTo-FTP-to-publish-pictures-on-my-blog.aspx/index.html
 ---
 <table>
 <tbody>

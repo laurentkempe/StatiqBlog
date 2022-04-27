@@ -5,8 +5,6 @@ date: 9/12/2007 8:04:51 AM
 updated: 9/12/2007 8:04:51 AM
 disqusIdentifier: 20070912080451
 tags: ["Silverlight", "Silverlight Streaming"]
-alias:
- - /post/Silverlight-and-file-system-loading.aspx/index.html
 ---
 I am currently working with [Silverlight](http://silverlight.net/Default.aspx) and [Silverlight Streaming](http://silverlight.live.com/) and had an issue over the weekend I am sure I will not be the last one to have so:
 

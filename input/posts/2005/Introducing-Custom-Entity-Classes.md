@@ -5,8 +5,6 @@ date: 3/16/2005 5:44:00 AM
 updated: 3/16/2005 5:44:00 AM
 disqusIdentifier: 20050316054400
 tags: ["ASP.NET 2.0", ".NET Framework 2.0"]
-alias:
- - /post/Introducing-Custom-Entity-Classes.aspx/index.html
 ---
 
 

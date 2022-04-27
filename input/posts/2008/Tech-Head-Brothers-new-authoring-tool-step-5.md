@@ -5,8 +5,6 @@ date: 2/22/2008 8:09:50 AM
 updated: 2/22/2008 8:09:50 AM
 disqusIdentifier: 20080222080950
 tags: ["Tech Head Brothers", "Visual Studio", "VSTO", ".NET Framework 3.5", "Office 2007"]
-alias:
- - /post/Tech-Head-Brothers-new-authoring-tool-step-5.aspx/index.html
 ---
 Tonight my goal was to be able to view a picture into the web browser!
 

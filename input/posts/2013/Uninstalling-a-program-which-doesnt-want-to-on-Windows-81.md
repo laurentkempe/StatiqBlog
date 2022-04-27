@@ -5,8 +5,6 @@ date: 9/19/2013 7:37:00 PM
 updated: 9/19/2013 7:40:02 PM
 disqusIdentifier: 20130919073700
 tags: ["Windows"]
-alias:
- - /post/Uninstalling-a-program-which-doesnt-want-to-on-Windows-81.aspx/index.html
 ---
 I updated to Windows 8.1 RTM a week ago and since that time I had the issue that AMD Radeon™ RAMDisk was not running but even worse I could not uninstall it because the uninstaller was saying that it was the wrong version of the operating system!   
 I was using it on Windows 8, it was working great on it but after the update it wasn’t anymore.

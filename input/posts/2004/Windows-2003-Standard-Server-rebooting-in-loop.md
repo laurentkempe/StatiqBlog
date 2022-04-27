@@ -5,8 +5,6 @@ date: 5/14/2004 4:58:00 AM
 updated: 5/14/2004 4:58:00 AM
 disqusIdentifier: 20040514045800
 tags: ["Work"]
-alias:
- - /post/Windows-2003-Standard-Server-rebooting-in-loop.aspx/index.html
 ---
 I could go a bit further with my issue to have a Windows 2003 Standard server running. As mentioned here: [Windows 2003 crashes after patching - Beginning of another week of hell :-(](http://weblogs.asp.net/lkempe/archive/2004/05/11/129871.aspx), I had a hard time to fix this but with some patience and pushing Linux fan colleagues I got it to work for... 10 minutes.
 

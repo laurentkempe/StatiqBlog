@@ -4,8 +4,6 @@ permalink: /2007/11/28/Migration-of-Tech-Head-Brothers-portal-to-NET-Framework-3
 date: 11/28/2007 9:01:39 PM
 updated: 11/28/2007 9:01:39 PM
 disqusIdentifier: 20071128090139
-alias:
- - /post/Migration-of-Tech-Head-Brothers-portal-to-NET-Framework-35.aspx/index.html
 ---
 I started yesterday the migration of [Tech Head Brothers](http://www.techheadbrothers.com/) portal to .NET Framework 3.5 and Visual Studio 2008.
 

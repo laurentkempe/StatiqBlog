@@ -5,8 +5,6 @@ date: 10/12/2007 6:43:44 AM
 updated: 10/12/2007 6:43:44 AM
 disqusIdentifier: 20071012064344
 tags: ["Note to self"]
-alias:
- - /post/Testing-your-Google-AdSense.aspx/index.html
 ---
 This trick is coming from my friend [Nix](http://blogs.codes-sources.com/nix).
 

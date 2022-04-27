@@ -5,8 +5,6 @@ date: 5/22/2010 1:19:21 AM
 updated: 5/22/2010 1:19:21 AM
 disqusIdentifier: 20100522011921
 tags: [".NET Framework 3.5"]
-alias:
- - /post/Missing-a-little-FileAccessRead-and-it-doesne28099t-work.aspx/index.html
 ---
 What is the difference between this code
 

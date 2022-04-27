@@ -5,8 +5,6 @@ date: 10/27/2008 2:25:21 PM
 updated: 10/27/2008 2:25:21 PM
 disqusIdentifier: 20081027022521
 tags: ["Tech Head Brothers", "Office 2007", "Open XML", "PDC 2008"]
-alias:
- - /post/PDC-2008-e28093-Show-off-selection.aspx/index.html
 ---
 Finally my video didn’t make it for the ShowOff contest at the PDC 2008. Here is the answer I’ve got:
 

@@ -5,8 +5,6 @@ date: 7/23/2004 12:14:00 AM
 updated: 7/23/2004 12:14:00 AM
 disqusIdentifier: 20040723121400
 tags: ["Work", "Infrastructure"]
-alias:
- - /post/Managing-IIS-with-scripts.aspx/index.html
 ---
 I needed to create a virtual directory in IIS 6 during the deployment of one of our backend application on a Windows 2003 server. This application is a COM component written in C++ that I developed wrapping a very old VB6 COM component. The whole exposed as a Web Service using the [SOAP Toolkit 3](http://www.microsoft.com/downloads/details.aspx?FamilyId=C943C0DD-CEEC-4088-9753-86F052EC8450&displaylang=en). I already discussed about it [here](http://weblogs.asp.net/lkempe/archive/2003/11/06/36233.aspx).
 

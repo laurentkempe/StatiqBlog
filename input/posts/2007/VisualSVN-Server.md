@@ -5,8 +5,6 @@ date: 11/16/2007 4:03:57 PM
 updated: 11/16/2007 4:03:57 PM
 disqusIdentifier: 20071116040357
 tags: ["Tools"]
-alias:
- - /post/VisualSVN-Server.aspx/index.html
 ---
 The guys that already made [VisualSVN](http://www.visualsvn.com/), a plugin that integrates into Visual Studio and provides a way to manage your source code changes into [Subversion](http://subversion.tigris.org/), just realized [VisualSVN Server](http://www.visualsvn.com/server/). 
 

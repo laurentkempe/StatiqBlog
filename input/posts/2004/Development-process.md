@@ -5,8 +5,6 @@ date: 8/1/2004 7:39:00 AM
 updated: 8/1/2004 7:39:00 AM
 disqusIdentifier: 20040801073900
 tags: ["Work"]
-alias:
- - /post/Development-process.aspx/index.html
 ---
 I am currently working on our whole development process and I found this article really interesting. Thanks [Dirk](http://weblogs.asp.net/dirkpr) for the pointer to the article.
 

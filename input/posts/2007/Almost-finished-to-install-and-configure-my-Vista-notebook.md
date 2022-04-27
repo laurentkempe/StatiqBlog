@@ -5,8 +5,6 @@ date: 4/18/2007 4:42:17 AM
 updated: 4/18/2007 4:42:17 AM
 disqusIdentifier: 20070418044217
 tags: ["Vista"]
-alias:
- - /post/Almost-finished-to-install-and-configure-my-Vista-notebook.aspx/index.html
 ---
 I still need to have some software installed but the main one needed to work are installed:
 

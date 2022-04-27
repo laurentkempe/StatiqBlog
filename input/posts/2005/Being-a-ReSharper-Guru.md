@@ -5,8 +5,6 @@ date: 5/3/2005 2:32:00 AM
 updated: 5/3/2005 2:32:00 AM
 disqusIdentifier: 20050503023200
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/Being-a-ReSharper-Guru.aspx/index.html
 ---
 If you are using [ReSharper](http://www.jetbrains.com/resharper/) 
 from [JetBrains](http://www.jetbrains.com) and you have some 

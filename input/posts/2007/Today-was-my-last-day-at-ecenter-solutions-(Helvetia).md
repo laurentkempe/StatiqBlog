@@ -5,8 +5,6 @@ date: 9/29/2007 6:45:46 AM
 updated: 9/29/2007 6:45:46 AM
 disqusIdentifier: 20070929064546
 tags: ["ecenter solutions", "innoveo solutions"]
-alias:
- - /post/Today-was-my-last-day-at-ecenter-solutions-(Helvetia).aspx/index.html
 ---
 Today it was my last day at ecenter solutions (spin off of [Helvetia](http://www.helvetia.ch/home.htm), Swiss insurance).
 

@@ -5,8 +5,6 @@ date: 8/24/2007 5:24:32 AM
 updated: 8/24/2007 5:24:32 AM
 disqusIdentifier: 20070824052432
 tags: ["Tools", "Visual Studio"]
-alias:
- - /post/ReSharper-302-is-out.aspx/index.html
 ---
 You might [download the version 3.0.2 here.](http://www.jetbrains.com/resharper/download/index.html)
 

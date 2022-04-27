@@ -5,8 +5,6 @@ date: 12/10/2005 8:59:00 AM
 updated: 12/10/2005 8:59:00 AM
 disqusIdentifier: 20051210085900
 tags: [".NET Framework 2.0"]
-alias:
- - /post/Visual-Studio-2005-Team-Suite-installation.aspx/index.html
 ---
 
 

@@ -5,8 +5,6 @@ date: 11/17/2005 4:11:00 AM
 updated: 11/17/2005 4:11:00 AM
 disqusIdentifier: 20051117041100
 tags: ["Groove Virtual Office"]
-alias:
- - /post/Groove-12.aspx/index.html
 ---
 If you are like me and you are using Groove. I recommend you to read [Marc Olson's 
 Groove "12" Blog](http://blogs.msdn.com/marco/archive/2005/11/15/493058.aspx).  

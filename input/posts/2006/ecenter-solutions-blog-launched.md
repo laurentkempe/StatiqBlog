@@ -5,8 +5,6 @@ date: 9/20/2006 5:10:26 AM
 updated: 9/20/2006 5:10:26 AM
 disqusIdentifier: 20060920051026
 tags: ["ecenter solutions"]
-alias:
- - /post/ecenter-solutions-blog-launched.aspx/index.html
 ---
 ecenter solutions, the company I am working for today as solution architect, just [launched a blog](http://blog.ecenter-solutions.com/).
 

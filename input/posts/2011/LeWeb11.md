@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5139/5502636257_0513e57534_q.jpg
 coverCaption: "Vue sur le rocher du Diamant depuis la grande Anse du Diamant, Le Diamant, Martinique"
 tags: ["LeWeb11"]
-alias:
- - /post/LeWeb11.aspx/index.html
 ---
 <!--[![Vue sur le rocher du Diamant depuis la grande Anse du Diamant](http://farm6.staticflickr.com/5139/5502636257_0513e57534_m.jpg)](http://www.flickr.com/photos/laurentkempe/5502636257/ "Vue sur le rocher du Diamant depuis la grande Anse du Diamant by Laurent Kempé, on Flickr")-->
 Joining [Didier](http://didierbeck.com/) direction [LeWeb’11](http://leweb.net/) for the [second time](http://www.laurentkempe.com/post/Le-Web-3-in-Paris.aspx) we are attending the biggest European Internet conference in Paris.

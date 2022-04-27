@@ -5,8 +5,6 @@ date: 3/22/2012 5:09:07 AM
 updated: 3/22/2012 6:47:01 AM
 disqusIdentifier: 20120322050907
 tags: ["Home Office"]
-alias:
- - /post/Installation-of-the-Ergotron-WorkFit-D.aspx/index.html
 ---
 [![New Ergotron Workfit-D desk](http://farm8.staticflickr.com/7120/7003699985_7c0182c1f6_c.jpg)](http://www.flickr.com/photos/laurentkempe/7003699985/ "New Ergotron WorkFit-D desk by Laurent Kempé, on Flickr")
 

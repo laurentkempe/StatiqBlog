@@ -5,8 +5,6 @@ date: 5/18/2006 6:13:00 AM
 updated: 5/18/2006 6:13:00 AM
 disqusIdentifier: 20060518061300
 tags: ["Tools"]
-alias:
- - /post/Windows-Media-Player-11-Beta-released.aspx/index.html
 ---
 Today Windows Media Player 11 Beta was released and you might [download 
 it here](http://www.microsoft.com/windows/windowsmedia/player/download/download.aspx). 

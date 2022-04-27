@@ -4,8 +4,6 @@ permalink: /2008/02/10/TechDays-2008-SNCF-and-their-online-services/
 date: 2/10/2008 5:53:26 PM
 updated: 2/10/2008 5:53:26 PM
 disqusIdentifier: 20080210055326
-alias:
- - /post/TechDays-2008-SNCF-and-their-online-services.aspx/index.html
 ---
 I decided to take the TGV train from Mulhouse to Paris to attend the [Tech Days 2008](http://www.microsoft.com/france/mstechdays/default.aspx?e=commdevtechead).
 

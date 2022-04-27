@@ -5,8 +5,6 @@ date: 11/7/2004 5:43:00 PM
 updated: 11/7/2004 5:43:00 PM
 disqusIdentifier: 20041107054300
 tags: ["Whidbey"]
-alias:
- - /post/Microsoft-Tools-for-Domain-Specific-Languages-Technology-Preview-(October-2004-Release).aspx/index.html
 ---
 "Today, you can download a tool that you can use to describe the concepts in a problem domain as the basis for a modeling tool or graphical designer. It is itself a graphical tool built on top of our designer platform and it is completely integrated into Visual Studio. For example, if you need a business process modeling tool, this editor allows you to describe the concepts specific to the way you like to model your business processes."<br><br>It is basically a graphical designer hosted in Visual Studio 2005 for designing and editing the concepts (or metamodel) of visual domain specific languages.
 

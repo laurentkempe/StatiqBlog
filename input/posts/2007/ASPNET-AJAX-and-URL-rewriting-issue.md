@@ -5,8 +5,6 @@ date: 8/4/2007 8:29:46 AM
 updated: 8/4/2007 8:29:46 AM
 disqusIdentifier: 20070804082946
 tags: ["ASP.NET 2.0", "ASP.NET AJAX"]
-alias:
- - /post/ASPNET-AJAX-and-URL-rewriting-issue.aspx/index.html
 ---
 If you are using URL rewriting you might know that you have to take care about the way you reference resources has written in the Scott Guthrie post; [Tip/Trick: Url Rewriting with ASP.NET](http://weblogs.asp.net/scottgu/archive/2007/02/26/tip-trick-url-rewriting-with-asp-net.aspx):
 

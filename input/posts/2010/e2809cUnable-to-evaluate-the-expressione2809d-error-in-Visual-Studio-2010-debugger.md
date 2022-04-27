@@ -5,8 +5,6 @@ date: 11/23/2010 8:04:46 PM
 updated: 11/23/2010 8:04:46 PM
 disqusIdentifier: 20101123080446
 tags: ["Visual Studio", "ASP.NET MVC", "Async"]
-alias:
- - /post/e2809cUnable-to-evaluate-the-expressione2809d-error-in-Visual-Studio-2010-debugger.aspx/index.html
 ---
 Last week I had an issue in Visual Studio 2010 debugger in some projects only! When I was looking at the value of variables I was getting an error message saying “Unable to evaluate the expression”!
 

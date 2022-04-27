@@ -5,8 +5,6 @@ date: 7/21/2004 5:55:00 AM
 updated: 5/7/2010 7:46:51 AM
 disqusIdentifier: 20040721055500
 tags: ["Tools"]
-alias:
- - /post/Sauce-Reader-16-released.aspx/index.html
 ---
 I've got this late afternoon a popup saying that release 1.6 is out. So I updated my favorite blog tools. I will test soon the image uploading tool that i just configured. And now posting to a .Text blog is working without issue and kind of update of already posted message (erase, post). So cool.<br>Nice to see that such a company is hiring, a bit far, but who knows. 
 

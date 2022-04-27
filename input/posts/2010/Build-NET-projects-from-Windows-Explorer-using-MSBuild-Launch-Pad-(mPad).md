@@ -5,8 +5,6 @@ date: 6/4/2010 7:27:22 PM
 updated: 6/4/2010 7:27:22 PM
 disqusIdentifier: 20100604072722
 tags: ["Visual Studio", "MSBuild", "Tools"]
-alias:
- - /post/Build-NET-projects-from-Windows-Explorer-using-MSBuild-Launch-Pad-(mPad).aspx/index.html
 ---
 In September 2009 I posted about a tool I am using to build my MSBuild projects from the shell “[Build your .NET project with a right click in Windows Explorer](http://www.laurentkempe.com/post/Build-your-NET-project-with-a-right-click-in-Windows-Explorer.aspx)”
 

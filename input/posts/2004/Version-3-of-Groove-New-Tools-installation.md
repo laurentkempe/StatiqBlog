@@ -5,8 +5,6 @@ date: 7/14/2004 8:32:00 AM
 updated: 5/7/2010 7:45:42 AM
 disqusIdentifier: 20040714083200
 tags: ["Tools"]
-alias:
- - /post/Version-3-of-Groove-New-Tools-installation.aspx/index.html
 ---
 After beta testing [Groove 3.0](http://www.groove.net) for a certain time on a Virtual PC with non productive data and after it final release of yesterday, I decide to upgrade. I have two computer and on each I have two differents Groove account. On my server the update worked perfectly but on my notebook I have issues with one of my account that doesn't update. I am waiting feedback from the support of Groove to solve my issue. And for sure it is with my business account. They will fix it for sure. Be positive.
 

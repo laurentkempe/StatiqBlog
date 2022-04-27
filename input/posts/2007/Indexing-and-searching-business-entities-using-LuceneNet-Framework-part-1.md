@@ -5,8 +5,6 @@ date: 11/16/2007 5:59:02 PM
 updated: 5/7/2010 7:46:50 AM
 disqusIdentifier: 20071116055902
 tags: ["Tools", "ASP.NET 2.0", "Interoperability", "innoveo solutions", "C#", "Architecture", "Generics", "Reflection"]
-alias:
- - /post/Indexing-and-searching-business-entities-using-LuceneNet-Framework-part-1.aspx/index.html
 ---
 *Conception using generics and reflection of a search engine to index and search content in your business entities without being intrusive.*  
 

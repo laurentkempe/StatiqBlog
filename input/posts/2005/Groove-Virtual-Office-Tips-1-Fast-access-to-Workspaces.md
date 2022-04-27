@@ -5,8 +5,6 @@ date: 5/21/2005 7:07:00 PM
 updated: 5/21/2005 7:07:00 PM
 disqusIdentifier: 20050521070700
 tags: ["Groove Virtual Office"]
-alias:
- - /post/Groove-Virtual-Office-Tips-1-Fast-access-to-Workspaces.aspx/index.html
 ---
 [Groove](http://www.groove.net/) Launchbar is great but sometimes 
 it simply takes too much time to open it to get to a workspace. 

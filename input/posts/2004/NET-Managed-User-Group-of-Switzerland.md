@@ -5,8 +5,6 @@ date: 10/28/2004 11:15:00 PM
 updated: 10/28/2004 11:15:00 PM
 disqusIdentifier: 20041028111500
 tags: ["Microsoft MVP", ".NET Development"]
-alias:
- - /post/NET-Managed-User-Group-of-Switzerland.aspx/index.html
 ---
 During my [trip to Barcelona](http://weblogs.asp.net/lkempe/archive/2004/10/20/245013.aspx), last week, I met <strong>Atif Aziz</strong>, President and Program Director, and <strong>Roman Mathis</strong>, Vice President and Membership Director, of the [<strong>.NET Managed User Group of Switzerland</strong>](http://www.dotmugs.ch/). We had several interesting discussions and I finally decided to join them in there user group as I am working in Zürich, Switzerland and there are located in the same city.<br><br>The 3 upcomings Events organized by the user group are:
 

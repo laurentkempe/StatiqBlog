@@ -5,8 +5,6 @@ date: 12/17/2007 3:19:03 AM
 updated: 12/17/2007 3:19:03 AM
 disqusIdentifier: 20071217031903
 tags: ["Tools"]
-alias:
- - /post/HP-Notebooks-and-Windows-Vista-External-Display-Detection-Issue.aspx/index.html
 ---
 I am using a tool from HP called [hp Health Check](http://h30155.www3.hp.com/helpandsupport/cpcehelp.html) that runs one time per week. Till now I didn't get any recommendation that I didn't know about but today that changed.
 

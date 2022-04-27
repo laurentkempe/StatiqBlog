@@ -5,8 +5,6 @@ date: 11/3/2009 5:10:52 PM
 updated: 11/3/2009 5:10:52 PM
 disqusIdentifier: 20091103051052
 tags: ["continuous integration", "Team City", "MSBuild", "ClickOnce"]
-alias:
- - /post/Build-multiple-ClickOnce-deployment-packages-using-MSBuild-and-Team-City.aspx/index.html
 ---
 The other day I posted about [Build ClickOnce deployment packages using MSBuild and Team City](http://weblogs.asp.net/lkempe/archive/2009/10/27/build-clickonce-deployment-packages-using-msbuild-and-team-city.aspx), and there were something that I didn’t liked in my way of doing it.
 

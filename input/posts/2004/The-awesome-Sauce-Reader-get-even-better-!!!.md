@@ -5,8 +5,6 @@ date: 6/18/2004 7:00:00 PM
 updated: 6/18/2004 7:00:00 PM
 disqusIdentifier: 20040618070000
 tags: ["Tools"]
-alias:
- - /post/The-awesome-Sauce-Reader-get-even-better-!!!.aspx/index.html
 ---
 You will finally think that I get some money from [Synop](http://www.synop.com/) to advertise [Sauce Reader](http://www.synop.com/Products/SauceReader/) like that. It is not the case I just find the tool awesome !!! So here are the major changes and improvements in this version include:
 

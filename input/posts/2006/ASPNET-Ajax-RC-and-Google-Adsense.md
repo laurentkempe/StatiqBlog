@@ -5,8 +5,6 @@ date: 12/22/2006 7:25:49 PM
 updated: 5/7/2010 7:45:39 AM
 disqusIdentifier: 20061222072549
 tags: ["ASP.NET AJAX", "ASP.NET"]
-alias:
- - /post/ASPNET-Ajax-RC-and-Google-Adsense.aspx/index.html
 ---
 During the integration of ASP.NET Ajax RC on [Tech Head Brothers](http://www.techheadbrothers.com/ "Tech Head Brothers") I had issues with some javascript failing both in ASP.NET Ajax and Adsense. After a short online discussion with [Cyril](http://blogs.codes-sources.com/cyril/default.aspx), he could manage to get a fix, and to identify the issue in the ASP.NET Ajax RC. You might read more about it on the [forum](http://forums.asp.net/thread/1501276.aspx), or on his [french blog](http://blogs.codes-sources.com/cyril/archive/2006/12/17/atlas-et-google-adsense-bug-avec-la-methode-date-parse.aspx).
 

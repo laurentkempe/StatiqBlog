@@ -5,8 +5,6 @@ date: 10/17/2007 6:05:37 AM
 updated: 10/17/2007 6:05:37 AM
 disqusIdentifier: 20071017060537
 tags: ["innoveo solutions"]
-alias:
- - /post/Coding-Horror-Remember-This-Stuff-Is-Supposed-To-Be-Fun.aspx/index.html
 ---
 > I set out to change that. Companies would no longer be able to select me from a generic lineup of candidates. Instead, I would select companies. Companies that I respected, companies that shared my passion for software. Armed with thirty years of hindsight, I would no longer let random, chance opportunities determine my career path. **I will choose where *I* want to work**.
 > 

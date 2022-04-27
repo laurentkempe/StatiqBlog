@@ -5,8 +5,6 @@ date: 7/2/2008 6:28:41 AM
 updated: 7/2/2008 6:28:41 AM
 disqusIdentifier: 20080702062841
 tags: ["innoveo solutions"]
-alias:
- - /post/Innoveo-Solutions-new-corporate-identity-amp3b-product-name-announced.aspx/index.html
 ---
 <font color="#0080ff">![](http://farm4.static.flickr.com/3039/2629237282_b1bae653e6_o.jpg)</font>At [Innoveo Solutions](http://www.innoveo.com/), today we went live with our new corporate identity and announced our product name, [**INNOVEO SKYE**](http://www.innoveo.com/Products.aspx).
 

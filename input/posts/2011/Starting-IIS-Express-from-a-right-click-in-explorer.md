@@ -5,8 +5,6 @@ date: 4/13/2011 7:36:54 AM
 updated: 4/13/2011 7:41:20 AM
 disqusIdentifier: 20110413073654
 tags: ["ASP.NET MVC", "IIS Express"]
-alias:
- - /post/Starting-IIS-Express-from-a-right-click-in-explorer.aspx/index.html
 ---
 After publishing this for [Starting ASP.NET Development Server from a right click in explorer](http://www.laurentkempe.com/post/Starting-ASPNET-Development-Server-from-a-right-click-in-explorer.aspx) it is time to do it for IIS Express.
 

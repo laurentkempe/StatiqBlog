@@ -5,8 +5,6 @@ date: 5/24/2004 7:31:00 AM
 updated: 5/24/2004 7:31:00 AM
 disqusIdentifier: 20040524073100
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/ReSharper-by-Jetbrains.aspx/index.html
 ---
 I finally managed to have my Addins in Visual Studio .NET 2003 working again, with reinstallation of it and then running a repair.
 

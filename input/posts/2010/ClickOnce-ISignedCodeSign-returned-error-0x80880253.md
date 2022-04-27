@@ -5,8 +5,6 @@ date: 1/12/2010 6:08:53 AM
 updated: 1/12/2010 6:08:53 AM
 disqusIdentifier: 20100112060853
 tags: ["continuous integration", "Team City", "MSBuild", "ClickOnce"]
-alias:
- - /post/ClickOnce-ISignedCodeSign-returned-error-0x80880253.aspx/index.html
 ---
 Tonight we got the following issue on our [TeamCity](http://www.jetbrains.com/teamcity/index.html) build server which produce different ClickOnce setups :
 

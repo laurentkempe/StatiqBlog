@@ -5,8 +5,6 @@ date: 4/17/2009 6:46:28 AM
 updated: 4/17/2009 6:46:28 AM
 disqusIdentifier: 20090417064628
 tags: ["Agile"]
-alias:
- - /post/Five-Ways-To-Build-Team-Trust-amp3b-Framework-for-Feedback.aspx/index.html
 ---
 I am for quite some time now working on the Agile subject and tonight I read two very interesting posts that I wanted to share and keep track of.
 

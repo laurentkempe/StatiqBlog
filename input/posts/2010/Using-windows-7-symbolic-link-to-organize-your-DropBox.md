@@ -5,8 +5,6 @@ date: 9/28/2010 3:32:55 AM
 updated: 9/28/2010 3:32:55 AM
 disqusIdentifier: 20100928033255
 tags: ["Tools", "Windows 7"]
-alias:
- - /post/Using-windows-7-symbolic-link-to-organize-your-DropBox.aspx/index.html
 ---
 If you are a user of the fantastic [DropBox](http://www.dropbox.com/referrals/NTIyMjQ1MTk) tool you might know that you have to organize your folders under a top root folder. This was really an issue for me which I wanted to solve because I like to organize my files in a different manner.
 

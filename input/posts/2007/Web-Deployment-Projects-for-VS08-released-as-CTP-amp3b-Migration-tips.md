@@ -5,8 +5,6 @@ date: 12/2/2007 4:59:02 PM
 updated: 12/2/2007 4:59:02 PM
 disqusIdentifier: 20071202045902
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "Visual Studio", "ASP.NET"]
-alias:
- - /post/Web-Deployment-Projects-for-VS08-released-as-CTP-amp3b-Migration-tips.aspx/index.html
 ---
 My old build script wasn't working after the migration to this new version and you will find in this post the different adaptation that I had to do.
 

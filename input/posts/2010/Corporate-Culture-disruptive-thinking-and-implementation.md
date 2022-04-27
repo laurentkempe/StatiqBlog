@@ -5,8 +5,6 @@ date: 7/29/2010 5:27:59 PM
 updated: 7/29/2010 5:27:59 PM
 disqusIdentifier: 20100729052759
 tags: ["Management", "Leadership"]
-alias:
- - /post/Corporate-Culture-disruptive-thinking-and-implementation.aspx/index.html
 ---
 Today, my friend [Didier](http://didierbeck.com) finally pushed his post about Netflix on his blog, [Corporate Culture: unusual Netflix example](http://didierbeck.com/2010/07/corporate-culture-unusual-netflix-example/). Some time ago, quite some time ago, he sent me the presentation about Netflix, which had a big impact on me! I liked very much the idea !
 

@@ -5,8 +5,6 @@ date: 2/10/2005 8:42:00 AM
 updated: 2/10/2005 8:42:00 AM
 disqusIdentifier: 20050210084200
 tags: ["Tools", ".NET Development"]
-alias:
- - /post/Omea-Reader-sending-to-Groove.aspx/index.html
 ---
 I started to develop a plugin for [Omea Reader](http://www.jetbrains.com/omea/), as you can read on 
 the [previous 

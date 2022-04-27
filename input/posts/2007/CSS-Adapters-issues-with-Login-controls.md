@@ -5,8 +5,6 @@ date: 5/5/2007 6:45:12 AM
 updated: 5/5/2007 6:45:12 AM
 disqusIdentifier: 20070505064512
 tags: ["ASP.NET 2.0", "ASP.NET"]
-alias:
- - /post/CSS-Adapters-issues-with-Login-controls.aspx/index.html
 ---
 If you are using [ASP.NET 2.0 CSS Friendly Control Adapters 1.0](http://www.asp.net/cssadapters/) with the Login controls of ASP.NET 2.0 you might have experienced some issue like multiple postback when using Internet Explorer. You might get a [GREAT fix and explanation of the issue](http://forums.asp.net/ShowPost.aspx?PostID=1676119) from [Tana Isaac](http://forums.asp.net/members/ticanaer.aspx) of Wellington, New Zealand.
 

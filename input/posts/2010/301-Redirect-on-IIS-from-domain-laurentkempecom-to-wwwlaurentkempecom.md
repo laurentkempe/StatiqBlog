@@ -5,8 +5,6 @@ date: 4/23/2010 5:46:08 PM
 updated: 4/23/2010 5:48:09 PM
 disqusIdentifier: 20100423054608
 tags: ["IIS"]
-alias:
- - /post/301-Redirect-on-IIS-from-domain-laurentkempecom-to-wwwlaurentkempecom.aspx/index.html
 ---
 I got an email the other day from [Didier](http://didierbeck.com/), than a message on my facebook page from [Antoine](http://www.facebook.com/aemond) about an issue with my blog [www.laurentkempe.com](http://www.laurentkempe.com) and my .NET portal [www.techheadbrothers.com](http://www.techheadbrothers.com) which were not redirecting correctly from laurentkempe.com and techheadbrothers.com to the ones with www in front.
 

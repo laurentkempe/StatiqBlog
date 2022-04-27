@@ -5,8 +5,6 @@ date: 6/23/2007 6:59:39 AM
 updated: 6/23/2007 6:59:39 AM
 disqusIdentifier: 20070623065939
 tags: ["Silverlight"]
-alias:
- - /post/My-brother-Mathieu-developed-one-of-the-first-commercial-applications-in-Australia-using-Silverlight.aspx/index.html
 ---
 As stated in the blog of [Frank Arrigo](http://blogs.msdn.com/frankarr/) (responsible for all Technical Communities in Australia),
 

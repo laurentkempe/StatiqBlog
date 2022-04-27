@@ -5,8 +5,6 @@ date: 5/21/2010 5:59:54 AM
 updated: 5/21/2010 5:59:54 AM
 disqusIdentifier: 20100521055954
 tags: ["Tools"]
-alias:
- - /post/flux-Better-lightinge280a6for-your-computer.aspx/index.html
 ---
 A couple of month ago I was introduced by a colleague to [f.lux](http://www.stereopsis.com/flux/). 
 

@@ -5,8 +5,6 @@ date: 6/11/2010 3:21:22 AM
 updated: 6/13/2010 8:09:10 PM
 disqusIdentifier: 20100611032122
 tags: ["white", "WPF", "unit test", "MSpec"]
-alias:
- - /post/From-WPF-functional-Unit-Tests-to-Specifications-using-MSpec-and-White.aspx/index.html
 ---
 I am in the train back home and wanted to try out quickly to migrate our WPF functional tests written has Unit Tests to BDD Specifications. 
 

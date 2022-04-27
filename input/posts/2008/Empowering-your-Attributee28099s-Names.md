@@ -5,8 +5,6 @@ date: 6/18/2008 8:54:06 PM
 updated: 6/18/2008 8:54:06 PM
 disqusIdentifier: 20080618085406
 tags: ["Lucene.Net"]
-alias:
- - /post/Empowering-your-Attributee28099s-Names.aspx/index.html
 ---
 Today I was facing the following issue. I have an indexing system (read more [here](http://weblogs.asp.net/lkempe/archive/2007/11/16/indexing-and-searching-business-entities-using-lucene-net-framework-part-1.aspx), [here](http://weblogs.asp.net/lkempe/archive/2008/03/07/indexing-and-searching-business-entities-using-lucene-net-framework-part-2.aspx) and [here](http://weblogs.asp.net/lkempe/archive/2008/03/07/indexing-and-searching-business-entities-using-lucene-net-framework-part-3.aspx)) using [Lucene.Net](http://incubator.apache.org/lucene.net/) that is working quite good. The drawback of the current implementation was that I couldn’t filter any to be indexed property decorated with the attribute. For example if I had a string property of my domain holding HTML, I wasn’t able to remove the HTML out of the string before indexing it. 
 

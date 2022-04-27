@@ -5,8 +5,6 @@ date: 4/28/2004 5:23:00 AM
 updated: 4/28/2004 5:23:00 AM
 disqusIdentifier: 20040428052300
 tags: ["Infrastructure"]
-alias:
- - /post/Exchange-2003-working-).aspx/index.html
 ---
 Now DNS are updated and I have Exchange 2003 working. I get a new email that I will have to share with my contacts. Thats will be lots of work. There is still something I need to fix: Outlook Web Access
 

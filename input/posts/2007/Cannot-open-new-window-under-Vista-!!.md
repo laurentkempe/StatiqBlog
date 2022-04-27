@@ -4,8 +4,6 @@ permalink: /2007/05/23/Cannot-open-new-window-under-Vista-!!/
 date: 5/23/2007 5:27:05 AM
 updated: 5/23/2007 5:27:05 AM
 disqusIdentifier: 20070523052705
-alias:
- - /post/Cannot-open-new-window-under-Vista-!!.aspx/index.html
 ---
 I was experiencing for some time a quite strange effect on my no so old installation of Windows Vista. After some dyas of usage without any reboot I sometime was unable to open any new window, it could be an explorer, internet explorer 7 tab, a menu of tray icon, and this without any error message. I first thought it was an issue with the video driver, but after too much annoyance I searched the web and found a post "[Max Num. of Open Windows under XP/2003/VISTA - Resolved !](http://weblogs.asp.net/israelio/archive/2007/02/07/max-num-of-open-windows-under-xp-2003-vista-resolved.aspx)' explaining the issue and a possible fix.
 

@@ -5,8 +5,6 @@ date: 9/5/2006 12:03:22 AM
 updated: 9/5/2006 12:03:22 AM
 disqusIdentifier: 20060905120322
 tags: ["Tools", "ASP.NET"]
-alias:
- - /post/Windows-Live-Writer-Plugins-Collection-Release-Cyclone-available.aspx/index.html
 ---
 [Windows Live Writer Plugins](http://www.codeplex.com/Wiki/View.aspx?ProjectName=WLWPlugins) project hosted on [Codeplex](http://www.codeplex.com/Wiki/View.aspx?ProjectName=WLWPlugins) hits its first public release, codenamed [Cyclone](http://www.codeplex.com/Release/ProjectReleases.aspx?ProjectName=WLWPlugins&ReleaseId=301) ([Keyvan](http://nayyeri.net/) inspired the codenames from tornado names). 
 

@@ -9,8 +9,6 @@ coverSize: partial
 thumbnailImage: https://farm6.staticflickr.com/5190/5563773074_38938ee129_q.jpg
 coverCaption: "Vue sur la tête de la femme couchée de la terrasse de la villa cannelle, Le Diamant, Martinique"
 tags: ["WPF", "Silverlight"]
-alias:
- - /post/Shortening-namespace-declarations-in-XAML-files.aspx/index.html
 ---
 <!--[![Vue sur la tête de la femme couchée de la terrasse de la villa cannelle](http://farm6.staticflickr.com/5190/5563773074_38938ee129_m.jpg)](http://www.flickr.com/photos/laurentkempe/5563773074/ "Vue sur la tête de la femme couchée de la terrasse de la villa cannelle by Laurent Kempé, on Flickr")-->
 This afternoon I was working on [Innoveo](http://www.innoveo.com/) [Skye Editor](http://www.innoveo.com/SoftwareSolution.aspx) which is a WPF application written in C#. 

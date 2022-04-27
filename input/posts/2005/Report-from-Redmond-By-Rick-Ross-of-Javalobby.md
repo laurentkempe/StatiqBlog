@@ -5,8 +5,6 @@ date: 3/28/2005 7:01:00 AM
 updated: 3/28/2005 7:01:00 AM
 disqusIdentifier: 20050328070100
 tags: ["Work", ".NET Development"]
-alias:
- - /post/Report-from-Redmond-By-Rick-Ross-of-Javalobby.aspx/index.html
 ---
 
 
