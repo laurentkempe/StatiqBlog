@@ -11,7 +11,7 @@ The other day I had to re-install my whole server which is hosting [Tech Head Br
 So I started from scratch and after some issues I finally managed to have it running. I started uisng the following post from Scott Forsyth, “[IIS Compression in IIS6.0](http://weblogs.asp.net/owscott/archive/2004/01/12/57916.aspx)” and I took over those steps from his post:
 <!-- more -->
 
-> ***First, before anything else, backup the metabase.  ***This is done by right-clicking on the server in the IIS snap-in and selecting All Tasks -> Backup/Restore Configuration.  The rest is straight forward.
+> ***First, before anything else, backup the metabase. ***This is done by right-clicking on the server in the IIS snap-in and selecting All Tasks -> Backup/Restore Configuration. The rest is straight forward.
 > 
 > **Create Compression Folder (optional)**
 > 
@@ -23,10 +23,10 @@ So I started from scratch and after some issues I finally managed to have it run
 > - Select the Service tab - Enable *Compress application files*
 > - Enable *Compress static files*
 > - Change Temporary Directory to the folder that you created above, or leave it at it's default
-> - Set the max size of the temp folder to something that the hard drive can handle. i.e. 1000. 
+> - Set the max size of the temp folder to something that the hard drive can handle. i.e. 1000.
 > - Save and close the Web Site Properties dialog
 > 
-> Note: The temporary compress directory is only used for static pages.  Dynamic pages aren't saved to disk and are recreated every time so there is some CPU overhead used on every page request for dynamic content.
+> Note: The temporary compress directory is only used for static pages. Dynamic pages aren't saved to disk and are recreated every time so there is some CPU overhead used on every page request for dynamic content.
 
 And from the last part I did the following:
 
@@ -35,41 +35,30 @@ And from the last part I did the following:
 
 And changed it like this, take care of the carriage return for the HcFileExtensions and HcScriptFileExtensions, it is important:
 
-<IIsCompressionScheme    Location ="/LM/W3SVC/Filters/Compression/deflate"     
-        HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"      
-        HcCreateFlags="0"      
-        HcDoDynamicCompression="TRUE"      
-        HcDoOnDemandCompression="TRUE"      
-        HcDoStaticCompression="TRUE"      
-        HcDynamicCompressionLevel="**9**"      
-       ** HcFileExtensions="css       
-            htm        
-            html        
-            js        
-            txt"        
-**        HcOnDemandCompLevel="**9**"      
-        HcPriority="1"      
-        **HcScriptFileExtensions="asp       
-            aspx        
-            axd"        
-**    >      
+```xml
+<IIsCompressionScheme Location ="/LM/W3SVC/Filters/Compression/deflate"     
+ HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"      
+ HcCreateFlags="0"      
+ HcDoDynamicCompression="TRUE"      
+ HcDoOnDemandCompression="TRUE"      
+ HcDoStaticCompression="TRUE"      
+ HcDynamicCompressionLevel="9"      
+ HcFileExtensions="css htm html js txt"        
+ HcOnDemandCompLevel="9"      
+ HcPriority="1"      
+ HcScriptFileExtensions="asp aspx axd">      
 </IIsCompressionScheme>      
-<IIsCompressionScheme    Location ="/LM/W3SVC/Filters/Compression/gzip"      
-        HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"      
-        HcCreateFlags="1"      
-        HcDoDynamicCompression="TRUE"      
-        HcDoOnDemandCompression="TRUE"      
-        HcDoStaticCompression="TRUE"      
-        HcDynamicCompressionLevel="**9**"      
-       ** HcFileExtensions="css       
-            htm        
-            html        
-            js"        
-**        HcOnDemandCompLevel="**9**"      
-        HcPriority="2"      
-       ** HcScriptFileExtensions="asp       
-            aspx        
-            axd"        
-**    >
+<IIsCompressionScheme Location ="/LM/W3SVC/Filters/Compression/gzip"      
+ HcCompressionDll="%windir%\system32\inetsrv\gzip.dll"      
+ HcCreateFlags="1"      
+ HcDoDynamicCompression="TRUE"      
+ HcDoOnDemandCompression="TRUE"      
+ HcDoStaticCompression="TRUE"      
+ HcDynamicCompressionLevel="9"      
+ HcFileExtensions="css htm html js"        
+ HcOnDemandCompLevel="9"      
+ HcPriority="2"      
+ HcScriptFileExtensions="asp aspx axd">
+ ```
 
 And then as I explained in the post “[Optimization of a Web Site - Using Content Expiration (IIS 6.0)](http://weblogs.asp.net/lkempe/archive/2007/07/25/optimization-of-a-web-site-using-content-expiration-iis-6-0.aspx)” I then reconfigured the content expiration "[Using Content Expiration (IIS 6.0)](http://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/0fc16fe7-be45-4033-a5aa-d7fda3c993ff.mspx?mfr=true)".

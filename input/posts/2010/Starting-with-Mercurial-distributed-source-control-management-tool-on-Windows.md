@@ -6,7 +6,7 @@ updated: 11/6/2010 10:24:47 PM
 disqusIdentifier: 20101106102447
 tags: ["Mercurial"]
 ---
-I am starting to use [Mercurial](http://mercurial.selenic.com/)for my personal projects. At the moment I use it only locally to be able to experience it but also to be able to try thing and revert easily to previous state.
+I am starting to use [Mercurial](http://mercurial.selenic.com/) for my personal projects. At the moment I use it only locally to be able to experience it but also to be able to try thing and revert easily to previous state.
 
 To get started I downloaded
 <!-- more -->

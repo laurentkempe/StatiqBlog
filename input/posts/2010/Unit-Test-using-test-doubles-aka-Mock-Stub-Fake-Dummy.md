@@ -14,7 +14,7 @@ Understanding the difference between a Stub and a Mock is an important distincti
 
 Some framework like the excellent [mockito](http://mockito.googlecode.com/) decided not to make the distinction in the way you create the two, some other framework like the also excellent [Rhino.Mock](http://ayende.com/Wiki/Rhino+Mocks.ashx) does this distinction. At the end what is important is that the developer understand the difference.
 
-**Extract from **[**Rhino.Mock website**](http://ayende.com/Wiki/Rhino+Mocks+3.5.ashx) 
+**Extract from [Rhino.Mock website](http://ayende.com/Wiki/Rhino+Mocks+3.5.ashx)** 
 
 > “In short term, **mock are for behavior verification**, **and stub are for state verification**.
 > 

@@ -23,73 +23,77 @@ Take care of the “x86”, due to my 64bits Windows 7 which is removed on the s
 
 After that I created all the registry keys needed
 
-> <font size="1">Windows Registry Editor Version 5.00</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A]
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\"
-> "ProductVersion"="7.0.30319"
-> "ProductName"="Microsoft Windows SDK for Visual Studio 2010"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools-x64]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities (x64)"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\x64\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools-x86]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK Tools for .NET Framework 4.0"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools-x64]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK Tools for .NET Framework 4.0 (x64)"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\x64\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools-x86]
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows SDK Tools for .NET Framework 4.0"
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-SDKTools]
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows Common Utilities"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-Win32Tools]
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows Utilities for Win32 Development"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-WindowsHeadersLibs]
-> "InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\"
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows Headers and Libraries"</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-WinSDKIntellisenseRefAssys]
-> "InstallationFolder"="C:\\Program Files\\Reference Assemblies\\"
-> "ProductVersion"="7.0.30319"
-> "ComponentName"="Windows Intellisense and Reference Assemblies"</font>
+```
+Windows Registry Editor Version 5.00
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A]
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\"
+"ProductVersion"="7.0.30319"
+"ProductName"="Microsoft Windows SDK for Visual Studio 2010"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools-x64]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities (x64)"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\x64\\"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx35Tools-x86]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK .NET Framework 3.5 Multi-targeting Utilities"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK Tools for .NET Framework 4.0"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools-x64]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK Tools for .NET Framework 4.0 (x64)"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\x64\\"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-NetFx40Tools-x86]
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows SDK Tools for .NET Framework 4.0"
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\NETFX 4.0 Tools\\"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-SDKTools]
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows Common Utilities"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-Win32Tools]
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bin\\"
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows Utilities for Win32 Development"
+ 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-WindowsHeadersLibs]
+"InstallationFolder"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\"
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows Headers and Libraries"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SDKs\Windows\v7.0A\WinSDK-WinSDKIntellisenseRefAssys]
+"InstallationFolder"="C:\\Program Files\\Reference Assemblies\\"
+"ProductVersion"="7.0.30319"
+"ComponentName"="Windows Intellisense and Reference Assemblies"
+```
 
 You can copy this in a .reg file and apply it directly
 
 Finally I also created the following keys, which you also might copy in a .reg file
 
-> <font size="1">Windows Registry Editor Version 5.00</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\GenericBootstrapper]</font>
-> 
-> <font size="1">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\GenericBootstrapper\4.0]
-> "Path"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\"</font>
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\GenericBootstrapper]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\GenericBootstrapper\4.0]
+"Path"="C:\\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\"
+```
 
 And here is the result
 

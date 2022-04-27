@@ -12,8 +12,8 @@ The other day I landed on the DZone page “[Automated Browser Testing: What's i
 <!-- more -->
 
 > *   Powerful Recorder works on any Browser
-> *   Robust object identification **without brittle XPaths **
-> *   **Implicit waits **- even for complex AJAX applications
+> *   Robust object identification **without brittle XPaths**
+> *   **Implicit waits** - even for complex AJAX applications
 
 This is supposed to solve the issue we currently have with Selenium, even if we use Screen Objects to encapsulate our Selenium tests. It is just a pain to work in our highly AJAX application and for sure the XPath are brittle.  
 

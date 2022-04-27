@@ -8,10 +8,10 @@ tags: ["continuous integration", "Team City", "MSBuild", "ClickOnce"]
 ---
 Tonight we got the following issue on our [TeamCity](http://www.jetbrains.com/teamcity/index.html) build server which produce different ClickOnce setups :
 
-> c:\WINDOWS\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets(3652, 9): **error MSB3482: An error occurred while signing: Failed to sign ..\..\Tests\Output\bin\DeployClickOnce\app.publish\setup.exe**. 
+> c:\WINDOWS\Microsoft.NET\Framework\v3.5\Microsoft.Common.targets(3652, 9): **error MSB3482: An error occurred while signing: Failed to sign ..\..\Tests\Output\bin\DeployClickOnce\app.publish\setup.exe**.
 <!-- more -->
-> **SignTool Error: ISignedCode::Sign returned error: 0x80880253
-> **    **The signer's certificate is not valid for signing.**
+> SignTool Error: ISignedCode::Sign returned error: 0x80880253
+> **The signer's certificate is not valid for signing.**
 > SignTool Error: An error occurred while attempting to sign: ..\..\Tests\Output\bin\DeployClickOnce\app.publish\setup.exe
 
 Checking the certificate used by our project I found that the expiration date was yesterday:

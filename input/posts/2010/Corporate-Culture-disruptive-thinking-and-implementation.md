@@ -11,7 +11,7 @@ Today, my friend [Didier](http://didierbeck.com) finally pushed his post about N
 > [Netflix](http://netflix.com/) thinks that “**as they grow, they have to minimize rules**”. Different approach as what we all know, experience, read. And … Netflix is definitely not a startup anymore! I would like to share with you a document from Netflix I found on SlideShare about their culture and some quite innovative management ideas they have put in place. Feed for thoughts ;-)
 <!-- more -->
 
-I’d like to think that I pushed him a bit to publish this after sending him the link and having a talk about the post of [Startup Culture Lessons From Mad Men](http://onstartups.com/tabid/3339/bid/13420/Startup-Culture-Lessons-From-Mad-Men.aspx)which bring a lot of similar points than the presentation of Netflix.
+I’d like to think that I pushed him a bit to publish this after sending him the link and having a talk about the post of [Startup Culture Lessons From Mad Men](http://onstartups.com/tabid/3339/bid/13420/Startup-Culture-Lessons-From-Mad-Men.aspx) which bring a lot of similar points than the presentation of Netflix.
 
 > That led us to think a bit about what just didn’t make sense anymore given the realities of the Gen Y worker, broadband in the home, constant connectivity via mobile devices, the modern market for hiring exceptional people, etc.
 > 

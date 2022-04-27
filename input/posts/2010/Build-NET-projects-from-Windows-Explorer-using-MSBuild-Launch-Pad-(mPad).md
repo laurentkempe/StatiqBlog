@@ -13,9 +13,9 @@ Last week I changed to [MSBuild Launch Pad (mPad)](http://msbuildlaunchpad.codep
 
 The added value for me is that it maintained project, 1.0 was released on May 21, 2010 with following release notes:
 
-*   *   Support sln, csproj, vbproj, vcxproj, shfbproj, ccproj, oxygene and proj files execution.
-    *   Basic settings such as Show Prompt, and Auto Hide are provided. 
-    *   MSBuild Shell Extension integration is achieved.   
+* Support sln, csproj, vbproj, vcxproj, shfbproj, ccproj, oxygene and proj files execution.
+* Basic settings such as Show Prompt, and Auto Hide are provided. 
+* MSBuild Shell Extension integration is achieved.   
 
 I also very much like that when I right click and say build I get the control on the .NET framework version I want to use and if it is a Release, Debug or what so ever.
 
