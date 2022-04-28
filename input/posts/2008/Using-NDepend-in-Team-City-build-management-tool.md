@@ -38,39 +38,44 @@ Let's take a look at the MSBuild script with the new "Open Project File" menu in
 
 First I am importing the MSBuild tasks exposed by NDepend like this:
 
-<span style="background: black; color: white">  <UsingTask </span><span style="background: black; color: #ff8000">AssemblyFile</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">$(NDependPath)\MSBuild\NDepend.Build.MSBuild.dll</span><span style="background: black; color: white">" </span><span style="background: black; color: #ff8000">TaskName</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">NDependTask</span><span style="background: black; color: white">" />
-</span>
-
+```xml
+<UsingTask AssemblyFile="$(NDependPath)\MSBuild\NDepend.Build.MSBuild.dll"
+           TaskName="NDependTask" />
+```
 Then defining some properties that will ease the build script writting later on:
 
-<span style="background: black; color: white">    <!-- </span><span style="background: black; color: green">NDepend </span><span style="background: black; color: white">-->
-    <NDependPath>C:\Program Files\_Tools\Development\ndepend</NDependPath>
-    <NDependProjectFilePath>$(TestsFolder)\NDepend\TechHeadBrothers.Portal.xml</NDependProjectFilePath>
-    <NDependInDirs>"$(SolutionFolder)\Sources\TechHeadBrothers.Portal\bin";"C:\Windows\Microsoft.NET\Framework\v2.0.50727";</NDependInDirs>
-    <NDpendOutputDir>$(TestsFolder)\Output\NDependOut</NDpendOutputDir>
-  </PropertyGroup>
-</span>
+```xml
+<NDependPath>C:\Program Files\_Tools\Development\ndepend</NDependPath>
+<NDependProjectFilePath>$(TestsFolder)\NDepend\TechHeadBrothers.Portal.xml</NDependProjectFilePath>
+<NDependInDirs>"$(SolutionFolder)\Sources\TechHeadBrothers.Portal\bin";"C:\Windows\Microsoft.NET\Framework\v2.0.50727";</NDependInDirs>
+<NDpendOutputDir>$(TestsFolder)\Output\NDependOut</NDpendOutputDir>
+```
 
 Then I define a Target for NDepend:
 
-<span style="background: black; color: white">  <Target </span><span style="background: black; color: #ff8000">Name</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">NDepend</span><span style="background: black; color: white">">
-    <Message </span><span style="background: black; color: #ff8000">Text</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">#--------- Executing NDepend ---------#</span><span style="background: black; color: white">" />
-    <NDependTask </span><span style="background: black; color: #ff8000">NDependConsoleExePath</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">$(NDependPath)</span><span style="background: black; color: white">" 
-                 </span><span style="background: black; color: #ff8000">ProjectFilePath</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">$(NDependProjectFilePath)</span><span style="background: black; color: white">" 
-                 </span><span style="background: black; color: #ff8000">InDirsDotComaSeparated</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">$(NDependInDirs)</span><span style="background: black; color: white">" 
-                 </span><span style="background: black; color: #ff8000">OutDir</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">$(NDpendOutputDir)</span><span style="background: black; color: white">" />
-  </Target>
-</span>
+```xml
+<Target Name="NDepend">
+    <Message Text="#--------- Executing NDepend ---------#" />
+    <NDependTask NDependConsoleExePath="$(NDependPath)"
+                 ProjectFilePath="$(NDependProjectFilePath)"
+                 InDirsDotComaSeparated="$(NDependInDirs)"
+                 OutDir="$(NDpendOutputDir)" />
+```
 
 Then in the after build target I call the NDepend target if the configuration is the Nightly one:
 
-<span style="background: black; color: white">  <Target </span><span style="background: black; color: #ff8000">Name</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">AfterBuild</span><span style="background: black; color: white">">
-    <CallTarget </span><span style="background: black; color: #ff8000">Condition</span><span style="background: black; color: white">=" </span><span style="background: black; color: lime">'$(Configuration)' == 'Staging' </span><span style="background: black; color: white">" </span><span style="background: black; color: #ff8000">Targets</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">SummaryCoverage</span><span style="background: black; color: white">" </span><span style="background: black; color: #ff8000">ContinueOnError</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">false</span><span style="background: black; color: white">" />
-    <CallTarget </span><span style="background: black; color: #ff8000">Condition</span><span style="background: black; color: white">=" </span><span style="background: black; color: lime">'$(Configuration)' == 'Nightly' </span><span style="background: black; color: white">" </span><span style="background: black; color: #ff8000">Targets</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">FullCoverage</span><span style="background: black; color: white">" </span><span style="background: black; color: #ff8000">ContinueOnError</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">false</span><span style="background: black; color: white">" />
-    <CallTarget </span><span style="background: black; color: #ff8000">Condition</span><span style="background: black; color: white">=" </span><span style="background: black; color: lime">'$(Configuration)' == 'Nightly' </span><span style="background: black; color: white">" 
-                </span><span style="background: black; color: #ff8000">Targets</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">NDepend</span><span style="background: black; color: white">" 
-                </span><span style="background: black; color: #ff8000">ContinueOnError</span><span style="background: black; color: white">="</span><span style="background: black; color: lime">false</span><span style="background: black; color: white">" />
-</span>
+```xml
+<Target Name="AfterBuild">
+    <CallTarget Condition=" '$(Configuration)' == 'Staging' "
+                Targets="SummaryCoverage"
+                ContinueOnError="false" />
+    <CallTarget Condition=" '$(Configuration)' == 'Nightly' "
+                Targets="FullCoverage"
+                ContinueOnError="false" />
+    <CallTarget Condition=" '$(Configuration)' == 'Nightly' "
+                Targets="NDepend"
+                ContinueOnError="false" />
+```
 
 Now what we want to have is the possibility to see the report generated by NDepend on the Team City portal like this:
 
@@ -82,12 +87,13 @@ To achieve this like for [NCover](http://www.ncover.com/) ([Integration of NCove
 
 Then you need to edit on the build server the file ***main-config.xml*** and add the following configuration:
 
+```xml
 <report-tab title="Code Coverage Summary" basePath="" startPage="CoverageSummary.html" />
     
 <report-tab title="Code Coverage" basePath="Coverage" startPage="index.html" />
 
-    
-**<report-tab title="NDepend" basePath="NDepend" startPage="NDependReport.html" /> **
+<report-tab title="NDepend" basePath="NDepend" startPage="NDependReport.html" />
+```
 
 Beware not to have two title with the same value!
 

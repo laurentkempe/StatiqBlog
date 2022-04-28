@@ -8,8 +8,8 @@ tags: ["ASP.NET AJAX", "ASP.NET AJAX Control Toolkit "]
 ---
 No new controls but some great fixes! 
 
-> **<u>Installation Files</u>**
 <!-- more -->
+> **<u>Installation Files</u>**
 > 
 > Please visit the [AJAX Control Toolkit Project Page](http://www.codeplex.com/Wiki/View.aspx?ProjectName=AtlasControlToolkit) on CodePlex
 > 

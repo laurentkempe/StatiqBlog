@@ -16,25 +16,23 @@ The important part in our case is the following one:
 > We don’t have complete support for command line msbuild usage to build solutions with Silverlight projects which also includes 64 bits MSBuild support.
 
 So basically I made a copy manually from the source of the Silverlight project to the output path of my MSBuild project:
-  <div style="font-size: 10pt; background: black; color: white; font-family: consolas">   
 
-    <!--<span style="color: green">HACK Fix the missing copy of ClientBin </span>-->
+```xml
+<!--
+Using MSbuild to build a solution in a command line doesn’t copy the Silverlight project output
+to the linked web project. We don’t have complete support for command line msbuild usage to
+build solutions with Silverlight projects which also includes 64 bits MSBuild support.
+-->
 
-    <!--<span style="color: green">http://www.microsoft.com/silverlight/resources/readme.aspx?v=2.0&sdk=true </span>-->
+<Message Condition=" '\((Configuration)|\)(Platform)' == 'Staging|AnyCPU' "
+         Text="### HACK Silverlight MSBUILD ###" />
 
-    <!--<span style="color: green">Using MSbuild to build a solution in a command line doesn’t copy the Silverlight project output to the linked web project</span>
+<MakeDir Condition=" '\((Configuration)|\)(Platform)' == 'Staging|AnyCPU' "
+         Directories="$(OutputPath)\ClientBin" ContinueOnError="true" />
 
-<span style="color: green">        We don’t have complete support for command line msbuild usage to build solutions with Silverlight projects which also includes 64 bits MSBuild support.</span>
-
-<span style="color: green">    </span>-->
-
-    <Message <span style="color: #ff8000">Condition</span>="<span style="color: lime"> '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' </span>"  <span style="color: #ff8000">Text</span>="<span style="color: lime">### HACK Silverlight MSBUILD ###</span>" />
-
-    <MakeDir <span style="color: #ff8000">Condition</span>="<span style="color: lime"> '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' </span>" <span style="color: #ff8000">Directories</span>="<span style="color: lime">$(OutputPath)\ClientBin</span>" <span style="color: #ff8000">ContinueOnError</span>="<span style="color: lime">true</span>" />
-
-    <Copy <span style="color: #ff8000">Condition</span>="<span style="color: lime"> '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' </span>" <span style="color: #ff8000">SourceFiles</span>="<span style="color: lime">$(MSBuildProjectDirectory)\..\..\Sources\VideoPlayer\ClientBin\VideoPlayer.xap</span>" <span style="color: #ff8000">DestinationFiles</span>="<span style="color: lime">$(OutputPath)\ClientBin\VideoPlayer.xap</span>" />
-
-    <!--<span style="color: green">EndHACK </span>-->
- </div>  
+<Copy Condition=" '\((Configuration)|\)(Platform)' == 'Staging|AnyCPU' "
+      SourceFiles="\((MSBuildProjectDirectory)\..\..\Sources\VideoPlayer\ClientBin\VideoPlayer.xap"
+      DestinationFiles="\)(OutputPath)\ClientBin\VideoPlayer.xap" />
+```
 
 Now my web application is compiled, deployed and works!

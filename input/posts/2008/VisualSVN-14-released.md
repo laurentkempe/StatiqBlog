@@ -7,23 +7,19 @@ disqusIdentifier: 20080422055731
 tags: ["Tools", "Visual Studio"]
 ---
 [VisualSVN](http://www.visualsvn.com/release-1.4.html), the plugin for [Subversion](http://subversion.tigris.org/) in Visual Studio 2003, 2005 & 2008 was just updated with some new good features:
-
-> ##### New Features
 <!-- more -->
+> ##### New Features
 > 
 > *   **Quick Diff**
 > 
-> ![Quick Diff](http://www.visualsvn.com/images/release-1.4-quickdiff.png) 
 > Reviewing changes has never been so easy. Now you don't have to open separate diff window and remember locations of edited code blocks. VisualSVN marks in real-time the text lines changed since original version of the file and offers convenient navigation between them.
 > Instead of pressing Page Up/Page Down several times and looking for changes just press Ctrl+Shift+Up/Down and jump to the next change immediatelly.
 > 
 > *   **Toolbar**
 > 
-> ![Toolbar](http://www.visualsvn.com/images/release-1.4-toolbar.png)
 > You don't need to remember curent code branch you are working on. There is current repository URL displayed on the VisualSVN toolbar and you can easily switch to another code branch from there. Buttons for the most common Subversion commands also make the life a bit easier.
 > 
 > *   **Add Solution Wizard**
-> ![Add Solution](http://www.visualsvn.com/images/release-1.4-addsolution.png)
 > 
 > First steps in using VisualSVN might have been non-trivial if you are not a Subversion expert. But with the brand new "Add Solution to Subversion" wizard it's just a piece of cake. The wizard automatically detects all potential problems and makes everything simple and intuitive.
 > 

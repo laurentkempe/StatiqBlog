@@ -21,9 +21,13 @@ The general idea is to output a well formed XML document out of the WordML docum
 
 The architecture I decided to use at the moment is to have special Word styles mapped to some part of my target XML structure. Doing so I can easily parse the WordML like this to get all pagaraph with Heading1 style:
 
-<span style="background: black; color: #ff8000">var </span><span style="background: black; color: white">sections = 
-    </span><span style="background: black; color: #ff8000">from </span><span style="background: black; color: white">p </span><span style="background: black; color: #ff8000">in </span><span style="background: black; color: white">styledPara
-    </span><span style="background: black; color: #ff8000">where </span><span style="background: black; color: white">p.Elements(w + </span><span style="background: black; color: lime">"pPr"</span><span style="background: black; color: white">).Elements(w + </span><span style="background: black; color: lime">"pStyle"</span><span style="background: black; color: white">).First().Attribute(w + </span><span style="background: black; color: lime">"val"</span><span style="background: black; color: white">).Value == </span><span style="background: black; color: lime">"Heading1"
-    </span><span style="background: black; color: #ff8000">select </span><span style="background: black; color: white">p;
-</span>
-[](http://11011.net/software/vspaste)
+```csharp
+var sections = 
+    from p in styledPara
+    where p.Elements(w + "pPr")
+           .Elements(w + "pStyle")
+           .First()
+           .Attribute(w + "val")
+           .Value == "Heading1"
+    select p;
+```

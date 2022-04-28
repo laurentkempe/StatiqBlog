@@ -12,53 +12,41 @@ For example I developed [Tech Head Brothers](http://www.techheadbrothers.com/) p
 <!-- more -->
 
 I do have a generic Repository interface as following:
-  <div style="font-family: courier new; background: white; color: black; font-size: 10pt">   
 
-<span style="color: blue">using</span> System;
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-<span style="color: blue">using</span> System.Collections.Generic;
-
-<span style="color: blue">using</span> System.Linq;
-
-<span style="color: blue">namespace</span> TechHeadBrothers.Portal.Infrastructure.Interfaces
-
+namespace TechHeadBrothers.Portal.Infrastructure.Interfaces
 {
+    ///
+    /// IRepository exposes all methods to access the data repository
+    ///
+    public interface IRepository
+    {
+        void InitializeRepository();
 
-    <span style="color: gray">///</span><span style="color: green"> </span><span style="color: gray"><summary></span>
+        bool Save(T entity) where T : class;
 
-    <span style="color: gray">///</span><span style="color: green"> IRepository exposes all methods to access the data repository</span>
+        bool SaveAll(IList entities) where T : class;
 
-    <span style="color: gray">///</span><span style="color: green"> </span><span style="color: gray"></summary></span>
+        bool Delete(string id) where T : class;
 
-    <span style="color: blue">public</span> <span style="color: blue">interface</span> <span style="color: #2b91af">IRepository</span>
+        T Find(string id) where T : class;
 
-    {
+        IQueryable Find();
 
-        <span style="color: blue">void</span> InitializeRepository();
+        IQueryable DetachedFind();
 
-        <span style="color: blue">bool</span> Save<T>(T entity) <span style="color: blue">where</span> T : <span style="color: blue">class</span>;
+        IQueryable Find(System.Linq.Expressions.Expression<Func<T, bool>> expression);
 
-        <span style="color: blue">bool</span> SaveAll<T>(<span style="color: #2b91af">IList</span><T> entities) <span style="color: blue">where</span> T : <span style="color: blue">class</span>;
+        int Count();
 
-        <span style="color: blue">bool</span> Delete<T>(<span style="color: blue">string</span> id) <span style="color: blue">where</span> T : <span style="color: blue">class</span>;
-
-        T Find<T>(<span style="color: blue">string</span> id) <span style="color: blue">where</span> T : <span style="color: blue">class</span>;
-
-        <span style="color: #2b91af">IQueryable</span><T> Find<T>();
-
-        <span style="color: #2b91af">IQueryable</span><T> DetachedFind<T>();
-
-        <span style="color: #2b91af">IQueryable</span><T> Find<T>(System.Linq.Expressions.<span style="color: #2b91af">Expression</span><<span style="color: #2b91af">Func</span><T, <span style="color: blue">bool</span>>> expression);
-
-        <span style="color: blue">int</span> Count<T>();
-
-        <span style="color: blue">int</span> Count<T>(System.Linq.Expressions.<span style="color: #2b91af">Expression</span><<span style="color: #2b91af">Func</span><T, <span style="color: blue">bool</span>>> expression);
-
-    }
-
+        int Count(System.Linq.Expressions.Expression<Func<T, bool>> expression);
+    }
 }
-
- </div>  
+```
 
 My ORM mapping tool of choice is [Euss](http://www.codeplex.com/euss/). And here comes the slight difference, I do have one implementation of my interface leveraging Euss, and that’s it. All different possibilities are handled by Euss. During my work on the definition of the domain I took the habit to use an [Euss](http://www.codeplex.com/euss/) XML Engine or an [Euss](http://www.codeplex.com/euss/) Memory Engine. I use those two engine for my unit test and my real application.
 

@@ -8,29 +8,31 @@ tags: ["Note to self"]
 ---
 I had to modify the Microsoft.WebDeployment.targets file to be able to compile through Team City the Web Deployment 2008 project !
 
-> **<!-- Changed KEL ExePath="$(FrameworkSDKDir)bin" --> **
-<!-- more -->
-> 
->     <Target Name="AspNetMerge" Condition="'$(UseMerge)' == 'true'" DependsOnTargets="$(MergeDependsOn)">
->         <AspNetMerge
-> **          ExePath="C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin"
-> **          ApplicationPath="$(TempBuildDir)"
->           KeyFile="$(_FullKeyFile)"
->           DelaySign="$(DelaySign)"
->           Prefix="$(AssemblyPrefixName)"
->           SingleAssemblyName="$(SingleAssemblyName)"
->           Debug="$(DebugSymbols)"
->           Nologo="$(NoLogo)"
->           ContentAssemblyName="$(ContentAssemblyName)"
->           ErrorStack="$(ErrorStack)"
->           RemoveCompiledFiles="$(DeleteAppCodeCompiledFiles)"
->           CopyAttributes="$(CopyAssemblyAttributes)"
->           AssemblyInfo="$(AssemblyInfoDll)"
->           MergeXmlDocs="$(MergeXmlDocs)"
->           ErrorLogFile="$(MergeErrorLogFile)"
->           />
-> 
->         <CreateItem Include="$(TempBuildDir)**\*.*">
->             <Output ItemName="PrecompiledOutput" TaskParameter="Include" />
->         </CreateItem>
->     </Target>
+```xml
+<!-- Changed KEL ExePath="$(FrameworkSDKDir)bin" -->
+<Target Name="AspNetMerge" 
+        Condition="'$(UseMerge)' == 'true'"
+        DependsOnTargets="$(MergeDependsOn)">
+  <AspNetMerge
+    ExePath="C:\Program Files\Microsoft SDKs\Windows\v6.0A\Bin"
+    ApplicationPath="$(TempBuildDir)"
+    KeyFile="$(_FullKeyFile)"
+    DelaySign="$(DelaySign)"
+    Prefix="$(AssemblyPrefixName)"
+    SingleAssemblyName="$(SingleAssemblyName)"
+    Debug="$(DebugSymbols)"
+    Nologo="$(NoLogo)"
+    ContentAssemblyName="$(ContentAssemblyName)"
+    ErrorStack="$(ErrorStack)"
+    RemoveCompiledFiles="$(DeleteAppCodeCompiledFiles)"
+    CopyAttributes="$(CopyAssemblyAttributes)"
+    AssemblyInfo="$(AssemblyInfoDll)"
+    MergeXmlDocs="$(MergeXmlDocs)"
+    ErrorLogFile="$(MergeErrorLogFile)"
+  />
+ 
+  <CreateItem Include="$(TempBuildDir)**\*.*">
+    <Output ItemName="PrecompiledOutput" TaskParameter="Include" />
+  </CreateItem>
+  </Target>
+```

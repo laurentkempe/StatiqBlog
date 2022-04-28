@@ -16,7 +16,7 @@ It supports C# 3.0 and LINQ, plugs nicely into Visual Studio 2008 and 2005 and a
 It includes:
 
 *   **Full Support for C# 3.0 and LINQ**; Full Edition and C# Edition provide comprehensive support for C# 3.0, including LINQ, implicitly typed locals and arrays, extension methods, automatic properties, lambda expressions, object & collection initializers, anonymous types, expression trees, and partial methods 
-*   **Comprehensive Insight into .NET Framework **
+*   **Comprehensive Insight into .NET Framework**
 *   **Solution-Wide Analysis**, which looks for erroneous C# code in your whole solution on-the-fly, without compiling it first 
 *   **Code Cleanup**, flexible code compliance and formatting tool bringing together a dozen of ReSharper features. In addition to fine-tuning formatting style to use, you can opt to arrange 'this' qualifier, remove code redundancies, convert properties with backup fields to auto-properties, make fields read-only if possible, optimize using directives, shorten qualified references, update file header, replace explicit types with vars, and revamp your C# code with many more settings 
 *   **New Refactorings**       
@@ -28,14 +28,14 @@ It includes:
     *   Inline Method 
     *   Convert Method to Indexer (to Default Property in VB.NET) 
     *   Convert Indexer (Default Property in VB.NET) to Method    
-*   **Multiple New Productivity Features **      
+*   **Multiple New Productivity Features**      
 
     *   *Complete statement*; inserts necessary syntax elements (braces, semicolons etc.) and gets you to the position to start the next statement, saving you from excessive juggling with the caret. 
     *   *CamelHumps in Code Completion*, allowing you to complete any symbol by entering only its uppercase characters. 
     *   *Live Templates Editor & Manager*, rejuvenated set of user interface items for viewing, managing, and editing all three types of templates — Live Templates, Surround With Templates, and File Templates. 
     *   *Recent Edits*, drop-down list similar to existing Go To features that shows files and symbols that you recently modified.    
 *   **Smoother Interaction with Visual Studio Ecosystem** 
-*   **ASP.NET Speedup**; significantly speed-up the analysis of ASP.NET pages** **   
+*   **ASP.NET Speedup**; significantly speed-up the analysis of ASP.NET pages   
 
 You might read [more details about all new features](http://www.jetbrains.com/resharper/features/newfeatures.html) or the [full list of features](http://www.jetbrains.com/resharper/features/index.html).
 

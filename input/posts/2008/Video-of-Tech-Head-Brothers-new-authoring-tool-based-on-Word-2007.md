@@ -17,12 +17,12 @@ Then you will see the Word 2007 template using to author the content of an artic
 2.  Definition of the **Description**
 3.  Definition of the **Keywords**
 4.  Writing of the content of a section of content with **bold, italic, list, hyperlink**
-5.  Adding some **sample code **directly copied from Visual Studio 2008
+5.  Adding some **sample code** directly copied from Visual Studio 2008
 6.  Inserting **sample code in a zip**
-7.  Adding a **picture **captured using SnagIt yo the article
-8.  **Offline preview **in Internet Explorer
-9.  **Posting **to the Tech Head Brothers web site with **Tags **selection
-10.  **Online preview **of the posted content  
+7.  Adding a **picture** captured using SnagIt yo the article
+8.  **Offline preview** in Internet Explorer
+9.  **Posting** to the Tech Head Brothers web site with **Tags** selection
+10.  **Online preview** of the posted content  
 
 <iframe style="width: 500px; height: 375px" src="http://silverlight.services.live.com/invoke/4065/thb_authoringtool_2/iframe.html" frameborder="0" scrolling="no"></iframe>
 

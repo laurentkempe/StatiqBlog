@@ -11,18 +11,18 @@ I finally found some time this evening to re-configure Team City and adapt my MS
 ![](http://farm3.static.flickr.com/2006/2434398929_d8bb394867_o.jpg) 
 <!-- more -->
 
-*   CI Trunk - Unit Tests, Coverage, Deploy Staging
-*   *   Checkout source code from subversion Portal project trunk
-    *   Compile
-    *   Run [NUnit](http://nunit.com/index.php) tests
-    *   Run [NCover](http://www.ncover.com/) with summary code coverage report
-    *   Deploy to the Staging IIS    Nightly Trunk - Duplicate Finder
-*   *   Find duplicates using Team City Build Runner    Nightly Trunk - Unit Tests, Coverage, NDepend
-*   *   Checkout source code from subversion Portal project trunk
-    *   Compile
-    *   Run [NUnit](http://nunit.com/index.php) tests
-    *   Run [NCover](http://www.ncover.com/) with summary code coverage report
-    *   Run [NCover](http://www.ncover.com/) with full code coverage report
-    *   Run [NDepend](http://www.ndepend.com/)   
+* CI Trunk - Unit Tests, Coverage, Deploy Staging
+  * Checkout source code from subversion Portal project trunk
+  *   Compile
+  *   Run [NUnit](http://nunit.com/index.php) tests
+  *   Run [NCover](http://www.ncover.com/) with summary code coverage report
+  *   Deploy to the Staging IIS    Nightly Trunk - Duplicate Finder
+* Find duplicates using Team City Build Runner    Nightly Trunk - Unit Tests, Coverage, NDepend
+* Checkout source code from subversion Portal project trunk
+  *   Compile
+  *   Run [NUnit](http://nunit.com/index.php) tests
+  *   Run [NCover](http://www.ncover.com/) with summary code coverage report
+  *   Run [NCover](http://www.ncover.com/) with full code coverage report
+  *   Run [NDepend](http://www.ndepend.com/)   
 
 Asap I will post about the way I achieve this configuration!

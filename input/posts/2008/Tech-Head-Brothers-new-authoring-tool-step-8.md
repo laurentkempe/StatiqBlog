@@ -8,15 +8,17 @@ tags: ["Tech Head Brothers", "VSTO", "WCF", "Office 2007"]
 ---
 For three night now I focused on one scenario for the Tech Head Brothers authoring tool:
 
-*   As an author I want to be able to copy source code from Visual Studio and insert it into the authored Word document
+* As an author I want to be able to copy source code from Visual Studio and insert it into the authored Word document
 <!-- more -->
-*   As an author I want to preview a document with source code inserted in Internet Explorer  
+* As an author I want to preview a document with source code inserted in Internet Explorer
 
 This might not look really difficult at first, but I had some difficulties to fulfill the requirements of those two user story.
 
 The first one was almost already implemented [in step 7](http://weblogs.asp.net/lkempe/archive/2008/03/12/tech-head-brothers-new-authoring-tool-step-7.aspx), using CustomXML capabilities of WordML.
 
-![](http://farm4.static.flickr.com/3228/2745205622_92d3d8e762_o.png)The biggest issue I had was to figure out why when I was inserting CustomXML, the WordML format of the hyperlink was changing. It took me the most time to realize that inserting CustomXML was not the issue. The issue was proofing. Somehow inserting CustomXML was activating the auto proofing and then I got some error like on the following picture. The red underlined Brothers which is a link was the issue. In fact this simple thing change the WordML representation of the hyperlink.
+![](http://farm4.static.flickr.com/3228/2745205622_92d3d8e762_o.png)
+
+The biggest issue I had was to figure out why when I was inserting CustomXML, the WordML format of the hyperlink was changing. It took me the most time to realize that inserting CustomXML was not the issue. The issue was proofing. Somehow inserting CustomXML was activating the auto proofing and then I got some error like on the following picture. The red underlined Brothers which is a link was the issue. In fact this simple thing change the WordML representation of the hyperlink.
 
 As I had something working I had to find a way other than adding a second way to parse Hyperlinks. I came to the solution of disabling proofing then saving the document before making my projection to Tech Head Brothers XML. Then for sure re-enabling the proofing. Nice and easy!
 

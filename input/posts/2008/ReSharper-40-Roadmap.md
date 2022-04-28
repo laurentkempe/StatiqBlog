@@ -8,8 +8,8 @@ tags: ["Tools"]
 ---
 JetBrains just published a [Roadmap for ReSharper 4.0](http://www.jetbrains.net/confluence/display/ReSharper/ReSharper+4.0+Roadmap) with a soon to come Early Access Program (I can't wait anymore :)
 
-> ReSharper 4.0 is the next major version of the product featuring a number of important enhancements:
 <!-- more -->
+> ReSharper 4.0 is the next major version of the product featuring a number of important enhancements:
 > 
 > *   Support for both Visual Studio 2005 and 2008  Comprehensive support for C# 3.0 language features, including:
 > 

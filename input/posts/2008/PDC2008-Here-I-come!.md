@@ -18,7 +18,9 @@ tags: ["PDC 2008"]
 .schedule .item table td {border-bottom:none;}
 </style>  
 
-[![](http://ecx.images-amazon.com/images/I/51CrrTeaEzL._SL500_AA240_.jpg)](http://www.poppendieck.com/ilsd.htm)I finished a first selection of my sessions! 
+[![](/images/2008/lean_software_book_cover.jpg)](http://www.poppendieck.com/ilsd.htm)
+
+I finished a first selection of my sessions! 
 <!-- more -->
 
 The main topic for me will be Cloud Computing and Live Mesh. With some WF 4.0, WCF 4.0 and Dublin and for sure some more web stuff like Silverlight, ASP.NET MVC.
@@ -33,15 +35,766 @@ Finally I will attend “Agile Perspectives, Industry and Microsoft” Presenter
 
 I enjoy reading Mary’s book “[Implementing Lean Software Development: From Concept to Cash](http://www.poppendieck.com/ilsd.htm)” with some more pages to read during the long flight! 
 
-When I attend such an event like Tech Ed or PDC I always select two sessions per time slot, in case one is full then I know on which one I want to go, so don’t be surprise!
-  <div class="schedule">   <div class="day">Sunday, October 26</div>    <table cellspacing="0" cellpadding="0" width="100%"><tbody>       <tr>         <td class="time" valign="top" width="150">10:00 AM - 12:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">1:15 PM - 3:15 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">3:45 PM - 5:45 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>     </tbody></table> </div>    
-  <div class="schedule">   <div class="day">Monday, October 27</div>    <table cellspacing="0" cellpadding="0" width="100%"><tbody>       <tr>         <td class="time" valign="top" width="150">8:30 AM - 10:30 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">8:30 AM - 11:00 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Keynote </div>                      <div>Hall A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">11:00 AM - 12:15 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>A Lap around Cloud Services Part 1 </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Microsoft Visual Studio Team System: A Lap Around VSTS 2010 </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">12:45 PM - 1:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>"Dublin" and .NET Services: Extending On-Premises Applications to the Cloud </div>                      <div>515A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">1:45 PM - 3:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Identity: "Geneva" Server and Framework Overview </div>                      <div>403AB</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>The Future of C# </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">3:30 PM - 4:45 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>A Lap around Cloud Services Part 2 </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>ASP.NET MVC: A New Framework for Building Web Applications </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">5:15 PM - 6:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Developing and Deploying Your First Cloud Service </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>WF 4.0: A First Look </div>                      <div>151</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>     </tbody></table> </div>    
-  <div class="schedule">   <div class="day">Tuesday, October 28</div>    <table cellspacing="0" cellpadding="0" width="100%"><tbody>       <tr>         <td class="time" valign="top" width="150">8:30 AM - 10:30 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">8:30 AM - 11:00 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Keynote </div>                      <div>Hall A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">11:00 AM - 12:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Keynote </div>                      <div>Hall A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">11:00 AM - 12:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">12:45 PM - 1:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: What I Learned Building My First Mesh Application </div>                      <div>501B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Showcase: [Cloud Computing](http://en.wikipedia.org/wiki/Cloud_computing "Cloud computing") Platform Enables External Partners </div>                      <div>408A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">1:45 PM - 3:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: A Lap around the Live Framework and Mesh Services </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Essential Cloud Storage Services </div>                      <div>502A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">3:30 PM - 4:45 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Microsoft Silverlight 2 for Mobile: Developing for Mobile Devices </div>                      <div>408B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Microsoft Silverlight Futures: Building Business Focused Applications </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">5:15 PM - 6:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Architecting Services for the Cloud </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Entity Framework Futures </div>                      <div>151</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>     </tbody></table> </div>    
-  <div class="schedule">   <div class="day">Wednesday, October 29</div>    <table cellspacing="0" cellpadding="0" width="100%"><tbody>       <tr>         <td class="time" valign="top" width="150">8:30 AM - 10:00 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody></tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">8:30 AM - 11:00 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Keynote </div>                      <div>Hall A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">10:30 AM - 11:45 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: Live Framework Programming Model Architecture and Insights </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>WCF 4.0: Building WCF Services with WF in Microsoft .NET 4.0 </div>                      <div>151</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Parallel Programming for Managed Developers with the Next Version of Microsoft Visual Studio </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">12:00 PM - 12:45 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Silverlight Controls Roadmap </div>                      <div>404A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Panel: The Future of Unit Testing </div>                      <div>406A</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">1:15 PM - 2:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Logging, Diagnosing, and Troubleshooting Applications Running Live in the Cloud </div>                      <div>515B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>"Oslo": Customizing and Extending the Visual Design Experience </div>                      <div>151</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">3:00 PM - 4:15 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: Mesh Services Architecture and Concepts </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>"Dublin": Hosting and Managing Workflows and Services in Windows Application Server </div>                      <div>403AB</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>A Day in the Life of a Cloud Service Developer </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">4:45 PM - 6:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: Building Mesh-Enabled Web Applications Using the Live Framework </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>     </tbody></table> </div>    
-  <div class="schedule">   <div class="day">Thursday, October 30</div>    <table cellspacing="0" cellpadding="0" width="100%"><tbody>       <tr>         <td class="time" valign="top" width="150">8:30 AM - 10:00 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Services Symposium: Expanding Applications to the Cloud </div>                      <div>515B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">8:30 AM - 9:45 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: FeedSync and Mesh Synchronization Services </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">10:15 AM - 11:30 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: The Future of the Device Mesh </div>                      <div>411</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>ASP.NET: Cache Extensibility </div>                      <div>403AB</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">10:15 AM - 11:45 AM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Services Symposium: Enterprise Grade Cloud Applications </div>                      <div>515B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">12:00 PM - 1:15 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Live Services: Notifications, Awareness, and Communications </div>                      <div>153</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Designing Your Application to Scale </div>                      <div>501B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>Cloud Computing: Programming in the Cloud </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">12:00 PM - 1:30 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Services Symposium: Cloud or No Cloud, the Laws of Physics Still Apply </div>                      <div>515B</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>             </tbody></table>          </td>       </tr>        <tr>         <td class="time" valign="top" width="150">1:45 PM - 3:00 PM </td>          <td class="item" valign="top">           <table border="0" width="100%"><tbody>               <tr>                 <td valign="top">                   <div class="schedule">                     <div>Workflow Services: Orchestrating Services and Business Processes Using Cloud-Based Workflow </div>                      <div>151</div>                      <div></div>                   </div>                 </td>                  <td valign="top" width="20"> </td>               </tr>                <tr>                 <td valign="top">                   <div class="schedule">                     <div>ASP.NET AJAX Futures </div>                      <div>Petree Hall CD</div>                      <div></div>                   </div>                    
+When I attend such an event like Tech Ed or PDC I always select two sessions per time slot, in case one is full then I know on which one I want to go, so don’t be surprised!
+<p></p>
 
-                    <div></div>                    
-
-                    <div></div>                    <div></div>                 </td>               </tr>             </tbody></table>         </td>       </tr>     </tbody></table> </div>  
+<div class="schedule">
+    <div class="day">Sunday, October 26</div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td class="time" valign="top" width="150">10:00 AM - 12:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">1:15 PM - 3:15 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">3:45 PM - 5:45 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="schedule">
+    <div class="day">Monday, October 27</div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 10:30 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 11:00 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Keynote</div>
+                                <div>Hall A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">11:00 AM - 12:15 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>A Lap around Cloud Services Part 1</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Microsoft Visual Studio Team System: A Lap Around VSTS 2010</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">12:45 PM - 1:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>"Dublin" and .NET Services: Extending On-Premises Applications to the Cloud</div>
+                                <div>515A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">1:45 PM - 3:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Identity: "Geneva" Server and Framework Overview</div>
+                                <div>403AB</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>The Future of C#</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">3:30 PM - 4:45 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>A Lap around Cloud Services Part 2</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>ASP.NET MVC: A New Framework for Building Web Applications</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">5:15 PM - 6:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Developing and Deploying Your First Cloud Service</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>WF 4.0: A First Look</div>
+                                <div>151</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="schedule">
+    <div class="day">Tuesday, October 28</div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 10:30 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 11:00 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Keynote</div>
+                                <div>Hall A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">11:00 AM - 12:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Keynote</div>
+                                <div>Hall A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">11:00 AM - 12:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">12:45 PM - 1:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: What I Learned Building My First Mesh Application</div>
+                                <div>501B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Showcase: [Cloud Computing](http://en.wikipedia.org/wiki/Cloud_computing "Cloud
+                                    computing") Platform Enables External Partners
+                                </div>
+                                <div>408A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">1:45 PM - 3:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: A Lap around the Live Framework and Mesh Services</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Essential Cloud Storage Services</div>
+                                <div>502A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">3:30 PM - 4:45 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Microsoft Silverlight 2 for Mobile: Developing for Mobile Devices</div>
+                                <div>408B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Microsoft Silverlight Futures: Building Business Focused Applications</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">5:15 PM - 6:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Architecting Services for the Cloud</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Entity Framework Futures</div>
+                                <div>151</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="schedule">
+    <div class="day">Wednesday, October 29</div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 10:00 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody></tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 11:00 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Keynote</div>
+                                <div>Hall A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">10:30 AM - 11:45 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: Live Framework Programming Model Architecture and Insights</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>WCF 4.0: Building WCF Services with WF in Microsoft .NET 4.0</div>
+                                <div>151</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Parallel Programming for Managed Developers with the Next Version of Microsoft
+                                    Visual Studio
+                                </div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">12:00 PM - 12:45 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Silverlight Controls Roadmap</div>
+                                <div>404A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Panel: The Future of Unit Testing</div>
+                                <div>406A</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">1:15 PM - 2:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Logging, Diagnosing, and Troubleshooting Applications Running Live in the Cloud
+                                </div>
+                                <div>515B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>"Oslo": Customizing and Extending the Visual Design Experience</div>
+                                <div>151</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">3:00 PM - 4:15 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: Mesh Services Architecture and Concepts</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>"Dublin": Hosting and Managing Workflows and Services in Windows Application
+                                    Server
+                                </div>
+                                <div>403AB</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>A Day in the Life of a Cloud Service Developer</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">4:45 PM - 6:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: Building Mesh-Enabled Web Applications Using the Live Framework
+                                </div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="schedule">
+    <div class="day">Thursday, October 30</div>
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 10:00 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Services Symposium: Expanding Applications to the Cloud</div>
+                                <div>515B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">8:30 AM - 9:45 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: FeedSync and Mesh Synchronization Services</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">10:15 AM - 11:30 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: The Future of the Device Mesh</div>
+                                <div>411</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>ASP.NET: Cache Extensibility</div>
+                                <div>403AB</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">10:15 AM - 11:45 AM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Services Symposium: Enterprise Grade Cloud Applications</div>
+                                <div>515B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">12:00 PM - 1:15 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Live Services: Notifications, Awareness, and Communications</div>
+                                <div>153</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Designing Your Application to Scale</div>
+                                <div>501B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Cloud Computing: Programming in the Cloud</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">12:00 PM - 1:30 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Services Symposium: Cloud or No Cloud, the Laws of Physics Still Apply</div>
+                                <div>515B</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="time" valign="top" width="150">1:45 PM - 3:00 PM</td>
+            <td class="item" valign="top">
+                <table border="0" width="100%">
+                    <tbody>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>Workflow Services: Orchestrating Services and Business Processes Using Cloud-Based
+                                    Workflow
+                                </div>
+                                <div>151</div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td valign="top" width="20"></td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <div class="schedule">
+                                <div>ASP.NET AJAX Futures</div>
+                                <div>Petree Hall CD</div>
+                                <div></div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>  
 
 See you there!

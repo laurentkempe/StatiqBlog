@@ -11,6 +11,12 @@ First do not trust their documentation! The launch anywhere (lax) file change do
 Do it by your own, with such a command:
 <!-- more -->
 
-"C:\Program Files\Web Performance Suite 3.4\webperformance.exe" -vm "C:\Program Files\Web Performance Suite 3.4\jre\bin\javaw.exe" -vmargs **-Xmx512M -Xms512M **-jar "C:\Program Files\Web Performance Suite 3.4\startup.jar" -os win32 -ws win32 -arch x86
+```
+"C:\Program Files\Web Performance Suite 3.4\webperformance.exe"
+    -vm "C:\Program Files\Web Performance Suite 3.4\jre\bin\javaw.exe"
+    -vmargs **-Xmx512M -Xms512M **-jar
+    "C:\Program Files\Web Performance Suite 3.4\startup.jar"
+    -os win32 -ws win32 -arch x86
+```
 
 Thanks Robert for the support.

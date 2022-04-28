@@ -6,7 +6,7 @@ updated: 3/7/2008 6:16:32 PM
 disqusIdentifier: 20080307061632
 tags: ["Tools", "ASP.NET 2.0", "Interoperability", "innoveo solutions", "C#", "Architecture", "Generics", "Reflection"]
 ---
-*![](http://farm3.static.flickr.com/2032/2105387404_33d2e9ed92_o.gif) *
+![](http://farm3.static.flickr.com/2032/2105387404_33d2e9ed92_o.gif)
 
 *Conception using generics and reflection of a search engine to index and search content in your business entities without being intrusive.*
 <!-- more -->
@@ -27,7 +27,7 @@ You might consult the documentation of the last stable version, version 2.0, [on
 
 #### Lucene.Net Architecture
 
- <center>![Lucene.Net Architecture](http://farm3.static.flickr.com/2412/2316420682_b2fe668382_o.jpg)</center> 
+![Lucene.Net Architecture](http://farm3.static.flickr.com/2412/2316420682_b2fe668382_o.jpg) 
 
 The lower layer is the data access layer (Storage). Then, the upper layer is about accessing the index files (data access). This layer is used by the indexing system and the searching system. On top of those we find a layer for searching and a search request parser layer used by the searching part of Lucene.Net. Identically we found a parser layer and a document layer used for the indexation part of Lucene.Net. 
 
@@ -35,4 +35,4 @@ To get more information about Lucene I recommend reading the presentation on [Lu
 
 Now that we got a better view on what is Lucene.Net about we will see in the next part how we will use it to index the properties of our business entities.  
 
-*This post is cross-posted on [innoveo blog](http://blog.innoveo.com/archive.aspx/2008/3/7/indexing-and-searching-business-entities-using-lucene-net-framework-part-2) **and in French on my .NET community portal *[*Tech Head Brothers*](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net)*.*
+This post is cross-posted on [innoveo blog](http://blog.innoveo.com/archive.aspx/2008/3/7/indexing-and-searching-business-entities-using-lucene-net-framework-part-2) and in French on my .NET community portal [Tech Head Brothers](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net).

@@ -6,16 +6,17 @@ updated: 3/7/2008 7:59:25 PM
 disqusIdentifier: 20080307075925
 tags: ["Tools", "ASP.NET 2.0", "Interoperability", "innoveo solutions", "C#", "Architecture", "Generics", "Reflection"]
 ---
-*![](http://farm3.static.flickr.com/2032/2105387404_33d2e9ed92_o.gif) *
+![](http://farm3.static.flickr.com/2032/2105387404_33d2e9ed92_o.gif)
 
 *Conception using generics and reflection of a search engine to index and search content in your business entities without being intrusive.*
 <!-- more -->
 
 Part 1 and 2 are available following those links
 
-1.  [Indexing and searching business entities using Lucene.Net Framework, part 1](http://weblogs.asp.net/lkempe/archive/2007/11/16/indexing-and-searching-business-entities-using-lucene-net-framework-part-1.aspx)  [Indexing and searching business entities using Lucene.Net Framework, part 2](http://weblogs.asp.net/lkempe/archive/2008/03/07/indexing-and-searching-business-entities-using-lucene-net-framework-part-2.aspx)  
+[Indexing and searching business entities using Lucene.Net Framework, part 1](http://weblogs.asp.net/lkempe/archive/2007/11/16/indexing-and-searching-business-entities-using-lucene-net-framework-part-1.aspx)
+[Indexing and searching business entities using Lucene.Net Framework, part 2](http://weblogs.asp.net/lkempe/archive/2008/03/07/indexing-and-searching-business-entities-using-lucene-net-framework-part-2.aspx)  
 
-### [Solution’s architecture]()
+### Solution’s architecture
 
 The main idea is to be able to define the business entity’s properties that must be indexed when this one is saved or updated in the chosen persistence system.
 
@@ -39,7 +40,11 @@ We have so defined the new attribute ***SearchableAttribute*** in the assembly *
 
 Here is the description of the organization of our solution:
 
-*   **innoveo.Blog.DAL**: Data access layer using [Euss](http://euss.evaluant.com/) OR/M mapping tool  **innoveo.Blog.Domain**: Assembly containing our domain business entities  **innoveo.Blog.Services**: Layer exposing the different business services  **innoveo.Blog.Web**: Web presentation & web services layer  **Blog**: The web application  
+* **innoveo.Blog.DAL**: Data access layer using [Euss](http://euss.evaluant.com/) OR/M mapping tool
+* **innoveo.Blog.Domain**: Assembly containing our domain business entities
+* **innoveo.Blog.Services**: Layer exposing the different business services
+* **innoveo.Blog.Web**: Web presentation & web services layer
+* **Blog**: The web application  
 
 Here it is for our solution that will use our business entities indexing Framework. Let’s have a closer look now at the Framework itself!
 
@@ -51,10 +56,13 @@ First here is the class diagram:
 
 The role of each class of our Framework is as following:  
 
-*   **EntityIndexer** manage an index and index the business entities  **EntitySearcher** let you search business entities  **EntityDocument** is used by the class EntityIndexer in order to manage Lucene.Net Document  **IndexPath** is an utility class used to specify the location of index 
+* **EntityIndexer** manage an index and index the business entities
+* **EntitySearcher** let you search business entities
+* **EntityDocument** is used by the class EntityIndexer in order to manage Lucene.Net Document
+* **IndexPath** is an utility class used to specify the location of index 
 
 As you can see on the diagram we use the .NET Frameworks 2 generics this in order to allow us to search whatever attribute decorating our business entities. But also to be able to have a Framework that is not dependant of any entities. This brings a good flexibility at the usage time as it let you index whatever property of type string of whatever business entity. All of this is without being intrusive in our model.  
 
 Now that we know about the architecture of our Framework it is time to look deeper in the details of the implementation.
 
-*This post is cross-posted on [innoveo blog](http://blog.innoveo.com/archive.aspx/2008/3/7/indexing-and-searching-business-entities-using-lucene-net-framework-part-3) **and in French on my .NET community portal *[*Tech Head Brothers*](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net)*.*
+This post is cross-posted on [innoveo blog](http://blog.innoveo.com/archive.aspx/2008/3/7/indexing-and-searching-business-entities-using-lucene-net-framework-part-3) and in French on my .NET community portal [Tech Head Brothers](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net).

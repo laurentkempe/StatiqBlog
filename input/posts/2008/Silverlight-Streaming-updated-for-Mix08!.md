@@ -24,8 +24,5 @@ And more
 > 
 > *The updated service and documentation will be available next week.*
 > 
-> ![image_thumb14](http://dev.live.com/img/2_27_08/image_thumb14_thumb.png) ![image_thumb12](http://dev.live.com/img/2_27_08/image_thumb12_thumb.png)
-> 
-> ![image_thumb32](http://dev.live.com/img/2_27_08/image_thumb32_thumb.png)
 
 The new version of [Tech Head Brothers](http://www.techheadbrothers.com/) will leverage all those new possibilities!
