@@ -8,8 +8,18 @@ tags: ["Tools"]
 ---
 I finally managed :-) to have [Draco.net](http://draconet.sourceforge.net) working on Windows 2003 Server with cvs. I always had a [100% cpu usage](http://www.mail-archive.com/draconet-users@lists.sourceforge.net/msg00069.html) when Draco.net detected a change and that was due to a cvs process.
 
-The solution I used was to define  <strong><cvsroot>:sspi:SERVERNAME:/MyREPO</cvsroot> </strong>like that. Before I had <strong><cvsroot>:sspi:User@SERVERNAME:E:/MyREPO</cvsroot></strong>, and it was not working with that configuration.
 <!-- more -->
+
+The solution I used was to define like that
+```
+<cvsroot>:sspi:SERVERNAME:/MyREPO</cvsroot>
+```
+Before I had
+
+````
+<cvsroot>:sspi:User@SERVERNAME:E:/MyREPO</cvsroot>
+````
+and it was not working with that configuration.
 
 I use CVSNT 2.0.13 and Draco.net 1.5-beta-2.
 
