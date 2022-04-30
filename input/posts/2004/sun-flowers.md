@@ -7,7 +7,7 @@ disqusIdentifier: 20040714085600
 ---
 My friend [Didier](http://www.didierbeck.com) got some [nice pictures](http://www.didierbeck.com/2004_07_01_blogs.php#108957069266216869) about sun flowers he got from France-Anne :-) Nice with those rainy days :-(
 
-![](http://www.didierbeck.com/pics/diverse/weekend04.JPG)
+![](/images/2004/weekend04.JPG)
 <!-- more -->
 
-![](http://www.didierbeck.com/pics/diverse/weekend05.JPG)
+![](/images/2004/weekend05.JPG)

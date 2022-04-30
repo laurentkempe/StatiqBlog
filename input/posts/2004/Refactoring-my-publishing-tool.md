@@ -29,6 +29,6 @@ I have done all the refactoring by hand. And that's such a pain. I am now used t
 
 I tried several of those in the past but now I really want to use one, but it is impossible cause I get an error message when I add an addin to Visual Studio .NET 2003, for exemple yith [.NET Reflector 4](http://www.aisto.com/roeder/DotNet/):
 
-![](http://perso.wanadoo.fr/laurent.kempe/images/vserror.png)
+![](/images/2004/vserror.png)
 
 Any one as an idea?

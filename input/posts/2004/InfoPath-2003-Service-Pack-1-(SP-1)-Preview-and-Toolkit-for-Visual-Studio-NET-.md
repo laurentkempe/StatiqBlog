@@ -10,31 +10,15 @@ I started to look at Infopath long time ago and was waiting for that solution. I
 
 Since I implemented a tool to write the article on my web site [Tech Head Brothers](http://www.techheadbrothers.com/) based on Word 2003 and Visual Studio Toolkit I was waiting the toolkit for Infopath to be able to have a form to post News that will use WSE to handle secured connection to my site.<br>In this new version when you add a button you will get a dialog with a button "Edit from code" and when you click on it your get back to Visual Studio that already added a handler for you:
 <!-- more -->
-<font size="2">
 
-
-</font><font color="#008000" size="2">// The following function handler is created by Microsoft Office InfoPath. Do not
-
-</font><font size="2">
-
-
-</font><font color="#008000" size="2">// modify the type or number of arguments.
-
-</font><font size="2">
-
-
+```csharp
+// The following function handler is created by Microsoft Office InfoPath. Do not
+// modify the type or number of arguments.
 [InfoPathEventHandler(MatchPath="CTRL4_5", EventType=InfoPathEventType.OnClick)]
-
-</font><font color="#0000ff" size="2">public</font><font size="2"> </font><font color="#0000ff" size="2">void</font><font size="2"> CTRL4_5_OnClick(DocActionEvent e)
-
+public void CTRL4_5_OnClick(DocActionEvent e)
 {
-
-</font><font color="#008000" size="2">// Write your code here.
-
-</font><font size="2">
-
-
+    // Write your code here.
 }
+```
 
 Thats really really cool.
-</font>

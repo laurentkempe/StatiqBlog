@@ -10,4 +10,4 @@ I have been [interviewed](http://www.01net.com/article/259734.html) by the Frenc
 For sure the article talks about Microsoft, [Visual Studio 2005 Team System](http://lab.msdn.microsoft.com/vs2005/teamsystem/), IBM, Atlantic and Borland Themis.
 
 <!-- more -->
-The whole article in French is also available as a [PDF](http://perso.wanadoo.fr/laurent.kempe/images/developpementversl'usinelogicielle-interviewnovembre2004.pdf).
+The whole article in French is also available as a [PDF](/images/2004/developpementversl'usinelogicielle-interviewnovembre2004.pdf).

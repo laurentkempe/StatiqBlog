@@ -6,13 +6,10 @@ updated: 4/24/2004 9:09:00 AM
 disqusIdentifier: 20040424090900
 tags: ["Microsoft MVP"]
 ---
-<strong>Working</strong> 
-
-
-![](http://perso.wanadoo.fr/laurent.kempe/images/MVPSummit1.jpg)
+**Working** 
+![](/images/2004/MVPSummit1.jpg)
 <!-- more -->
-<strong>Drinking</strong> 
+**Drinking** 
+![](/images/2004/MVPSummit2.jpg)
 
-
-![](http://perso.wanadoo.fr/laurent.kempe/images/MVPSummit2.jpg)
 Thanks to [Richard ](http://blogs.developpeur.org/richardc/)for the pictures!!! (There is one missing but I can't post it ;-).

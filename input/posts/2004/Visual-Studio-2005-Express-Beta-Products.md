@@ -19,14 +19,14 @@ It is really funny!!! In fact I knew about those products because I saw somethin
 
 I quickly tried to create a personal website with [Visual Web Dev 2005 Express](http://go.microsoft.com/fwlink/?LinkId=31772&clcid=0x409). Thats how it looks like:
 
-![](http://perso.wanadoo.fr/laurent.kempe/images/personalwebsite.png)
+![](/images/2004/personalwebsite.png)
 
 There is nice photo album with the template:
 
-![](http://perso.wanadoo.fr/laurent.kempe/images/photoalbum.jpg)
+![](/images/2004/photoalbum.jpg)
 
 There is a place for a resume:
 
-![](http://perso.wanadoo.fr/laurent.kempe/images/expressresume.jpg)
+![](/images/2004/expressresume.jpg)
 
 The site looks nice. Now I need a bit more time to look in the code. If there is some ;-)

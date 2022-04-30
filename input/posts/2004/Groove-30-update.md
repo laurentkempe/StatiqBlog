@@ -10,6 +10,6 @@ I am having an issue with my groove pro accounts. I reported that to groove supp
 <u>Update</u>: I still get the same error after installing the update. I am so :-( Going to bed...
 <!-- more -->
 
-![](http://perso.wanadoo.fr/laurent.kempe/images/grooveerror.png)
+![](/images/2004/grooveerror.png)
 
 <u>Update</u>: There is a second update this morning (build 3.0a.2155) and this one <strong>fixed my issue</strong>. Nice I will be able to work at least now.

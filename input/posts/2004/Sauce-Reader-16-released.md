@@ -13,11 +13,11 @@ I've got this late afternoon a popup saying that release 1.6 is out. So I update
 > 
 > [Sauce Reader](http://www.synop.com/Products/SauceReader/) v1.6 is now available for [download](http://www.synop.com/Products/SauceReader/Download/). Major changes and improvements in this version include:
 > 
-<ul style="MARGIN-TOP: 0.4em; MARGIN-BOTTOM: 0.7em" xmlns="http://www.w3.org/1999/xhtml">
-<li>Image uploading support in the weblog editor. </li>
-<li>Currently playing support in the weblog editor. </li>
-<li>Major improvements to weblog editor support and stability, particularly .Text and WordPress. </li>
-<li>Huge number of crash bug fixes based on automatic report feedback.</li></ul>
+> <ul style="MARGIN-TOP: 0.4em; MARGIN-BOTTOM: 0.7em" xmlns="http://www.w3.org/1999/xhtml">
+> <li>Image uploading support in the weblog editor. </li>
+> <li>Currently playing support in the weblog editor. </li>
+> <li>Major improvements to weblog editor support and stability, particularly .Text and WordPress. </li>
+> <li>Huge number of crash bug fixes based on automatic report feedback.</li></ul>
 > 
 > A special thank you to all users who took the time to submit crash or bug reports. These are problems we could never find without your ongoing support through an extensive beta period. As a result, this is the most stable version of Sauce Reader ever. Please keep the feedback coming!
 > 
