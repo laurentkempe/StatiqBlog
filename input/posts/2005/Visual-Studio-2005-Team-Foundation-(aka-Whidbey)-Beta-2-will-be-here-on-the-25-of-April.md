@@ -7,20 +7,15 @@ disqusIdentifier: 20050409093600
 tags: ["Whidbey", ".NET Framework 2.0"]
 ---
 
-
-
 What can you expect from the Beta Experience?
 <!-- more -->
 
-*   Visual Studio 2005 Team System Beta 2 
-  Team Foundation Server Beta 2 
-  WeFly247 training DVD 
-  SQL Server 2005 Standard Edition Community Technology Preview 
-  The Beta Experience newsletter (6-weekly, terminated with the launch of 
-  the final version of Visual Studio 2005)
-
+*  Visual Studio 2005 Team System Beta 2 
+*  Team Foundation Server Beta 2 
+*  WeFly247 training DVD 
+*  SQL Server 2005 Standard Edition Community Technology Preview 
+*  The Beta Experience newsletter (6-weekly, terminated with the launch of the final version of Visual Studio 2005)
 
 I hope that this time Team Foundation can be installed on one VPC.
 
-<u>Updated</u>: The information is comming from this page: [The Beta 
-Experience](http://www.microsoft.com/emea/msdn/betaexperience/) (Thanks [Alex](http://weblogs.asp.net/acampbell)).  
+<u>Updated</u>: The information is comming from this page: [The Beta Experience](http://www.microsoft.com/emea/msdn/betaexperience/) (Thanks [Alex](http://weblogs.asp.net/acampbell)).  

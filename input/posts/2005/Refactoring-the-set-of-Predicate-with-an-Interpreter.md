@@ -7,335 +7,331 @@ disqusIdentifier: 20050312090900
 tags: ["Tech Head Brothers", "Whidbey", "ASP.NET 2.0", ".NET Framework 2.0"]
 ---
 
-
-
-This evening I continued my journey with the [C# Generics](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnvs05/html/csharp_generics.asp). 
-I refactored what I described in my post "[DataAccessLayer.FindAll(PublishedBy(Author))](http://weblogs.asp.net/lkempe/archive/2005/03/09/391247.aspx) 
-" to be able to use the [Design 
-Pattern Interpreter](http://www.dofactory.com/Patterns/PatternInterpreter.aspx).
+This evening I continued my journey with the [C# Generics](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnvs05/html/csharp_generics.asp). 
+I refactored what I described in my post "[DataAccessLayer.FindAll(PublishedBy(Author))](http://weblogs.asp.net/lkempe/archive/2005/03/09/391247.aspx)" to be able to use the [Design Pattern Interpreter](http://www.dofactory.com/Patterns/PatternInterpreter.aspx).
 <!-- more -->
 
 The result in the ASPX code behind file is the following:
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> AndSpec spec = <font color="blue">new</font> AndSpec(
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span>                         <font color="blue">new</font> AndSpec(
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>                             <font color="blue">new</font> PublishedSpec(),
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>                             <font color="blue">new</font> BeforeDateSpec(DateTime.Parse(<font color="maroon">"01/01/2005"</font>))
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>                         ),
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span>                         <font color="blue">new</font> OrSpec(
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>                             <font color="blue">new</font> AuthorSpec(<font color="maroon">"Mathieu Kempé"</font>),
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>                             <font color="blue">new</font> AuthorSpec(<font color="maroon">"Laurent Kempé"</font>)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>                         )
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span>                     );
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span> DataAccessor<Article> articles = <font color="blue">new</font> DataAccessor<Article>(<font color="maroon">"GetArticles"</font>);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span> GridView3.DataSource = articles.FindAll(Matching(spec));
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span> GridView3.DataBind();
+```csharp
+AndSpec spec = new AndSpec(
+                        new AndSpec(
+                            new PublishedSpec(),
+                            new BeforeDateSpec(DateTime.Parse("01/01/2005"))
+                        ),
+                        new OrSpec(
+                            new AuthorSpec("Mathieu Kempé"),
+                            new AuthorSpec("Laurent Kempé")
+                        )
+                    );
+
+DataAccessor<Article> articles = new DataAccessor<Article>("GetArticles");
+GridView3.DataSource = articles.FindAll(Matching(spec));
+GridView3.DataBind();
+```
 
 With the unique Matching Predicate, replacing all the other Predicate:
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">protected</font> Predicate<Article> Matching(Spec spec)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">return</font> <font color="blue">delegate</font>(Article a)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>         <font color="blue">return</font> spec.isSatisfiedBy(a);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span>     };
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span> }</pre>
+```csharp
+protected Predicate<Article> Matching(Spec spec)
+{
+    return delegate(Article a)
+    {
+        return spec.isSatisfiedBy(a);
+    };
+}
+```
 
 To achieve this I first added two more properties to my Entity, Article. I 
 did not added new constructors because those two properties are not 
 mandatory:
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">private</font> DateTime datePublished;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span> <font color="blue">public</font> DateTime DatePublished
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>     <font color="blue">get</font> { <font color="blue">return</font> datePublished; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span>     <font color="blue">set</font> { datePublished = value; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span> <font color="blue">private</font> DateTime dateModified;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> <font color="blue">public</font> DateTime DateModified
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span>     <font color="blue">get</font> { <font color="blue">return</font> dateModified; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span>     <font color="blue">set</font> { dateModified = value; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 15</span> }
+```csharp
+private DateTime datePublished;
 
+public DateTime DatePublished
+{
+    get { return datePublished; }
+    set { datePublished = value; }
+}
+
+private DateTime dateModified;
+
+public DateTime DateModified
+{
+    get { return dateModified; }
+    set { dateModified = value; }
+}
+```
 Then I modified my Data Access Layer to have it a bit more generic, starting with the interface :
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">interface</font> IDataAccess<T>
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     List<T> GetAll();
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>     List<T> FindAll(Predicate<T> match);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span> </pre>
+```csharp
+interface IDataAccess<T>
+{
+    List<T> GetAll();
 
-I removed the method "T Get(Guid uuid)" and "T Get(string uuid)" because that can be easily expressed with a Predicate.
+    List<T> FindAll(Predicate<T> match);
+}
+```
+
+I removed the method `T Get(Guid uuid)` and `T Get(string uuid)` because that can be easily expressed with a Predicate.
 
 I made a Generic implementation of my Data Access through a DataAccessor class:
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">namespace</font> TechHeadBrothers.Portal.DAL
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> <font color="blue">class</font> DataAccessor<T> : IDataAccess<T> where T : <font color="blue">new</font>()
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>         List<T> list = <font color="blue">null</font>;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>         <font color="blue">public</font> DataAccessor(<font color="blue">string</font> sp)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>             readFromDatabase(sp);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span>         <font color="blue">#region</font> Protected Methods
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span>         <font color="blue">protected</font> <font color="blue">void</font> readFromDatabase(<font color="blue">string</font> sp)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 15</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 16</span>             <font color="green">// Create Instance of Connection and Command Object
-</font><span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 17</span>             SqlConnection myConnection =
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 18</span>                 <font color="blue">new</font> SqlConnection(ConfigurationManager.ConnectionStrings[<font color="maroon">"TechHeadBrothers"</font>].ConnectionString);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 19</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 20</span>             SqlDataAdapter myCommand = <font color="blue">new</font> SqlDataAdapter(sp, myConnection);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 21</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 22</span>             <font color="green">// Mark the Command as a SPROC
-</font><span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 23</span>             myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 24</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 25</span>             <font color="green">// Create and Fill the DataSet
-</font><span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 26</span>             DataSet ds = <font color="blue">new</font> DataSet();
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 27</span>             myCommand.Fill(ds);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 28</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 29</span>             myConnection.Close();
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 30</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 31</span>             <font color="blue">this</font>.list = DataAdapterFactory.createAdapter<T>().Adapt(ds.Tables[<font color="maroon">0</font>]);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 32</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 33</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 34</span>         <font color="blue">#endregion</font>
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 35</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 36</span>         <font color="blue">#region</font> IDataAccess<T> Members
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 37</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 38</span>         <font color="blue">public</font> List<T> GetAll()
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 39</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 40</span>             <font color="blue">return</font> list;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 41</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 42</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 43</span>         <font color="blue">public</font> List<T> FindAll(Predicate<T> match)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 44</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 45</span>             <font color="blue">return</font> list.FindAll(match);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 46</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 47</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 48</span>         <font color="blue">#endregion</font>
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 49</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 50</span> }
-</pre>
+```csharp
+namespace TechHeadBrothers.Portal.DAL
+{
+    public class DataAccessor<T> : IDataAccess<T> where T : new()
+    {
+        List<T> list = null;
 
- </pre>
+        public DataAccessor(string sp)
+        {
+            readFromDatabase(sp);
+        }
 
-I had to implement an Adapter to convert the data from the Database representation to the Entity :</pre>
+        #region Protected Methods
 
- </pre>
+        protected void readFromDatabase(string sp)
+        {
+            <font color="green">// Create Instance of Connection and Command Object
+            SqlConnection myConnection =
+                new SqlConnection(ConfigurationManager.ConnectionStrings["TechHeadBrothers"].ConnectionString);
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">abstract</font> <font color="blue">class</font> DataAdapter<T> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> List<T> Adapt(DataTable table)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>         List<T> list = <font color="blue">new</font> List<T>(table.Rows.Count);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>         <font color="blue">foreach</font> (DataRow row <font color="blue">in</font> table.Rows)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>             list.Add(<font color="blue">this</font>.Adapt(row));
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span>         <font color="blue">return</font> list;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 15</span>     <font color="blue">public</font> <font color="blue">abstract</font> T Adapt(DataRow row);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 16</span> }</pre></pre>
+            SqlDataAdapter myCommand = new SqlDataAdapter(sp, myConnection);
 
- </pre>
+            <font color="green">// Mark the Command as a SPROC
+            myCommand.SelectCommand.CommandType = CommandType.StoredProcedure;
 
-And a Factory :</pre>
+            <font color="green">// Create and Fill the DataSet
+            DataSet ds = new DataSet();
+            myCommand.Fill(ds);
 
- </pre>
+            myConnection.Close();
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">class</font> DataAdapterFactory
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> <font color="blue">static</font> DataAdapter<T> createAdapter<T>() where T : <font color="blue">new</font>()
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>         <font color="blue">string</font> name = <font color="blue">new</font> T().GetType().Name.ToLower();
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>         <font color="blue">if</font> ( name == <font color="maroon">"article"</font>)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>             <font color="blue">return</font> <font color="blue">new</font> ArticleAdapter() <font color="blue">as</font> DataAdapter<T>;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>         <font color="blue">else</font> <font color="blue">if</font> ( name == <font color="maroon">"author"</font>)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span>             <font color="blue">return</font> <font color="blue">new</font> AuthorAdapter() <font color="blue">as</font> DataAdapter<T>;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span>         <font color="blue">return</font> <font color="blue">null</font>;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span> }</pre>
+            this.list = DataAdapterFactory.createAdapter<T>().Adapt(ds.Tables[0]);
+        }
 
- </pre>
+        #endregion
 
-Here is the concrete implementation for the Article Entity Adapter:</pre></pre></pre>
+        #region IDataAccess<T> Members
 
- </pre>
+        public List<T> GetAll()
+        {
+            return list;
+        }
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">class</font> ArticleAdapter : DataAdapter<Article>
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> <font color="blue">override</font> Article Adapt(DataRow row)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>         Article article = <font color="blue">new</font> Article((<font color="blue">string</font>)row[<font color="maroon">"Title"</font>],
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span>                                       (<font color="blue">string</font>)row[<font color="maroon">"Description"</font>],
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>                                       (<font color="blue">string</font>)row[<font color="maroon">"Author"</font>],
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>                                         (<font color="blue">bool</font>)row[<font color="maroon">"isPublished"</font>],
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>                                         (Guid)row[<font color="maroon">"uuid"</font>]);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span>         <font color="blue">if</font> (row[<font color="maroon">"DatePublished"</font>] != DBNull.Value)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span>             article.DatePublished = (DateTime)row[<font color="maroon">"DatePublished"</font>];
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 15</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 16</span>         <font color="blue">if</font> (row[<font color="maroon">"DateModified"</font>] != DBNull.Value)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 17</span>         {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 18</span>             article.DateModified = (DateTime)row[<font color="maroon">"DateModified"</font>];
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 19</span>         }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 20</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 21</span>         <font color="blue">return</font> article;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 22</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 23</span> }</pre></pre></pre>
+        public List<T> FindAll(Predicate<T> match)
+        {
+            return list.FindAll(match);
+        }
 
- </pre>
+        #endregion
+    }
+}
+```
 
-I made also a Business Layer generic class, but has it is just for the moment a wrapper around the DataAccessor, I will not show it.</pre>
+I had to implement an Adapter to convert the data from the Database representation to the Entity :
 
- </pre>
 
-And finally the [Interpreter Design Pattern](http://www.dofactory.com/Patterns/PatternInterpreter.aspx):</pre>
+```csharp
+abstract class DataAdapter<T> 
+{
+    public List<T> Adapt(DataTable table)
+    {
+        List<T> list = new List<T>(table.Rows.Count);
 
- </pre>
+        foreach (DataRow row in table.Rows)
+        {
+            list.Add(this.Adapt(row));
+        }
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">public</font> <font color="blue">abstract</font> <font color="blue">class</font> Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> <font color="blue">abstract</font> <font color="blue">bool</font> isSatisfiedBy(Article article);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span> }</pre></pre>
+        return list;
+    }
+
+    public abstract T Adapt(DataRow row);
+}
+```
+
+And a Factory :
+
+```csharp
+class DataAdapterFactory
+{
+    public static DataAdapter<T> createAdapter<T>() where T : new()
+    {
+        string name = new T().GetType().Name.ToLower();
+
+        if ( name == "article")
+            return new ArticleAdapter() as DataAdapter<T>;
+        else if ( name == "author")
+            return new AuthorAdapter() as DataAdapter<T>;
+
+        return null;
+    }
+}
+```
+
+Here is the concrete implementation for the Article Entity Adapter:
+
+```csharp
+class ArticleAdapter : DataAdapter<Article>
+{
+    public override Article Adapt(DataRow row)
+    {
+        Article article = new Article((string)row["Title"],
+                                      (string)row["Description"],
+                                      (string)row["Author"],
+                                        (bool)row["isPublished"],
+                                        (Guid)row["uuid"]);
+
+        if (row["DatePublished"] != DBNull.Value)
+        {
+            article.DatePublished = (DateTime)row["DatePublished"];
+        }
+
+        if (row["DateModified"] != DBNull.Value)
+        {
+            article.DateModified = (DateTime)row["DateModified"];
+        }
+
+        return article;
+    }
+}
+```
+
+I made also a Business Layer generic class, but has it is just for the moment a wrapper around the DataAccessor, I will not show it.
+
+And finally the [Interpreter Design Pattern](http://www.dofactory.com/Patterns/PatternInterpreter.aspx):
+
+```csharp
+public abstract class Spec
+{
+    public abstract bool isSatisfiedBy(Article article);
+}
+```
 
 With the different concrete Specifications:
 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  1</span> <font color="blue">public</font> <font color="blue">class</font> PublishedSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  2</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  3</span>     <font color="blue">public</font> PublishedSpec()
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  4</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  5</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  6</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  7</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font> isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  8</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">  9</span>          <font color="blue">return</font> (article.isPublished == <font color="maroon">true</font>);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 10</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 11</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 12</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 13</span> <font color="blue">public</font> <font color="blue">class</font> BeforeDateSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 14</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 15</span>     <font color="blue">private</font> DateTime date;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 16</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 17</span>     <font color="blue">public</font> DateTime Date
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 18</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 19</span>         <font color="blue">get</font> { <font color="blue">return</font> date; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 20</span>         <font color="blue">set</font> { date = value; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 21</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 22</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 23</span>     <font color="blue">public</font> BeforeDateSpec(DateTime date)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 24</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 25</span>         <font color="blue">this</font>.Date = date;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 26</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 27</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 28</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font> isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 29</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 30</span>         <font color="blue">return</font> (article.DatePublished < <font color="blue">this</font>.Date);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 31</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 32</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 33</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 34</span> <font color="blue">public</font> <font color="blue">class</font> AuthorSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 35</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 36</span>     <font color="blue">private</font> <font color="blue">string</font> author;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 37</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 38</span>     <font color="blue">public</font> <font color="blue">string</font> Author
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 39</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 40</span>       <font color="blue">get</font> { <font color="blue">return</font> author;}
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 41</span>       <font color="blue">set</font> { author = value; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 42</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 43</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 44</span>     <font color="blue">public</font> AuthorSpec (<font color="blue">string</font> author)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 45</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 46</span>         <font color="blue">this</font>.Author = author;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 47</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 48</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 49</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font> isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 50</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 51</span>          <font color="blue">return</font> (article.Author == <font color="blue">this</font>.Author);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 52</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 53</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 54</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 55</span> <font color="blue">public</font> <font color="blue">class</font> NotSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 56</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 57</span>     <font color="blue">private</font> Spec specToNegate;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 58</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 59</span>     <font color="blue">public</font> NotSpec(Spec specToNegate)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 60</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 61</span>         <font color="blue">this</font>.specToNegate = specToNegate;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 62</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 63</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 64</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font> isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 65</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 66</span>         <font color="blue">return</font> !specToNegate.isSatisfiedBy(article);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 67</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 68</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 69</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 70</span> <font color="blue">public</font> <font color="blue">class</font> AndSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 71</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 72</span>     <font color="blue">private</font> Spec augend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 73</span>     <font color="blue">public</font> Spec Augend
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 74</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 75</span>       <font color="blue">get</font> { <font color="blue">return</font> augend;}
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 76</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 77</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 78</span>     <font color="blue">private</font> Spec addend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 79</span>     <font color="blue">public</font> Spec Addend
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 80</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 81</span>       <font color="blue">get</font> { <font color="blue">return</font> addend;}
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 82</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 83</span>     
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 84</span>     <font color="blue">public</font> AndSpec (Spec augend, Spec addend)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 85</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 86</span>         <font color="blue">this</font>.augend = augend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 87</span>         <font color="blue">this</font>.addend = addend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 88</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 89</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 90</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font>  isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 91</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 92</span>          <font color="blue">return</font> Augend.isSatisfiedBy(article) && Addend.isSatisfiedBy(article);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 93</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 94</span> }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 95</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 96</span> <font color="blue">public</font> <font color="blue">class</font> OrSpec : Spec
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 97</span> {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 98</span>     <font color="blue">private</font> Spec augend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey"> 99</span>     <font color="blue">public</font> Spec Augend
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">100</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">101</span>         <font color="blue">get</font> { <font color="blue">return</font> augend; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">102</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">103</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">104</span>     <font color="blue">private</font> Spec addend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">105</span>     <font color="blue">public</font> Spec Addend
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">106</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">107</span>         <font color="blue">get</font> { <font color="blue">return</font> addend; }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">108</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">109</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">110</span>     <font color="blue">public</font> OrSpec(Spec augend, Spec addend)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">111</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">112</span>         <font color="blue">this</font>.augend = augend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">113</span>         <font color="blue">this</font>.addend = addend;
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">114</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">115</span> 
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">116</span>     <font color="blue">public</font> <font color="blue">override</font> <font color="blue">bool</font> isSatisfiedBy(Article article)
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">117</span>     {
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">118</span>         <font color="blue">return</font> Augend.isSatisfiedBy(article) || Addend.isSatisfiedBy(article);
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">119</span>     }
-<span style="COLOR: teal; BACKGROUND-COLOR: lightgrey">120</span> }</pre>
+```csharp
+public class PublishedSpec : Spec
+{
+    public PublishedSpec()
+    {
+    }
+
+    public override bool isSatisfiedBy(Article article)
+    {
+         return (article.isPublished == true);
+    }
+}
+
+public class BeforeDateSpec : Spec
+{
+    private DateTime date;
+
+    public DateTime Date
+    {
+        get { return date; }
+        set { date = value; }
+    }
+
+    public BeforeDateSpec(DateTime date)
+    {
+        this.Date = date;
+    }
+
+    public override bool isSatisfiedBy(Article article)
+    {
+        return (article.DatePublished < this.Date);
+    }
+}
+
+public class AuthorSpec : Spec
+{
+    private string author;
+
+    public string Author
+    {
+      get { return author;}
+      set { author = value; }
+    }
+
+    public AuthorSpec (string author)
+    {
+        this.Author = author;
+    }
+
+    public override bool isSatisfiedBy(Article article)
+    {
+         return (article.Author == this.Author);
+    }
+}
+
+public class NotSpec : Spec
+{
+    private Spec specToNegate;
+
+    public NotSpec(Spec specToNegate)
+    {
+        this.specToNegate = specToNegate;
+    }
+
+    public override bool isSatisfiedBy(Article article)
+    {
+        return !specToNegate.isSatisfiedBy(article);
+    }
+}
+
+public class AndSpec : Spec
+{
+    private Spec augend;
+    public Spec Augend
+    {
+      get { return augend;}
+    }
+
+    private Spec addend;
+    public Spec Addend
+    {
+      get { return addend;}
+    }
+    
+    public AndSpec (Spec augend, Spec addend)
+    {
+        this.augend = augend;
+        this.addend = addend;
+    }
+
+    public override bool  isSatisfiedBy(Article article)
+    {
+         return Augend.isSatisfiedBy(article) && Addend.isSatisfiedBy(article);
+    }
+}
+
+public class OrSpec : Spec
+{
+    private Spec augend;
+    public Spec Augend
+    {
+        get { return augend; }
+    }
+
+    private Spec addend;
+    public Spec Addend
+    {
+        get { return addend; }
+    }
+
+    public OrSpec(Spec augend, Spec addend)
+    {
+        this.augend = augend;
+        this.addend = addend;
+    }
+
+    public override bool isSatisfiedBy(Article article)
+    {
+        return Augend.isSatisfiedBy(article) || Addend.isSatisfiedBy(article);
+    }
+}
+```

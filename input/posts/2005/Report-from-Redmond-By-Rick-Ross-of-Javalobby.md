@@ -7,8 +7,6 @@ disqusIdentifier: 20050328070100
 tags: ["Work", ".NET Development"]
 ---
 
-
-
 "Rick Ross, founder of Javalobby, talks about our recent trip to the 
 Microsoft campus in Redmond Washington for the Technology Summit 2005. This 
 gathering of developers from a variety of platforms yielded some interesting 
@@ -16,10 +14,9 @@ insights from all parties. Listen on for Rick's overview and thoughts on the
 summit.   
 <!-- more -->
 
-[Listen to the 
-report now! ](http://www.javalobby.org/eps/summit)  
-[Read the offline PDF 
-](http://www.javalobby.org/members-only/summit/mts.pdf)"
+[Listen to the report now! ](http://www.javalobby.org/eps/summit)
+
+[Read the offline PDF ](http://www.javalobby.org/members-only/summit/mts.pdf)
 
 From Rick: "I am encouraging **mutual respect** and a 
 **dialogue** to keep the possibility for progress alive. Frozen 

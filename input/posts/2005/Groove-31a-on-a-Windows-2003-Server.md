@@ -12,7 +12,7 @@ Why having it on a Windows 2003 Server ?
 <!-- more -->
 
 1.  I have one at home, it is used has a backup for some Groove Workspaces
-2.  [Integrating virtual office solutions](http://www.groove.net/solutions/develop/dev2.cfm) with the [Groove Web Services API](http://components.groove.net/Groove/DailyBuilds/GDKlatest/GrooveWSDevelopmentKit.exe) 
+2.  [Integrating virtual office solutions](http://www.groove.net/solutions/develop/dev2.cfm) with the [Groove Web Services API](http://components.groove.net/Groove/DailyBuilds/GDKlatest/GrooveWSDevelopmentKit.exe) 
 
 As described on the site, "The Groove Web Services API allows you to develop custom applications that integrate Groove Virtual Office workspace data and/or Groove platform services with external applications."
 

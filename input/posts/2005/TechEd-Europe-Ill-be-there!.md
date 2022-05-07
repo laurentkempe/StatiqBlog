@@ -6,9 +6,4 @@ updated: 6/17/2005 5:48:00 AM
 disqusIdentifier: 20050617054800
 tags: ["Microsoft MVP", "Tech Head Brothers"]
 ---
-<table>
-  <tbody>
-  <tr>
-    <td>![](http://www.microsoft.com/emea/msdn/betaexperience/images/banner_teched_150x130.gif)</td>
-    <td valign="top">I finally got the confirmation of my registration to the 
-      Tech*Ed 2005 Europe, held in Amsterdam.</td></tr></tbody></table>
+I finally got the confirmation of my registration to the Tech*Ed 2005 Europe, held in Amsterdam.

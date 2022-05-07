@@ -20,8 +20,8 @@ Suite.
 
 I ran the setup with default options except the location of the folder to 
 install. Everything went fine till the end and then I had a strange message 
-about Office 2003 missing SP2 and PIA... It was proposed that I 
-run VSTOR.EXE manually.
+about Office 2003 missing SP2 and PIA... It was proposed that I 
+run VSTOR.EXE manually.
 
 Running VSTOR.EXE I get an error message saying that I need to uninstall 
 "Visual Studio .NET prerequisites - English", but I don't had that as an option 
@@ -40,16 +40,16 @@ I then decided to uninstall and try to re-install, I did it two
 times with some operations in between. No way still not working. I started to be 
 really really pissed off.
 
-To cooooool down I decided to get some music: [Jack 
-Johnson - In Between Dreams](http://www.amazon.fr/exec/obidos/ASIN/B000BNUT7A/techheadbroth-21/402-5617210-5443358), really really cool. Thanks [Mathieu](http://myaustraliantrip.blogspot.com).
+To cooooool down I decided to get some music: [Jack Johnson - In Between Dreams](http://www.amazon.fr/exec/obidos/ASIN/B000BNUT7A/techheadbroth-21/402-5617210-5443358), really really cool. Thanks [Mathieu](http://myaustraliantrip.blogspot.com).
 
-Then I went with regedit to 
-*HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\  
-*and 
-started to uninstall stuff with *msiexec /x {guid}*
+Then I went with regedit to
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\  
+```
+and started to uninstall stuff with `msiexec /x {guid}`
 
 I finally managed to be able to install VSTOR.EXE after 
-installing .Net Framework 2. Then a full re-install  of Visual Studio 2005 
+installing .Net Framework 2. Then a full re-install  of Visual Studio 2005 
 Team Suite without SQL Server 2005 Express that I installed by hand and also 
 with several trial before being successful.
 

@@ -6,11 +6,8 @@ updated: 4/2/2005 4:29:00 PM
 disqusIdentifier: 20050402042900
 ---
 
+I've got an email this morning saying that I'm renominated as an **[Microsoft MVP Visual Developer - ASP/ASP.NET](https://mvp.microsoft.com/en-us/PublicProfile/7749?fullName=Laurent%20Kemp%C3%A9)** for the current year. This is now the 4th year that I am awarded. Great news !!!
 
-
-I've got an email this morning saying that I'm renominated as an <span style="COLOR: #ffffff; BACKGROUND-COLOR: #335ea8"><font style="BACKGROUND-COLOR: #ffffff" color="#000000">[**Microsoft 
-MVP Visual Developer - ASP/ASP.NET**](http://www.microsoft.com/communities/mvp/mvpdetails.mspx?Params=%7eCMTYDataSvcParams%5e%7earg+Name%3d%22guid%22+Value%3d%22d2f50802-1a35-423c-a263-353cb10c676c%22%2f%5e%7esParams%5e%7e%2fsParams%5e%7e%2fCMTYDataSvcParams%5e) </font></span>for the current 
-year. This is now the 4th year that I am awarded. Great news !!!
 <!-- more -->
 
 **But what are Microsoft MVP**
