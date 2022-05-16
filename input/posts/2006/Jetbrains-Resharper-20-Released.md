@@ -11,13 +11,12 @@ tags: ["Tools", "Visual Studio"]
 [ReSharper](http://www.jetbrains.com/resharper/) top most features IMHO:
 <!-- more -->
 
-<ol>
-<li>[Refactoring](http://www.jetbrains.com/resharper/features/refactoring.html) 
-<li>[Navigation & Search](http://www.jetbrains.com/resharper/features/codeAssistance.html) 
-<li>[Error Highlighting and Quick Fixes](http://www.jetbrains.com/resharper/features/highlighting.html) 
-<li>[Code Assistance](http://www.jetbrains.com/resharper/features/codeAssistance.html) 
-<li>[ASP.NET Editing](http://www.jetbrains.com/resharper/features/ASPnetEditing.html)</li></li></li></li></li></ol>
 
+* [Refactoring](http://www.jetbrains.com/resharper/features/refactoring.html) 
+* [Navigation & Search](http://www.jetbrains.com/resharper/features/codeAssistance.html) 
+* [Error Highlighting and Quick Fixes](http://www.jetbrains.com/resharper/features/highlighting.html) 
+* [Code Assistance](http://www.jetbrains.com/resharper/features/codeAssistance.html) 
+* [ASP.NET Editing](http://www.jetbrains.com/resharper/features/ASPnetEditing.html)
 
 It is bundled for Visual Studio 2005 and Visual Studio 2003 and you might [download it on this page](http://www.jetbrains.com/resharper/download/).
 
