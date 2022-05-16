@@ -6,9 +6,6 @@ updated: 6/13/2006 6:11:54 AM
 disqusIdentifier: 20060613061154
 tags: ["Tech Head Brothers", "ASP.NET 2.0", "ASP.NET AJAX"]
 ---
-
-
-
 After a smooth integration of Atlas in the new version of [Tech Head Brothers](http://www.techheadbrothers.com/) website, I 
 decided to go a step further with a project a bit more complex then the scenario 
 developed [here](http://weblogs.asp.net/lkempe/archive/2006/04/15/443019.aspx).
@@ -18,58 +15,46 @@ The new version of the site is totally rewritten in C# and ASP.NET 2 and uses
 the Webparts.
 
 So the new scenario I wanted to implement was a system of connected Webparts, 
-one showing an article, a how-to or news and the other the 
-comments associated with that. The connection of the webparts was done in 
+one showing an article, a how-to or news and the other the 
+comments associated with that. The connection of the webparts was done in 
 about 10 minutes, really cool techno.
 
 Then I learned that an Atlas UpdatePanel can't be part of a Webpart because 
 then you have the UpdatePanel in a Template of the WebpartZone and that doesn't 
 work, so you have to move the UpdatePanel to have it around the Webpartzone. As 
-I am working with nested Master Pages I decided to have the UpdatePanel in 
+I am working with nested Master Pages I decided to have the UpdatePanel in 
 an asp Content control around the WebPartZone like this:
 
-<style type="text/css"> .cf { font-family: Courier New; font-size: 10pt; color: black; background: white; } .cl { margin: 0px; } .cb1 { background: yellow; } .cb2 { color: blue; } .cb3 { color: maroon; } .cb4 { color: red; } </style>
 
-<div class="cf">
+```html
+<%@ Page Language="C#" MasterPageFile="~/OneColumn.master" AutoEventWireup="true"
+    CodeFile="Articles.aspx.cs" Inherits="Articles" Title="Tech Head Brothers - Articles" %>
 
+<%@ MasterType VirtualPath="~/OneColumn.master" %>
 
-<span class="cb1"><%</span><span class="cb2">@</span> <span class="cb3">Page</span> <span class="cb4">Language</span><span class="cb2">="C#"</span> <span class="cb4">MasterPageFile</span><span class="cb2">="~/OneColumn.master"</span> <span class="cb4">AutoEventWireup</span><span class="cb2">="true"</span>
+<%@ Register Assembly="Nsquared2.Web"
+    Namespace="Nsquared2.Web.UI.WebControls.WebParts"
 
-    <span class="cb4">CodeFile</span><span class="cb2">="Articles.aspx.cs"</span> <span class="cb4">Inherits</span><span class="cb2">="Articles"</span> <span class="cb4">Title</span><span class="cb2">="Tech 
-Head Brothers - Articles"</span> <span class="cb1">%></span>
+    TagPrefix="nsquared2" %>
 
-<span class="cb1"><%</span><span class="cb2">@</span> <span class="cb3">MasterType</span> <span class="cb4">VirtualPath</span><span class="cb2">="~/OneColumn.master"</span> <span class="cb1">%></span>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
 
-<span class="cb1"><%</span><span class="cb2">@</span> <span class="cb3">Register</span> <span class="cb4">Assembly</span><span class="cb2">="Nsquared2.Web"</span> <span class="cb4">Namespace</span><span class="cb2">="Nsquared2.Web.UI.WebControls.WebParts"</span>
+    <atlas:UpdatePanel ID="panelarticles" Mode="Conditional" runat="server">
+        <ContentTemplate>
+            <nsquared2:TemplatedWebPartZone
+                    ID="ContentZone"
+                    runat="server"
+                    ChromeTemplateFile="~/Templates/Chrome/THBOriginalTemplate.chrome"
+                    CssClass="webpartzone"
+                    Padding="0">
+                <ZoneTemplate>
+                </ZoneTemplate>
+            </nsquared2:TemplatedWebPartZone>
+        </ContentTemplate>
+    </atlas:UpdatePanel>
 
-    <span class="cb4">TagPrefix</span><span class="cb2">="nsquared2"</span> <span class="cb1">%></span>
-
-<span class="cb2"><</span><span class="cb3">asp</span><span class="cb2">:</span><span class="cb3">Content</span> <span class="cb4">ID</span><span class="cb2">="Content1"</span> <span class="cb4">ContentPlaceHolderID</span><span class="cb2">="ContentPlaceHolder"</span> <span class="cb4">runat</span><span class="cb2">="Server"></span>
-
-    <span class="cb2"><</span><span class="cb3">atlas</span><span class="cb2">:</span><span class="cb3">UpdatePanel</span> 
-<span class="cb4">ID</span><span class="cb2">="panelarticles"</span> <span class="cb4">Mode</span><span class="cb2">="Conditional"</span> <span class="cb4">runat</span><span class="cb2">="server"></span>
-
-        <span class="cb2"><</span><span class="cb3">ContentTemplate</span><span class="cb2">></span>
-
-            <span class="cb2"><</span><span class="cb3">nsquared2</span><span class="cb2">:</span><span class="cb3">TemplatedWebPartZone</span> <span class="cb4">ID</span><span class="cb2">="ContentZone"</span> <span class="cb4">runat</span><span class="cb2">="server"</span> <span class="cb4">ChromeTemplateFile</span><span class="cb2">="~/Templates/Chrome/THBOriginalTemplate.chrome"</span>
-
-                <span class="cb4">CssClass</span><span class="cb2">="webpartzone"</span> <span class="cb4">Padding</span><span class="cb2">="0"></span>
-
-                <span class="cb2"><</span><span class="cb3">ZoneTemplate</span><span class="cb2">></span>
-
-                <span class="cb2"></</span><span class="cb3">ZoneTemplate</span><span class="cb2">></span>
-
-            <span class="cb2"></</span><span class="cb3">nsquared2</span><span class="cb2">:</span><span class="cb3">TemplatedWebPartZone</span><span class="cb2">></span>
-
-        <span class="cb2"></</span><span class="cb3">ContentTemplate</span><span class="cb2">></span>
-
-    <span class="cb2"></</span><span class="cb3">atlas</span><span class="cb2">:</span><span class="cb3">UpdatePanel</span><span class="cb2">></span>
-
-<span class="cb2"></</span><span class="cb3">asp</span><span class="cb2">:</span><span class="cb3">Content</span><span class="cb2">></span>
-
-<span class="cb2"></span> 
-</div>
-
+</asp:Content>
+```
 
 Then in my comments WebPart I implemented a button doing a 
 response redirect to another page that will handle the writing of a new comment, 
@@ -81,7 +66,7 @@ was back again. hum!!! But that was not the scenario I wanted for my comments,
 so I added again my UpdatePanel and made several tests withtout any success. 
 
 
-Then searching on the [forum](http://forums.asp.net/default.aspx?GroupID=34) I found why, [here](http://forums.asp.net/thread/1241741.aspx) : "*The 
+Then searching on the [forum](http://forums.asp.net/default.aspx?GroupID=34) I found why, [here](http://forums.asp.net/thread/1241741.aspx) : "*The 
 specific reason it happens is that when ScriptManager detects a Redirect during 
 an async postback, it clears the response, which means all cookies are lost. One 
 of those cookies is the session ID cookie. This doesn't necessarily affect all 

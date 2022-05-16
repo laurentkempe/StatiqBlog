@@ -7,7 +7,8 @@ disqusIdentifier: 20060629062500
 ---
 I would like to congratulate all the French "has-been too old" football players :-)
 
-Then I would like to quote [Didier](http://www.didierbeck.com/)<br>"<br>And my dear Spanish colleagues, friends and non-friends, journalists, trainer and players, sometimes, as in the business field, it is *definitely* better to keep a low profile and to respect your opponents, and more especially before playing a match, even if you have won your last 26 games. Some examples...."
+Then I would like to quote [Didier](http://www.didierbeck.com/)
+"And my dear Spanish colleagues, friends and non-friends, journalists, trainer and players, sometimes, as in the business field, it is *definitely* better to keep a low profile and to respect your opponents, and more especially before playing a match, even if you have won your last 26 games. Some examples...."
 <!-- more -->
 
 <strong>What about the shameful behaviour of the Spanish fans during the anthem?</strong>
@@ -20,8 +21,8 @@ Striker Thierry Henry described the rival supporters' behaviour as shameful. "I'
 
 <strong>What about the racist remarks of the Spanish trainer (for a while) and supporters? </strong>
 
-Aragones and Henry are not the best of friends after Aragones’ used a racist remark in referring to the France striker while trying to motivate Jose Antonio Reyes, an Arsenal teammate of Henry. <br>Domenech also suggested that some Spain supporters had made monkey noises when the bus carrying the France players arrived at the stadium."<br>"
+Aragones and Henry are not the best of friends after Aragones’ used a racist remark in referring to the France striker while trying to motivate Jose Antonio Reyes, an Arsenal teammate of Henry. <br>Domenech also suggested that some Spain supporters had made monkey noises when the bus carrying the France players arrived at the stadium."
 
-I think that the best answer was given by the French team during the game. THANKS GUYS !!!
+I think that the best answer was given by the French team during the game. THANKS GUYS !!!
 
 <strong>Allez les Bleus! </strong>

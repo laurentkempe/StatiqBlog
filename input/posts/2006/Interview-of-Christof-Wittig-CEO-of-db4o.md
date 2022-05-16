@@ -18,10 +18,15 @@ There are several aspects that I particularly like in what I read:
 
 And from a technical aspect I really like this kind of code:
 
-    IList<Student> students = db.Query<Student>(delegate(Student student){  
-        return student.Age < 20  
-          && student.Grade == gradeA;  
-      });
+```csharp
+    IList<Student> students = 
+        db.Query<Student>(
+            delegate(Student student)
+            {  
+                return student.Age < 20 && student.Grade == gradeA;  
+            }
+        );
+```
 
 It is named Native Queries, and it is 100% type safe, I like when the compiler already tells me that my code has a defect.
 

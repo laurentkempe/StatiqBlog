@@ -11,23 +11,23 @@ During the integration of ASP.NET Ajax RC on [Tech Head Brothers](http://www.tec
 Adsense uses the native method Date.parse of JavaScript. ASP.NET Ajax RC overload this method changing a bit its behavior. Luckily the old method is saved in Date._jsParse. Using this code just before your first insert of the adsense script will solve the issue:
 <!-- more -->
 
-            <span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">script</span> <span style="color: rgb(255,0,0)">type</span><span style="color: rgb(0,0,255)">="text/javascript"></span><!--
-                Date.__cyril_parse = Date.parse; 
-                Date.parse = <span style="color: rgb(0,0,255)">function</span>(s){
-                    <span style="color: rgb(0,0,255)">try</span> {
-                        <span style="color: rgb(0,0,255)">return</span> Date.__cyril_parse(s);
-                    } <span style="color: rgb(0,0,255)">catch</span> (e){
-                        <span style="color: rgb(0,0,255)">var</span> d = Date._jsParse(s);
-                        <span style="color: rgb(0,0,255)">if</span> (d) {
-                            <span style="color: rgb(0,0,255)">return</span> d; 
-                        } <span style="color: rgb(0,0,255)">else</span> {
-                            <span style="color: rgb(0,0,255)">throw</span> e;
-                        } 
-                    }
-                }
-            <span style="color: rgb(0,128,0)">//--></span><span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">script</span><span style="color: rgb(0,0,255)">></span>
-[](http://11011.net/software/vspaste)
-
+```javascript
+<script type="text/javascript"><!--
+    Date.__cyril_parse = Date.parse; 
+    Date.parse = function(s){
+        try {
+            return Date.__cyril_parse(s);
+        } catch (e){
+            var d = Date._jsParse(s);
+            if (d) {
+                return d; 
+            } else {
+                throw e;
+            } 
+        }
+    }
+//--></script>
+```
 
 **Thanks Cyril!!!**
 

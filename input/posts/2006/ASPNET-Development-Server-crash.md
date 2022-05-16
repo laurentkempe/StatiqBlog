@@ -8,34 +8,23 @@ tags: ["ASP.NET 2.0", "Visual Studio", ".NET"]
 ---
 This morning I had a strange crash of ASP.NET Development Server, it is the first time that it happens and I was really stressed about it.
 
-With debugger I got: "**<font size="2" color="#000080">An unhandled exception of type 'System.StackOverflowException' occurred in Unknown Module."</font>**
+With debugger I got: "**An unhandled exception of type 'System.StackOverflowException' occurred in Unknown Module."**
 <!-- more -->
 
 I thought of third parties assemblies but that wasn't it, so I finally thought of infinite loop and pointed out that I was doing the following in my last changes:
-<div style="font-size: 10pt; background: white; color: black; font-family: Consolas">
 
-<span style="color: blue">public</span> <span style="color: blue">virtual</span> <span style="color: blue">string</span> **ChromeTemplateFile**
-
+````csharp
+public virtual string ChromeTemplateFile
 {
-
-    <span style="color: blue">get</span>
-
-    {
-
-        <span style="color: blue">if</span> (<span style="color: teal">WebPartManager</span>.GetCurrentWebPartManager(Page).DisplayMode == <span style="color: teal">WebPartManager</span>.BrowseDisplayMode)
-
-            <span style="color: blue">return</span> BrowseDisplayModeChromeTemplateFile;
-
-        <span style="color: blue">else</span>
-
-            <span style="color: blue">return</span> **ChromeTemplateFile**;
-
-    }
-
-    <span style="color: blue">set</span> { <span style="color: blue">throw</span> <span style="color: blue">new</span> <span style="color: teal">ApplicationException</span>(<span style="color: maroon">"Not Implemented"</span>); }
-
+    get
+    {
+        if (WebPartManager.GetCurrentWebPartManager(Page).DisplayMode == WebPartManager.BrowseDisplayMode)
+            return BrowseDisplayModeChromeTemplateFile;
+        else
+            return ChromeTemplateFile;
+    }
+    set { throw new ApplicationException("Not Implemented"); }
 }
-
-</div>
+````
 
 Bingo, one miss tipping of a properties name and you end up in an infinite loop. Thanks Valentin for the nice msn talks ;-)

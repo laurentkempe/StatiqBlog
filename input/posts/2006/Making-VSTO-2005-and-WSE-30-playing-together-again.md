@@ -6,15 +6,13 @@ updated: 5/7/2010 7:45:40 AM
 disqusIdentifier: 20060813120800
 tags: ["Web Services", "ASP.NET", "VSTO"]
 ---
-Today I am working on the security of my publishing web services for the next release of Tech Head Brothers Portal. The goal is to be able to post content on the portal using [THBAuhtoring](http://www.codeplex.com/Wiki/View.aspx?ProjectName=THBAuthoring "THBAuthoring") (you might get the source from [Codeplex](http://www.codeplex.com/ "Codeplex")) a Word 2003 solution I developed. I wanted to build my proxy class like so:
-
-<div style="FONT-SIZE: 10pt; BACKGROUND: white; COLOR: black; FONT-FAMILY: Consolas">
-
+Today I am working on the security of my publishing web services for the next release of Tech Head Brothers Portal. The goal is to be able to post content on the portal using [THBAuhtoring](http://www.codeplex.com/Wiki/View.aspx?ProjectName=THBAuthoring "THBAuthoring") (you might get the source from [Codeplex](http://www.codeplex.com/ "Codeplex")) a Word 2003 solution I developed. I wanted to build my proxy class like so:
 
 <!-- more -->
-<span style="COLOR: teal">PublishServiceWse</span> service = <span style="COLOR: blue">new</span> <span style="COLOR: teal">PublishServiceWse</span>();
-</div>
 
+```csharp
+PublishServiceWse service = new PublishServiceWse();
+```
 
 and then I was getting the following error:
 
