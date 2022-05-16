@@ -26,38 +26,37 @@ The cool point here is that during the development of [innoveo solutions](http:/
 
 *Definition of a new blog, that will be used in the httpHandlers part of the web.config*
 
-    <span style="color: rgb(0,0,255)">public</span> <span style="color: rgb(0,0,255)">class</span> <span style="color: rgb(43,145,175)">VideoBlog</span> : <span style="color: rgb(43,145,175)">GenericBlog</span><<span style="color: rgb(43,145,175)">Video</span>>
+```csharp
+public class VideoBlog : GenericBlog<Video>
+{
+    public VideoBlog() : base(new VideoBlogAssembler())
     {
-        <span style="color: rgb(0,0,255)">public</span> VideoBlog() : <span style="color: rgb(0,0,255)">base</span>(<span style="color: rgb(0,0,255)">new</span> <span style="color: rgb(43,145,175)">VideoBlogAssembler</span>())
-        {
-        }
     }
-[](http://11011.net/software/vspaste)
-
+}
+```
 
 *Definition of the converter class, converting an business entity to/from a Post*
 
-    <span style="color: rgb(0,0,255)">public</span> <span style="color: rgb(0,0,255)">class</span> <span style="color: rgb(43,145,175)">VideoBlogAssembler</span> : <span style="color: rgb(43,145,175)">IBlogAssembler</span><<span style="color: rgb(43,145,175)">Video</span>>
-    {
-
-[](http://11011.net/software/vspaste)
-
-        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><summary>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> Converts the specified video.
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"></summary>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><param name="video"></span><span style="color: rgb(0,128,0)">The video.</span><span style="color: rgb(128,128,128)"></param>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><returns></returns>
-</span>        <span style="color: rgb(0,0,255)">public</span> <span style="color: rgb(43,145,175)">Post</span> Convert(<span style="color: rgb(43,145,175)">Video</span> video)
-        {
-            <span style="color: rgb(43,145,175)">Post</span> post = <span style="color: rgb(0,0,255)">new</span> <span style="color: rgb(43,145,175)">Post</span>();
-
-            post.dateCreated = video.PublishDate;
-            post.description = video.Description;
-
-[](http://11011.net/software/vspaste)
+```csharp
+public class VideoBlogAssembler : IBlogAssembler<Video>
+{
+```
 
 
-...
+```csharp
+/// <summary>
+/// Converts the specified video.
+/// </summary>
+/// <param name="video">The video.</param>
+/// <returns></returns>
+public Post Convert(Video video)
+{
+    Post post = new Post();
+
+    post.dateCreated = video.PublishDate;
+    post.description = video.Description;
+    ...
+```
 
 The admin part was quick to develop just extending the page I already had for articles publication.
 

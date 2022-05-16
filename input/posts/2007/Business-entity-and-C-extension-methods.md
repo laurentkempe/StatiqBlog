@@ -8,15 +8,18 @@ tags: ["Note to self"]
 ---
 In place of writing something like:
 
-<span style="color: rgb(0,0,255)">protected</span> <span style="color: rgb(0,0,255)">string</span> GetUrl(<span style="color: rgb(43,145,175)">Information</span> info)
+```csharp
+protected string GetUrl(Information info)
 {
-    <span style="color: rgb(0,0,255)">if</span> (info <span style="color: rgb(0,0,255)">is</span> <span style="color: rgb(43,145,175)">News</span>)
-        <span style="color: rgb(0,0,255)">return</span> ResolveUrl(<span style="color: rgb(0,0,255)">string</span>.Format(<span style="color: rgb(163,21,21)">"~/news.aspx/{0}"</span>, info.NormalizedTitle));
-    <span style="color: rgb(0,0,255)">else</span> <span style="color: rgb(0,0,255)">if</span> (info <span style="color: rgb(0,0,255)">is</span> <span style="color: rgb(43,145,175)">Publication</span>)
-        <span style="color: rgb(0,0,255)">return</span> ResolveUrl(<span style="color: rgb(0,0,255)">string</span>.Format(<span style="color: rgb(163,21,21)">"~/publications.aspx/{0}"</span>, info.NormalizedTitle));
-    <span style="color: rgb(0,0,255)">else
-</span>        <span style="color: rgb(0,0,255)">return</span> <span style="color: rgb(0,0,255)">string</span>.Empty;
+    if (info is News)
+        return ResolveUrl(string.Format("~/news.aspx/{0}", info.NormalizedTitle));
+    else if (info is Publication)
+        return ResolveUrl(string.Format("~/publications.aspx/{0}", info.NormalizedTitle));
+    else
+        return string.Empty;
 }
+```
+
 <!-- more -->
 
 I would use on the presentation layer only an extension method on my business entity class of type Information to add a GetUrl method!
@@ -25,9 +28,10 @@ It would keep the business entity light on the different other layers, and add w
 
 And would end like so:
 
-<span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">a</span> <span style="color: rgb(255,0,0)">href</span><span style="color: rgb(0,0,255)">="</span><span style="background: rgb(255,238,98)"><%</span># ((Information)Container.DataItem)).GetUrl() <span style="background: rgb(255,238,98)">%><span style="color: rgb(0,0,255)"></span>"</span> <span style="color: rgb(255,0,0)">title</span><span style="color: rgb(0,0,255)">="</span><span style="background: rgb(255,238,98)"><%</span>#Eval("Title")<span style="background: rgb(255,238,98)">%><span style="color: rgb(0,0,255)"></span>">
-</span>    <span style="background: rgb(255,238,98)"><%<span style="color: rgb(0,0,255)"></span>#</span>Eval(<span style="color: rgb(163,21,21)">"Title"</span>)<span style="background: rgb(255,238,98)">%>
-<span style="color: rgb(0,0,255)"></span></</span><span style="color: rgb(163,21,21)">a</span><span style="color: rgb(0,0,255)">>
-</span>
+```html
+<a href="<%# ((Information)Container.DataItem)).GetUrl() %>" title="<%#Eval("Title")%>">
+    <%#Eval("Title")%>
+</a>
+```
 
 Something to test when I will install Visual Studio 2008!

@@ -8,8 +8,9 @@ tags: ["Tools", "ASP.NET 2.0", "Interoperability", "innoveo solutions", "C#", "A
 ---
 *Conception using generics and reflection of a search engine to index and search content in your business entities without being intrusive.*  
 
-### [Introduction]()
 <!-- more -->
+
+### Introduction
 
 Today, one of the functionality that almost all web sites implements is a method to index content and give it users the possibility to search that content spread into its web pages. It is one of the simplest ways to improve the user experience on your web site.  
 
@@ -29,4 +30,4 @@ Wanting to be independent of any database and services like Full-Text indexing, 
 
 In the following posts, I will present an introduction of Lucene.Net; we will see the architecture I have chosen for the indexing and searching framework; the implementation details of that framework and finally an example of integration into a data access layer.
 
-*This post is cross-posted on [innoveo blog](http://blog.innoveo.com/archive.aspx/2007/12/12/indexing-and-searching-business-entities-using-lucene-net-framework-part-1) **and in French on my .NET community portal *[*Tech Head Brothers*](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net)*.*
+This post is cross-posted on *[innoveo blog](http://blog.innoveo.com/archive.aspx/2007/12/12/indexing-and-searching-business-entities-using-lucene-net-framework-part-1)* and in French on my .NET community portal *[Tech Head Brothers](http://www.techheadbrothers.com/Articles.aspx/indexer-rechercher-entites-metier-aide-framework-lucene-net)*.

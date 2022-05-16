@@ -28,14 +28,15 @@ In this folder you have everything to start with a very good looking player; the
 
 To start you have to modify the default.html to use the Silverlight JavaScript script delivered by Silverlight Streaming:
 
-<span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">script</span> <span style="color: rgb(255,0,0)">type</span><span style="color: rgb(0,0,255)">='text/javascript'</span> <span style="color: rgb(255,0,0)">src</span><span style="color: rgb(0,0,255)">="Silverlight.js"></</span><span style="color: rgb(163,21,21)">script</span><span style="color: rgb(0,0,255)">></span>
+```html
+<script type='text/javascript' src="Silverlight.js"></script>
+```
 
-[](http://11011.net/software/vspaste)by
+by
 
-<span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">script</span> <span style="color: rgb(255,0,0)">type</span><span style="color: rgb(0,0,255)">="text/javascript"</span> <span style="color: rgb(255,0,0)">src</span><span style="color: rgb(0,0,255)">="http://agappdom.net/h/silverlight.js"></</span><span style="color: rgb(163,21,21)">script</span><span style="color: rgb(0,0,255)">>
-</span>
-[](http://11011.net/software/vspaste)
-
+```html
+<script type="text/javascript" src="http://agappdom.net/h/silverlight.js"></script>
+```
 
 This is recommended by the documentation, but it is not mandatory:
 
@@ -43,80 +44,85 @@ This is recommended by the documentation, but it is not mandatory:
 
 Then you have to modify the StartPlayer.js, replace:
 
-<span style="color: rgb(0,0,255)">function</span> StartPlayer_0(parentId) {
-    <span style="color: rgb(0,0,255)">this</span>._hostname = EePlayer.Player._getUniqueName(<span style="color: rgb(163,21,21)">"xamlHost"</span>);
-    Silverlight.createObjectEx( {   source: <span style="color: rgb(163,21,21)">'player.xaml'</span>, 
-                                    parentElement: $get(parentId ||<span style="color: rgb(163,21,21)">"divPlayer_0"</span>), 
-                                    id:<span style="color: rgb(0,0,255)">this</span>._hostname, 
-                                    properties:{ width:<span style="color: rgb(163,21,21)">'100%'</span>, 
-                                                 height:<span style="color: rgb(163,21,21)">'100%'</span>, 
-                                                 version:<span style="color: rgb(163,21,21)">'1.0'</span>, 
+```javascript
+function StartPlayer_0(parentId) {
+    this._hostname = EePlayer.Player._getUniqueName("xamlHost");
+    Silverlight.createObjectEx( {   source: 'player.xaml', 
+                                    parentElement: $get(parentId ||"divPlayer_0"), 
+                                    id:this._hostname, 
+                                    properties:{ width:'100%', 
+                                                 height:'100%', 
+                                                 version:'1.0', 
                                                  background:document.body.style.backgroundColor, 
-                                                 isWindowless:<span style="color: rgb(163,21,21)">'false'</span> }, 
-                                    events:{ onLoad:Function.createDelegate(<span style="color: rgb(0,0,255)">this</span>, <span style="color: rgb(0,0,255)">this</span>._handleLoad) } } );
-    <span style="color: rgb(0,0,255)">this</span>._currentMediainfo = 0;      
+                                                 isWindowless:'false' }, 
+                                    events:{ onLoad:Function.createDelegate(this, this._handleLoad) } } );
+    this._currentMediainfo = 0;      
 }
-
+```
 
 with this, adding the [initParams](http://dev.live.com/silverlight/initparams.aspx):
 
-<span style="color: rgb(0,0,255)">function</span> StartPlayer_0(parentId) {
-    <span style="color: rgb(0,0,255)">this</span>._hostname = EePlayer.Player._getUniqueName(<span style="color: rgb(163,21,21)">"xamlHost"</span>);
+```javascript
+function StartPlayer_0(parentId) {
+    this._hostname = EePlayer.Player._getUniqueName("xamlHost");
 
-    Silverlight.createHostedObjectEx( {   source: <span style="color: rgb(163,21,21)">'player.xaml'</span>, 
-                                        parentElement: $get(parentId ||<span style="color: rgb(163,21,21)">"divPlayer_0"</span>), 
-                                        id: <span style="color: rgb(0,0,255)">this</span>._hostname, 
-                                        properties:{ width:<span style="color: rgb(163,21,21)">'100%'</span>, 
-                                                     height:<span style="color: rgb(163,21,21)">'100%'</span>, 
-                                                     version:<span style="color: rgb(163,21,21)">'1.0'</span>, 
+    Silverlight.createHostedObjectEx( {   source: 'player.xaml', 
+                                        parentElement: $get(parentId ||"divPlayer_0"), 
+                                        id: this._hostname, 
+                                        properties:{ width:'100%', 
+                                                     height:'100%', 
+                                                     version:'1.0', 
                                                      background:document.body.style.backgroundColor, 
-                                                     isWindowless:<span style="color: rgb(163,21,21)">'false'</span> }, 
-                                        events:{ onLoad:Function.createDelegate(<span style="color: rgb(0,0,255)">this</span>, <span style="color: rgb(0,0,255)">this</span>._handleLoad) },
-                                        **initParams:<span style="color: rgb(163,21,21)">"streaming:/4065/livewriterdemo/livewriterdemo.wmv"</span>** } );
-    <span style="color: rgb(0,0,255)">this</span>._currentMediainfo = 0;      
+                                                     isWindowless:'false' }, 
+                                        events:{ onLoad:Function.createDelegate(this, this._handleLoad) },
+                                        **initParams:"streaming:/4065/livewriterdemo/livewriterdemo.wmv"** } );
+    this._currentMediainfo = 0;      
 }
-
-[](http://11011.net/software/vspaste)
-
+```
 
 Now you need a way to get back this the real url of you video out of the streaming:/4065/livewriterdemo/livewriterdemo.wmv, this is done automatically by the script doing a post to Silverlight Streaming server that returns the following javascript:
 
+```javascript
 SLStreaming._StartApp("bl2", null  
 , {}  
 , []  
 , ["http://msbluelight-0.agappdom.net/e1/d/4065/8.w/63325188000/0.UZcUXMfJgIK0I0HcP-SQGzhvvVE/livewriterdemo.wmv"]);
+```
 
 Now we need to take car of the real url in the _handleLoad method we change the call to the _playNextVideo to a new method ChangeVideo:
 
+```javascript
 StartPlayer_0.prototype= {
-    _handleLoad: <span style="color: rgb(0,0,255)">function</span>() {
-        <span style="color: rgb(0,0,255)">this</span>._player = $create(   ExtendedPlayer.Player, 
+    _handleLoad: function() {
+        this._player = $create(   ExtendedPlayer.Player, 
                                   { <span style="color: rgb(0,128,0)">// properties
-</span>                                    autoPlay    : <span style="color: rgb(0,0,255)">true</span>, 
+                                    autoPlay    : true, 
                                     volume      : 1.0,
-                                    muted       : <span style="color: rgb(0,0,255)">false
-</span>                                  }, 
+                                    muted       : false
+                                  }, 
                                   { <span style="color: rgb(0,128,0)">// event handlers
-</span>                                    mediaEnded: Function.createDelegate(<span style="color: rgb(0,0,255)">this</span>, <span style="color: rgb(0,0,255)">this</span>._onMediaEnded),
-                                    mediaFailed: Function.createDelegate(<span style="color: rgb(0,0,255)">this</span>, <span style="color: rgb(0,0,255)">this</span>._onMediaFailed)
+                                    mediaEnded: Function.createDelegate(this, this._onMediaEnded),
+                                    mediaFailed: Function.createDelegate(this, this._onMediaFailed)
                                   },
-                                  <span style="color: rgb(0,0,255)">null</span>, $get(<span style="color: rgb(0,0,255)">this</span>._hostname)  ); 
+                                  null, $get(this._hostname)  ); 
         <span style="color: rgb(0,128,0)">//this._playNextVideo();     
-</span>        <span style="color: rgb(0,0,255)">this</span>.ChangeVideo();
+        this.ChangeVideo();
     },    
-    ChangeVideo: <span style="color: rgb(0,0,255)">function</span>(){            
+    ChangeVideo: function(){            
 
-        <span style="color: rgb(0,0,255)">var</span> params = $get(<span style="color: rgb(0,0,255)">this</span>._hostname).InitParams;
-        <span style="color: rgb(0,0,255)">this</span>._player.set_mediainfo(
-                { <span style="color: rgb(163,21,21)">"mediaUrl"</span>: params, <span style="color: rgb(163,21,21)">"placeholderImage"</span>: <span style="color: rgb(163,21,21)">""</span>, <span style="color: rgb(163,21,21)">"chapters"</span>: [] }  
+        var params = $get(this._hostname).InitParams;
+        this._player.set_mediainfo(
+                { "mediaUrl": params, "placeholderImage": "", "chapters": [] }  
             );                                                                                                              
     },                  
-
+```
 
 We get access to the initParams converted to a real url using:
 
-        <span style="color: rgb(0,0,255)">var</span> params = $get(<span style="color: rgb(0,0,255)">this</span>._hostname).InitParams;
+```javascript
+var params = $get(this._hostname).InitParams;
+```
 
-Tanks to [Mathieu](http://www.techheadbrothers.com/Auteurs.aspx/mathieu-kempe) for the help in the javascript coding.
+Thanks to [Mathieu](http://www.techheadbrothers.com/Auteurs.aspx/mathieu-kempe) for the help in the javascript coding.
 
 So this is all you need to do to have your video hosted and delivered by [Silverlight Streaming](http://silverlight.live.com/) and your application hosted on your own site.

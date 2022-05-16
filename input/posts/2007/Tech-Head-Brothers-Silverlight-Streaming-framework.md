@@ -19,15 +19,17 @@ It is basic with a Manager class (*SilverlightStreamingManager*) using a set of 
 
 Uploading a Video is as simple as those few lines:
 
-            <span style="color: rgb(43,145,175)">SilverlightStreamingManager</span> mgr =
-                <span style="color: rgb(0,0,255)">new</span> <span style="color: rgb(43,145,175)">SilverlightStreamingManager</span>(<span style="color: rgb(163,21,21)">"TOBEDEFINED"</span>, <span style="color: rgb(163,21,21)">"TOBEDEFINED"</span>);
+```csharp
+SilverlightStreamingManager mgr =
+    new SilverlightStreamingManager("TOBEDEFINED", "TOBEDEFINED");
 
-            <span style="color: rgb(0,0,255)">string</span> fileset = <span style="color: rgb(163,21,21)">"testvideo"</span>;
+string fileset = "testvideo";
 
-            <span style="color: rgb(0,0,255)">if</span> (mgr.UploadVideo(<span style="color: rgb(163,21,21)">@"T:\_Projects\Silverlight\SilverlightStreaming\media\fiona.wmv"</span>, fileset))
-                <span style="color: rgb(43,145,175)">Console</span>.WriteLine(<span style="color: rgb(163,21,21)">"Uploaded sucessfully!! "</span>);
-            <span style="color: rgb(0,0,255)">else
-</span>                <span style="color: rgb(43,145,175)">Console</span>.WriteLine(<span style="color: rgb(163,21,21)">"Something went wrong !!"</span>);
+if (mgr.UploadVideo(@"T:\_Projects\Silverlight\SilverlightStreaming\media\fiona.wmv", fileset))
+    Console.WriteLine("Uploaded sucessfully!! ");
+else
+    Console.WriteLine("Something went wrong !!");
+```
 
 You also might prefer to use the corresponding workflow activities delivered or even the sample workflow:
 

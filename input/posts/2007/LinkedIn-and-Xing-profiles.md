@@ -8,7 +8,7 @@ tags: ["Work"]
 ---
 You might take a look to my LinkedIn and Xing profiles clicking on the following pictures:
 
-[![View Laurent Kempé's profile on LinkedIn](http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.gif)](http://www.linkedin.com/in/laurentkempe)
+[LinkedIn](http://www.linkedin.com/in/laurentkempe)
 <!-- more -->
 
 [![XING](http://www.xing.com/img/buttons/10_en_btn.gif)](http://www.xing.com/profile/Laurent_Kempe)

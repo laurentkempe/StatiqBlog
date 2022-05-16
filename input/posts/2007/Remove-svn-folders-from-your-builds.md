@@ -13,5 +13,7 @@ I use [Visual Studio 2005 Web Deployment Projects](http://msdn2.microsoft.com/en
 
 If the .svn folders are hidden, you forget about those folders but with the build and packaging they will be there in your package. So to remove those folders I juste added this line in my MSBuild file:
 
-<span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">ExcludeFromBuild</span><span style="color: rgb(0,0,255)"> </span><span style="color: rgb(255,0,0)">Include</span><span style="color: rgb(0,0,255)">=</span>"<span style="color: rgb(0,0,255)">$(SourceWebPhysicalPath)\**\.svn\**\*.*</span>"<span style="color: rgb(0,0,255)"> /></span>
-[](http://11011.net/software/vspaste)
+
+```xml
+<ExcludeFromBuild Include="$(SourceWebPhysicalPath)\**\.svn\**\*.*" />
+```

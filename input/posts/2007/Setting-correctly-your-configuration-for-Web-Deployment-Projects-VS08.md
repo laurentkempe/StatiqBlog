@@ -8,18 +8,19 @@ tags: ["ASP.NET 2.0", "Visual Studio", "ASP.NET"]
 ---
 I read on [MSDN Forums](http://forums.asp.net/t/1151526.aspx) that it is not possible to use other configuration than Release and Debug. This is wrong.
 
-I am using it for Tech Head Brothers Portal, what you have to take care of is how you set your configuration. On the following picture you see how I defined a new Staging configuration and set the Web Deployment Project *WebApplication.csproj_deploy *to build using this configuration.
+I am using it for Tech Head Brothers Portal, what you have to take care of is how you set your configuration. On the following picture you see how I defined a new Staging configuration and set the Web Deployment Project *WebApplication.csproj_deploy* to build using this configuration.
 <!-- more -->
 
 ![](http://farm3.static.flickr.com/2203/2079573615_8fa38ad83d_o.jpg) 
 
 Then you are able to use it this way in your MSBuild:
 
-<span style="color: rgb(0,0,255)"><</span><span style="color: rgb(163,21,21)">PropertyGroup</span><span style="color: rgb(0,0,255)"> </span><span style="color: rgb(255,0,0)">Condition</span><span style="color: rgb(0,0,255)">=</span>"<span style="color: rgb(0,0,255)"> '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' </span>"<span style="color: rgb(0,0,255)">>
-    <</span><span style="color: rgb(163,21,21)">DebugSymbols</span><span style="color: rgb(0,0,255)">></span>true<span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">DebugSymbols</span><span style="color: rgb(0,0,255)">>
-    <</span><span style="color: rgb(163,21,21)">OutputPath</span><span style="color: rgb(0,0,255)">></span>.\Staging<span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">OutputPath</span><span style="color: rgb(0,0,255)">>
-    <</span><span style="color: rgb(163,21,21)">EnableUpdateable</span><span style="color: rgb(0,0,255)">></span>true<span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">EnableUpdateable</span><span style="color: rgb(0,0,255)">>
-    <</span><span style="color: rgb(163,21,21)">UseMerge</span><span style="color: rgb(0,0,255)">></span>true<span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">UseMerge</span><span style="color: rgb(0,0,255)">>
-    <</span><span style="color: rgb(163,21,21)">SingleAssemblyName</span><span style="color: rgb(0,0,255)">></span>THB.Portal<span style="color: rgb(0,0,255)"></</span><span style="color: rgb(163,21,21)">SingleAssemblyName</span><span style="color: rgb(0,0,255)">>
-</</span><span style="color: rgb(163,21,21)">PropertyGroup</span><span style="color: rgb(0,0,255)">></span>
-[](http://11011.net/software/vspaste)
+```xml
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Staging|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\Staging</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>THB.Portal</SingleAssemblyName>
+</PropertyGroup>
+```

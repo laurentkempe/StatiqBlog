@@ -6,7 +6,7 @@ updated: 11/18/2007 8:21:52 PM
 disqusIdentifier: 20071118082152
 tags: ["innoveo solutions"]
 ---
-![Le Web 3 '07](http://www.loiclemeur.com/english/leweb3registration2007small.jpeg)I will be in Paris for [Le Web 3 '07](http://www.leweb3.com/) from Monday 10 December 2007 evening to Thursday 13 December 2007 mid-day. 
+I will be in Paris for [Le Web 3 '07](http://www.leweb3.com/) from Monday 10 December 2007 evening to Thursday 13 December 2007 mid-day. 
 
 I will attend the conference with [Didier](http://www.didierbeck.com/) which was to the [2005](http://www.didierbeck.com/2005/12/news-les-blog-20-starting.php) and [2006](http://www.didierbeck.com/2006/10/news-leweb3-in-paris-registered.php) editions.
 <!-- more -->

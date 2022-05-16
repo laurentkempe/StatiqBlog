@@ -28,32 +28,33 @@ The link to the error didn't really helped because the code was absolutely corre
 
 After some research I found the issue in the data access layer, in which I have a generic Repository class for all CRUD operations that I parameterize with a business entity of my domain. The code look like this: 
 
-<span style="color: rgb(0,0,255)">namespace</span> TechHeadBrothers.Portal.DAL  
+```csharp
+namespace TechHeadBrothers.Portal.DAL  
 {  
-    <span style="color: rgb(0,0,255)">public</span> <span style="color: rgb(0,0,255)">class</span> <span style="color: rgb(43,145,175)">Repository</span><T>  
-        <span style="color: rgb(0,0,255)">where</span> T : <span style="color: rgb(0,0,255)">class  
-</span>    {  
+    public class Repository<T>  
+        where T : class  
+    {  
 
-        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><summary>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> Reads from the specified query.
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"></summary>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><param name="query"></span><span style="color: rgb(0,128,0)">The query.</span><span style="color: rgb(128,128,128)"></param>
-</span>        <span style="color: rgb(128,128,128)">///</span><span style="color: rgb(0,128,0)"> </span><span style="color: rgb(128,128,128)"><returns></returns>
-</span>        <span style="color: rgb(0,0,255)">protected</span> <span style="color: rgb(0,0,255)">static</span> <span style="color: rgb(43,145,175)">IList</span><T> Read(<span style="color: rgb(43,145,175)">Query</span> query)
+        /// <summary>
+        /// Reads from the specified query.
+        /// </summary>
+        /// <param name="query">The query.</param>
+        /// <returns></returns>
+        protected static IList<T> Read(Query query)
         {
-            <span style="color: rgb(0,0,255)">return</span> <span style="color: rgb(43,145,175)">PersistenceFactory</span>.Context.Load<T>(query);
+            return PersistenceFactory.Context.Load<T>(query);
         }
-[](http://11011.net/software/vspaste)
-
-
+```
 The issue is that in one method, one of the Read operation, I use the Query class. This class is coming from Euss framework. As Query is a parameter of a method in a public class and this method is marked as protected, it might be inherited in another layer and override. Then the issue is that Query parameter in this other layer is not known because we want to have the Euss framework encapsulated on the data access layer. So we got the error.
 
 <u>Update</u>: The fix is as following:
 
-        <span style="color: rgb(0,0,255)">internal</span> <span style="color: rgb(0,0,255)">static</span> <span style="color: rgb(43,145,175)">IList</span><T> Read(<span style="color: rgb(43,145,175)">Query</span> query)
-        {
-            <span style="color: rgb(0,0,255)">return</span> <span style="color: rgb(43,145,175)">PersistenceFactory</span>.Context.Load<T>(query);
-        }
+```csharp
+internal static IList<T> Read(Query query)
+{
+    return PersistenceFactory.Context.Load<T>(query);
+}
+```
 
 Weird thing is that the same thing works without any issue on Visual Studio 2005.
 
@@ -63,4 +64,4 @@ I am still currently missing VS Web Deployment Add-In, but it was announced by [
 
 > ##### <u>Silverlight Tools and VS Web Deployment Project Add-Ins</u>
 > 
-> Two popular add-ins to Visual Studio are not yet available to download for the final VS 2008 release.  These are the Silverlight 1.1 Tools Alpha for Visual Studio and the Web Deployment Project add-in for Visual Studio.  Our hope is to post updates to both of them to work with the final VS 2008 release in the next two weeks.  If you are doing Silverlight 1.1 development using VS 2008 Beta2 you'll want to stick with with VS 2008 Beta2 until this updated Silverlight Tools Add-In is available. 
+> Two popular add-ins to Visual Studio are not yet available to download for the final VS 2008 release.  These are the Silverlight 1.1 Tools Alpha for Visual Studio and the Web Deployment Project add-in for Visual Studio.  Our hope is to post updates to both of them to work with the final VS 2008 release in the next two weeks.  If you are doing Silverlight 1.1 development using VS 2008 Beta2 you'll want to stick with with VS 2008 Beta2 until this updated Silverlight Tools Add-In is available. 

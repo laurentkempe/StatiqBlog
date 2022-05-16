@@ -35,4 +35,4 @@ If you are using [ASP.NET 2.0 CSS Friendly Control Adapters 1.0](http://www.asp.
 
 **Great work Tana**, **Thanks** for sharing you saved me some time.
 
-<u>Update</u>:** **The CSS Adapters project is now hosted on Codeplex, [http://www.codeplex.com/cssfriendly](http://www.codeplex.com/cssfriendly "http://www.codeplex.com/cssfriendly").
+<u>Update</u>: The CSS Adapters project is now hosted on Codeplex, [http://www.codeplex.com/cssfriendly](http://www.codeplex.com/cssfriendly "http://www.codeplex.com/cssfriendly").

@@ -13,13 +13,11 @@ As stated in the blog of [Frank Arrigo](http://blogs.msdn.com/frankarr/) (respon
 > 
 > [You may have read about this in a recent B & T Article](http://blogs.msdn.com/frankarr/archive/2007/05/30/spreading-the-word-about-silverlight-to-bandt.aspx) (which also featured me)
 > 
-> ![image](http://blogs.msdn.com/blogfiles/frankarr/WindowsLiveWriter/DiscoveryChannelAsiaNeverMissTVtobeprevi_F01C/image_1.png)
-> 
 > I had a sneak preview of the site this week and it looked cool. Can't wait to see the rest of it at ReMIX
 
-The digital agency [@www](http://www.atwww.com.au/) referenced by Frank is the company in which my brother [Mathieu](http://www.techheadbrothers.com/Auteurs.aspx?Id=337eb7bf-2bba-417c-be9d-20488ba6732a) is working. 
+The digital agency [@www](http://www.atwww.com.au/) referenced by Frank is the company in which my brother [Mathieu](http://www.techheadbrothers.com/Auteurs.aspx?Id=337eb7bf-2bba-417c-be9d-20488ba6732a) is working. 
 
-A couple of weeks ago he made a demonstration of [Silvelright](http://www.silverlight.net/) in @www and now he has implemented a first commercial application using it that will be demonstrated during [ReMIX 2007](http://www.microsoft.com/australia/remix07/) in Australia and Asia. 
+A couple of weeks ago he made a demonstration of [Silvelright](http://www.silverlight.net/) in @www and now he has implemented a first commercial application using it that will be demonstrated during [ReMIX 2007](http://www.microsoft.com/australia/remix07/) in Australia and Asia. 
 
 I have seen the last bits of it today, and it rocks!!! 
 

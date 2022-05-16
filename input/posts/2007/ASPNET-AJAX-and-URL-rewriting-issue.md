@@ -27,27 +27,28 @@ http://localhost:8080/Authentication_JSON_AppService.axd/Login
 
 Looking at the page rendered by ASP.NET I see that the following is rendered:
 
+```javascript
 <script type="text/javascript">  
 <!--  
 Sys.Services._AuthenticationService.DefaultWebServicePath = 'Authentication_JSON_AppService.axd';  
 // -->  
 </script>
+```
 
 So I am clearly missing a / in the path and due to that the URL rewriting confuse the post to the server.
 
 The first solution was found by [Cyril Durand](http://blogs.codes-sources.com/cyril/) (always of good help in this AJAX world ;) and is to add this line of code:
 
-<span style="color: rgb(43,145,175)">ScriptManager</span>.GetCurrent(Page).AuthenticationService.Path = <span style="color: rgb(163,21,21)">"/Authentication_JSON_AppService.axd"</span>;
-[](http://11011.net/software/vspaste)
-
+```javascript
+ScriptManager.GetCurrent(Page).AuthenticationService.Path = "/Authentication_JSON_AppService.axd";
+```
 
 But I did it a bit differently, directly in the javascript adding the following line:
 
-Sys.Services.AuthenticationService.set_path(<span style="color: rgb(163,21,21)">'/Authentication_JSON_AppService.axd'</span>);
-[](http://11011.net/software/vspaste)
-
+```javascript
+Sys.Services.AuthenticationService.set_path('/Authentication_JSON_AppService.axd');
+```
 
 Btw this javascript line would be generated at rendering time by the solution of Cyril.
-
 
 Thanks Cyril for the always nice talks.
