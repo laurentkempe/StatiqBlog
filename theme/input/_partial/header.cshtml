@@ -2,14 +2,14 @@
 @{
     var sidebarBehavior = ViewData["sidebarBehavior"];
 }
-<!-- Define author's picture -->
+@* <!-- Define author's picture --> *@
 <header id="header" data-behavior="@sidebarBehavior">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link"
            href="/"
            aria-label="@Localization.Get("global.go_to_homepage")">
-            @Constants.BlogTitle
+            @Html.Raw(Constants.BlogTitle)
         </a>
     </div>
     <a class="header-right-picture"
