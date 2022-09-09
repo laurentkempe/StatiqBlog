@@ -6,7 +6,7 @@ disqusIdentifier: 20211019013205
 tags: [.NET, Dapr]
 video: Xvjiujn08vo
 ---
-TODO Add short introduction
-<!-- more --> <!-- TODO Should we put this info in the front matter  -->  
+
+Discussion with JetBrains advocate [Marco Behler](https://www.marcobehler.com/) around how my team at [Innoveo](https://innoveo.com/) is building Skye Business Canvas using [TeamCity](https://www.jetbrains.com/teamcity/).
 
 <?# Plyr video=Xvjiujn08vo /?>
