@@ -1,2 +1,2 @@
-ArchiveSources: => $"posts/**/*"
+ArchiveSources: => $"**/*"
 ArchiveDestination: => $"../output/all-tags/index.html"

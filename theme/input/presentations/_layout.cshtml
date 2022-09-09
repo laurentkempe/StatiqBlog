@@ -17,13 +17,14 @@
     </div>
     
     <div id="post-footer" class="post-footer main-content-wrap">
-    @* TODO
-        <% if ((post.tags) && (post.tags.length > 0)) { %>
+        @if (presentation.Tags.Any())
+        {
             <div class="post-footer-tags">
-                <span class="text-color-light text-small"><%= __('post.tagged_in') %></span><br/>
-                <%- partial('post/tag', {tags: post.tags})%>
+                <span class="text-color-light text-small">@Localization.Get("post.tagged_in")</span><br/>
+                @await Html.PartialAsync("../_partial/post/tag.cshtml", presentation.Tags)
             </div>
-        <% } %>
+        }
+        @* TODO
         <% if (post.actions === undefined || post.actions) { %>
             <%- partial('post/actions', {postContent: postContent}) %>
         <% } %>

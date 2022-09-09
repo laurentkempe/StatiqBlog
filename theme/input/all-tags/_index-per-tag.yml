@@ -1,4 +1,4 @@
-ArchiveSources: => $"posts/**/*"
+ArchiveSources: => $"**/*"
 ArchiveKey: tags
 ArchivePageSize: => 10
 ArchiveOrderKey: permalink
