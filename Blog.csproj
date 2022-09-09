@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Meziantou.Framework.Slug" Version="1.0.3" />
-    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.47" />
+    <PackageReference Include="Statiq.Web" Version="1.0.0-beta.49" />
     <PackageReference Update="Microsoft.Build" Version="17.0.0" />
   </ItemGroup>
 
