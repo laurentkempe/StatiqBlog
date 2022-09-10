@@ -1,9 +1,9 @@
 ﻿---
 title: 'Git Diff Margin'
-permalink: /2021/10/19/git-diff-margin/
+permalink: /presentations/2021/10/19/git-diff-margin/
 date: 04/22/2020 17:30:00
 disqusIdentifier: 20211019013205
-tags: [.NET, Dapr]
+tags: [.NET, VisualStudio]
 excerpt: Git Diff Margin presentation, in French, during DevApps S01 Ep04 online meetup
 slides: https://laurentkempe.com/presentations/Git%20Diff%20Margin/index.html#/
 ---

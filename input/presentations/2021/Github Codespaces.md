@@ -1,9 +1,9 @@
 ﻿---
 title: 'Github Codespaces'
-permalink: /2021/10/19/github-codespaces/
+permalink: /presentations/2021/10/19/github-codespaces/
 date: 09/30/2020 17:25:00
 disqusIdentifier: 20211019013205
-tags: [.NET, Dapr]
+tags: [GitHub, Devs]
 excerpt: Presentation, in French, during DevApps S02 Ep04 online meetup
 slides: https://laurentkempe.com/presentations/Github%20Codespaces/#/
 ---

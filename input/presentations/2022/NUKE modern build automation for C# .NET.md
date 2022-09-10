@@ -1,6 +1,6 @@
 ﻿---
 title: 'NUKE modern build automation for C#/.NET'
-permalink: /2022/02/02/NUKE-modern-build-automation-for-sharp-dotnet/
+permalink: /presentations/2022/02/02/NUKE-modern-build-automation-for-sharp-dotnet/
 date: 02/02/2022 17:32:00
 tags: [.NET, Build, NUKE]
 excerpt: Presentation, in French, during DevApps S06 Ep04 online meetup

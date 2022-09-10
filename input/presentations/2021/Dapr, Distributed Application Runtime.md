@@ -1,6 +1,6 @@
 ﻿---
 title: 'Dapr, Distributed Application Runtime introduction'
-permalink: /2021/10/19/presentation-dapr-distributed-application-runtime/
+permalink: /presentations/2021/10/19/presentation-dapr-distributed-application-runtime/
 date: 5/19/2021 17:30:00
 tags: [.NET, Dapr]
 excerpt: Presentation, in French, during DevApps S04 Ep04 online meetup

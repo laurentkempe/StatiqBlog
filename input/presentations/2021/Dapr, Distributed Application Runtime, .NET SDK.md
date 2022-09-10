@@ -1,6 +1,6 @@
 ﻿---
 title: 'Dapr, Distributed Application Runtime, .NET SDK demo'
-permalink: /2021/06/09/presentation-dapr-distributed-application-runtime-dotnet-sdk/
+permalink: /presentations/2021/06/09/presentation-dapr-distributed-application-runtime-dotnet-sdk/
 date: 06/09/2021 17:32:00
 tags: [.NET, Dapr]
 excerpt: Presentation, in French, during DevApps S04 Ep07 online meetup

@@ -15,7 +15,7 @@ public class BlogElementBase
     }
 
     public string Title => Document.GetString(Keys.Title) ?? Document.GetLocalized("post.no_title");
-    public virtual string? Permalink => Document.GetString("permalink");
+    public string? Permalink => Document.GetString("permalink");
     public string? Excerpt => Document.GetString(Keys.Excerpt);
     public string Date => Document.GetDateTime("date").ToString(Document.GetDateFormat());
     public DateTime DateTime => Document.GetDateTime("date");

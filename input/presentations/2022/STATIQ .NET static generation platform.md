@@ -1,6 +1,6 @@
 ﻿---
 title: 'STATIQ .NET static generation platform'
-permalink: /2022/03/09/STATIQ-dotnet-static-generation-platform/
+permalink: /presentations/2022/03/09/STATIQ-dotnet-static-generation-platform/
 date: 03/09/2022 17:15:00
 tags: [.NET, Build, STATIQ]
 excerpt: Presentation, in French, during DevApps S06 Ep07 online meetup
