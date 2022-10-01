@@ -1,9 +1,8 @@
+title: >
+  => $"Archives: {GetDateTime("date").Year}"
 ArchiveSources: => $"**/*"
 ArchiveKey: => GetDateTime("date").Year
 ArchivePageSize: => 10
-ArchiveOrderKey: permalink
-ArchiveOrderDescending: true
 ArchiveFilter: => GetString("date") != null
-ArchiveKeyComparer: => StringComparer.OrdinalIgnoreCase.ToConvertingEqualityComparer()
 ArchiveDestination: >
   => GetInt("Index") <= 1 ? $"archives/{GetString("GroupKey")}/index.html" : $"archives/{GetString("GroupKey")}/page/{GetInt("Index")}/index.html"

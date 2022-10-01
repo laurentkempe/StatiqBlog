@@ -1,6 +1,7 @@
+title: "Archives"
 ArchiveSources: => $"**/*"
 ArchiveDestination: => $"../output/archives/index.html"
 ---
 @inherits MyStatiqRazorPage<IDocument>
 
-@await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements())
+@await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements().OrderByDescending(b => b.DateTime))

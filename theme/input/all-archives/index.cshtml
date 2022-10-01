@@ -2,7 +2,7 @@
 
 @if (Document.ContainsKey(Keys.GroupKey))
 {
-    @await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements())
+    @await Html.PartialAsync("../_partial/index.cshtml", Document.AsBlogElements().OrderByDescending(b => b.DateTime))
 }
 else
 {
