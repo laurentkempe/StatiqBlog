@@ -1,3 +1,5 @@
+⚠️ Archived because I decided to go with something else than Statiq, see https://github.com/laurentkempe/myblog
+
 # My new blog
 
 [Laurent Kempé - One of the Tech Head Brothers](https://laurentkempe.com/) leveraging now [Statiq](http://statiq.dev/).
